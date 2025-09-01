@@ -2,17 +2,29 @@
 <html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <meta name="theme-color" content="#0891b2" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Inteligencia Energética" />
+    <link rel="manifest" href="/manifest.json" />
     <title>Seminario Internacional de Inteligencia Energética</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <link rel="dns-prefetch" href="https://aistudiocdn.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <style>
       body {
         font-family: 'Inter', sans-serif;
         --tw-bg-opacity: 1;
         background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-tap-highlight-color: transparent;
       }
       .animated-gradient {
         background: linear-gradient(-45deg, #0f172a, #1e3a8a, #0891b2, #0f172a);
@@ -23,6 +35,189 @@
         0% { background-position: 0% 50%; }
         50% { background-position: 100% 50%; }
         100% { background-position: 0% 50%; }
+      }
+      
+      /* Mobile optimizations */
+      @media (max-width: 768px) {
+        .touch-manipulation {
+          touch-action: manipulation;
+        }
+        
+        /* Improve button tap targets */
+        button, a {
+          min-height: 44px;
+          min-width: 44px;
+        }
+        
+        /* Smooth scrolling for mobile */
+        html {
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+        }
+        
+        /* Prevent zoom on input focus */
+        input, textarea, select {
+          font-size: 16px;
+        }
+      }
+      
+      /* Improve text rendering on mobile */
+      @media (max-width: 768px) {
+        body {
+          text-rendering: optimizeLegibility;
+        }
+      }
+      
+      /* Performance optimizations */
+      * {
+        box-sizing: border-box;
+      }
+      
+      /* Optimize animations for mobile */
+      @media (prefers-reduced-motion: reduce) {
+        .animated-gradient {
+          animation: none;
+        }
+        
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+      
+      /* Optimize for mobile performance */
+      @media (max-width: 768px) {
+        .animated-gradient {
+          background: #0f172a;
+          animation: none;
+        }
+      }
+      
+      /* Improve scrolling performance */
+      .overflow-hidden {
+        -webkit-overflow-scrolling: touch;
+      }
+      
+      /* Custom scale for tab buttons */
+      .hover\:scale-102:hover {
+        transform: scale(1.02);
+      }
+      
+      /* Ripple effect for buttons */
+      .ripple {
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .ripple::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+      }
+      
+      .ripple:active::before {
+        width: 300px;
+        height: 300px;
+      }
+      
+      /* Enhanced button animations */
+      .btn-enhanced {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .btn-enhanced::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s;
+      }
+      
+      .btn-enhanced:hover::after {
+        left: 100%;
+      }
+      
+      /* Pulse animation for CTA buttons */
+      .pulse-cta {
+        animation: pulse-cta 2s infinite;
+      }
+      
+      @keyframes pulse-cta {
+        0% {
+          box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 10px rgba(6, 182, 212, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(6, 182, 212, 0);
+        }
+      }
+      
+      /* Loading states */
+      .loading {
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .loading::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+        animation: loading 1.5s infinite;
+      }
+      
+      @keyframes loading {
+        0% {
+          left: -100%;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+      
+      /* Smooth page transitions */
+      .page-transition {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      /* Staggered animations */
+      .stagger-1 { animation-delay: 0.1s; }
+      .stagger-2 { animation-delay: 0.2s; }
+      .stagger-3 { animation-delay: 0.3s; }
+      .stagger-4 { animation-delay: 0.4s; }
+      
+      /* Fade in animation */
+      .fade-in {
+        animation: fadeIn 0.6s ease-out forwards;
+      }
+      
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     </style>
   <script type="importmap">
@@ -38,5 +233,19 @@
   <body class="bg-slate-900">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
+    <script>
+      // Registrar Service Worker para PWA
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registrado: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registro falló: ', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
