@@ -5,6 +5,7 @@ export interface Translations {
     paraQuien: string;
     resultados: string;
     testimonios: string;
+    incluye: string;
     inversion: string;
     inscribirse: string;
   };
@@ -74,6 +75,17 @@ export interface Translations {
     }>;
   };
   
+  // Includes Section
+  includes: {
+    title: string;
+    subtitle: string;
+    items: Array<{
+      icon: string;
+      title: string;
+      description: string;
+    }>;
+  };
+  
   // Investment Section
   investment: {
     title: string;
@@ -100,6 +112,7 @@ export const translations: Record<string, Translations> = {
       paraQuien: "Para Quién",
       resultados: "Resultados",
       testimonios: "Testimonios",
+      incluye: "¿Qué Incluye?",
       inversion: "Inversión",
       inscribirse: "Inscribirse"
     },
@@ -272,6 +285,42 @@ export const translations: Record<string, Translations> = {
         }
       ]
     },
+    includes: {
+      title: "¿Qué Incluye el Seminario?",
+      subtitle: "Todo lo necesario para tu transformación energética está incluido",
+      items: [
+        {
+          icon: "📚",
+          title: "Materiales",
+          description: "Guías completas y recursos impresos"
+        },
+        {
+          icon: "📖",
+          title: "Manuales",
+          description: "Documentación detallada de protocolos"
+        },
+        {
+          icon: "⚡",
+          title: "Protocolos",
+          description: "Métodos probados de transformación"
+        },
+        {
+          icon: "🏆",
+          title: "Certificación",
+          description: "Certificado oficial de participación"
+        },
+        {
+          icon: "📱",
+          title: "App Oficial",
+          description: "Acceso a recursos y herramientas digitales"
+        },
+        {
+          icon: "🔄",
+          title: "Extensiones 2026",
+          description: "Sesiones de seguimiento y consolidación"
+        }
+      ]
+    },
     investment: {
       title: "Inversión en tu Transformación",
       subtitle: "La experiencia continúa con encuentros de seguimiento en 2026 para consolidar tu aprendizaje.",
@@ -280,7 +329,7 @@ export const translations: Record<string, Translations> = {
       earlyBirdPrice: "$7,000 MXN",
       regularPrice: "$8,500 MXN",
       validUntil: "Válido hasta el 10 de Noviembre de 2025",
-      includes: "Precios para modalidad Presencial y Online. Incluye: Materiales, manuales, protocolos, certificación, acceso a la app oficial con recursos y a las extensiones 2026.",
+      includes: "Precios para modalidad Presencial y Online.",
       ctaWhatsApp: "Inscríbete vía WhatsApp"
     },
     footer: {
@@ -293,6 +342,7 @@ export const translations: Record<string, Translations> = {
       paraQuien: "Who is it for",
       resultados: "Results",
       testimonios: "Testimonials",
+      incluye: "What's Included",
       inversion: "Investment",
       inscribirse: "Register"
     },
@@ -465,6 +515,42 @@ export const translations: Record<string, Translations> = {
         }
       ]
     },
+    includes: {
+      title: "What's Included in the Seminar?",
+      subtitle: "Everything you need for your energy transformation is included",
+      items: [
+        {
+          icon: "📚",
+          title: "Materials",
+          description: "Complete guides and printed resources"
+        },
+        {
+          icon: "📖",
+          title: "Manuals",
+          description: "Detailed protocol documentation"
+        },
+        {
+          icon: "⚡",
+          title: "Protocols",
+          description: "Proven transformation methods"
+        },
+        {
+          icon: "🏆",
+          title: "Certification",
+          description: "Official participation certificate"
+        },
+        {
+          icon: "📱",
+          title: "Official App",
+          description: "Access to digital resources and tools"
+        },
+        {
+          icon: "🔄",
+          title: "2026 Extensions",
+          description: "Follow-up and consolidation sessions"
+        }
+      ]
+    },
     investment: {
       title: "Investment in Your Transformation",
       subtitle: "The experience continues with follow-up meetings in 2026 to consolidate your learning.",
@@ -473,7 +559,7 @@ export const translations: Record<string, Translations> = {
       earlyBirdPrice: "$7,000 MXN",
       regularPrice: "$8,500 MXN",
       validUntil: "Valid until November 10, 2025",
-      includes: "Prices for both In-Person and Online modalities. Includes: Materials, manuals, protocols, certification, access to the official app with resources and 2026 extensions.",
+      includes: "Prices for both In-Person and Online modalities.",
       ctaWhatsApp: "Register via WhatsApp"
     },
     footer: {

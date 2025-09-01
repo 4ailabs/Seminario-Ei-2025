@@ -18,7 +18,12 @@ import {
     MessageCircle,
     Languages,
     ArrowUp,
-    Timer
+    Timer,
+    BookOpen,
+    FileText,
+    Award,
+    Smartphone,
+    RefreshCw
 } from 'lucide-react';
 import { LanguageProvider, useLanguage } from './LanguageContext';
 import { useIntersectionObserver } from './useIntersectionObserver';
@@ -80,6 +85,7 @@ const Header: React.FC<{ onScrollTo: (id: string) => void }> = ({ onScrollTo }) 
         { id: 'para-quien', text: t.nav.paraQuien },
         { id: 'resultados', text: t.nav.resultados },
         { id: 'testimonios', text: t.nav.testimonios },
+        { id: 'incluye', text: t.nav.incluye },
         { id: 'inversion', text: t.nav.inversion },
     ];
 
@@ -114,7 +120,7 @@ const Header: React.FC<{ onScrollTo: (id: string) => void }> = ({ onScrollTo }) 
                 </div>
 
                 {/* Desktop CTA Button */}
-                <a href="#inversion" onClick={(e) => {e.preventDefault(); onScrollTo('inversion')}} className="hidden md:block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-5 rounded-full text-sm transition duration-300 ease-in-out transform hover:scale-105">
+                 <a href="#inversion" onClick={(e) => {e.preventDefault(); onScrollTo('inversion')}} className="hidden md:block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-5 rounded-full text-sm transition duration-300 ease-in-out transform hover:scale-105">
                     {t.nav.inscribirse}
                 </a>
 
@@ -216,8 +222,8 @@ const ProgramSection: React.FC = () => {
         };
 
         return (
-            <button
-                onClick={() => setActiveTab(day)}
+        <button
+            onClick={() => setActiveTab(day)}
                 className={`w-full text-left p-3 sm:p-4 rounded-lg transition-all duration-300 border-2 relative overflow-hidden ${
                     activeTab === day 
                         ? `bg-gradient-to-br ${getDayColor(day)} text-white shadow-lg border-white/30 transform scale-105` 
@@ -241,8 +247,8 @@ const ProgramSection: React.FC = () => {
                         <div className="mt-2 w-full h-1 bg-white rounded-full opacity-60"></div>
                     )}
                 </div>
-            </button>
-        );
+        </button>
+    );
     };
     
     return (
@@ -516,6 +522,28 @@ const AppContent: React.FC = () => {
                     </div>
                 </AnimatedSection>
 
+                {/* --- Includes Section --- */}
+                <AnimatedSection id="incluye" className="py-12 sm:py-16 md:py-24" delay={900}>
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-6 text-white leading-tight">
+                            {t.includes.title}
+                        </h2>
+                        <p className="text-base sm:text-lg text-slate-400 mb-8 sm:mb-12 max-w-3xl mx-auto text-center leading-relaxed">
+                            {t.includes.subtitle}
+                        </p>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+                            {t.includes.items.map((item, index) => (
+                                <IncludeCard
+                                    key={index}
+                                    icon={getIncludeIcon(item.title)}
+                                    title={item.title}
+                                    description={item.description}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                </AnimatedSection>
+
                 {/* --- Extensions & Investment Section --- */}
                  <AnimatedSection id="inversion" className="py-12 sm:py-16 md:py-24 bg-slate-900" delay={1000}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -614,6 +642,38 @@ const TestimonialCard: React.FC<{ quote: string, name: string, role: string }> =
         </div>
     </div>
 );
+
+// --- Include Card Component ---
+const IncludeCard: React.FC<{ icon: React.ReactNode; title: string; description: string }> = ({ icon, title, description }) => (
+    <div className="bg-slate-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10 group">
+        <div className="flex items-center mb-4">
+            <div className="p-3 bg-cyan-500/10 rounded-xl group-hover:bg-cyan-500/20 transition-colors duration-300">
+                {icon}
+            </div>
+        </div>
+        <h3 className="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">{title}</h3>
+        <p className="text-slate-400 text-sm sm:text-base leading-relaxed">{description}</p>
+    </div>
+);
+
+// --- Function to get include icon ---
+const getIncludeIcon = (title: string) => {
+    const iconMap: { [key: string]: React.ReactNode } = {
+        'Materiales': <BookOpen className="w-6 h-6 text-cyan-400" />,
+        'Materials': <BookOpen className="w-6 h-6 text-cyan-400" />,
+        'Manuales': <FileText className="w-6 h-6 text-cyan-400" />,
+        'Manuals': <FileText className="w-6 h-6 text-cyan-400" />,
+        'Protocolos': <Zap className="w-6 h-6 text-cyan-400" />,
+        'Protocols': <Zap className="w-6 h-6 text-cyan-400" />,
+        'Certificación': <Award className="w-6 h-6 text-cyan-400" />,
+        'Certification': <Award className="w-6 h-6 text-cyan-400" />,
+        'App Oficial': <Smartphone className="w-6 h-6 text-cyan-400" />,
+        'Official App': <Smartphone className="w-6 h-6 text-cyan-400" />,
+        'Extensiones 2026': <RefreshCw className="w-6 h-6 text-cyan-400" />,
+        '2026 Extensions': <RefreshCw className="w-6 h-6 text-cyan-400" />
+    };
+    return iconMap[title] || <Check className="w-6 h-6 text-cyan-400" />;
+};
 
 
 export default App;
