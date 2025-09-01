@@ -27,6 +27,7 @@ import {
 } from 'lucide-react';
 import { LanguageProvider, useLanguage } from './LanguageContext';
 import { useIntersectionObserver } from './useIntersectionObserver';
+import ChatButton from './components/ChatButton';
 
 
 // --- Icons ---
@@ -462,10 +463,10 @@ const AppContent: React.FC = () => {
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-white leading-tight">{t.whoIsItFor.title}</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-7xl mx-auto">
-                           <InfoCard icon={<BrainIcon />} title={t.whoIsItFor.cards[0].title} description={t.whoIsItFor.cards[0].description}/>
-                           <InfoCard icon={<EnergyIcon />} title={t.whoIsItFor.cards[1].title} description={t.whoIsItFor.cards[1].description}/>
-                           <InfoCard icon={<DecisionIcon />} title={t.whoIsItFor.cards[2].title} description={t.whoIsItFor.cards[2].description}/>
-                           <InfoCard icon={<CpuIcon />} title={t.whoIsItFor.cards[3].title} description={t.whoIsItFor.cards[3].description}/>
+                           <InfoCard icon={<Brain className="w-7 h-7 text-purple-400" />} title={t.whoIsItFor.cards[0].title} description={t.whoIsItFor.cards[0].description}/>
+                           <InfoCard icon={<Zap className="w-7 h-7 text-yellow-400" />} title={t.whoIsItFor.cards[1].title} description={t.whoIsItFor.cards[1].description}/>
+                           <InfoCard icon={<Clock className="w-7 h-7 text-green-400" />} title={t.whoIsItFor.cards[2].title} description={t.whoIsItFor.cards[2].description}/>
+                           <InfoCard icon={<Cpu className="w-7 h-7 text-blue-400" />} title={t.whoIsItFor.cards[3].title} description={t.whoIsItFor.cards[3].description}/>
                         </div>
                     </div>
                 </AnimatedSection>
@@ -479,17 +480,17 @@ const AppContent: React.FC = () => {
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
                             <BenefitCard 
-                                icon={<HeartPulseIcon className="w-7 h-7" />} 
+                                icon={<HeartPulse className="w-7 h-7 text-red-400" />} 
                                 title={t.results.cards[0].title} 
                                 benefits={t.results.cards[0].benefits} 
                             />
                             <BenefitCard 
-                                icon={<BriefcaseIcon className="w-7 h-7" />} 
+                                icon={<Briefcase className="w-7 h-7 text-emerald-400" />} 
                                 title={t.results.cards[1].title} 
                                 benefits={t.results.cards[1].benefits} 
                             />
                             <BenefitCard 
-                                icon={<UserIcon className="w-7 h-7" />} 
+                                icon={<User className="w-7 h-7 text-indigo-400" />} 
                                 title={t.results.cards[2].title} 
                                 benefits={t.results.cards[2].benefits} 
                             />
@@ -588,6 +589,7 @@ const AppContent: React.FC = () => {
             </footer>
 
             <BackToTop />
+            <ChatButton />
         </div>
     );
 };
@@ -656,21 +658,21 @@ const IncludeCard: React.FC<{ icon: React.ReactNode; title: string; description:
     </div>
 );
 
-// --- Function to get include icon ---
+// --- Function to get include icon with different colors ---
 const getIncludeIcon = (title: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
-        'Materiales': <BookOpen className="w-6 h-6 text-cyan-400" />,
-        'Materials': <BookOpen className="w-6 h-6 text-cyan-400" />,
-        'Manuales': <FileText className="w-6 h-6 text-cyan-400" />,
-        'Manuals': <FileText className="w-6 h-6 text-cyan-400" />,
-        'Protocolos': <Zap className="w-6 h-6 text-cyan-400" />,
-        'Protocols': <Zap className="w-6 h-6 text-cyan-400" />,
-        'Certificación': <Award className="w-6 h-6 text-cyan-400" />,
-        'Certification': <Award className="w-6 h-6 text-cyan-400" />,
-        'App Oficial': <Smartphone className="w-6 h-6 text-cyan-400" />,
-        'Official App': <Smartphone className="w-6 h-6 text-cyan-400" />,
-        'Extensiones 2026': <RefreshCw className="w-6 h-6 text-cyan-400" />,
-        '2026 Extensions': <RefreshCw className="w-6 h-6 text-cyan-400" />
+        'Materiales': <BookOpen className="w-6 h-6 text-blue-400" />,
+        'Materials': <BookOpen className="w-6 h-6 text-blue-400" />,
+        'Manuales': <FileText className="w-6 h-6 text-green-400" />,
+        'Manuals': <FileText className="w-6 h-6 text-green-400" />,
+        'Protocolos': <Zap className="w-6 h-6 text-yellow-400" />,
+        'Protocols': <Zap className="w-6 h-6 text-yellow-400" />,
+        'Certificación': <Award className="w-6 h-6 text-purple-400" />,
+        'Certification': <Award className="w-6 h-6 text-purple-400" />,
+        'App Oficial': <Smartphone className="w-6 h-6 text-pink-400" />,
+        'Official App': <Smartphone className="w-6 h-6 text-pink-400" />,
+        'Extensiones 2026': <RefreshCw className="w-6 h-6 text-orange-400" />,
+        '2026 Extensions': <RefreshCw className="w-6 h-6 text-orange-400" />
     };
     return iconMap[title] || <Check className="w-6 h-6 text-cyan-400" />;
 };
