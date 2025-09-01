@@ -27,7 +27,7 @@ class GeminiService {
       
       INFORMACIÓN DEL SEMINARIO:
       - Fecha: 5-7 de Diciembre 2025
-      - Ubicación: Hotel Reef, Playa del Carmen
+      - Ubicación: Playa del Carmen, México
       - Duración: 3 días de inmersión profunda
       - Modalidades: Presencial y Online
       - Precio Early Bird: $7,000 MXN (válido hasta 10 de Noviembre 2025)
@@ -48,7 +48,7 @@ class GeminiService {
       
       SEMINAR INFORMATION:
       - Date: December 5-7, 2025
-      - Location: Hotel Reef, Playa del Carmen
+      - Location: Playa del Carmen, Mexico
       - Duration: 3 days of deep immersion
       - Modalities: In-Person and Online
       - Early Bird Price: $7,000 MXN (valid until November 10, 2025)
@@ -138,16 +138,16 @@ class GeminiService {
     const responses = {
       es: {
         'precio': 'El precio Early Bird es de $7,000 MXN (válido hasta el 10 de noviembre 2025) y el precio regular es de $8,500 MXN. Incluye materiales, manuales, protocolos, certificación, acceso a la app oficial y extensiones 2026.',
-        'fecha': 'El seminario se realizará del 5 al 7 de diciembre de 2025 en el Hotel Reef, Playa del Carmen.',
-        'ubicacion': 'El evento se llevará a cabo en el Hotel Reef, ubicado en Playa del Carmen.',
+        'fecha': 'El seminario se realizará del 5 al 7 de diciembre de 2025 en Playa del Carmen, México.',
+        'ubicacion': 'El evento se llevará a cabo en Playa del Carmen, México. La ubicación específica se confirmará próximamente.',
         'modalidad': 'El seminario está disponible en modalidad presencial y online.',
         'incluye': 'El seminario incluye: materiales completos, manuales detallados, protocolos de transformación, certificación oficial, acceso a la app oficial con recursos digitales y extensiones 2026.',
         'default': 'Gracias por tu interés en el Seminario Internacional de Inteligencia Energética. ¿Te gustaría saber más sobre precios, fechas, ubicación o qué incluye el seminario? También puedes contactarnos directamente vía WhatsApp al +52 557 907 6626.'
       },
       en: {
         'price': 'The Early Bird price is $7,000 MXN (valid until November 10, 2025) and the regular price is $8,500 MXN. It includes materials, manuals, protocols, certification, official app access, and 2026 extensions.',
-        'date': 'The seminar will take place from December 5-7, 2025 at Hotel Reef, Playa del Carmen.',
-        'location': 'The event will be held at Hotel Reef, located in Playa del Carmen.',
+        'date': 'The seminar will take place from December 5-7, 2025 in Playa del Carmen, Mexico.',
+        'location': 'The event will be held in Playa del Carmen, Mexico. The specific venue will be confirmed soon.',
         'modality': 'The seminar is available in both in-person and online modalities.',
         'includes': 'The seminar includes: complete materials, detailed manuals, transformation protocols, official certification, official app access with digital resources, and 2026 extensions.',
         'default': 'Thank you for your interest in the International Energy Intelligence Conference. Would you like to know more about prices, dates, location, or what the seminar includes? You can also contact us directly via WhatsApp at +52 557 907 6626.'
