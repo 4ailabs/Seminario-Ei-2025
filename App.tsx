@@ -408,8 +408,8 @@ const AppContent: React.FC = () => {
 
     const generateWhatsAppMessage = () => {
         const message = t.language === 'es' 
-            ? `¡Hola! Me interesa inscribirme al Seminario Internacional de Inteligencia Energética del 5-7 de diciembre 2025 en Playa del Carmen. ¿Podrían brindarme más información sobre el proceso de inscripción y formas de pago?`
-            : `Hello! I'm interested in registering for the International Energy Intelligence Conference on December 5-7, 2025 in Playa del Carmen. Could you provide me with more information about the registration process and payment methods?`;
+            ? `¡Hola! Me interesa inscribirme al Seminario Internacional de Inteligencia Energética del 5-7 de diciembre 2025 en Ciudad de México. ¿Podrían brindarme más información sobre el proceso de inscripción y formas de pago?`
+            : `Hello! I'm interested in registering for the International Energy Intelligence Conference on December 5-7, 2025 in Mexico City. Could you provide me with more information about the registration process and payment methods?`;
         return encodeURIComponent(message);
     };
 

@@ -54,7 +54,7 @@ El chatbot está implementado y listo para usar. Actualmente funciona con respue
 #### 🎯 **Información que puede proporcionar:**
 - **Precios** (Early Bird y Regular)
 - **Fechas** del seminario
-- **Ubicación** (Hotel Reef, Playa del Carmen)
+- **Ubicación** (Ciudad de México)
 - **Modalidades** (Presencial y Online)
 - **Qué incluye** el seminario
 - **Contacto** vía WhatsApp
