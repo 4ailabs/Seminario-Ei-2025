@@ -98,8 +98,15 @@ const Header: React.FC<{ onScrollTo: (id: string) => void }> = ({ onScrollTo }) 
     return (
         <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-slate-900/80 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`}>
             <div className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-                <div className="text-lg sm:text-xl font-bold text-white tracking-wider">
-                    <span className="text-cyan-400">Inteligencia</span> Energética
+                <div className="flex items-center gap-3">
+                    <img 
+                        src="/images/logo-seminario.png" 
+                        alt="Logo Seminario Inteligencia Energética" 
+                        className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
+                    />
+                    <div className="text-lg sm:text-xl font-bold text-white tracking-wider">
+                        <span className="text-cyan-400">Inteligencia</span> Energética
+                    </div>
                 </div>
                 
                 {/* Desktop Navigation */}
@@ -424,9 +431,16 @@ const AppContent: React.FC = () => {
                     <div className="absolute inset-0 bg-slate-900/60"></div>
                     <div className="relative z-10 max-w-6xl mx-auto">
                         <AnimatedSection>
-                            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white tracking-tight mb-6 leading-tight">
-                                {t.hero.title}
-                            </h1>
+                            <div className="flex flex-col items-center mb-8">
+                                <img 
+                                    src="/images/logo-seminario.png" 
+                                    alt="Logo Seminario Inteligencia Energética" 
+                                    className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain mb-4"
+                                />
+                                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white tracking-tight leading-tight text-center">
+                                    {t.hero.title}
+                                </h1>
+                            </div>
                             <p className="flex flex-col sm:flex-row items-center justify-center text-base sm:text-lg md:text-xl text-cyan-400 font-semibold mb-4 gap-2">
                                 <span className="flex items-center">
                                     <MapPinIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0" />
