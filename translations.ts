@@ -178,10 +178,6 @@ export const translations: Record<string, Translations> = {
               title: "Los cuatro protocolos principales (Alpha, Beta, Gamma, Delta)",
               description: "Integra protocolos específicos para abordar síntomas físicos, conflictos emocionales y dinámicas del sistema."
             },
-            {
-              title: 'Evento Especial: Obra de Teatro "Yo fui calor"',
-              description: "Una experiencia artística nocturna para complementar el aprendizaje del día."
-            }
           ]
         },
         day3: {
@@ -408,10 +404,6 @@ export const translations: Record<string, Translations> = {
               title: "The four main protocols (Alpha, Beta, Gamma, Delta)",
               description: "Integrate specific protocols to address physical symptoms, emotional conflicts, and system dynamics."
             },
-            {
-              title: 'Special Event: Theater Play "I was heat"',
-              description: "A nighttime artistic experience to complement the day's learning."
-            }
           ]
         },
         day3: {
