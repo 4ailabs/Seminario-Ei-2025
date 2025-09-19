@@ -143,24 +143,24 @@ const Header: React.FC<{ onScrollTo: (id: string) => void }> = ({ onScrollTo }) 
 
             {/* Mobile Navigation Menu */}
             {isMobileMenuOpen && (
-                <div className="md:hidden absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-lg border-t border-slate-700 shadow-lg">
+                <div className="md:hidden absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-lg border-t border-slate-700 shadow-lg max-h-[80vh] overflow-y-auto">
                     <nav className="container mx-auto px-4 py-4">
                         {navLinks.map(link => (
                             <a
                                 href={`#${link.id}`}
                                 onClick={(e) => {e.preventDefault(); handleMobileNavClick(link.id)}}
                                 key={link.id}
-                                className="block py-3 text-slate-300 hover:text-cyan-400 transition-colors duration-300 border-b border-slate-700 last:border-b-0"
+                                className="block py-4 text-slate-300 hover:text-cyan-400 transition-colors duration-300 border-b border-slate-700 last:border-b-0 touch-manipulation text-base"
                             >
                                 {link.text}
                             </a>
                         ))}
                         {/* Mobile Language Toggle */}
-                        <div className="flex items-center justify-center gap-2 mt-4 mb-4">
-                            <Languages className="w-4 h-4 text-slate-300" />
+                        <div className="flex items-center justify-between py-4 border-b border-slate-700">
+                            <span className="text-slate-300 text-base">Idioma</span>
                             <button
                                 onClick={() => setLanguage(language === 'es' ? 'en' : 'es')}
-                                className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 text-sm font-medium"
+                                className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 text-base font-medium touch-manipulation px-3 py-2 rounded-lg hover:bg-slate-800"
                             >
                                 {language === 'es' ? 'English' : 'Español'}
                             </button>
@@ -169,7 +169,7 @@ const Header: React.FC<{ onScrollTo: (id: string) => void }> = ({ onScrollTo }) 
                         <a
                             href="#inversion"
                             onClick={(e) => {e.preventDefault(); handleMobileNavClick('inversion')}}
-                            className="block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-6 rounded-full text-center transition duration-300"
+                            className="block bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 text-white font-bold py-4 px-6 rounded-full text-center transition duration-300 touch-manipulation text-base"
                         >
                             {t.nav.inscribirse}
                         </a>

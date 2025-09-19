@@ -104,40 +104,41 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-      <div className="bg-slate-900 rounded-2xl shadow-2xl w-full max-w-md h-[600px] flex flex-col border border-slate-700">
+    <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/50 backdrop-blur-sm">
+      <div className="bg-slate-900 rounded-t-3xl sm:rounded-2xl shadow-2xl w-full h-[85vh] sm:h-[600px] sm:max-w-md flex flex-col border border-slate-700 sm:border-t-0">
         {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b border-slate-700">
+        <div className="flex items-center justify-between p-4 border-b border-slate-700 sticky top-0 bg-slate-900 z-10">
           <div className="flex items-center gap-3">
             <div className="p-2 bg-cyan-500/20 rounded-lg">
               <Bot className="w-5 h-5 text-cyan-400" />
             </div>
             <div>
-              <h3 className="font-semibold text-white">
+              <h3 className="font-semibold text-white text-sm sm:text-base">
                 {language === 'es' ? 'Asistente Virtual' : 'Virtual Assistant'}
               </h3>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-slate-400 hidden sm:block">
                 {language === 'es' ? 'Seminario Inteligencia Energética' : 'Energy Intelligence Seminar'}
               </p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-2 hover:bg-slate-800 rounded-lg transition-colors"
+            className="p-2 hover:bg-slate-800 rounded-lg transition-colors touch-manipulation"
+            aria-label={language === 'es' ? 'Cerrar chat' : 'Close chat'}
           >
             <X className="w-5 h-5 text-slate-400" />
           </button>
         </div>
 
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto p-4 space-y-4">
+        <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 -webkit-overflow-scrolling-touch">
           {messages.map((message) => (
             <div
               key={message.id}
               className={`flex ${message.isUser ? 'justify-end' : 'justify-start'}`}
             >
               <div
-                className={`max-w-[80%] rounded-2xl p-3 ${
+                className={`max-w-[85%] sm:max-w-[80%] rounded-2xl p-3 text-sm sm:text-base ${
                   message.isUser
                     ? 'bg-cyan-500 text-white'
                     : 'bg-slate-800 text-slate-200'
@@ -175,16 +176,16 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose }) => {
 
         {/* Quick Questions */}
         {messages.length <= 1 && (
-          <div className="px-4 pb-2">
+          <div className="px-3 sm:px-4 pb-2">
             <p className="text-xs text-slate-400 mb-2">
               {language === 'es' ? 'Preguntas frecuentes:' : 'Frequently asked:'}
             </p>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2">
               {quickQuestions.map((question, index) => (
                 <button
                   key={index}
                   onClick={() => setInputMessage(question)}
-                  className="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1 rounded-full transition-colors"
+                  className="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-2 sm:px-3 py-1.5 sm:py-1 rounded-full transition-colors touch-manipulation"
                 >
                   {question}
                 </button>
@@ -194,7 +195,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose }) => {
         )}
 
         {/* Input */}
-        <div className="p-4 border-t border-slate-700">
+        <div className="p-3 sm:p-4 border-t border-slate-700 bg-slate-900 sticky bottom-0">
           <div className="flex gap-2">
             <input
               type="text"
@@ -202,13 +203,18 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose }) => {
               onChange={(e) => setInputMessage(e.target.value)}
               onKeyPress={handleKeyPress}
               placeholder={language === 'es' ? 'Escribe tu pregunta...' : 'Type your question...'}
-              className="flex-1 bg-slate-800 border border-slate-600 rounded-lg px-3 py-2 text-white placeholder-slate-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+              className="flex-1 bg-slate-800 border border-slate-600 rounded-lg px-3 py-2.5 sm:py-2 text-white placeholder-slate-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 text-base touch-manipulation"
               disabled={isLoading}
+              autoComplete="off"
+              autoCorrect="off"
+              autoCapitalize="off"
+              spellCheck="false"
             />
             <button
               onClick={handleSendMessage}
               disabled={!inputMessage.trim() || isLoading}
-              className="p-2 bg-cyan-500 hover:bg-cyan-600 disabled:bg-slate-700 disabled:cursor-not-allowed text-white rounded-lg transition-colors"
+              className="p-2.5 sm:p-2 bg-cyan-500 hover:bg-cyan-600 disabled:bg-slate-700 disabled:cursor-not-allowed text-white rounded-lg transition-colors touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center"
+              aria-label={language === 'es' ? 'Enviar mensaje' : 'Send message'}
             >
               {isLoading ? (
                 <Loader2 className="w-5 h-5 animate-spin" />
