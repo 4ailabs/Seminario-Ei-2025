@@ -53,8 +53,8 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose }) => {
     setIsLoading(true);
 
     try {
-      // Use mock service for now (you can switch to real Gemini API later)
-      const response = await geminiService.sendMessageMock(inputMessage, language);
+      // Use real Gemini API
+      const response = await geminiService.sendMessage(inputMessage, language);
       
       const botMessage: ChatMessage = {
         id: (Date.now() + 1).toString(),
