@@ -284,6 +284,9 @@ const ProgramSection: React.FC = () => {
              <p className="text-center text-slate-400 text-sm sm:text-base mb-8 sm:mb-12 max-w-2xl mx-auto">
                 {t.program.subtitle}
              </p>
+             <p className="text-center text-slate-500 text-xs mb-4 italic">
+                {t.program.disclaimer}
+             </p>
              <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 max-w-6xl mx-auto">
                 <div className="lg:w-1/3">
                     <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-1 gap-3 sm:gap-4">

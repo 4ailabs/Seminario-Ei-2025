@@ -22,9 +22,10 @@ export interface Translations {
   };
   
   // Program Section
-  program: {
-    title: string;
-    subtitle: string;
+    program: {
+      title: string;
+      subtitle: string;
+      disclaimer: string;
     sessions: {
       session1: string;
       session2: string;
@@ -143,6 +144,7 @@ export const translations: Record<string, Translations> = {
     program: {
       title: "Programa Detallado",
       subtitle: "Haz clic en cada sesión para explorar el contenido completo del seminario",
+      disclaimer: "*El programa está sujeto a cambios sin previo aviso",
       sessions: {
         session1: "SESIÓN 1",
         session2: "SESIÓN 2", 
@@ -410,6 +412,7 @@ export const translations: Record<string, Translations> = {
     program: {
       title: "Detailed Program",
       subtitle: "Click on each session to explore the complete seminar content",
+      disclaimer: "*Program subject to changes without prior notice",
       sessions: {
         session1: "SESSION 1",
         session2: "SESSION 2",
