@@ -2,15 +2,15 @@
 ## International Energy Intelligence Conference
 
 **📍 Ubicación:** Playa del Carmen, México  
-**📅 Fechas:** 5-7 Diciembre 2025  
-**⏰ Duración:** 3 días de inmersión profunda  
+**📅 Fechas:** Diciembre 2025 - Febrero 2026 (5 sesiones)  
+**⏰ Duración:** 5 sesiones de transformación profunda  
 **🎯 Modalidad:** Presencial y Online  
 
 ---
 
 ## 🌟 Descripción General
 
-Una inmersión profunda de 3 días para transformar tu cerebro reactivo en una herramienta de creación consciente. Ahora potenciado con herramientas de Inteligencia Artificial para acelerar tu transformación.
+Una experiencia transformadora de 5 sesiones para transformar tu cerebro reactivo en una herramienta de creación consciente. Ahora potenciado con herramientas de Inteligencia Artificial para acelerar tu transformación.
 
 ### 🎯 Objetivo Principal
 Transformar tu cerebro reactivo en una herramienta de creación consciente a través de metodologías de vanguardia que integran neuroplasticidad, bioenergética, context engineering y herramientas de IA.
@@ -19,7 +19,7 @@ Transformar tu cerebro reactivo en una herramienta de creación consciente a tra
 
 ## 📋 Programa Detallado
 
-### 🗓️ **VIERNES - Día 1**
+### 🗓️ **SESIÓN 1 - 5 de Diciembre 2025**
 #### **Neuroplasticidad, IA y Sistemas de Inteligencia Estratégica**
 
 **Horario:** 9:00 AM - 6:00 PM
@@ -45,22 +45,10 @@ Transformar tu cerebro reactivo en una herramienta de creación consciente a tra
 - Generación de nuevas perspectivas personalizadas
 - **Break:** 2:45 PM - 3:00 PM
 
-#### **4. LSP Insight System: del símbolo a la acción**
-*3:00 PM - 4:30 PM*
-- Principios de LEGO® Serious Play®
-- Materialización de ideas complejas
-- Metodología de "pensar con las manos"
-- **Break:** 4:30 PM - 4:45 PM
-
-#### **5. Descubrimiento de insights y estrategias con LSP**
-*4:45 PM - 6:00 PM*
-- Transformación de descubrimientos en arquetipos
-- Desarrollo de estrategias claras y accionables
-- Creación de planes de acción concretos
 
 ---
 
-### 🗓️ **SÁBADO - Día 2**
+### 🗓️ **SESIÓN 2 - 6 de Diciembre 2025**
 #### **Bioenergética y Context Engineering Aplicado**
 
 **Horario:** 9:00 AM - 6:00 PM
@@ -86,23 +74,15 @@ Transformar tu cerebro reactivo en una herramienta de creación consciente a tra
 - Mapeo de estados energéticos
 - **Break:** 2:45 PM - 3:00 PM
 
-#### **4. Los cuatro protocolos principales (Alpha, Beta, Gamma, Delta)**
-*3:00 PM - 4:30 PM*
-- Protocolo Alpha: Síntomas físicos
-- Protocolo Beta: Conflictos emocionales
-- Protocolo Gamma: Dinámicas del sistema
-- Protocolo Delta: Integración y síntesis
-- **Break:** 4:30 PM - 4:45 PM
-
-#### **5. Evento Especial: Obra de Teatro "Yo fui calor"**
-*4:45 PM - 6:00 PM*
+#### **4. Evento Especial: Obra de Teatro "Yo fui calor"**
+*3:00 PM - 6:00 PM*
 - Experiencia artística nocturna
 - Complemento vivencial del aprendizaje del día
 - Integración emocional y sensorial
 
 ---
 
-### 🗓️ **DOMINGO - Día 3**
+### 🗓️ **SESIÓN 3 - 7 de Diciembre 2025**
 #### **Sistemas de Decisión Consciente - Experiencia Vivencial**
 
 **Horario:** 9:00 AM - 6:00 PM
@@ -128,19 +108,82 @@ Transformar tu cerebro reactivo en una herramienta de creación consciente a tra
 - Potenciación de la vida personal y profesional
 - **Break:** 2:45 PM - 3:00 PM
 
-#### **4. Metodología de Acción Efectiva**
-*3:00 PM - 4:30 PM*
+#### **4. Síntesis de Transformación Integral y Certificación**
+*3:00 PM - 6:00 PM*
+- Integración de aprendizajes de las primeras 3 sesiones
+- Establecimiento de compromisos personalizados
+- Entrega de certificación inicial
+- Plan de seguimiento para sesiones 4 y 5
+
+---
+
+### 🗓️ **SESIÓN 4 - 25 de Enero 2026**
+#### **Consolidación y Profundización**
+
+**Horario:** 9:00 AM - 6:00 PM
+
+#### **1. Revisión de Progreso y Ajustes**
+*9:00 AM - 10:30 AM*
+- Evaluación del progreso personal
+- Ajustes en las estrategias implementadas
+- Identificación de áreas de mejora
+- **Break:** 10:30 AM - 10:45 AM
+
+#### **2. Protocolos Avanzados de Bioenergética**
+*10:45 AM - 12:15 PM*
+- Los cuatro protocolos principales (Alpha, Beta, Gamma, Delta)
+- Aplicación práctica en casos reales
+- Integración de protocolos específicos
+- **Break:** 12:15 PM - 1:15 PM
+
+#### **3. Metodología de Acción Efectiva**
+*1:15 PM - 2:45 PM*
 - Conexión entre comprensión e implementación
 - Protocolos de compromiso auténtico
 - Sistemas de seguimiento y accountability
-- **Break:** 4:30 PM - 4:45 PM
+- **Break:** 2:45 PM - 3:00 PM
 
-#### **5. Síntesis de Transformación Integral y Certificación**
-*4:45 PM - 6:00 PM*
-- Integración de aprendizajes de los 3 días
-- Establecimiento de compromisos personalizados
-- Entrega de certificación oficial
-- Plan de seguimiento 2026
+#### **4. LSP Insight System: del símbolo a la acción**
+*3:00 PM - 6:00 PM*
+- Principios de LEGO® Serious Play®
+- Materialización de ideas complejas
+- Metodología de "pensar con las manos"
+- Práctica vivencial de LSP
+
+---
+
+### 🗓️ **SESIÓN 5 - 22 de Febrero 2026**
+#### **Maestría y Proyección Futura**
+
+**Horario:** 9:00 AM - 6:00 PM
+
+#### **1. Descubrimiento de insights y estrategias con LSP**
+*9:00 AM - 10:30 AM*
+- Transformación de descubrimientos en arquetipos
+- Desarrollo de estrategias claras y accionables
+- Creación de planes de acción concretos
+- **Break:** 10:30 AM - 10:45 AM
+
+#### **2. Integración de Herramientas de IA**
+*10:45 AM - 12:15 PM*
+- Uso avanzado de IA como asistente estratégico
+- Aplicación en práctica profesional y personal
+- Optimización de flujos de trabajo con IA
+- **Break:** 12:15 PM - 1:15 PM
+
+#### **3. Síntesis Final y Proyección**
+*1:15 PM - 4:00 PM*
+- Integración completa de los aprendizajes
+- Establecimiento de compromisos a largo plazo
+- Plan de desarrollo continuo
+- **Break:** 4:00 PM - 4:15 PM
+
+#### **4. Certificación Final y Comunidad**
+*4:15 PM - 6:00 PM*
+- Entrega de certificación final
+- Acceso a la comunidad de práctica continua
+- Red de apoyo y colaboración
+- Celebración de la transformación lograda
 
 ---
 
@@ -263,14 +306,14 @@ Transformar tu cerebro reactivo en una herramienta de creación consciente a tra
 
 ---
 
-## 🚀 Seguimiento 2026
+## 🚀 Seguimiento Continuo
 
-La experiencia continúa con encuentros de seguimiento en 2026 para consolidar tu aprendizaje:
+La experiencia se extiende con las sesiones 4 y 5 en 2026 para consolidar tu aprendizaje:
 
-- **Sesiones de consolidación** trimestrales
-- **Acceso a recursos actualizados**
-- **Comunidad de práctica continua**
-- **Herramientas de IA actualizadas**
+- **Sesión 4 (Enero 2026):** Consolidación y Profundización
+- **Sesión 5 (Febrero 2026):** Maestría y Proyección Futura
+- **Comunidad de práctica continua** post-seminario
+- **Acceso a recursos actualizados** y herramientas de IA
 
 ---
 

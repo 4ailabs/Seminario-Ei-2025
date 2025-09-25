@@ -194,64 +194,83 @@ const ProgramSection: React.FC = () => {
     
     const scheduleData = {
         1: {
-            dayLabel: t.program.days.friday,
-            title: t.program.topics.day1.title,
-            topics: t.program.topics.day1.topics
+            sessionLabel: t.program.sessions.session1,
+            title: t.program.topics.session1.title,
+            date: t.program.topics.session1.date,
+            topics: t.program.topics.session1.topics
         },
         2: {
-            dayLabel: t.program.days.saturday,
-            title: t.program.topics.day2.title,
-            topics: t.program.topics.day2.topics
+            sessionLabel: t.program.sessions.session2,
+            title: t.program.topics.session2.title,
+            date: t.program.topics.session2.date,
+            topics: t.program.topics.session2.topics
         },
         3: {
-            dayLabel: t.program.days.sunday,
-            title: t.program.topics.day3.title,
-            topics: t.program.topics.day3.topics
+            sessionLabel: t.program.sessions.session3,
+            title: t.program.topics.session3.title,
+            date: t.program.topics.session3.date,
+            topics: t.program.topics.session3.topics
+        },
+        4: {
+            sessionLabel: t.program.sessions.session4,
+            title: t.program.topics.session4.title,
+            date: t.program.topics.session4.date,
+            topics: t.program.topics.session4.topics
+        },
+        5: {
+            sessionLabel: t.program.sessions.session5,
+            title: t.program.topics.session5.title,
+            date: t.program.topics.session5.date,
+            topics: t.program.topics.session5.topics
         },
     };
 
-    const TabButton: React.FC<{ day: number; label: string; }> = ({ day, label }) => {
-        const getDayIcon = (dayNum: number) => {
-            switch(dayNum) {
+    const TabButton: React.FC<{ session: number; label: string; }> = ({ session, label }) => {
+        const getSessionIcon = (sessionNum: number) => {
+            switch(sessionNum) {
                 case 1: return <Sparkles className="w-5 h-5" strokeWidth={1.5} />;
                 case 2: return <Zap className="w-5 h-5" strokeWidth={1.5} />;
                 case 3: return <Compass className="w-5 h-5" strokeWidth={1.5} />;
+                case 4: return <Brain className="w-5 h-5" strokeWidth={1.5} />;
+                case 5: return <Award className="w-5 h-5" strokeWidth={1.5} />;
                 default: return <Sparkles className="w-5 h-5" strokeWidth={1.5} />;
             }
         };
 
-        const getDayColor = (dayNum: number) => {
-            switch(dayNum) {
+        const getSessionColor = (sessionNum: number) => {
+            switch(sessionNum) {
                 case 1: return "from-blue-500 to-cyan-500";
                 case 2: return "from-purple-500 to-pink-500";
                 case 3: return "from-green-500 to-emerald-500";
+                case 4: return "from-orange-500 to-red-500";
+                case 5: return "from-yellow-500 to-amber-500";
                 default: return "from-slate-500 to-slate-600";
             }
         };
 
         return (
         <button
-            onClick={() => setActiveTab(day)}
+            onClick={() => setActiveTab(session)}
                 className={`w-full text-left p-3 sm:p-4 rounded-lg transition-all duration-300 border-2 relative overflow-hidden ${
-                    activeTab === day 
-                        ? `bg-gradient-to-br ${getDayColor(day)} text-white shadow-lg border-white/30 transform scale-105` 
+                    activeTab === session 
+                        ? `bg-gradient-to-br ${getSessionColor(session)} text-white shadow-lg border-white/30 transform scale-105` 
                         : 'bg-slate-800 hover:bg-slate-700 text-slate-300 border-slate-600 hover:border-slate-500 hover:shadow-md hover:scale-102'
                 }`}
             >
-                {/* Efecto de brillo para el día activo */}
-                {activeTab === day && (
+                {/* Efecto de brillo para la sesión activa */}
+                {activeTab === session && (
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
                 )}
                 
                 <div className="relative z-10">
                     <div className="flex items-center gap-2 mb-1">
-                        {getDayIcon(day)}
-                        <span className={`block text-xs sm:text-sm font-semibold ${activeTab === day ? 'opacity-90' : 'opacity-70'}`}>
-                            DÍA {day}
+                        {getSessionIcon(session)}
+                        <span className={`block text-xs sm:text-sm font-semibold ${activeTab === session ? 'opacity-90' : 'opacity-70'}`}>
+                            SESIÓN {session}
                         </span>
                     </div>
                     <span className="font-bold text-sm sm:text-base block">{label}</span>
-                    {activeTab === day && (
+                    {activeTab === session && (
                         <div className="mt-2 w-full h-1 bg-white rounded-full opacity-60"></div>
                     )}
                 </div>
@@ -267,22 +286,24 @@ const ProgramSection: React.FC = () => {
              </p>
              <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 max-w-6xl mx-auto">
                 <div className="lg:w-1/3">
-                    <div className="flex flex-col sm:flex-row lg:flex-col gap-3 sm:gap-4">
-                        <TabButton day={1} label={t.program.days.friday}/>
-                        <TabButton day={2} label={t.program.days.saturday}/>
-                        <TabButton day={3} label={t.program.days.sunday}/>
+                    <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-1 gap-3 sm:gap-4">
+                        <TabButton session={1} label={t.program.sessions.session1}/>
+                        <TabButton session={2} label={t.program.sessions.session2}/>
+                        <TabButton session={3} label={t.program.sessions.session3}/>
+                        <TabButton session={4} label={t.program.sessions.session4}/>
+                        <TabButton session={5} label={t.program.sessions.session5}/>
                     </div>
                     {/* Indicador de progreso */}
                     <div className="mt-4 hidden lg:block">
                         <div className="text-center text-slate-400 text-sm mb-2">Progreso del Programa</div>
                         <div className="flex gap-2 justify-center">
-                            {[1, 2, 3].map((day) => (
+                            {[1, 2, 3, 4, 5].map((session) => (
                                 <div
-                                    key={day}
+                                    key={session}
                                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                                        activeTab === day 
+                                        activeTab === session 
                                             ? 'bg-cyan-400 scale-125' 
-                                            : activeTab > day 
+                                            : activeTab > session 
                                                 ? 'bg-slate-500' 
                                                 : 'bg-slate-700 border border-slate-600'
                                     }`}
@@ -293,7 +314,8 @@ const ProgramSection: React.FC = () => {
                 </div>
                 <div className="lg:w-2/3 bg-slate-800/50 border border-slate-700 p-4 sm:p-6 md:p-8 rounded-2xl">
                      <h3 className="text-xl sm:text-2xl font-bold text-cyan-400 mb-2 leading-tight">{scheduleData[activeTab].title}</h3>
-                     <p className="text-slate-400 mb-4 sm:mb-6 text-sm sm:text-base">Temas principales del día:</p>
+                     <p className="text-slate-300 mb-2 text-sm sm:text-base font-medium">{scheduleData[activeTab].date}</p>
+                     <p className="text-slate-400 mb-4 sm:mb-6 text-sm sm:text-base">Temas principales de la sesión:</p>
                      <ul className="space-y-4 sm:space-y-6">
                         {scheduleData[activeTab].topics.map((topic, index) => (
                             <li key={index} className="flex items-start">

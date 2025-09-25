@@ -25,22 +25,37 @@ export interface Translations {
   program: {
     title: string;
     subtitle: string;
-    days: {
-      friday: string;
-      saturday: string;
-      sunday: string;
+    sessions: {
+      session1: string;
+      session2: string;
+      session3: string;
+      session4: string;
+      session5: string;
     };
     topics: {
-      day1: {
+      session1: {
         title: string;
+        date: string;
         topics: Array<{ title: string; description: string }>;
       };
-      day2: {
+      session2: {
         title: string;
+        date: string;
         topics: Array<{ title: string; description: string }>;
       };
-      day3: {
+      session3: {
         title: string;
+        date: string;
+        topics: Array<{ title: string; description: string }>;
+      };
+      session4: {
+        title: string;
+        date: string;
+        topics: Array<{ title: string; description: string }>;
+      };
+      session5: {
+        title: string;
+        date: string;
         topics: Array<{ title: string; description: string }>;
       };
     };
@@ -119,23 +134,26 @@ export const translations: Record<string, Translations> = {
     hero: {
       title: "Seminario Internacional de Inteligencia Energética",
       location: "Ciudad de México, México",
-      date: "5–7 Diciembre 2025",
+      date: "Diciembre 2025 - Febrero 2026",
       subtitle: "Ahora potenciado con herramientas de Inteligencia Artificial para acelerar tu transformación.",
-      description: "Una inmersión profunda de 3 días para transformar tu cerebro reactivo en una herramienta de creación consciente.",
+      description: "Una experiencia transformadora de 5 sesiones para transformar tu cerebro reactivo en una herramienta de creación consciente.",
       ctaInscribirse: "Inscribirme Ahora",
       ctaVerPrograma: "Ver Programa"
     },
     program: {
       title: "Programa Detallado",
-      subtitle: "Haz clic en cada día para explorar el contenido completo del seminario",
-      days: {
-        friday: "VIERNES",
-        saturday: "SÁBADO",
-        sunday: "DOMINGO"
+      subtitle: "Haz clic en cada sesión para explorar el contenido completo del seminario",
+      sessions: {
+        session1: "SESIÓN 1",
+        session2: "SESIÓN 2", 
+        session3: "SESIÓN 3",
+        session4: "SESIÓN 4",
+        session5: "SESIÓN 5"
       },
       topics: {
-        day1: {
+        session1: {
           title: "Neuroplasticidad, IA y Sistemas de Inteligencia Estratégica",
+          date: "5 de Diciembre 2025",
           topics: [
             {
               title: "El cerebro reactivo: supervivencia vs. felicidad",
@@ -149,18 +167,11 @@ export const translations: Record<string, Translations> = {
               title: "Inteligencia Aumentada: IA para el Crecimiento",
               description: "Utiliza modelos de IA como asistente para profundizar en los conceptos, generar nuevas perspectivas y personalizar tu aprendizaje."
             },
-            {
-              title: "LSP Insight System: del símbolo a la acción",
-              description: "Descubre los principios de LEGO® Serious Play® para materializar ideas y 'pensar con las manos'."
-            },
-            {
-              title: "Descubrimiento de insights y estrategias con LSP",
-              description: "Transforma los descubrimientos de los modelos en arquetipos, estrategias claras y un plan de acción concreto."
-            }
           ]
         },
-        day2: {
+        session2: {
           title: "Bioenergética y Context Engineering Aplicado",
+          date: "6 de Diciembre 2025",
           topics: [
             {
               title: "Context Engineering y Esquema de Contexto",
@@ -175,13 +186,14 @@ export const translations: Record<string, Translations> = {
               description: "Aprende a identificar la sensación raíz corporal y a comprender la dinámica cuerpo-emoción-creencia."
             },
             {
-              title: "Los cuatro protocolos principales (Alpha, Beta, Gamma, Delta)",
-              description: "Integra protocolos específicos para abordar síntomas físicos, conflictos emocionales y dinámicas del sistema."
+              title: 'Evento Especial: Obra de Teatro "Yo fui calor"',
+              description: "Una experiencia artística nocturna para complementar el aprendizaje del día."
             },
           ]
         },
-        day3: {
+        session3: {
           title: "Sistemas de Decisión Consciente - Experiencia Vivencial",
+          date: "7 de Diciembre 2025",
           topics: [
             {
               title: "Los Tres Elementos de Decisión Consciente",
@@ -196,12 +208,52 @@ export const translations: Record<string, Translations> = {
               description: "Desarrolla la habilidad de asignar nuevos significados y reencuadrar limitaciones para potenciar tu vida."
             },
             {
+              title: "Síntesis de Transformación Integral y Certificación",
+              description: "Integra los aprendizajes de las primeras 3 sesiones, establece compromisos personalizados y recibe tu certificación inicial."
+            }
+          ]
+        },
+        session4: {
+          title: "Consolidación y Profundización",
+          date: "25 de Enero 2026",
+          topics: [
+            {
+              title: "Revisión de Progreso y Ajustes",
+              description: "Evaluación del progreso personal y ajustes en las estrategias implementadas."
+            },
+            {
+              title: "Protocolos Avanzados de Bioenergética",
+              description: "Los cuatro protocolos principales (Alpha, Beta, Gamma, Delta) y su aplicación práctica."
+            },
+            {
               title: "Metodología de Acción Efectiva",
               description: "Conecta la comprensión con la implementación a través de protocolos que aseguran un compromiso auténtico."
             },
             {
-              title: "Síntesis de Transformación Integral y Certificación",
-              description: "Integra los aprendizajes de los 3 días, establece compromisos personalizados y recibe tu certificación."
+              title: "LSP Insight System: del símbolo a la acción",
+              description: "Descubre los principios de LEGO® Serious Play® para materializar ideas y 'pensar con las manos'."
+            }
+          ]
+        },
+        session5: {
+          title: "Maestría y Proyección Futura",
+          date: "22 de Febrero 2026",
+          topics: [
+            {
+              title: "Descubrimiento de insights y estrategias con LSP",
+              description: "Transforma los descubrimientos de los modelos en arquetipos, estrategias claras y un plan de acción concreto."
+            },
+            {
+              title: "Integración de Herramientas de IA",
+              description: "Uso avanzado de IA como asistente estratégico en tu práctica profesional y personal."
+            },
+            {
+              title: "Síntesis Final y Proyección",
+              description: "Integración completa de los aprendizajes, establecimiento de compromisos a largo plazo y plan de desarrollo continuo."
+            },
+            {
+              title: "Certificación Final y Comunidad",
+              description: "Entrega de certificación final y acceso a la comunidad de práctica continua."
             }
           ]
         }
@@ -345,23 +397,26 @@ export const translations: Record<string, Translations> = {
     hero: {
       title: "International Energy Intelligence Conference",
       location: "Mexico City, Mexico",
-      date: "December 5-7, 2025",
+      date: "December 2025 - February 2026",
       subtitle: "Now enhanced with Artificial Intelligence tools to accelerate your transformation.",
-      description: "A deep 3-day immersion to transform your reactive brain into a conscious creation tool.",
+      description: "A transformative 5-session experience to transform your reactive brain into a conscious creation tool.",
       ctaInscribirse: "Register Now",
       ctaVerPrograma: "View Program"
     },
     program: {
       title: "Detailed Program",
-      subtitle: "Click on each day to explore the complete seminar content",
-      days: {
-        friday: "FRIDAY",
-        saturday: "SATURDAY",
-        sunday: "SUNDAY"
+      subtitle: "Click on each session to explore the complete seminar content",
+      sessions: {
+        session1: "SESSION 1",
+        session2: "SESSION 2",
+        session3: "SESSION 3",
+        session4: "SESSION 4",
+        session5: "SESSION 5"
       },
       topics: {
-        day1: {
+        session1: {
           title: "Neuroplasticity, AI and Strategic Intelligence Systems",
+          date: "December 5, 2025",
           topics: [
             {
               title: "The reactive brain: survival vs. happiness",
@@ -375,18 +430,11 @@ export const translations: Record<string, Translations> = {
               title: "Augmented Intelligence: AI for Growth",
               description: "Use AI models as assistants to deepen concepts, generate new perspectives, and personalize your learning."
             },
-            {
-              title: "LSP Insight System: from symbol to action",
-              description: "Discover LEGO® Serious Play® principles to materialize ideas and 'think with your hands'."
-            },
-            {
-              title: "Insight and strategy discovery with LSP",
-              description: "Transform model discoveries into archetypes, clear strategies, and a concrete action plan."
-            }
           ]
         },
-        day2: {
+        session2: {
           title: "Bioenergetics and Applied Context Engineering",
+          date: "December 6, 2025",
           topics: [
             {
               title: "Context Engineering and Context Schema",
@@ -401,13 +449,14 @@ export const translations: Record<string, Translations> = {
               description: "Learn to identify root body sensations and understand body-emotion-belief dynamics."
             },
             {
-              title: "The four main protocols (Alpha, Beta, Gamma, Delta)",
-              description: "Integrate specific protocols to address physical symptoms, emotional conflicts, and system dynamics."
+              title: 'Special Event: Theater Play "I was heat"',
+              description: "A nighttime artistic experience to complement the day's learning."
             },
           ]
         },
-        day3: {
+        session3: {
           title: "Conscious Decision Systems - Lived Experience",
+          date: "December 7, 2025",
           topics: [
             {
               title: "The Three Elements of Conscious Decision",
@@ -422,12 +471,52 @@ export const translations: Record<string, Translations> = {
               description: "Develop the ability to assign new meanings and reframe limitations to empower your life."
             },
             {
+              title: "Integral Transformation Synthesis and Certification",
+              description: "Integrate learnings from the first 3 sessions, establish personalized commitments, and receive your initial certification."
+            }
+          ]
+        },
+        session4: {
+          title: "Consolidation and Deepening",
+          date: "January 25, 2026",
+          topics: [
+            {
+              title: "Progress Review and Adjustments",
+              description: "Evaluation of personal progress and adjustments in implemented strategies."
+            },
+            {
+              title: "Advanced Bioenergetics Protocols",
+              description: "The four main protocols (Alpha, Beta, Gamma, Delta) and their practical application."
+            },
+            {
               title: "Effective Action Methodology",
               description: "Connect understanding with implementation through protocols that ensure authentic commitment."
             },
             {
-              title: "Integral Transformation Synthesis and Certification",
-              description: "Integrate learnings from the 3 days, establish personalized commitments, and receive your certification."
+              title: "LSP Insight System: from symbol to action",
+              description: "Discover LEGO® Serious Play® principles to materialize ideas and 'think with your hands'."
+            }
+          ]
+        },
+        session5: {
+          title: "Mastery and Future Projection",
+          date: "February 22, 2026",
+          topics: [
+            {
+              title: "Insight and strategy discovery with LSP",
+              description: "Transform model discoveries into archetypes, clear strategies, and a concrete action plan."
+            },
+            {
+              title: "Integration of AI Tools",
+              description: "Advanced use of AI as a strategic assistant in your professional and personal practice."
+            },
+            {
+              title: "Final Synthesis and Projection",
+              description: "Complete integration of learnings, establishment of long-term commitments, and continuous development plan."
+            },
+            {
+              title: "Final Certification and Community",
+              description: "Delivery of final certification and access to continuous practice community."
             }
           ]
         }

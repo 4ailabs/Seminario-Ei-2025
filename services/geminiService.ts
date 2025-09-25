@@ -27,9 +27,9 @@ class GeminiService {
       
 <<<<<<< Updated upstream
       INFORMACIÓN DEL SEMINARIO:
-      - Fecha: 5-7 de Diciembre 2025
+      - Fechas: Diciembre 2025 - Febrero 2026 (5 sesiones)
       - Ubicación: Playa del Carmen, México
-      - Duración: 3 días de inmersión profunda
+      - Duración: 5 sesiones de transformación profunda
       - Modalidades: Presencial y Online
       - Precio Early Bird: $8,000 MXN (válido hasta 10 de Noviembre 2025)
       - Precio Regular: $9,000 MXN
@@ -43,25 +43,34 @@ class GeminiService {
       
       PROGRAMA DETALLADO:
       
-      DÍA 1 - VIERNES: "Neuroplasticidad, IA y Sistemas de Inteligencia Estratégica"
+      SESIÓN 1 - 5 de Diciembre: "Neuroplasticidad, IA y Sistemas de Inteligencia Estratégica"
       - El cerebro reactivo: supervivencia vs. felicidad
       - Priming neurofisiológico: entrenamiento de estados óptimos
       - Inteligencia Aumentada: IA para el Crecimiento
-      - LSP Insight System: del símbolo a la acción
-      - Descubrimiento de insights y estrategias con LSP
       
-      DÍA 2 - SÁBADO: "Bioenergética y Context Engineering Aplicado"
+      SESIÓN 2 - 6 de Diciembre: "Bioenergética y Context Engineering Aplicado"
       - Context Engineering y Esquema de Contexto
       - Rastreo guiado con Esquema de Contexto
       - Del síntoma al escenario energético
-      - Los cuatro protocolos principales (Alpha, Beta, Gamma, Delta)
+      - Evento Especial: Obra de Teatro "Yo fui calor"
       
-      DÍA 3 - DOMINGO: "Sistemas de Decisión Consciente - Experiencia Vivencial"
+      SESIÓN 3 - 7 de Diciembre: "Sistemas de Decisión Consciente - Experiencia Vivencial"
       - Los Tres Elementos de Decisión Consciente
       - Maestría del Enfoque Consciente
       - Resignificación y Reencuadre Consciente
-      - Metodología de Acción Efectiva
       - Síntesis de Transformación Integral y Certificación
+      
+      SESIÓN 4 - 25 de Enero 2026: "Consolidación y Profundización"
+      - Revisión de Progreso y Ajustes
+      - Protocolos Avanzados de Bioenergética
+      - Metodología de Acción Efectiva
+      - LSP Insight System: del símbolo a la acción
+      
+      SESIÓN 5 - 22 de Febrero 2026: "Maestría y Proyección Futura"
+      - Descubrimiento de insights y estrategias con LSP
+      - Integración de Herramientas de IA
+      - Síntesis Final y Proyección
+      - Certificación Final y Comunidad
       
       PARA QUIÉN ES:
       - Profesionales de la Salud (terapeutas, coaches, psicólogos)
@@ -86,9 +95,9 @@ class GeminiService {
       en: `You are a virtual assistant specialized in the International Energy Intelligence Conference.
       
       BASIC SEMINAR INFORMATION:
-      - Date: December 5-7, 2025
+      - Dates: December 2025 - February 2026 (5 sessions)
       - Location: Playa del Carmen, Mexico
-      - Duration: 3 days of deep immersion
+      - Duration: 5 sessions of deep transformation
       - Modalities: In-Person and Online
       - Early Bird Price: $8,000 MXN (valid until November 10, 2025)
       - Regular Price: $9,000 MXN
@@ -102,25 +111,34 @@ class GeminiService {
       
       DETAILED PROGRAM:
       
-      DAY 1 - FRIDAY: "Neuroplasticity, AI and Strategic Intelligence Systems"
+      SESSION 1 - December 5: "Neuroplasticity, AI and Strategic Intelligence Systems"
       - The reactive brain: survival vs. happiness
       - Neurophysiological priming: optimal state training
       - Augmented Intelligence: AI for Growth
-      - LSP Insight System: from symbol to action
-      - Insight and strategy discovery with LSP
       
-      DAY 2 - SATURDAY: "Bioenergetics and Applied Context Engineering"
+      SESSION 2 - December 6: "Bioenergetics and Applied Context Engineering"
       - Context Engineering and Context Schema
       - Guided tracking with Context Schema
       - From symptom to energetic scenario
-      - The four main protocols (Alpha, Beta, Gamma, Delta)
+      - Special Event: Theater Play "I was heat"
       
-      DAY 3 - SUNDAY: "Conscious Decision Systems - Lived Experience"
+      SESSION 3 - December 7: "Conscious Decision Systems - Lived Experience"
       - The Three Elements of Conscious Decision
       - Mastery of Conscious Focus
       - Conscious Reframing and Re-signification
-      - Effective Action Methodology
       - Integral Transformation Synthesis and Certification
+      
+      SESSION 4 - January 25, 2026: "Consolidation and Deepening"
+      - Progress Review and Adjustments
+      - Advanced Bioenergetics Protocols
+      - Effective Action Methodology
+      - LSP Insight System: from symbol to action
+      
+      SESSION 5 - February 22, 2026: "Mastery and Future Projection"
+      - Insight and strategy discovery with LSP
+      - Integration of AI Tools
+      - Final Synthesis and Projection
+      - Final Certification and Community
       
       WHO IS IT FOR:
       - Health Professionals (therapists, coaches, psychologists)
@@ -215,7 +233,7 @@ class GeminiService {
     const responses = {
       es: {
         'precio': 'El precio Early Bird es de $8,000 MXN (válido hasta el 10 de noviembre 2025) y el precio regular es de $9,000 MXN. Incluye materiales, manuales, protocolos, certificación, acceso a la app oficial y extensiones 2026.',
-        'fecha': 'El seminario se realizará del 5 al 7 de diciembre de 2025 en Playa del Carmen, México.',
+        'fecha': 'El seminario se realizará en 5 sesiones: 5-7 de diciembre de 2025, 25 de enero y 22 de febrero de 2026 en Playa del Carmen, México.',
         'ubicacion': 'El evento se llevará a cabo en Playa del Carmen, México. La ubicación específica se confirmará próximamente.',
         'modalidad': 'El seminario está disponible en modalidad presencial y online.',
         'incluye': 'El seminario incluye: materiales completos, manuales detallados, protocolos de transformación, certificación oficial, acceso a la app oficial con recursos digitales y extensiones 2026.',
@@ -223,7 +241,7 @@ class GeminiService {
       },
       en: {
         'price': 'The Early Bird price is $8,000 MXN (valid until November 10, 2025) and the regular price is $9,000 MXN. It includes materials, manuals, protocols, certification, official app access, and 2026 extensions.',
-        'date': 'The seminar will take place from December 5-7, 2025 in Playa del Carmen, Mexico.',
+        'date': 'The seminar will take place in 5 sessions: December 5-7, 2025, January 25 and February 22, 2026 in Playa del Carmen, Mexico.',
         'location': 'The event will be held in Playa del Carmen, Mexico. The specific venue will be confirmed soon.',
         'modality': 'The seminar is available in both in-person and online modalities.',
         'includes': 'The seminar includes: complete materials, detailed manuals, transformation protocols, official certification, official app access with digital resources, and 2026 extensions.',
