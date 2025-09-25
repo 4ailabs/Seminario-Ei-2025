@@ -167,6 +167,14 @@ export const translations: Record<string, Translations> = {
               title: "Inteligencia Aumentada: IA para el Crecimiento",
               description: "Utiliza modelos de IA como asistente para profundizar en los conceptos, generar nuevas perspectivas y personalizar tu aprendizaje."
             },
+            {
+              title: "Workshop 1: Práctica de Coherencia Cardíaca",
+              description: "Sesión práctica de entrenamiento en coherencia cardíaca y regulación del sistema nervioso autónomo."
+            },
+            {
+              title: "Workshop 2: Exploración con IA",
+              description: "Taller práctico para utilizar herramientas de IA como asistente personal de aprendizaje y desarrollo."
+            },
           ]
         },
         session2: {
@@ -425,6 +433,14 @@ export const translations: Record<string, Translations> = {
             {
               title: "Augmented Intelligence: AI for Growth",
               description: "Use AI models as assistants to deepen concepts, generate new perspectives, and personalize your learning."
+            },
+            {
+              title: "Workshop 1: Heart Coherence Practice",
+              description: "Practical session on heart coherence training and autonomic nervous system regulation."
+            },
+            {
+              title: "Workshop 2: AI Exploration",
+              description: "Hands-on workshop to use AI tools as personal learning and development assistants."
             },
           ]
         },

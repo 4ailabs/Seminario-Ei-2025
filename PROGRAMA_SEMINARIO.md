@@ -46,6 +46,21 @@ Transformar tu cerebro reactivo en una herramienta de creación consciente a tra
 - Generación de nuevas perspectivas personalizadas
 - **Break:** 2:45 PM - 3:00 PM
 
+#### **4. Workshop 1: Práctica de Coherencia Cardíaca**
+*3:00 PM - 4:30 PM*
+- Sesión práctica de entrenamiento en coherencia cardíaca
+- Regulación del sistema nervioso autónomo
+- Técnicas de visualización aplicadas
+- Práctica guiada con monitoreo
+- **Break:** 4:30 PM - 4:45 PM
+
+#### **5. Workshop 2: Exploración con IA**
+*4:45 PM - 6:00 PM*
+- Taller práctico para utilizar herramientas de IA
+- Asistente personal de aprendizaje y desarrollo
+- Exploración de casos prácticos
+- Implementación de estrategias con IA
+
 
 ---
 

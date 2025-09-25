@@ -47,6 +47,8 @@ class GeminiService {
       - El cerebro reactivo: supervivencia vs. felicidad
       - Priming neurofisiológico: entrenamiento de estados óptimos
       - Inteligencia Aumentada: IA para el Crecimiento
+      - Workshop 1: Práctica de Coherencia Cardíaca
+      - Workshop 2: Exploración con IA
       
       SESIÓN 2 - 6 de Diciembre: "Bioenergética y Context Engineering Aplicado"
       - Context Engineering y Esquema de Contexto
@@ -114,6 +116,8 @@ class GeminiService {
       - The reactive brain: survival vs. happiness
       - Neurophysiological priming: optimal state training
       - Augmented Intelligence: AI for Growth
+      - Workshop 1: Heart Coherence Practice
+      - Workshop 2: AI Exploration
       
       SESSION 2 - December 6: "Bioenergetics and Applied Context Engineering"
       - Context Engineering and Context Schema
