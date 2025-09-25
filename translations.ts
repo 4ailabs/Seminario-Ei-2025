@@ -251,10 +251,6 @@ export const translations: Record<string, Translations> = {
               title: "Síntesis Final y Proyección",
               description: "Integración completa de los aprendizajes, establecimiento de compromisos a largo plazo y plan de desarrollo continuo."
             },
-            {
-              title: "Certificación Final y Comunidad",
-              description: "Entrega de certificación final y acceso a la comunidad de práctica continua."
-            }
           ]
         }
       }
@@ -514,10 +510,6 @@ export const translations: Record<string, Translations> = {
               title: "Final Synthesis and Projection",
               description: "Complete integration of learnings, establishment of long-term commitments, and continuous development plan."
             },
-            {
-              title: "Final Certification and Community",
-              description: "Delivery of final certification and access to continuous practice community."
-            }
           ]
         }
       }

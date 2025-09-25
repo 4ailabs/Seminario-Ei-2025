@@ -183,12 +183,12 @@ Transformar tu cerebro reactivo en una herramienta de creación consciente a tra
 - Plan de desarrollo continuo
 - **Break:** 4:00 PM - 4:15 PM
 
-#### **4. Certificación Final y Comunidad**
+#### **4. Celebración de la Transformación**
 *4:15 PM - 6:00 PM*
-- Entrega de certificación final
-- Acceso a la comunidad de práctica continua
+- Reconocimiento del progreso logrado
 - Red de apoyo y colaboración
 - Celebración de la transformación lograda
+- Plan de desarrollo continuo
 
 ---
 

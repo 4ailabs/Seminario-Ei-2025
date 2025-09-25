@@ -70,7 +70,6 @@ class GeminiService {
       - Descubrimiento de insights y estrategias con LSP
       - Integración de Herramientas de IA
       - Síntesis Final y Proyección
-      - Certificación Final y Comunidad
       
       PARA QUIÉN ES:
       - Profesionales de la Salud (terapeutas, coaches, psicólogos)
@@ -138,7 +137,6 @@ class GeminiService {
       - Insight and strategy discovery with LSP
       - Integration of AI Tools
       - Final Synthesis and Projection
-      - Final Certification and Community
       
       WHO IS IT FOR:
       - Health Professionals (therapists, coaches, psychologists)
