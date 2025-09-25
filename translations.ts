@@ -322,8 +322,8 @@ export const translations: Record<string, Translations> = {
       subtitle: "La experiencia continúa con encuentros de seguimiento en 2026 para consolidar tu aprendizaje.",
       earlyBird: "Precio Early Bird",
       regular: "Precio Regular",
-      earlyBirdPrice: "$7,000 MXN",
-      regularPrice: "$8,500 MXN",
+      earlyBirdPrice: "$8,000 MXN",
+      regularPrice: "$9,000 MXN",
       validUntil: "Válido hasta el 10 de Noviembre de 2025",
       includes: "Precios para modalidad Presencial y Online.",
       ctaWhatsApp: "Inscríbete vía WhatsApp"
@@ -548,8 +548,8 @@ export const translations: Record<string, Translations> = {
       subtitle: "The experience continues with follow-up meetings in 2026 to consolidate your learning.",
       earlyBird: "Early Bird Price",
       regular: "Regular Price",
-      earlyBirdPrice: "$7,000 MXN",
-      regularPrice: "$8,500 MXN",
+      earlyBirdPrice: "$8,000 MXN",
+      regularPrice: "$9,000 MXN",
       validUntil: "Valid until November 10, 2025",
       includes: "Prices for both In-Person and Online modalities.",
       ctaWhatsApp: "Register via WhatsApp"

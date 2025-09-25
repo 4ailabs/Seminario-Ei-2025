@@ -31,8 +31,8 @@ class GeminiService {
       - Ubicación: Playa del Carmen, México
       - Duración: 3 días de inmersión profunda
       - Modalidades: Presencial y Online
-      - Precio Early Bird: $7,000 MXN (válido hasta 10 de Noviembre 2025)
-      - Precio Regular: $8,500 MXN
+      - Precio Early Bird: $8,000 MXN (válido hasta 10 de Noviembre 2025)
+      - Precio Regular: $9,000 MXN
       
       QUÉ INCLUYE:
       - Materiales y manuales completos
@@ -90,8 +90,8 @@ class GeminiService {
       - Location: Playa del Carmen, Mexico
       - Duration: 3 days of deep immersion
       - Modalities: In-Person and Online
-      - Early Bird Price: $7,000 MXN (valid until November 10, 2025)
-      - Regular Price: $8,500 MXN
+      - Early Bird Price: $8,000 MXN (valid until November 10, 2025)
+      - Regular Price: $9,000 MXN
       
       WHAT'S INCLUDED:
       - Complete materials and manuals
@@ -214,7 +214,7 @@ class GeminiService {
   async sendMessageMock(message: string, language: 'es' | 'en' = 'es'): Promise<GeminiResponse> {
     const responses = {
       es: {
-        'precio': 'El precio Early Bird es de $7,000 MXN (válido hasta el 10 de noviembre 2025) y el precio regular es de $8,500 MXN. Incluye materiales, manuales, protocolos, certificación, acceso a la app oficial y extensiones 2026.',
+        'precio': 'El precio Early Bird es de $8,000 MXN (válido hasta el 10 de noviembre 2025) y el precio regular es de $9,000 MXN. Incluye materiales, manuales, protocolos, certificación, acceso a la app oficial y extensiones 2026.',
         'fecha': 'El seminario se realizará del 5 al 7 de diciembre de 2025 en Playa del Carmen, México.',
         'ubicacion': 'El evento se llevará a cabo en Playa del Carmen, México. La ubicación específica se confirmará próximamente.',
         'modalidad': 'El seminario está disponible en modalidad presencial y online.',
@@ -222,7 +222,7 @@ class GeminiService {
         'default': 'Gracias por tu interés en el Seminario Internacional de Inteligencia Energética. ¿Te gustaría saber más sobre precios, fechas, ubicación o qué incluye el seminario? También puedes contactarnos directamente vía WhatsApp al +52 557 907 6626.'
       },
       en: {
-        'price': 'The Early Bird price is $7,000 MXN (valid until November 10, 2025) and the regular price is $8,500 MXN. It includes materials, manuals, protocols, certification, official app access, and 2026 extensions.',
+        'price': 'The Early Bird price is $8,000 MXN (valid until November 10, 2025) and the regular price is $9,000 MXN. It includes materials, manuals, protocols, certification, official app access, and 2026 extensions.',
         'date': 'The seminar will take place from December 5-7, 2025 in Playa del Carmen, Mexico.',
         'location': 'The event will be held in Playa del Carmen, Mexico. The specific venue will be confirmed soon.',
         'modality': 'The seminar is available in both in-person and online modalities.',
