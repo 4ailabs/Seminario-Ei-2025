@@ -168,12 +168,12 @@ export const translations: Record<string, Translations> = {
               description: "Utiliza modelos de IA como asistente para profundizar en los conceptos, generar nuevas perspectivas y personalizar tu aprendizaje."
             },
             {
-              title: "Workshop 1: Práctica de Coherencia Cardíaca",
-              description: "Sesión práctica de entrenamiento en coherencia cardíaca y regulación del sistema nervioso autónomo."
+              title: "Workshop 1: Priming Neurofisiológico",
+              description: "Sesión práctica de entrenamiento en priming neurofisiológico y regulación del sistema nervioso autónomo."
             },
             {
-              title: "Workshop 2: Exploración con IA",
-              description: "Taller práctico para utilizar herramientas de IA como asistente personal de aprendizaje y desarrollo."
+              title: "Workshop 2: Estado de Enfoque y Recursos",
+              description: "Taller práctico para desarrollar estados de enfoque óptimo y acceso a recursos internos."
             },
           ]
         },
@@ -194,8 +194,8 @@ export const translations: Record<string, Translations> = {
               description: "Aprende a identificar la sensación raíz corporal y a comprender la dinámica cuerpo-emoción-creencia."
             },
             {
-              title: 'Evento Especial: Obra de Teatro "Yo fui calor"',
-              description: "Una experiencia artística nocturna para complementar el aprendizaje del día."
+              title: "Workshop: Context Engineering Bioenergético",
+              description: "Taller práctico de Context Engineering aplicado a la bioenergética y transformación personal."
             },
           ]
         },
@@ -435,12 +435,12 @@ export const translations: Record<string, Translations> = {
               description: "Use AI models as assistants to deepen concepts, generate new perspectives, and personalize your learning."
             },
             {
-              title: "Workshop 1: Heart Coherence Practice",
-              description: "Practical session on heart coherence training and autonomic nervous system regulation."
+              title: "Workshop 1: Neurophysiological Priming",
+              description: "Practical session on neurophysiological priming training and autonomic nervous system regulation."
             },
             {
-              title: "Workshop 2: AI Exploration",
-              description: "Hands-on workshop to use AI tools as personal learning and development assistants."
+              title: "Workshop 2: Focus State and Resources",
+              description: "Hands-on workshop to develop optimal focus states and access to internal resources."
             },
           ]
         },
@@ -461,8 +461,8 @@ export const translations: Record<string, Translations> = {
               description: "Learn to identify root body sensations and understand body-emotion-belief dynamics."
             },
             {
-              title: 'Special Event: Theater Play "I was heat"',
-              description: "A nighttime artistic experience to complement the day's learning."
+              title: "Workshop: Bioenergetic Context Engineering",
+              description: "Practical workshop on Context Engineering applied to bioenergetics and personal transformation."
             },
           ]
         },

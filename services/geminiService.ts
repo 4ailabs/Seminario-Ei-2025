@@ -47,14 +47,14 @@ class GeminiService {
       - El cerebro reactivo: supervivencia vs. felicidad
       - Priming neurofisiológico: entrenamiento de estados óptimos
       - Inteligencia Aumentada: IA para el Crecimiento
-      - Workshop 1: Práctica de Coherencia Cardíaca
-      - Workshop 2: Exploración con IA
+      - Workshop 1: Priming Neurofisiológico
+      - Workshop 2: Estado de Enfoque y Recursos
       
       SESIÓN 2 - 6 de Diciembre: "Bioenergética y Context Engineering Aplicado"
       - Context Engineering y Esquema de Contexto
       - Rastreo guiado con Esquema de Contexto
       - Del síntoma al escenario energético
-      - Evento Especial: Obra de Teatro "Yo fui calor"
+      - Workshop: Context Engineering Bioenergético
       
       SESIÓN 3 - 7 de Diciembre: "Sistemas de Decisión Consciente - Experiencia Vivencial"
       - Los Tres Elementos de Decisión Consciente
@@ -116,14 +116,14 @@ class GeminiService {
       - The reactive brain: survival vs. happiness
       - Neurophysiological priming: optimal state training
       - Augmented Intelligence: AI for Growth
-      - Workshop 1: Heart Coherence Practice
-      - Workshop 2: AI Exploration
+      - Workshop 1: Neurophysiological Priming
+      - Workshop 2: Focus State and Resources
       
       SESSION 2 - December 6: "Bioenergetics and Applied Context Engineering"
       - Context Engineering and Context Schema
       - Guided tracking with Context Schema
       - From symptom to energetic scenario
-      - Special Event: Theater Play "I was heat"
+      - Workshop: Bioenergetic Context Engineering
       
       SESSION 3 - December 7: "Conscious Decision Systems - Lived Experience"
       - The Three Elements of Conscious Decision

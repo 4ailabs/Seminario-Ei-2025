@@ -46,20 +46,20 @@ Transformar tu cerebro reactivo en una herramienta de creación consciente a tra
 - Generación de nuevas perspectivas personalizadas
 - **Break:** 2:45 PM - 3:00 PM
 
-#### **4. Workshop 1: Práctica de Coherencia Cardíaca**
+#### **4. Workshop 1: Priming Neurofisiológico**
 *3:00 PM - 4:30 PM*
-- Sesión práctica de entrenamiento en coherencia cardíaca
+- Sesión práctica de entrenamiento en priming neurofisiológico
 - Regulación del sistema nervioso autónomo
-- Técnicas de visualización aplicadas
+- Técnicas de coherencia cardíaca aplicadas
 - Práctica guiada con monitoreo
 - **Break:** 4:30 PM - 4:45 PM
 
-#### **5. Workshop 2: Exploración con IA**
+#### **5. Workshop 2: Estado de Enfoque y Recursos**
 *4:45 PM - 6:00 PM*
-- Taller práctico para utilizar herramientas de IA
-- Asistente personal de aprendizaje y desarrollo
-- Exploración de casos prácticos
-- Implementación de estrategias con IA
+- Taller práctico para desarrollar estados de enfoque óptimo
+- Acceso a recursos internos y estados de alta performance
+- Técnicas de visualización y anclaje
+- Implementación de estrategias de enfoque
 
 
 ---
@@ -91,11 +91,12 @@ Transformar tu cerebro reactivo en una herramienta de creación consciente a tra
 - Mapeo de estados energéticos
 - **Break:** 2:45 PM - 3:00 PM
 
-#### **4. Evento Especial: Obra de Teatro "Yo fui calor"**
+#### **4. Workshop: Context Engineering Bioenergético**
 *3:00 PM - 6:00 PM*
-- Experiencia artística nocturna
-- Complemento vivencial del aprendizaje del día
-- Integración emocional y sensorial
+- Taller práctico de Context Engineering aplicado a la bioenergética
+- Transformación personal a través de preguntas poderosas
+- Aplicación práctica de esquemas de contexto
+- Integración de técnicas bioenergéticas con Context Engineering
 
 ---
 
@@ -322,7 +323,7 @@ Transformar tu cerebro reactivo en una herramienta de creación consciente a tra
 - ✅ Certificación oficial
 - ✅ Acceso a app oficial
 - ✅ Sesiones de seguimiento 2026 (online)
-- ✅ Obra de teatro (sesión 2 presencial)
+- ✅ Workshop Context Engineering Bioenergético (sesión 2)
 - ✅ Plataforma online para sesiones 4 y 5
 
 ---
