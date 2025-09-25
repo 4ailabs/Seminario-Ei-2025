@@ -6,6 +6,17 @@
 **⏰ Duración:** 5 sesiones de transformación profunda  
 **🎯 Modalidad:** Presencial (Sesiones 1-3) y Online (Sesiones 4-5)  
 
+> **📝 Nota importante:** El programa está sujeto a cambios sin previo aviso. Nos reservamos el derecho de modificar horarios, contenidos o modalidades para optimizar la experiencia de aprendizaje.
+
+---
+
+**📍 Location:** Mexico City, Mexico (Sessions 1-3) / Online (Sessions 4-5)  
+**📅 Dates:** December 2025 - February 2026 (5 sessions)  
+**⏰ Duration:** 5 sessions of deep transformation  
+**🎯 Modality:** In-Person (Sessions 1-3) and Online (Sessions 4-5)  
+
+> **📝 Important note:** The program is subject to changes without prior notice. We reserve the right to modify schedules, content, or modalities to optimize the learning experience.
+
 ---
 
 ## 🌟 Descripción General
@@ -369,6 +380,14 @@ La experiencia se extiende con las sesiones 4 y 5 en 2026 para consolidar tu apr
 **Más de una década y 12 seminarios transformando vidas.**
 
 *Únete a la revolución de la inteligencia energética y descubre el poder de tu cerebro consciente.*
+
+---
+
+## 📋 Aviso Importante
+
+**El programa está sujeto a cambios sin previo aviso.** Nos reservamos el derecho de modificar horarios, contenidos, modalidades, ubicaciones o cualquier aspecto del seminario para optimizar la experiencia de aprendizaje y adaptarnos a circunstancias imprevistas.
+
+**The program is subject to changes without prior notice.** We reserve the right to modify schedules, content, modalities, locations, or any aspect of the seminar to optimize the learning experience and adapt to unforeseen circumstances.
 
 ---
 
