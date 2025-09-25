@@ -215,7 +215,7 @@ export const translations: Record<string, Translations> = {
         },
         session4: {
           title: "Consolidación y Profundización",
-          date: "25 de Enero 2026",
+          date: "25 de Enero 2026 (Online)",
           topics: [
             {
               title: "Revisión de Progreso y Ajustes",
@@ -237,7 +237,7 @@ export const translations: Record<string, Translations> = {
         },
         session5: {
           title: "Maestría y Proyección Futura",
-          date: "22 de Febrero 2026",
+          date: "22 de Febrero 2026 (Online)",
           topics: [
             {
               title: "Descubrimiento de insights y estrategias con LSP",
@@ -478,7 +478,7 @@ export const translations: Record<string, Translations> = {
         },
         session4: {
           title: "Consolidation and Deepening",
-          date: "January 25, 2026",
+          date: "January 25, 2026 (Online)",
           topics: [
             {
               title: "Progress Review and Adjustments",
@@ -500,7 +500,7 @@ export const translations: Record<string, Translations> = {
         },
         session5: {
           title: "Mastery and Future Projection",
-          date: "February 22, 2026",
+          date: "February 22, 2026 (Online)",
           topics: [
             {
               title: "Insight and strategy discovery with LSP",

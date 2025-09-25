@@ -28,7 +28,7 @@ class GeminiService {
 <<<<<<< Updated upstream
       INFORMACIÓN DEL SEMINARIO:
       - Fechas: Diciembre 2025 - Febrero 2026 (5 sesiones)
-      - Ubicación: Playa del Carmen, México
+      - Ubicación: Ciudad de México, México (Sesiones 1-3) / Online (Sesiones 4-5)
       - Duración: 5 sesiones de transformación profunda
       - Modalidades: Presencial y Online
       - Precio Early Bird: $8,000 MXN (válido hasta 10 de Noviembre 2025)
@@ -60,13 +60,13 @@ class GeminiService {
       - Resignificación y Reencuadre Consciente
       - Síntesis de Transformación Integral y Certificación
       
-      SESIÓN 4 - 25 de Enero 2026: "Consolidación y Profundización"
+      SESIÓN 4 - 25 de Enero 2026 (Online): "Consolidación y Profundización"
       - Revisión de Progreso y Ajustes
       - Protocolos Avanzados de Bioenergética
       - Metodología de Acción Efectiva
       - LSP Insight System: del símbolo a la acción
       
-      SESIÓN 5 - 22 de Febrero 2026: "Maestría y Proyección Futura"
+      SESIÓN 5 - 22 de Febrero 2026 (Online): "Maestría y Proyección Futura"
       - Descubrimiento de insights y estrategias con LSP
       - Integración de Herramientas de IA
       - Síntesis Final y Proyección
@@ -96,7 +96,7 @@ class GeminiService {
       
       BASIC SEMINAR INFORMATION:
       - Dates: December 2025 - February 2026 (5 sessions)
-      - Location: Playa del Carmen, Mexico
+      - Location: Mexico City, Mexico (Sessions 1-3) / Online (Sessions 4-5)
       - Duration: 5 sessions of deep transformation
       - Modalities: In-Person and Online
       - Early Bird Price: $8,000 MXN (valid until November 10, 2025)
@@ -128,13 +128,13 @@ class GeminiService {
       - Conscious Reframing and Re-signification
       - Integral Transformation Synthesis and Certification
       
-      SESSION 4 - January 25, 2026: "Consolidation and Deepening"
+      SESSION 4 - January 25, 2026 (Online): "Consolidation and Deepening"
       - Progress Review and Adjustments
       - Advanced Bioenergetics Protocols
       - Effective Action Methodology
       - LSP Insight System: from symbol to action
       
-      SESSION 5 - February 22, 2026: "Mastery and Future Projection"
+      SESSION 5 - February 22, 2026 (Online): "Mastery and Future Projection"
       - Insight and strategy discovery with LSP
       - Integration of AI Tools
       - Final Synthesis and Projection
@@ -233,16 +233,16 @@ class GeminiService {
     const responses = {
       es: {
         'precio': 'El precio Early Bird es de $8,000 MXN (válido hasta el 10 de noviembre 2025) y el precio regular es de $9,000 MXN. Incluye materiales, manuales, protocolos, certificación, acceso a la app oficial y extensiones 2026.',
-        'fecha': 'El seminario se realizará en 5 sesiones: 5-7 de diciembre de 2025, 25 de enero y 22 de febrero de 2026 en Playa del Carmen, México.',
-        'ubicacion': 'El evento se llevará a cabo en Playa del Carmen, México. La ubicación específica se confirmará próximamente.',
+        'fecha': 'El seminario se realizará en 5 sesiones: 5-7 de diciembre de 2025 (presencial en Ciudad de México), 25 de enero y 22 de febrero de 2026 (online).',
+        'ubicacion': 'Las primeras 3 sesiones se llevarán a cabo en Ciudad de México, México. Las sesiones 4 y 5 serán online.',
         'modalidad': 'El seminario está disponible en modalidad presencial y online.',
         'incluye': 'El seminario incluye: materiales completos, manuales detallados, protocolos de transformación, certificación oficial, acceso a la app oficial con recursos digitales y extensiones 2026.',
         'default': 'Gracias por tu interés en el Seminario Internacional de Inteligencia Energética. ¿Te gustaría saber más sobre precios, fechas, ubicación o qué incluye el seminario? También puedes contactarnos directamente vía WhatsApp al +52 557 907 6626.'
       },
       en: {
         'price': 'The Early Bird price is $8,000 MXN (valid until November 10, 2025) and the regular price is $9,000 MXN. It includes materials, manuals, protocols, certification, official app access, and 2026 extensions.',
-        'date': 'The seminar will take place in 5 sessions: December 5-7, 2025, January 25 and February 22, 2026 in Playa del Carmen, Mexico.',
-        'location': 'The event will be held in Playa del Carmen, Mexico. The specific venue will be confirmed soon.',
+        'date': 'The seminar will take place in 5 sessions: December 5-7, 2025 (in-person in Mexico City), January 25 and February 22, 2026 (online).',
+        'location': 'The first 3 sessions will be held in Mexico City, Mexico. Sessions 4 and 5 will be online.',
         'modality': 'The seminar is available in both in-person and online modalities.',
         'includes': 'The seminar includes: complete materials, detailed manuals, transformation protocols, official certification, official app access with digital resources, and 2026 extensions.',
         'default': 'Thank you for your interest in the International Energy Intelligence Conference. Would you like to know more about prices, dates, location, or what the seminar includes? You can also contact us directly via WhatsApp at +52 557 907 6626.'

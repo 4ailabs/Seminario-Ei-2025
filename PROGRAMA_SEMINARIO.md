@@ -1,10 +1,10 @@
 # 🧠 Seminario Internacional de Inteligencia Energética
 ## International Energy Intelligence Conference
 
-**📍 Ubicación:** Playa del Carmen, México  
+**📍 Ubicación:** Ciudad de México, México (Sesiones 1-3) / Online (Sesiones 4-5)  
 **📅 Fechas:** Diciembre 2025 - Febrero 2026 (5 sesiones)  
 **⏰ Duración:** 5 sesiones de transformación profunda  
-**🎯 Modalidad:** Presencial y Online  
+**🎯 Modalidad:** Presencial (Sesiones 1-3) y Online (Sesiones 4-5)  
 
 ---
 
@@ -19,9 +19,10 @@ Transformar tu cerebro reactivo en una herramienta de creación consciente a tra
 
 ## 📋 Programa Detallado
 
-### 🗓️ **SESIÓN 1 - 5 de Diciembre 2025**
+### 🗓️ **SESIÓN 1 - 5 de Diciembre 2025 (PRESENCIAL)**
 #### **Neuroplasticidad, IA y Sistemas de Inteligencia Estratégica**
 
+**Modalidad:** Presencial en Ciudad de México  
 **Horario:** 9:00 AM - 6:00 PM
 
 #### **1. El cerebro reactivo: supervivencia vs. felicidad**
@@ -48,9 +49,10 @@ Transformar tu cerebro reactivo en una herramienta de creación consciente a tra
 
 ---
 
-### 🗓️ **SESIÓN 2 - 6 de Diciembre 2025**
+### 🗓️ **SESIÓN 2 - 6 de Diciembre 2025 (PRESENCIAL)**
 #### **Bioenergética y Context Engineering Aplicado**
 
+**Modalidad:** Presencial en Ciudad de México  
 **Horario:** 9:00 AM - 6:00 PM
 
 #### **1. Context Engineering y Esquema de Contexto**
@@ -82,9 +84,10 @@ Transformar tu cerebro reactivo en una herramienta de creación consciente a tra
 
 ---
 
-### 🗓️ **SESIÓN 3 - 7 de Diciembre 2025**
+### 🗓️ **SESIÓN 3 - 7 de Diciembre 2025 (PRESENCIAL)**
 #### **Sistemas de Decisión Consciente - Experiencia Vivencial**
 
+**Modalidad:** Presencial en Ciudad de México  
 **Horario:** 9:00 AM - 6:00 PM
 
 #### **1. Los Tres Elementos de Decisión Consciente**
@@ -117,10 +120,11 @@ Transformar tu cerebro reactivo en una herramienta de creación consciente a tra
 
 ---
 
-### 🗓️ **SESIÓN 4 - 25 de Enero 2026**
+### 🗓️ **SESIÓN 4 - 25 de Enero 2026 (ONLINE)**
 #### **Consolidación y Profundización**
 
-**Horario:** 9:00 AM - 6:00 PM
+**Modalidad:** Online  
+**Horario:** 9:00 AM - 6:00 PM (Hora de México)
 
 #### **1. Revisión de Progreso y Ajustes**
 *9:00 AM - 10:30 AM*
@@ -152,10 +156,11 @@ Transformar tu cerebro reactivo en una herramienta de creación consciente a tra
 
 ---
 
-### 🗓️ **SESIÓN 5 - 22 de Febrero 2026**
+### 🗓️ **SESIÓN 5 - 22 de Febrero 2026 (ONLINE)**
 #### **Maestría y Proyección Futura**
 
-**Horario:** 9:00 AM - 6:00 PM
+**Modalidad:** Online  
+**Horario:** 9:00 AM - 6:00 PM (Hora de México)
 
 #### **1. Descubrimiento de insights y estrategias con LSP**
 *9:00 AM - 10:30 AM*
@@ -301,8 +306,9 @@ Transformar tu cerebro reactivo en una herramienta de creación consciente a tra
 - ✅ Todos los materiales y manuales
 - ✅ Certificación oficial
 - ✅ Acceso a app oficial
-- ✅ Sesiones de seguimiento 2026
-- ✅ Obra de teatro (modalidad presencial)
+- ✅ Sesiones de seguimiento 2026 (online)
+- ✅ Obra de teatro (sesión 2 presencial)
+- ✅ Plataforma online para sesiones 4 y 5
 
 ---
 
