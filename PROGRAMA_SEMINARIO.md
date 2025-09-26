@@ -322,11 +322,11 @@ Transformar tu cerebro reactivo en una herramienta de creación consciente a tra
 ## 💰 Inversión
 
 ### **Precio Early Bird**
-- **$8,000 MXN** (Válido hasta 10 de Noviembre 2025)
+- **$8,000 MXN** (Válido hasta 16 de Octubre 2025)
 - Modalidad Presencial y Online
 
 ### **Precio Regular**
-- **$9,000 MXN**
+- **$9,500 MXN**
 - Modalidad Presencial y Online
 
 ### **Incluye**

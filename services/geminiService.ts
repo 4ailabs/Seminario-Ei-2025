@@ -31,8 +31,8 @@ class GeminiService {
       - Ubicación: Ciudad de México, México (Sesiones 1-3) / Online (Sesiones 4-5)
       - Duración: 5 sesiones de transformación profunda
       - Modalidades: Presencial y Online
-      - Precio Early Bird: $8,000 MXN (válido hasta 10 de Noviembre 2025)
-      - Precio Regular: $9,000 MXN
+      - Precio Early Bird: $8,000 MXN (válido hasta 16 de Octubre 2025)
+      - Precio Regular: $9,500 MXN
       
       QUÉ INCLUYE:
       - Materiales y manuales completos
@@ -100,8 +100,8 @@ class GeminiService {
       - Location: Mexico City, Mexico (Sessions 1-3) / Online (Sessions 4-5)
       - Duration: 5 sessions of deep transformation
       - Modalities: In-Person and Online
-      - Early Bird Price: $8,000 MXN (valid until November 10, 2025)
-      - Regular Price: $9,000 MXN
+      - Early Bird Price: $8,000 MXN (valid until October 16, 2025)
+      - Regular Price: $9,500 MXN
       
       WHAT'S INCLUDED:
       - Complete materials and manuals
@@ -234,7 +234,7 @@ class GeminiService {
   async sendMessageMock(message: string, language: 'es' | 'en' = 'es'): Promise<GeminiResponse> {
     const responses = {
       es: {
-        'precio': 'El precio Early Bird es de $8,000 MXN (válido hasta el 10 de noviembre 2025) y el precio regular es de $9,000 MXN. Incluye materiales, manuales, protocolos, certificación, acceso a la app oficial y extensiones 2026.',
+        'precio': 'El precio Early Bird es de $8,000 MXN (válido hasta el 16 de octubre 2025) y el precio regular es de $9,500 MXN. Incluye materiales, manuales, protocolos, certificación, acceso a la app oficial y extensiones 2026.',
         'fecha': 'El seminario se realizará en 5 sesiones: 5-7 de diciembre de 2025 (presencial en Ciudad de México), 25 de enero y 22 de febrero de 2026 (online).',
         'ubicacion': 'Las primeras 3 sesiones se llevarán a cabo en Ciudad de México, México. Las sesiones 4 y 5 serán online.',
         'modalidad': 'El seminario está disponible en modalidad presencial y online.',
@@ -242,7 +242,7 @@ class GeminiService {
         'default': 'Gracias por tu interés en el Seminario Internacional de Inteligencia Energética. ¿Te gustaría saber más sobre precios, fechas, ubicación o qué incluye el seminario? También puedes contactarnos directamente vía WhatsApp al +52 557 907 6626.'
       },
       en: {
-        'price': 'The Early Bird price is $8,000 MXN (valid until November 10, 2025) and the regular price is $9,000 MXN. It includes materials, manuals, protocols, certification, official app access, and 2026 extensions.',
+        'price': 'The Early Bird price is $8,000 MXN (valid until October 16, 2025) and the regular price is $9,500 MXN. It includes materials, manuals, protocols, certification, official app access, and 2026 extensions.',
         'date': 'The seminar will take place in 5 sessions: December 5-7, 2025 (in-person in Mexico City), January 25 and February 22, 2026 (online).',
         'location': 'The first 3 sessions will be held in Mexico City, Mexico. Sessions 4 and 5 will be online.',
         'modality': 'The seminar is available in both in-person and online modalities.',
