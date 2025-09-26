@@ -599,7 +599,7 @@ const AppContent: React.FC = () => {
                             {/* Countdown Timer */}
                             <div className="mb-6 p-4 bg-slate-900/50 rounded-xl border border-yellow-400/30">
                                 <p className="text-center text-yellow-400 text-sm font-semibold mb-3">¡Oferta Early Bird termina en!</p>
-                                <CountdownTimer targetDate="2025-10-19T23:59:59" />
+                                <CountdownTimer targetDate="2025-10-16T23:59:59" />
                             </div>
                             
                             <div className="mb-4 sm:mb-6">

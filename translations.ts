@@ -384,7 +384,7 @@ export const translations: Record<string, Translations> = {
       earlyBirdPrice: "$8,000 MXN",
       regularPrice: "$9,500 MXN",
       reservationInfo: "Aparta tu lugar con $3,000 MXN y paga el resto una semana antes del evento",
-      validUntil: "Válido hasta el 19 de Octubre de 2025",
+      validUntil: "Válido hasta el 16 de Octubre de 2025",
       includes: "Precios para modalidad Presencial y Online.",
       ctaWhatsApp: "Inscríbete vía WhatsApp"
     },
@@ -653,7 +653,7 @@ export const translations: Record<string, Translations> = {
       earlyBirdPrice: "$8,000 MXN",
       regularPrice: "$9,500 MXN",
       reservationInfo: "Reserve your spot with $3,000 MXN and pay the rest one week before the event",
-      validUntil: "Valid until October 19, 2025",
+      validUntil: "Valid until October 16, 2025",
       includes: "Prices for both In-Person and Online modalities.",
       ctaWhatsApp: "Register via WhatsApp"
     },
