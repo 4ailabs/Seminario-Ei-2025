@@ -110,6 +110,7 @@ export interface Translations {
     regular: string;
     earlyBirdPrice: string;
     regularPrice: string;
+    reservationInfo: string;
     validUntil: string;
     includes: string;
     ctaWhatsApp: string;
@@ -381,7 +382,8 @@ export const translations: Record<string, Translations> = {
       earlyBird: "Precio Early Bird",
       regular: "Precio Regular",
       earlyBirdPrice: "$8,000 MXN",
-      regularPrice: "$9,000 MXN",
+      regularPrice: "$9,500 MXN",
+      reservationInfo: "Aparta tu lugar con $3,000 MXN y paga el resto una semana antes del 19 de octubre",
       validUntil: "Válido hasta el 10 de Noviembre de 2025",
       includes: "Precios para modalidad Presencial y Online.",
       ctaWhatsApp: "Inscríbete vía WhatsApp"
@@ -649,7 +651,8 @@ export const translations: Record<string, Translations> = {
       earlyBird: "Early Bird Price",
       regular: "Regular Price",
       earlyBirdPrice: "$8,000 MXN",
-      regularPrice: "$9,000 MXN",
+      regularPrice: "$9,500 MXN",
+      reservationInfo: "Reserve your spot with $3,000 MXN and pay the rest one week before October 19th",
       validUntil: "Valid until November 10, 2025",
       includes: "Prices for both In-Person and Online modalities.",
       ctaWhatsApp: "Register via WhatsApp"

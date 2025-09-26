@@ -611,7 +611,12 @@ const AppContent: React.FC = () => {
                                 <p className="text-base sm:text-lg font-semibold text-slate-300">{t.investment.regular}</p>
                                 <p className="text-xl sm:text-2xl font-bold text-slate-500">{t.investment.regularPrice}</p>
                             </div>
-                            <p className="text-slate-400 mb-6 sm:mb-8 text-sm sm:text-base leading-relaxed">{t.investment.includes}</p>
+                            <p className="text-slate-400 mb-4 text-sm sm:text-base leading-relaxed">{t.investment.includes}</p>
+                            <div className="bg-slate-700/50 p-4 rounded-lg mb-6 sm:mb-8">
+                                <p className="text-cyan-400 text-sm sm:text-base font-medium text-center leading-relaxed">
+                                    {t.investment.reservationInfo}
+                                </p>
+                            </div>
                             <div className="flex justify-center">
                                 <a href={`https://wa.me/+525579076626?text=${generateWhatsAppMessage()}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 active:bg-green-700 text-white font-bold py-4 px-6 sm:py-3 sm:px-8 rounded-full text-base sm:text-lg transition duration-300 transform hover:scale-105 active:scale-95 shadow-lg shadow-green-500/20 touch-manipulation ripple btn-enhanced">
                                     <WhatsAppIcon className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
