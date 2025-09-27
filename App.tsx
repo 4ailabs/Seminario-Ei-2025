@@ -332,21 +332,6 @@ const ProgramSection: React.FC = () => {
                                 <div className="flex-1">
                                     <h4 className="font-semibold text-slate-200 text-sm sm:text-base leading-tight">{topic.title}</h4>
                                     <p className="text-slate-400 mt-1 text-xs sm:text-sm leading-relaxed">{topic.description}</p>
-                                    {topic.videoUrl && (
-                                        <div className="mt-3">
-                                            <a 
-                                                href={topic.videoUrl} 
-                                                target="_blank" 
-                                                rel="noopener noreferrer"
-                                                className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors duration-300"
-                                            >
-                                                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                                    <path d="M8 5v14l11-7z"/>
-                                                </svg>
-                                                Ver Video Introductorio
-                                            </a>
-                                        </div>
-                                    )}
                                 </div>
                             </li>
                         ))}
@@ -783,18 +768,6 @@ const WebinarCard: React.FC<{ webinar: { title: string; description: string; vid
                     title="webinar 1"
                 ></iframe>
             </div>
-            
-            <a 
-                href={webinar.videoUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300"
-            >
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
-                </svg>
-                Abrir en Vimeo
-            </a>
         </div>
     );
 };
