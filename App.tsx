@@ -898,8 +898,10 @@ const LightboxModal: React.FC<{ isOpen: boolean; currentIndex: number; onClose: 
 const WebinarCard: React.FC<{ webinar: { title: string; description: string; videoUrl: string; session: string } }> = ({ webinar }) => {
     // Extract video ID and hash from Vimeo URL
     const getVimeoEmbedUrl = (url: string) => {
-        const videoId = url.split('/').pop()?.split('?')[0];
-        const hash = url.split('h=')[1]?.split('&')[0];
+        // Handle format: https://vimeo.com/1122501757/9d6c991bc4
+        const parts = url.split('/');
+        const videoId = parts[parts.length - 2]; // Get the video ID
+        const hash = parts[parts.length - 1]; // Get the hash
         return `https://player.vimeo.com/video/${videoId}?h=${hash}&badge=0&autopause=0&player_id=0&app_id=58479`;
     };
 
