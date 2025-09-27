@@ -440,28 +440,9 @@ const BackToTop: React.FC = () => {
 // --- Main App Component ---
 const AppContent: React.FC = () => {
     const { t } = useLanguage();
-    const [lightboxOpen, setLightboxOpen] = useState(false);
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
     
     const handleScrollTo = (id: string) => {
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    };
-
-    const openLightbox = (index: number) => {
-        setCurrentImageIndex(index);
-        setLightboxOpen(true);
-    };
-
-    const closeLightbox = () => {
-        setLightboxOpen(false);
-    };
-
-    const nextImage = () => {
-        setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
-    };
-
-    const prevImage = () => {
-        setCurrentImageIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
     };
 
     const generateWhatsAppMessage = () => {
@@ -542,8 +523,7 @@ const AppContent: React.FC = () => {
                                 <GalleryImage 
                                     key={index} 
                                     src={image} 
-                                    index={index} 
-                                    onClick={openLightbox}
+                                    index={index}
                                 />
                             ))}
                         </div>
@@ -739,15 +719,6 @@ const AppContent: React.FC = () => {
 
             <BackToTop />
             <ChatButton />
-            
-            {/* Lightbox Modal */}
-            <LightboxModal
-                isOpen={lightboxOpen}
-                currentIndex={currentImageIndex}
-                onClose={closeLightbox}
-                onNext={nextImage}
-                onPrev={prevImage}
-            />
         </div>
     );
 };
@@ -823,76 +794,17 @@ const galleryImages = [
 ];
 
 // --- Gallery Image Component ---
-const GalleryImage: React.FC<{ src: string; index: number; onClick: (index: number) => void }> = ({ src, index, onClick }) => (
-    <div 
-        className="relative group cursor-pointer overflow-hidden rounded-lg bg-slate-800"
-        onClick={() => onClick(index)}
-    >
+const GalleryImage: React.FC<{ src: string; index: number }> = ({ src, index }) => (
+    <div className="relative overflow-hidden rounded-lg bg-slate-800">
         <img
             src={src}
             alt={`Seminario anterior ${index + 1}`}
             className="w-full h-48 sm:h-56 object-cover"
             loading="lazy"
         />
-        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                </svg>
-            </div>
-        </div>
     </div>
 );
 
-// --- Lightbox Modal Component ---
-const LightboxModal: React.FC<{ isOpen: boolean; currentIndex: number; onClose: () => void; onNext: () => void; onPrev: () => void }> = ({ 
-    isOpen, currentIndex, onClose, onNext, onPrev 
-}) => {
-    if (!isOpen) return null;
-
-    return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm">
-            <div className="relative max-w-4xl max-h-[90vh] w-full mx-4">
-                <button
-                    onClick={onClose}
-                    className="absolute -top-12 right-0 text-white hover:text-cyan-400 transition-colors duration-300 z-10"
-                >
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-                
-                <button
-                    onClick={onPrev}
-                    className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-cyan-400 transition-colors duration-300 z-10"
-                >
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
-                
-                <button
-                    onClick={onNext}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-cyan-400 transition-colors duration-300 z-10"
-                >
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
-                
-                <img
-                    src={galleryImages[currentIndex]}
-                    alt={`Seminario anterior ${currentIndex + 1}`}
-                    className="w-full h-full object-contain rounded-lg"
-                />
-                
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm">
-                    {currentIndex + 1} / {galleryImages.length}
-                </div>
-            </div>
-        </div>
-    );
-};
 
 // --- Webinar Card Component ---
 const WebinarCard: React.FC<{ webinar: { title: string; description: string; videoUrl: string; session: string } }> = ({ webinar }) => {
