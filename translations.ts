@@ -421,13 +421,13 @@ export const translations: Record<string, Translations> = {
       description: "Accede a los videos introductorios de cada sesión para prepararte y obtener el máximo provecho del seminario.",
       videos: [
         {
-          title: "Webinar de Introducción - Sesión 1",
+          title: "Del cerebro reactivo al creativo",
           description: "Video introductorio que establece las bases conceptuales y el contexto del programa de transformación energética.",
           videoUrl: "https://vimeo.com/1122501757/9d6c991bc4",
           session: "Sesión 1"
         },
         {
-          title: "Webinar de Introducción - Sesión 2",
+          title: "Priming Neurofisiológico Entrena tu Cerebro para Estados Óptimos",
           description: "Video preparatorio para la segunda sesión, profundizando en las técnicas de transformación energética.",
           videoUrl: "https://vimeo.com/1122509089/a1f5880cc0",
           session: "Sesión 2"
@@ -721,13 +721,13 @@ export const translations: Record<string, Translations> = {
       description: "Access the introductory videos for each session to prepare yourself and get the most out of the seminar.",
       videos: [
         {
-          title: "Introduction Webinar - Session 1",
+          title: "From Reactive to Creative Brain",
           description: "Introductory video that establishes the conceptual foundations and context of the energy transformation program.",
           videoUrl: "https://vimeo.com/1122501757/9d6c991bc4",
           session: "Session 1"
         },
         {
-          title: "Introduction Webinar - Session 2",
+          title: "Neurophysiological Priming Train Your Brain for Optimal States",
           description: "Preparation video for the second session, delving deeper into energy transformation techniques.",
           videoUrl: "https://vimeo.com/1122509089/a1f5880cc0",
           session: "Session 2"
