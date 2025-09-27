@@ -98,7 +98,12 @@ const Header: React.FC<{ onScrollTo: (id: string) => void }> = ({ onScrollTo }) 
     return (
         <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-slate-900/80 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`}>
             <div className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-                <div className="flex items-center gap-3">
+                <a 
+                    href="https://inteligencia-energetica.com/home-ei" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-300"
+                >
                     <img 
                         src="/images/logo-seminario.png" 
                         alt="Logo Seminario Inteligencia Energética" 
@@ -107,7 +112,7 @@ const Header: React.FC<{ onScrollTo: (id: string) => void }> = ({ onScrollTo }) 
                     <div className="text-lg sm:text-xl font-bold text-white tracking-wider">
                         <span className="text-cyan-400">Inteligencia</span> Energética
                     </div>
-                </div>
+                </a>
                 
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex items-center space-x-6">
@@ -629,7 +634,28 @@ const AppContent: React.FC = () => {
             </main>
 
             <footer className="text-center p-8 text-slate-400 bg-slate-900 border-t border-slate-800">
-                <p className="text-xl italic">"{t.footer.quote}"</p>
+                <div className="max-w-4xl mx-auto">
+                    <p className="text-xl italic mb-6">"{t.footer.quote}"</p>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+                        <a 
+                            href="https://inteligencia-energetica.com/home-ei" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+                        >
+                            <img 
+                                src="/images/logo-seminario.png" 
+                                alt="Logo Inteligencia Energética" 
+                                className="w-6 h-6 object-contain"
+                            />
+                            Visita nuestro sitio principal
+                        </a>
+                        <div className="hidden sm:block w-px h-6 bg-slate-600"></div>
+                        <p className="text-sm text-slate-500">
+                            © 2025 Seminario Internacional de Inteligencia Energética
+                        </p>
+                    </div>
+                </div>
             </footer>
 
             <BackToTop />
