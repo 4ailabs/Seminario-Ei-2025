@@ -3,6 +3,7 @@ export interface Translations {
   nav: {
     programa: string;
     webinars: string;
+    galeria: string;
     paraQuien: string;
     resultados: string;
     testimonios: string;
@@ -129,6 +130,11 @@ export interface Translations {
       session: string;
     }>;
   };
+  gallery: {
+    title: string;
+    subtitle: string;
+    description: string;
+  };
   
   // Footer
   footer: {
@@ -141,6 +147,7 @@ export const translations: Record<string, Translations> = {
     nav: {
       programa: "Programa",
       webinars: "Webinars",
+      galeria: "Galería",
       paraQuien: "Para Quién",
       resultados: "Resultados",
       testimonios: "Testimonios",
@@ -421,6 +428,11 @@ export const translations: Record<string, Translations> = {
         }
       ]
     },
+    gallery: {
+      title: "Galería de Seminarios Anteriores",
+      subtitle: "Momentos únicos de transformación",
+      description: "Descubre la experiencia real de nuestros seminarios a través de imágenes de ediciones anteriores. Ve el ambiente, los participantes y los momentos de transformación que han vivido otros."
+    },
     footer: {
       quote: "Transforma tu cerebro reactivo en una herramienta de creación consciente"
     }
@@ -429,6 +441,7 @@ export const translations: Record<string, Translations> = {
     nav: {
       programa: "Program",
       webinars: "Webinars",
+      galeria: "Gallery",
       paraQuien: "Who is it for",
       resultados: "Results",
       testimonios: "Testimonials",
@@ -708,6 +721,11 @@ export const translations: Record<string, Translations> = {
           session: "Session 1"
         }
       ]
+    },
+    gallery: {
+      title: "Previous Seminars Gallery",
+      subtitle: "Unique moments of transformation",
+      description: "Discover the real experience of our seminars through images from previous editions. See the atmosphere, participants and transformation moments that others have experienced."
     },
     footer: {
       quote: "Transform your reactive brain into a conscious creation tool"

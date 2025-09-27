@@ -83,6 +83,7 @@ const Header: React.FC<{ onScrollTo: (id: string) => void }> = ({ onScrollTo }) 
 
     const navLinks = [
         { id: 'programa', text: t.nav.programa },
+        { id: 'galeria', text: t.nav.galeria },
         { id: 'webinars', text: t.nav.webinars },
         { id: 'para-quien', text: t.nav.paraQuien },
         { id: 'resultados', text: t.nav.resultados },
@@ -439,9 +440,28 @@ const BackToTop: React.FC = () => {
 // --- Main App Component ---
 const AppContent: React.FC = () => {
     const { t } = useLanguage();
+    const [lightboxOpen, setLightboxOpen] = useState(false);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
     
     const handleScrollTo = (id: string) => {
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    const openLightbox = (index: number) => {
+        setCurrentImageIndex(index);
+        setLightboxOpen(true);
+    };
+
+    const closeLightbox = () => {
+        setLightboxOpen(false);
+    };
+
+    const nextImage = () => {
+        setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
+    };
+
+    const prevImage = () => {
+        setCurrentImageIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
     };
 
     const generateWhatsAppMessage = () => {
@@ -501,6 +521,33 @@ const AppContent: React.FC = () => {
                 {/* --- Program Section --- */}
                 <AnimatedSection id="programa" delay={200}>
                     <ProgramSection/>
+                </AnimatedSection>
+                
+                {/* --- Gallery Section --- */}
+                <AnimatedSection id="galeria" className="bg-slate-800 py-12 sm:py-16 md:py-24" delay={250}>
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center mb-8 sm:mb-12">
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
+                                {t.gallery.title}
+                            </h2>
+                            <p className="text-lg sm:text-xl text-cyan-400 font-semibold mb-4">
+                                {t.gallery.subtitle}
+                            </p>
+                            <p className="text-slate-300 max-w-3xl mx-auto text-sm sm:text-base leading-relaxed">
+                                {t.gallery.description}
+                            </p>
+                        </div>
+                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 max-w-7xl mx-auto">
+                            {galleryImages.map((image, index) => (
+                                <GalleryImage 
+                                    key={index} 
+                                    src={image} 
+                                    index={index} 
+                                    onClick={openLightbox}
+                                />
+                            ))}
+                        </div>
+                    </div>
                 </AnimatedSection>
                 
                 {/* --- Webinars Section --- */}
@@ -692,6 +739,15 @@ const AppContent: React.FC = () => {
 
             <BackToTop />
             <ChatButton />
+            
+            {/* Lightbox Modal */}
+            <LightboxModal
+                isOpen={lightboxOpen}
+                currentIndex={currentImageIndex}
+                onClose={closeLightbox}
+                onNext={nextImage}
+                onPrev={prevImage}
+            />
         </div>
     );
 };
@@ -746,6 +802,97 @@ const TestimonialCard: React.FC<{ quote: string, name: string, role: string }> =
         </div>
     </div>
 );
+
+// --- Gallery Images Data ---
+const galleryImages = [
+    "https://images.squarespace-cdn.com/content/v1/63937c55c3c2e84a13a3ede9/0c987d8e-b63a-4104-aa77-147eaa644fcb/Captura+de+pantalla+2023-02-20+a+la%28s%29+2.10.00.png?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/63937c55c3c2e84a13a3ede9/0d314223-f2a9-49bd-9d56-685079cf6178/318732989_5842086489179009_1876634961710280986_n.jpg?format=1000w",
+    "https://images.squarespace-cdn.com/content/v1/63937c55c3c2e84a13a3ede9/02bfdd59-d98b-49fb-8243-cea769464db6/79100512_2651933944860962_8133227410628804608_n.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/63937c55c3c2e84a13a3ede9/3def86e3-5c8e-4e87-bbec-aeeaac6d6ed4/36187994_1750292751691757_5557467898957529088_n.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/63937c55c3c2e84a13a3ede9/07abdcd2-4ece-42a2-a845-25e28ba958e7/28336394_1620009831386717_450887483519267763_o.jpg?format=750w",
+    "https://images.squarespace-cdn.com/content/v1/63937c55c3c2e84a13a3ede9/9b785917-754f-4e3d-b7cd-c355fb1a1621/79461055_2658045480916475_3270552093357768704_n.jpg?format=1500w",
+    "https://images.squarespace-cdn.com/content/v1/63937c55c3c2e84a13a3ede9/46ce011a-dfb4-48b0-a15e-2ba13bc6f6b9/Captura+de+pantalla+2023-02-20+a+la%28s%29+2.09.32.png?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/63937c55c3c2e84a13a3ede9/49fb6ebf-6e5b-4718-afc3-f3e5720daae3/318946364_5842086535845671_6157775697751393913_n.jpg?format=1000w",
+    "https://images.squarespace-cdn.com/content/v1/63937c55c3c2e84a13a3ede9/83a4d781-dcd0-44c8-a9eb-8e67c0d839d8/44590312_1931732183547812_3189394503001702400_n-2.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/63937c55c3c2e84a13a3ede9/839b5040-b85b-4742-8012-bbb9762277eb/19420802_1384430381611331_4472760945169630011_n.jpg?format=1000w",
+    "https://images.squarespace-cdn.com/content/v1/63937c55c3c2e84a13a3ede9/983b13da-5bbb-4612-a377-b85e47912878/78708264_2658661747521515_4623076946006245376_n.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/63937c55c3c2e84a13a3ede9/6692a358-6173-41ce-ba32-001b8b828299/35532611_1739902549397444_2776592495964848128_n.jpg?format=2500w",
+    "https://images.squarespace-cdn.com/content/v1/63937c55c3c2e84a13a3ede9/ae8bf916-b9ec-40b7-88e0-41630b8f9c10/14572863_1120733867980985_4117207448982533631_n.jpg?format=1000w",
+    "https://images.squarespace-cdn.com/content/v1/63937c55c3c2e84a13a3ede9/c7c5ed1e-2fd6-4dc9-a731-b010edcd710f/318815591_5842091229178535_2014644832699938854_n.jpg?format=1500w",
+    "https://images.squarespace-cdn.com/content/v1/63937c55c3c2e84a13a3ede9/f2040dfc-6559-4e92-810d-37e50e60570d/44028273_1920602174660813_2667927813331353600_n.jpg?format=2500w"
+];
+
+// --- Gallery Image Component ---
+const GalleryImage: React.FC<{ src: string; index: number; onClick: (index: number) => void }> = ({ src, index, onClick }) => (
+    <div 
+        className="relative group cursor-pointer overflow-hidden rounded-lg bg-slate-800"
+        onClick={() => onClick(index)}
+    >
+        <img
+            src={src}
+            alt={`Seminario anterior ${index + 1}`}
+            className="w-full h-48 sm:h-56 object-cover transition-transform duration-300 group-hover:scale-105"
+            loading="lazy"
+        />
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+);
+
+// --- Lightbox Modal Component ---
+const LightboxModal: React.FC<{ isOpen: boolean; currentIndex: number; onClose: () => void; onNext: () => void; onPrev: () => void }> = ({ 
+    isOpen, currentIndex, onClose, onNext, onPrev 
+}) => {
+    if (!isOpen) return null;
+
+    return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm">
+            <div className="relative max-w-4xl max-h-[90vh] w-full mx-4">
+                <button
+                    onClick={onClose}
+                    className="absolute -top-12 right-0 text-white hover:text-cyan-400 transition-colors duration-300 z-10"
+                >
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                
+                <button
+                    onClick={onPrev}
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-cyan-400 transition-colors duration-300 z-10"
+                >
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                
+                <button
+                    onClick={onNext}
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-cyan-400 transition-colors duration-300 z-10"
+                >
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+                
+                <img
+                    src={galleryImages[currentIndex]}
+                    alt={`Seminario anterior ${currentIndex + 1}`}
+                    className="w-full h-full object-contain rounded-lg"
+                />
+                
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm">
+                    {currentIndex + 1} / {galleryImages.length}
+                </div>
+            </div>
+        </div>
+    );
+};
 
 // --- Webinar Card Component ---
 const WebinarCard: React.FC<{ webinar: { title: string; description: string; videoUrl: string; session: string } }> = ({ webinar }) => {
