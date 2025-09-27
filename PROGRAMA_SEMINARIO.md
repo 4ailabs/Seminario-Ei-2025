@@ -46,7 +46,7 @@ Transformar tu cerebro reactivo en una herramienta de creación consciente a tra
 #### **2. Priming neurofisiológico: entrenamiento de estados óptimos**
 *10:45 AM - 12:15 PM*
 - Regulación del sistema nervioso autónomo
-- Técnicas de coherencia cardíaca (HRV)
+- Técnicas de respiración consciente
 - Protocolos de visualización y respiración
 - **Break:** 12:15 PM - 1:15 PM
 
@@ -224,7 +224,7 @@ Transformar tu cerebro reactivo en una herramienta de creación consciente a tra
 ### **1. Neuroplasticidad Aplicada**
 - Entrenamiento de estados óptimos
 - Regulación del sistema nervioso autónomo
-- Técnicas de coherencia cardíaca (HRV)
+- Técnicas de respiración consciente
 
 ### **2. LEGO® Serious Play® (LSP)**
 - Metodología de "pensar con las manos"

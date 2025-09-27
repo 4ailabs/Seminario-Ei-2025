@@ -164,7 +164,7 @@ export const translations: Record<string, Translations> = {
             },
             {
               title: "Priming neurofisiológico: entrenamiento de estados óptimos",
-              description: "Aprende a regular tu sistema nervioso autónomo a través de la coherencia cardíaca (HRV) y técnicas de visualización."
+              description: "Aprende a regular tu sistema nervioso autónomo a través de técnicas de visualización y respiración consciente."
             },
             {
               title: "Inteligencia Aumentada: IA para el Crecimiento",
@@ -433,7 +433,7 @@ export const translations: Record<string, Translations> = {
             },
             {
               title: "Neurophysiological priming: optimal state training",
-              description: "Learn to regulate your autonomic nervous system through heart coherence (HRV) and visualization techniques."
+              description: "Learn to regulate your autonomic nervous system through visualization techniques and conscious breathing."
             },
             {
               title: "Augmented Intelligence: AI for Growth",
