@@ -674,6 +674,15 @@ const AppContent: React.FC = () => {
                             Visita nuestro sitio principal
                         </a>
                         <div className="hidden sm:block w-px h-6 bg-slate-600"></div>
+                        <a 
+                            href="https://www.institutocentrobioenergetica.com" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-slate-400 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                        >
+                            Instituto Centro Bioenergética
+                        </a>
+                        <div className="hidden sm:block w-px h-6 bg-slate-600"></div>
                         <p className="text-sm text-slate-500">
                             © 2025 Seminario Internacional de Inteligencia Energética
                         </p>
