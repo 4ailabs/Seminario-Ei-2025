@@ -532,7 +532,7 @@ const AppContent: React.FC = () => {
                                 {t.webinars.description}
                             </p>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
                             {t.webinars.videos.map((webinar, index) => (
                                 <WebinarCard key={index} webinar={webinar} />
                             ))}
@@ -754,35 +754,56 @@ const TestimonialCard: React.FC<{ quote: string, name: string, role: string }> =
 );
 
 // --- Webinar Card Component ---
-const WebinarCard: React.FC<{ webinar: { title: string; description: string; videoUrl: string; session: string } }> = ({ webinar }) => (
-    <div className="bg-slate-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10 group">
-        <div className="flex items-start justify-between mb-4">
-            <div className="flex items-center gap-3">
-                <div className="p-3 bg-cyan-500/10 rounded-xl group-hover:bg-cyan-500/20 transition-colors duration-300">
-                    <svg className="w-6 h-6 text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-                <div>
-                    <span className="text-xs font-semibold text-cyan-400 uppercase tracking-wide">{webinar.session}</span>
+const WebinarCard: React.FC<{ webinar: { title: string; description: string; videoUrl: string; session: string } }> = ({ webinar }) => {
+    // Extract video ID from Vimeo URL
+    const getVimeoEmbedUrl = (url: string) => {
+        const videoId = url.split('/').pop()?.split('?')[0];
+        return `https://player.vimeo.com/video/${videoId}?autoplay=0&loop=0&muted=0&controls=1&responsive=1`;
+    };
+
+    return (
+        <div className="bg-slate-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10 group">
+            <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-3">
+                    <div className="p-3 bg-cyan-500/10 rounded-xl group-hover:bg-cyan-500/20 transition-colors duration-300">
+                        <svg className="w-6 h-6 text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span className="text-xs font-semibold text-cyan-400 uppercase tracking-wide">{webinar.session}</span>
+                    </div>
                 </div>
             </div>
+            <h3 className="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">{webinar.title}</h3>
+            <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-4">{webinar.description}</p>
+            
+            {/* Embedded Video */}
+            <div className="relative w-full h-48 sm:h-64 rounded-lg overflow-hidden mb-4">
+                <iframe
+                    src={getVimeoEmbedUrl(webinar.videoUrl)}
+                    className="w-full h-full"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                    title={webinar.title}
+                ></iframe>
+            </div>
+            
+            <a 
+                href={webinar.videoUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300"
+            >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
+                </svg>
+                Abrir en Vimeo
+            </a>
         </div>
-        <h3 className="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">{webinar.title}</h3>
-        <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-4">{webinar.description}</p>
-        <a 
-            href={webinar.videoUrl} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300 group-hover:bg-cyan-600"
-        >
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"/>
-            </svg>
-            Ver Webinar
-        </a>
-    </div>
-);
+    );
+};
 
 // --- Include Card Component ---
 const IncludeCard: React.FC<{ icon: React.ReactNode; title: string; description: string }> = ({ icon, title, description }) => (
