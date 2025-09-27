@@ -755,12 +755,6 @@ const TestimonialCard: React.FC<{ quote: string, name: string, role: string }> =
 
 // --- Webinar Card Component ---
 const WebinarCard: React.FC<{ webinar: { title: string; description: string; videoUrl: string; session: string } }> = ({ webinar }) => {
-    // Extract video ID from Vimeo URL
-    const getVimeoEmbedUrl = (url: string) => {
-        const videoId = url.split('/').pop()?.split('?')[0];
-        return `https://player.vimeo.com/video/${videoId}?autoplay=0&loop=0&muted=0&controls=1&responsive=1`;
-    };
-
     return (
         <div className="bg-slate-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10 group">
             <div className="flex items-start justify-between mb-4">
@@ -778,15 +772,15 @@ const WebinarCard: React.FC<{ webinar: { title: string; description: string; vid
             <h3 className="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">{webinar.title}</h3>
             <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-4">{webinar.description}</p>
             
-            {/* Embedded Video */}
-            <div className="relative w-full h-48 sm:h-64 rounded-lg overflow-hidden mb-4">
-                <iframe
-                    src={getVimeoEmbedUrl(webinar.videoUrl)}
-                    className="w-full h-full"
-                    frameBorder="0"
-                    allow="autoplay; fullscreen; picture-in-picture"
-                    allowFullScreen
-                    title={webinar.title}
+            {/* Embedded Video with official Vimeo embed code */}
+            <div className="relative w-full rounded-lg overflow-hidden mb-4" style={{padding: '56.25% 0 0 0', position: 'relative'}}>
+                <iframe 
+                    src="https://player.vimeo.com/video/1122501757?h=9d6c991bc4&badge=0&autopause=0&player_id=0&app_id=58479" 
+                    frameBorder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin" 
+                    style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} 
+                    title="webinar 1"
                 ></iframe>
             </div>
             
