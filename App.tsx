@@ -831,7 +831,7 @@ const GalleryImage: React.FC<{ src: string; index: number; onClick: (index: numb
         <img
             src={src}
             alt={`Seminario anterior ${index + 1}`}
-            className="w-full h-48 sm:h-56 object-cover transition-transform duration-300 group-hover:scale-105"
+            className="w-full h-48 sm:h-56 object-cover"
             loading="lazy"
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
