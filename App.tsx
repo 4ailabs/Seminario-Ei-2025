@@ -328,9 +328,24 @@ const ProgramSection: React.FC = () => {
                         {scheduleData[activeTab].topics.map((topic, index) => (
                             <li key={index} className="flex items-start">
                                 <CheckIcon className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-cyan-400 flex-shrink-0 mt-1" />
-                                <div>
+                                <div className="flex-1">
                                     <h4 className="font-semibold text-slate-200 text-sm sm:text-base leading-tight">{topic.title}</h4>
                                     <p className="text-slate-400 mt-1 text-xs sm:text-sm leading-relaxed">{topic.description}</p>
+                                    {topic.videoUrl && (
+                                        <div className="mt-3">
+                                            <a 
+                                                href={topic.videoUrl} 
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors duration-300"
+                                            >
+                                                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M8 5v14l11-7z"/>
+                                                </svg>
+                                                Ver Video Introductorio
+                                            </a>
+                                        </div>
+                                    )}
                                 </div>
                             </li>
                         ))}

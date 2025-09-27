@@ -159,6 +159,11 @@ export const translations: Record<string, Translations> = {
           date: "5 de Diciembre 2025",
           topics: [
             {
+              title: "Webinar de Introducción",
+              description: "Video introductorio del seminario que establece las bases conceptuales y el contexto del programa de transformación energética.",
+              videoUrl: "https://vimeo.com/1122501757/9d6c991bc4"
+            },
+            {
               title: "El cerebro reactivo: supervivencia vs. felicidad",
               description: "Explora la evolución del cerebro, sus bases neurobiológicas y cómo pasar del piloto automático al control consciente."
             },
@@ -427,6 +432,11 @@ export const translations: Record<string, Translations> = {
           title: "Neuroplasticity, AI and Strategic Intelligence Systems",
           date: "December 5, 2025",
           topics: [
+            {
+              title: "Introduction Webinar",
+              description: "Introductory video of the seminar that establishes the conceptual foundations and context of the energy transformation program.",
+              videoUrl: "https://vimeo.com/1122501757/9d6c991bc4"
+            },
             {
               title: "The reactive brain: survival vs. happiness",
               description: "Explore brain evolution, its neurobiological foundations, and how to move from autopilot to conscious control."
