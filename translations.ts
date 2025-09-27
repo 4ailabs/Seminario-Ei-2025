@@ -425,6 +425,12 @@ export const translations: Record<string, Translations> = {
           description: "Video introductorio que establece las bases conceptuales y el contexto del programa de transformación energética.",
           videoUrl: "https://vimeo.com/1122501757/9d6c991bc4",
           session: "Sesión 1"
+        },
+        {
+          title: "Webinar de Introducción - Sesión 2",
+          description: "Video preparatorio para la segunda sesión, profundizando en las técnicas de transformación energética.",
+          videoUrl: "https://vimeo.com/1122509089/a1f5880cc0",
+          session: "Sesión 2"
         }
       ]
     },
@@ -719,6 +725,12 @@ export const translations: Record<string, Translations> = {
           description: "Introductory video that establishes the conceptual foundations and context of the energy transformation program.",
           videoUrl: "https://vimeo.com/1122501757/9d6c991bc4",
           session: "Session 1"
+        },
+        {
+          title: "Introduction Webinar - Session 2",
+          description: "Preparation video for the second session, delving deeper into energy transformation techniques.",
+          videoUrl: "https://vimeo.com/1122509089/a1f5880cc0",
+          session: "Session 2"
         }
       ]
     },

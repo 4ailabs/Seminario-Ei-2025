@@ -896,6 +896,13 @@ const LightboxModal: React.FC<{ isOpen: boolean; currentIndex: number; onClose: 
 
 // --- Webinar Card Component ---
 const WebinarCard: React.FC<{ webinar: { title: string; description: string; videoUrl: string; session: string } }> = ({ webinar }) => {
+    // Extract video ID and hash from Vimeo URL
+    const getVimeoEmbedUrl = (url: string) => {
+        const videoId = url.split('/').pop()?.split('?')[0];
+        const hash = url.split('h=')[1]?.split('&')[0];
+        return `https://player.vimeo.com/video/${videoId}?h=${hash}&badge=0&autopause=0&player_id=0&app_id=58479`;
+    };
+
     return (
         <div className="bg-slate-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10 group">
             <div className="flex items-start justify-between mb-4">
@@ -916,12 +923,12 @@ const WebinarCard: React.FC<{ webinar: { title: string; description: string; vid
             {/* Embedded Video with official Vimeo embed code */}
             <div className="relative w-full rounded-lg overflow-hidden mb-4" style={{padding: '56.25% 0 0 0', position: 'relative'}}>
                 <iframe 
-                    src="https://player.vimeo.com/video/1122501757?h=9d6c991bc4&badge=0&autopause=0&player_id=0&app_id=58479" 
+                    src={getVimeoEmbedUrl(webinar.videoUrl)} 
                     frameBorder="0" 
                     allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
                     referrerPolicy="strict-origin-when-cross-origin" 
                     style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} 
-                    title="webinar 1"
+                    title={webinar.title}
                 ></iframe>
             </div>
         </div>
