@@ -1,4 +1,4 @@
-// Gemini AI Service for Chatbot
+// OpenAI Service for Chatbot
 export interface ChatMessage {
   id: string;
   text: string;
@@ -6,26 +6,25 @@ export interface ChatMessage {
   timestamp: Date;
 }
 
-export interface GeminiResponse {
+export interface OpenAIResponse {
   text: string;
   success: boolean;
   error?: string;
 }
 
-class GeminiService {
+class OpenAIService {
   private apiKey: string;
-  private baseUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent';
+  private baseUrl = 'https://api.openai.com/v1/chat/completions';
 
   constructor() {
     // Get API key from environment variables (for Vercel deployment)
-    this.apiKey = import.meta.env.VITE_GEMINI_API_KEY || 'YOUR_GEMINI_API_KEY';
+    this.apiKey = import.meta.env.VITE_OPENAI_API_KEY || 'YOUR_OPENAI_API_KEY';
   }
 
   private getSystemPrompt(language: 'es' | 'en'): string {
     const prompts = {
       es: `Eres un asistente virtual especializado en el Seminario Internacional de Inteligencia Energética. 
       
-<<<<<<< Updated upstream
       INFORMACIÓN DEL SEMINARIO:
       - Fechas: Diciembre 2025 - Febrero 2026 (5 sesiones)
       - Ubicación: Ciudad de México, México (Sesiones 1-3) / Online (Sesiones 4-5)
@@ -166,50 +165,55 @@ class GeminiService {
     return prompts[language];
   }
 
-  async sendMessage(message: string, language: 'es' | 'en' = 'es'): Promise<GeminiResponse> {
+  async sendMessage(message: string, language: 'es' | 'en' = 'es'): Promise<OpenAIResponse> {
     try {
-      if (!this.apiKey || this.apiKey === 'YOUR_GEMINI_API_KEY') {
-        return {
-          text: language === 'es' 
-            ? 'El chatbot no está configurado. Por favor contacta directamente vía WhatsApp al +52 557 907 6626 para más información.'
-            : 'Chatbot is not configured. Please contact directly via WhatsApp at +52 557 907 6626 for more information.',
-          success: false,
-          error: 'API key not configured'
-        };
+      // En desarrollo local, usar respuestas mock
+      if (import.meta.env.DEV || !this.apiKey || this.apiKey === 'YOUR_OPENAI_API_KEY') {
+        console.log('Using mock responses for development');
+        return await this.sendMessageMock(message, language);
       }
 
+      // Solo usar OpenAI API en producción (Vercel)
       const systemPrompt = this.getSystemPrompt(language);
       
       const requestBody = {
-        contents: [{
-          parts: [{
-            text: `${systemPrompt}\n\nPregunta del usuario: ${message}`
-          }]
-        }],
-        generationConfig: {
-          temperature: 0.7,
-          topK: 40,
-          topP: 0.95,
-          maxOutputTokens: 1024,
-        }
+        model: 'gpt-3.5-turbo',
+        messages: [
+          {
+            role: 'system',
+            content: systemPrompt
+          },
+          {
+            role: 'user',
+            content: message
+          }
+        ],
+        max_tokens: 1024,
+        temperature: 0.7,
+        top_p: 0.95,
+        frequency_penalty: 0,
+        presence_penalty: 0
       };
 
-      const response = await fetch(`${this.baseUrl}?key=${this.apiKey}`, {
+      const response = await fetch(this.baseUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': `Bearer ${this.apiKey}`
         },
         body: JSON.stringify(requestBody)
       });
 
       if (!response.ok) {
+        const errorText = await response.text();
+        console.error('OpenAI API Error:', response.status, errorText);
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
       const data = await response.json();
       
-      if (data.candidates && data.candidates[0] && data.candidates[0].content) {
-        const text = data.candidates[0].content.parts[0].text;
+      if (data.choices && data.choices[0] && data.choices[0].message) {
+        const text = data.choices[0].message.content;
         return {
           text: text.trim(),
           success: true
@@ -219,19 +223,14 @@ class GeminiService {
       }
 
     } catch (error) {
-      console.error('Gemini API Error:', error);
-      return {
-        text: language === 'es' 
-          ? 'Lo siento, hay un problema técnico. Por favor contacta directamente vía WhatsApp al +52 557 907 6626 para más información.'
-          : 'Sorry, there is a technical issue. Please contact directly via WhatsApp at +52 557 907 6626 for more information.',
-        success: false,
-        error: error instanceof Error ? error.message : 'Unknown error'
-      };
+      console.error('OpenAI API Error:', error);
+      // En caso de error, usar respuestas mock como fallback
+      return await this.sendMessageMock(message, language);
     }
   }
 
   // Mock response for development/testing
-  async sendMessageMock(message: string, language: 'es' | 'en' = 'es'): Promise<GeminiResponse> {
+  async sendMessageMock(message: string, language: 'es' | 'en' = 'es'): Promise<OpenAIResponse> {
     const responses = {
       es: {
         'precio': 'El precio Early Bird es de $8,000 MXN (válido hasta el 16 de octubre 2025) y el precio regular es de $9,500 MXN. Incluye materiales, manuales, protocolos, certificación, acceso a la app oficial y extensiones 2026.',
@@ -275,4 +274,4 @@ class GeminiService {
   }
 }
 
-export const geminiService = new GeminiService();
+export const openaiService = new OpenAIService();

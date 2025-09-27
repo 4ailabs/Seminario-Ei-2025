@@ -10,7 +10,7 @@ El proyecto está listo para desplegar en Vercel con las siguientes característ
 - ✅ **Service Worker** configurado
 - ✅ **Responsive design** optimizado
 - ✅ **Bilingual support** (ES/EN)
-- ✅ **Chatbot** con Gemini AI
+- ✅ **Chatbot** con OpenAI
 
 ### **2. Pasos para Desplegar**
 
@@ -56,10 +56,10 @@ vercel --prod
 
 | Variable | Valor | Entornos |
 |----------|-------|----------|
-| `VITE_GEMINI_API_KEY` | `tu_api_key_de_gemini` | Production, Preview, Development |
+| `VITE_OPENAI_API_KEY` | `tu_api_key_de_openai` | Production, Preview, Development |
 
-#### **Obtener API Key de Gemini:**
-1. Ve a [Google AI Studio](https://makersuite.google.com/app/apikey)
+#### **Obtener API Key de OpenAI:**
+1. Ve a [OpenAI Platform](https://platform.openai.com/api-keys)
 2. Crea una nueva API key
 3. Copia la clave generada
 4. Añádela en Vercel como variable de entorno
@@ -71,10 +71,10 @@ Después del despliegue, edita `components/ChatWindow.tsx`:
 
 ```typescript
 // Cambiar esta línea:
-const response = await geminiService.sendMessageMock(inputMessage, language);
+const response = await openaiService.sendMessageMock(inputMessage, language);
 
 // Por esta:
-const response = await geminiService.sendMessage(inputMessage, language);
+const response = await openaiService.sendMessage(inputMessage, language);
 ```
 
 ### **5. Configuración PWA**
@@ -135,7 +135,7 @@ vercel --prod
 - Revisa los logs en Vercel Dashboard
 
 #### **Chatbot no funciona:**
-- Verifica que `VITE_GEMINI_API_KEY` esté configurada
+- Verifica que `VITE_OPENAI_API_KEY` esté configurada
 - Asegúrate de activar la API real (no mock)
 
 #### **PWA no se instala:**

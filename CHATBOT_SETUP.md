@@ -1,20 +1,20 @@
-# 🤖 Chatbot Setup - Gemini AI
+# 🤖 Chatbot Setup - OpenAI
 
 ## Configuración del Chatbot
 
-El chatbot está implementado y listo para usar. Actualmente funciona con respuestas mock para desarrollo, pero puedes conectarlo a la API real de Gemini.
+El chatbot está implementado y listo para usar. Actualmente funciona con respuestas mock para desarrollo, pero puedes conectarlo a la API real de OpenAI.
 
 ### 🔧 Configuración de la API Key
 
 #### **Para Desarrollo Local:**
-1. **Obtén tu API Key de Gemini:**
-   - Ve a [Google AI Studio](https://makersuite.google.com/app/apikey)
+1. **Obtén tu API Key de OpenAI:**
+   - Ve a [OpenAI Platform](https://platform.openai.com/api-keys)
    - Crea una nueva API key
    - Copia la clave generada
 
 2. **Crea archivo `.env.local`:**
    ```bash
-   VITE_GEMINI_API_KEY=tu_api_key_aqui
+   VITE_OPENAI_API_KEY=tu_api_key_aqui
    ```
 
 #### **Para Vercel (Producción):**
@@ -22,7 +22,7 @@ El chatbot está implementado y listo para usar. Actualmente funciona con respue
    - Ve a tu proyecto
    - Settings > Environment Variables
    - Add New Variable:
-     - **Name:** `VITE_GEMINI_API_KEY`
+     - **Name:** `VITE_OPENAI_API_KEY`
      - **Value:** `tu_api_key_aqui`
      - **Environment:** Production, Preview, Development
 
@@ -33,11 +33,11 @@ El chatbot está implementado y listo para usar. Actualmente funciona con respue
 - En el archivo `components/ChatWindow.tsx`
 - Cambia la línea 47 de:
   ```typescript
-  const response = await geminiService.sendMessageMock(inputMessage, language);
+  const response = await openaiService.sendMessageMock(inputMessage, language);
   ```
 - A:
   ```typescript
-  const response = await geminiService.sendMessage(inputMessage, language);
+  const response = await openaiService.sendMessage(inputMessage, language);
   ```
 
 ### 🚀 Características Implementadas
@@ -77,7 +77,7 @@ El chatbot está implementado y listo para usar. Actualmente funciona con respue
 - Perfecto para testing
 
 #### **Modo Producción:**
-- Conectado a Gemini AI real
+- Conectado a OpenAI real
 - Requiere API key válida
 - Respuestas generadas por IA
 - Más inteligente y contextual
@@ -99,7 +99,7 @@ El chatbot está optimizado para:
 ### 🛠️ Personalización
 
 Puedes personalizar:
-- **Prompts del sistema** en `geminiService.ts`
+- **Prompts del sistema** en `openaiService.ts`
 - **Preguntas rápidas** en `ChatWindow.tsx`
 - **Estilos** usando las clases de Tailwind
 - **Comportamiento** modificando la lógica de respuestas
@@ -109,6 +109,6 @@ Puedes personalizar:
 - **API Key**: Mantén tu clave segura
 - **Validación**: El servicio valida respuestas
 - **Fallback**: Respuestas de error amigables
-- **Rate Limiting**: Gemini maneja los límites automáticamente
+- **Rate Limiting**: OpenAI maneja los límites automáticamente
 
 ¡El chatbot está listo para mejorar la experiencia de tus usuarios! 🎉

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { X, Send, Bot, User, Loader2 } from 'lucide-react';
-import { geminiService, ChatMessage } from '../services/geminiService';
+import { openaiService, ChatMessage } from '../services/openaiService';
 import { useLanguage } from '../LanguageContext';
 
 interface ChatWindowProps {
@@ -53,8 +53,8 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose }) => {
     setIsLoading(true);
 
     try {
-      // Use real Gemini API
-      const response = await geminiService.sendMessage(inputMessage, language);
+      // Use real OpenAI API
+      const response = await openaiService.sendMessage(inputMessage, language);
       
       const botMessage: ChatMessage = {
         id: (Date.now() + 1).toString(),
