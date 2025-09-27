@@ -2,6 +2,7 @@ export interface Translations {
   // Navigation
   nav: {
     programa: string;
+    webinars: string;
     paraQuien: string;
     resultados: string;
     testimonios: string;
@@ -116,6 +117,19 @@ export interface Translations {
     ctaWhatsApp: string;
   };
   
+  // Webinars Section
+  webinars: {
+    title: string;
+    subtitle: string;
+    description: string;
+    videos: Array<{
+      title: string;
+      description: string;
+      videoUrl: string;
+      session: string;
+    }>;
+  };
+  
   // Footer
   footer: {
     quote: string;
@@ -126,6 +140,7 @@ export const translations: Record<string, Translations> = {
   es: {
     nav: {
       programa: "Programa",
+      webinars: "Webinars",
       paraQuien: "Para Quién",
       resultados: "Resultados",
       testimonios: "Testimonios",
@@ -393,6 +408,19 @@ export const translations: Record<string, Translations> = {
       includes: "Precios para modalidad Presencial y Online.",
       ctaWhatsApp: "Inscríbete vía WhatsApp"
     },
+    webinars: {
+      title: "Webinars Introductorios",
+      subtitle: "Videos de preparación para cada sesión",
+      description: "Accede a los videos introductorios de cada sesión para prepararte y obtener el máximo provecho del seminario.",
+      videos: [
+        {
+          title: "Webinar de Introducción - Sesión 1",
+          description: "Video introductorio que establece las bases conceptuales y el contexto del programa de transformación energética.",
+          videoUrl: "https://vimeo.com/1122501757/9d6c991bc4",
+          session: "Sesión 1"
+        }
+      ]
+    },
     footer: {
       quote: "Transforma tu cerebro reactivo en una herramienta de creación consciente"
     }
@@ -400,6 +428,7 @@ export const translations: Record<string, Translations> = {
   en: {
     nav: {
       programa: "Program",
+      webinars: "Webinars",
       paraQuien: "Who is it for",
       resultados: "Results",
       testimonios: "Testimonials",
@@ -666,6 +695,19 @@ export const translations: Record<string, Translations> = {
       validUntil: "Valid until October 16, 2025",
       includes: "Prices for both In-Person and Online modalities.",
       ctaWhatsApp: "Register via WhatsApp"
+    },
+    webinars: {
+      title: "Introductory Webinars",
+      subtitle: "Preparation videos for each session",
+      description: "Access the introductory videos for each session to prepare yourself and get the most out of the seminar.",
+      videos: [
+        {
+          title: "Introduction Webinar - Session 1",
+          description: "Introductory video that establishes the conceptual foundations and context of the energy transformation program.",
+          videoUrl: "https://vimeo.com/1122501757/9d6c991bc4",
+          session: "Session 1"
+        }
+      ]
     },
     footer: {
       quote: "Transform your reactive brain into a conscious creation tool"

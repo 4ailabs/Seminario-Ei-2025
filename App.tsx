@@ -83,6 +83,7 @@ const Header: React.FC<{ onScrollTo: (id: string) => void }> = ({ onScrollTo }) 
 
     const navLinks = [
         { id: 'programa', text: t.nav.programa },
+        { id: 'webinars', text: t.nav.webinars },
         { id: 'para-quien', text: t.nav.paraQuien },
         { id: 'resultados', text: t.nav.resultados },
         { id: 'testimonios', text: t.nav.testimonios },
@@ -517,6 +518,28 @@ const AppContent: React.FC = () => {
                     <ProgramSection/>
                 </AnimatedSection>
                 
+                {/* --- Webinars Section --- */}
+                <AnimatedSection id="webinars" className="bg-slate-900 py-12 sm:py-16 md:py-24" delay={300}>
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center mb-8 sm:mb-12">
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
+                                {t.webinars.title}
+                            </h2>
+                            <p className="text-lg sm:text-xl text-cyan-400 font-semibold mb-4">
+                                {t.webinars.subtitle}
+                            </p>
+                            <p className="text-slate-300 max-w-3xl mx-auto text-sm sm:text-base leading-relaxed">
+                                {t.webinars.description}
+                            </p>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
+                            {t.webinars.videos.map((webinar, index) => (
+                                <WebinarCard key={index} webinar={webinar} />
+                            ))}
+                        </div>
+                    </div>
+                </AnimatedSection>
+                
                 {/* --- Who is it for Section --- */}
                 <AnimatedSection id="para-quien" className="bg-slate-900 py-12 sm:py-16 md:py-24" delay={400}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -727,6 +750,37 @@ const TestimonialCard: React.FC<{ quote: string, name: string, role: string }> =
             <p className="font-bold text-white text-sm sm:text-base">{name}</p>
             <p className="text-cyan-400 text-xs sm:text-sm">{role}</p>
         </div>
+    </div>
+);
+
+// --- Webinar Card Component ---
+const WebinarCard: React.FC<{ webinar: { title: string; description: string; videoUrl: string; session: string } }> = ({ webinar }) => (
+    <div className="bg-slate-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10 group">
+        <div className="flex items-start justify-between mb-4">
+            <div className="flex items-center gap-3">
+                <div className="p-3 bg-cyan-500/10 rounded-xl group-hover:bg-cyan-500/20 transition-colors duration-300">
+                    <svg className="w-6 h-6 text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </div>
+                <div>
+                    <span className="text-xs font-semibold text-cyan-400 uppercase tracking-wide">{webinar.session}</span>
+                </div>
+            </div>
+        </div>
+        <h3 className="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">{webinar.title}</h3>
+        <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-4">{webinar.description}</p>
+        <a 
+            href={webinar.videoUrl} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300 group-hover:bg-cyan-600"
+        >
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+            </svg>
+            Ver Webinar
+        </a>
     </div>
 );
 
