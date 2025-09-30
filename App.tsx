@@ -2,13 +2,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import { 
-    Sparkles, 
-    Zap, 
-    Compass, 
     MapPin, 
-    Gem, 
     Brain, 
-    Zap as Energy, 
+    Zap, 
     Clock, 
     Cpu, 
     Check, 
@@ -17,7 +13,6 @@ import {
     User, 
     Quote, 
     MessageCircle,
-    Languages,
     ArrowUp,
     ArrowRight,
     Timer,
@@ -25,7 +20,9 @@ import {
     FileText,
     Award,
     Smartphone,
-    RefreshCw
+    RefreshCw,
+    Sparkles,
+    Compass
 } from 'lucide-react';
 import { LanguageProvider, useLanguage } from './LanguageContext';
 import { useIntersectionObserver } from './useIntersectionObserver';
@@ -34,349 +31,41 @@ import SessionsPage from './pages/SessionsPage';
 import SessionDetailPage from './pages/SessionDetailPage';
 import LazyGalleryImage from './components/LazyGalleryImage';
 import LazyVimeoVideo from './components/LazyVimeoVideo';
+import Header from './components/Header';
+import AnimatedSection from './components/AnimatedSection';
+import ProgramSection from './components/ProgramSection';
+import ErrorBoundary from './components/ErrorBoundary';
+import InfoCard from './components/InfoCard';
+import WebinarCard from './components/WebinarCard';
+import TestimonialCard from './components/TestimonialCard';
+import IncludeCard from './components/IncludeCard';
+import { 
+  MapPinIcon, 
+  SparklesIcon, 
+  GemIcon, 
+  BrainIcon, 
+  EnergyIcon, 
+  DecisionIcon, 
+  CpuIcon, 
+  CheckIcon, 
+  HeartPulseIcon, 
+  BriefcaseIcon, 
+  UserIcon, 
+  QuoteIcon, 
+  WhatsAppIcon,
+  BookOpenIcon,
+  FileTextIcon,
+  AwardIcon,
+  SmartphoneIcon,
+  RefreshCwIcon
+} from './components/Icons';
 import { sessionsData } from './data/sessionsData';
 
 
-// --- Icons ---
-const MapPinIcon = ({ className = "w-6 h-6" }) => <MapPin className={className} strokeWidth={1.5} />;
-const SparklesIcon = ({ className = "w-6 h-6" }) => <Sparkles className={className} strokeWidth={1.5} />;
-const GemIcon = ({ className = "w-6 h-6" }) => <Gem className={className} strokeWidth={1.5} />;
-const BrainIcon = () => <Brain className="w-7 h-7" strokeWidth={1.5} />;
-const EnergyIcon = () => <Energy className="w-7 h-7" strokeWidth={1.5} />;
-const DecisionIcon = () => <Clock className="w-7 h-7" strokeWidth={1.5} />;
-const CpuIcon = ({ className = "w-7 h-7" }) => <Cpu className={className} strokeWidth={1.5} />;
-const CheckIcon = ({ className = "w-6 h-6 mr-3 text-cyan-400 flex-shrink-0 mt-1" }) => <Check className={className} strokeWidth={1.5} />;
-const HeartPulseIcon = ({ className = "w-7 h-7" }) => <HeartPulse className={className} strokeWidth={1.5} />;
-const BriefcaseIcon = ({ className = "w-7 h-7" }) => <Briefcase className={className} strokeWidth={1.5} />;
-const UserIcon = ({ className = "w-7 h-7" }) => <User className={className} strokeWidth={1.5} />;
-const QuoteIcon = ({ className = "w-6 h-6" }) => <Quote className={className} strokeWidth={1.5} />;
-const WhatsAppIcon = ({className = "w-6 h-6"}) => <MessageCircle className={className} strokeWidth={1.5} />;
 
 
-// --- Section Wrapper ---
-const AnimatedSection: React.FC<{ children: React.ReactNode, className?: string, id?: string, delay?: number }> = ({ children, className, id, delay = 0 }) => {
-    const [ref, isIntersecting] = useIntersectionObserver();
-    
-    return (
-        <div 
-            ref={ref}
-            id={id} 
-            className={`transition-all duration-1000 ease-out ${
-                isIntersecting 
-                    ? 'opacity-100 translate-y-0' 
-                    : 'opacity-0 translate-y-8'
-            } ${className || ''}`}
-            style={{ transitionDelay: `${delay}ms` }}
-        >
-            {children}
-        </div>
-    );
-};
-
-
-// --- Header Component ---
-const Header: React.FC<{ onScrollTo: (id: string) => void }> = ({ onScrollTo }) => {
-    const [isScrolled, setIsScrolled] = useState(false);
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const { language, setLanguage, t } = useLanguage();
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 10);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    const navLinks = [
-        { id: 'programa', text: t.nav.programa },
-        { id: 'sesiones', text: 'Sesiones', isRoute: true },
-        { id: 'galeria', text: t.nav.galeria },
-        { id: 'webinars', text: t.nav.webinars },
-        { id: 'para-quien', text: t.nav.paraQuien },
-        { id: 'resultados', text: t.nav.resultados },
-        { id: 'testimonios', text: t.nav.testimonios },
-        { id: 'incluye', text: t.nav.incluye },
-        { id: 'inversion', text: t.nav.inversion },
-    ];
-
-    const handleMobileNavClick = (id: string) => {
-        onScrollTo(id);
-        setIsMobileMenuOpen(false);
-    };
-
-    return (
-        <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-slate-900/80 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`}>
-            <div className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-                <a 
-                    href="https://inteligencia-energetica.com/home-ei" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-300"
-                >
-                    <img 
-                        src="/images/logo-seminario.png" 
-                        alt="Logo Seminario Inteligencia Energética" 
-                        className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
-                    />
-                    <div className="text-lg sm:text-xl font-bold text-white tracking-wider">
-                        <span className="text-cyan-400">Inteligencia</span> Energética
-                    </div>
-                </a>
-                
-                {/* Desktop Navigation */}
-                <nav className="hidden md:flex items-center space-x-6">
-                    {navLinks.map(link => (
-                        link.isRoute ? (
-                            <a href={`/${link.id}`} key={link.id} className="text-slate-300 hover:text-cyan-400 transition-colors duration-300">{link.text}</a>
-                        ) : (
-                            <a href={`#${link.id}`} onClick={(e) => {e.preventDefault(); onScrollTo(link.id)}} key={link.id} className="text-slate-300 hover:text-cyan-400 transition-colors duration-300">{link.text}</a>
-                        )
-                    ))}
-                </nav>
-                
-                {/* Language Toggle */}
-                <div className="hidden md:flex items-center gap-2 mr-4">
-                    <Languages className="w-4 h-4 text-slate-300" />
-                    <button
-                        onClick={() => setLanguage(language === 'es' ? 'en' : 'es')}
-                        className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 text-sm font-medium"
-                    >
-                        {language === 'es' ? 'EN' : 'ES'}
-                    </button>
-                </div>
-
-                {/* Desktop CTA Button */}
-                 <a href="#inversion" onClick={(e) => {e.preventDefault(); onScrollTo('inversion')}} className="hidden md:block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-5 rounded-full text-sm transition duration-300 ease-in-out transform hover:scale-105">
-                    {t.nav.inscribirse}
-                </a>
-
-                {/* Mobile Menu Button */}
-                <button
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    className="md:hidden p-2 text-white hover:text-cyan-400 transition-colors duration-300"
-                    aria-label="Toggle mobile menu"
-                >
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        {isMobileMenuOpen ? (
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                        ) : (
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                        )}
-                    </svg>
-                </button>
-            </div>
-
-            {/* Mobile Navigation Menu */}
-            {isMobileMenuOpen && (
-                <div className="md:hidden absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-lg border-t border-slate-700 shadow-lg max-h-[85vh] overflow-y-auto">
-                    <nav className="container mx-auto px-4 py-6">
-                        {navLinks.map(link => (
-                            link.isRoute ? (
-                                <a
-                                    href={`/${link.id}`}
-                                    key={link.id}
-                                    className="block py-4 px-2 text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50 transition-all duration-300 border-b border-slate-700 last:border-b-0 touch-manipulation text-base font-medium rounded-lg"
-                                >
-                                    {link.text}
-                                </a>
-                            ) : (
-                                <a
-                                    href={`#${link.id}`}
-                                    onClick={(e) => {e.preventDefault(); handleMobileNavClick(link.id)}}
-                                    key={link.id}
-                                    className="block py-4 px-2 text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50 transition-all duration-300 border-b border-slate-700 last:border-b-0 touch-manipulation text-base font-medium rounded-lg"
-                                >
-                                    {link.text}
-                                </a>
-                            )
-                        ))}
-                        {/* Mobile Language Toggle */}
-                        <div className="flex items-center justify-between py-4 px-2 border-b border-slate-700">
-                            <span className="text-slate-300 text-base font-medium">Idioma</span>
-                            <button
-                                onClick={() => setLanguage(language === 'es' ? 'en' : 'es')}
-                                className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 text-base font-medium touch-manipulation px-4 py-2 rounded-lg hover:bg-slate-800/50"
-                            >
-                                {language === 'es' ? 'English' : 'Español'}
-                            </button>
-                        </div>
-                        
-                        <a
-                            href="#inversion"
-                            onClick={(e) => {e.preventDefault(); handleMobileNavClick('inversion')}}
-                            className="block bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 text-white font-bold py-4 px-6 rounded-full text-center transition duration-300 touch-manipulation text-base mt-4"
-                        >
-                            {t.nav.inscribirse}
-                        </a>
-                    </nav>
-                </div>
-            )}
-        </header>
-    );
-};
 
 // --- Program Section Component ---
-const ProgramSection: React.FC = () => {
-    const [activeTab, setActiveTab] = useState(1);
-    const { t } = useLanguage();
-    const navigate = useNavigate();
-    
-    const scheduleData = {
-        1: {
-            sessionLabel: t.program.sessions.session1,
-            title: t.program.topics.session1.title,
-            date: t.program.topics.session1.date,
-            topics: t.program.topics.session1.topics
-        },
-        2: {
-            sessionLabel: t.program.sessions.session2,
-            title: t.program.topics.session2.title,
-            date: t.program.topics.session2.date,
-            topics: t.program.topics.session2.topics
-        },
-        3: {
-            sessionLabel: t.program.sessions.session3,
-            title: t.program.topics.session3.title,
-            date: t.program.topics.session3.date,
-            topics: t.program.topics.session3.topics
-        },
-        4: {
-            sessionLabel: t.program.sessions.session4,
-            title: t.program.topics.session4.title,
-            date: t.program.topics.session4.date,
-            topics: t.program.topics.session4.topics
-        },
-        5: {
-            sessionLabel: t.program.sessions.session5,
-            title: t.program.topics.session5.title,
-            date: t.program.topics.session5.date,
-            topics: t.program.topics.session5.topics
-        },
-    };
-
-    const TabButton: React.FC<{ session: number; label: string; }> = ({ session, label }) => {
-        const getSessionIcon = (sessionNum: number) => {
-            switch(sessionNum) {
-                case 1: return <Sparkles className="w-5 h-5" strokeWidth={1.5} />;
-                case 2: return <Zap className="w-5 h-5" strokeWidth={1.5} />;
-                case 3: return <Compass className="w-5 h-5" strokeWidth={1.5} />;
-                case 4: return <Brain className="w-5 h-5" strokeWidth={1.5} />;
-                case 5: return <Award className="w-5 h-5" strokeWidth={1.5} />;
-                default: return <Sparkles className="w-5 h-5" strokeWidth={1.5} />;
-            }
-        };
-
-        const getSessionColor = (sessionNum: number) => {
-            switch(sessionNum) {
-                case 1: return "from-blue-500 to-cyan-500";
-                case 2: return "from-purple-500 to-pink-500";
-                case 3: return "from-green-500 to-emerald-500";
-                case 4: return "from-orange-500 to-red-500";
-                case 5: return "from-yellow-500 to-amber-500";
-                default: return "from-slate-500 to-slate-600";
-            }
-        };
-
-        return (
-        <div
-            className={`w-full text-left p-3 sm:p-4 rounded-lg transition-all duration-300 border-2 relative overflow-hidden group ${
-                activeTab === session 
-                    ? `bg-gradient-to-br ${getSessionColor(session)} text-white shadow-lg border-white/30 transform scale-105` 
-                    : 'bg-slate-800 hover:bg-slate-700 text-slate-300 border-slate-600 hover:border-slate-500 hover:shadow-md hover:scale-102'
-            }`}
-            onClick={() => setActiveTab(session)}
-        >
-                {/* Efecto de brillo para la sesión activa */}
-                {activeTab === session && (
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
-                )}
-                
-                <div className="relative z-10">
-                    <div className="flex items-center gap-2 mb-1">
-                        {getSessionIcon(session)}
-                        <span className={`block text-xs sm:text-sm font-semibold ${activeTab === session ? 'opacity-90' : 'opacity-70'}`}>
-                            SESIÓN {session}
-                        </span>
-                    </div>
-                    <span className="font-bold text-sm sm:text-base block">{label}</span>
-                    <div className="mt-2 flex items-center justify-between">
-                        {activeTab === session && (
-                            <div className="w-full h-1 bg-white rounded-full opacity-60"></div>
-                        )}
-                        <button
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                navigate(`/sesion/${session}`);
-                            }}
-                            className="flex items-center gap-1 px-3 py-1 bg-white/20 hover:bg-white/30 rounded-lg transition-colors text-xs font-medium group/btn"
-                        >
-                            <span>Explorar</span>
-                            <ArrowRight className="w-3 h-3 group-hover/btn:translate-x-0.5 transition-transform" />
-                        </button>
-                    </div>
-                </div>
-        </div>
-    );
-    };
-    
-    return (
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-24">
-             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-6 text-white tracking-tight leading-tight">{t.program.title}</h2>
-             <p className="text-center text-slate-400 text-sm sm:text-base mb-8 sm:mb-12 max-w-2xl mx-auto">
-                {t.program.subtitle}
-             </p>
-             <p className="text-center text-slate-500 text-xs mb-4 italic">
-                {t.program.disclaimer}
-             </p>
-             <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 max-w-6xl mx-auto">
-                <div className="lg:w-1/3">
-                    <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-1 gap-3 sm:gap-4">
-                        <TabButton session={1} label={t.program.sessions.session1}/>
-                        <TabButton session={2} label={t.program.sessions.session2}/>
-                        <TabButton session={3} label={t.program.sessions.session3}/>
-                        <TabButton session={4} label={t.program.sessions.session4}/>
-                        <TabButton session={5} label={t.program.sessions.session5}/>
-                    </div>
-                    {/* Indicador de progreso */}
-                    <div className="mt-4 hidden lg:block">
-                        <div className="text-center text-slate-400 text-sm mb-2">Progreso del Programa</div>
-                        <div className="flex gap-2 justify-center">
-                            {[1, 2, 3, 4, 5].map((session) => (
-                                <div
-                                    key={session}
-                                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                                        activeTab === session 
-                                            ? 'bg-cyan-400 scale-125' 
-                                            : activeTab > session 
-                                                ? 'bg-slate-500' 
-                                                : 'bg-slate-700 border border-slate-600'
-                                    }`}
-                                />
-                            ))}
-                        </div>
-                    </div>
-                </div>
-                <div className="lg:w-2/3 bg-slate-800/50 border border-slate-700 p-4 sm:p-6 md:p-8 rounded-2xl">
-                     <h3 className="text-xl sm:text-2xl font-bold text-cyan-400 mb-2 leading-tight">{scheduleData[activeTab].title}</h3>
-                     <p className="text-slate-300 mb-2 text-sm sm:text-base font-medium">{scheduleData[activeTab].date}</p>
-                     <p className="text-slate-400 mb-4 sm:mb-6 text-sm sm:text-base">Temas principales de la sesión:</p>
-                     <ul className="space-y-4 sm:space-y-6">
-                        {scheduleData[activeTab].topics.map((topic, index) => (
-                            <li key={index} className="flex items-start">
-                                <CheckIcon className="w-5 h-5 sm:w-6 sm:h-6 mr-3 text-cyan-400 flex-shrink-0 mt-1" />
-                                <div className="flex-1">
-                                    <h4 className="font-semibold text-slate-200 text-sm sm:text-base leading-tight">{topic.title}</h4>
-                                    <p className="text-slate-400 mt-1 text-xs sm:text-sm leading-relaxed">{topic.description}</p>
-                                </div>
-                            </li>
-                        ))}
-                     </ul>
-                </div>
-             </div>
-        </div>
-    );
-};
 
 
 // --- Countdown Timer Component ---
@@ -642,11 +331,12 @@ const AppContent: React.FC = () => {
                         </div>
                         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 max-w-7xl mx-auto">
                             {galleryImages.map((image, index) => (
-                                <LazyGalleryImage 
-                                    key={index} 
-                                    src={image} 
-                                    index={index}
-                                />
+                                <ErrorBoundary key={index}>
+                                    <LazyGalleryImage 
+                                        src={image}
+                                        index={index}
+                                    />
+                                </ErrorBoundary>
                             ))}
                         </div>
                     </div>
@@ -773,15 +463,6 @@ const App: React.FC = () => {
     );
 };
 
-const InfoCard: React.FC<{ icon: React.ReactNode, title: string, description: string }> = ({ icon, title, description }) => (
-    <div className="bg-slate-800 p-6 sm:p-8 rounded-xl text-center border border-slate-700 transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/10 h-full">
-        <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 mb-4 sm:mb-6 text-cyan-400 bg-slate-900 rounded-full">
-            {icon}
-        </div>
-        <h3 className="text-lg sm:text-xl font-bold text-white mb-3 leading-tight">{title}</h3>
-        <p className="text-sm sm:text-base text-slate-400 leading-relaxed">{description}</p>
-    </div>
-);
 
 const BenefitCard: React.FC<{ icon: React.ReactNode, title: string, benefits: string[] }> = ({ icon, title, benefits }) => (
     <div className="bg-slate-800/50 p-4 sm:p-6 rounded-xl border border-slate-700 h-full transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/10">
@@ -802,18 +483,6 @@ const BenefitCard: React.FC<{ icon: React.ReactNode, title: string, benefits: st
     </div>
 );
 
-const TestimonialCard: React.FC<{ quote: string, name: string, role: string }> = ({ quote, name, role }) => (
-    <div className="bg-slate-800 p-6 sm:p-8 rounded-xl border border-slate-700 relative h-full flex flex-col justify-between transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/10">
-        <div>
-            <QuoteIcon className="absolute top-4 left-4 sm:top-6 sm:left-6 w-8 h-8 sm:w-12 sm:h-12 text-slate-700" />
-            <p className="relative z-10 text-sm sm:text-base text-slate-300 mb-4 sm:mb-6 italic leading-relaxed">"{quote}"</p>
-        </div>
-        <div className="relative z-10 mt-auto">
-            <p className="font-bold text-white text-sm sm:text-base">{name}</p>
-            <p className="text-cyan-400 text-xs sm:text-sm">{role}</p>
-        </div>
-    </div>
-);
 
 // --- Gallery Images Data ---
 const galleryImages = [
@@ -837,54 +506,7 @@ const galleryImages = [
 
 
 // --- Webinar Card Component ---
-const WebinarCard: React.FC<{ webinar: { title: string; description: string; videoUrl: string; session: string } }> = ({ webinar }) => {
-    // Extract video ID and hash from Vimeo URL
-    const getVimeoEmbedUrl = (url: string) => {
-        // Handle format: https://vimeo.com/1122501757/9d6c991bc4
-        const parts = url.split('/');
-        const videoId = parts[parts.length - 2]; // Get the video ID
-        const hash = parts[parts.length - 1]; // Get the hash
-        return `https://player.vimeo.com/video/${videoId}?h=${hash}&badge=0&autopause=0&player_id=0&app_id=58479`;
-    };
 
-    return (
-        <div className="bg-slate-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10 group h-full flex flex-col">
-            <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-3">
-                    <div className="p-3 bg-cyan-500/10 rounded-xl group-hover:bg-cyan-500/20 transition-colors duration-300">
-                        <svg className="w-6 h-6 text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <span className="text-xs font-semibold text-cyan-400 uppercase tracking-wide">{webinar.session}</span>
-                    </div>
-                </div>
-            </div>
-            <h3 className="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2 min-h-[3.5rem]">{webinar.title}</h3>
-            <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-4 flex-1 line-clamp-3">{webinar.description}</p>
-            
-            {/* Lazy Loaded Video */}
-            <LazyVimeoVideo 
-                videoUrl={webinar.videoUrl}
-                title={webinar.title}
-            />
-        </div>
-    );
-};
-
-// --- Include Card Component ---
-const IncludeCard: React.FC<{ icon: React.ReactNode; title: string; description: string }> = ({ icon, title, description }) => (
-    <div className="bg-slate-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10 group">
-        <div className="flex items-center mb-4">
-            <div className="p-3 bg-cyan-500/10 rounded-xl group-hover:bg-cyan-500/20 transition-colors duration-300">
-                {icon}
-            </div>
-        </div>
-        <h3 className="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">{title}</h3>
-        <p className="text-slate-400 text-sm sm:text-base leading-relaxed">{description}</p>
-    </div>
-);
 
 // --- Function to get include icon with different colors ---
 const getIncludeIcon = (title: string) => {
