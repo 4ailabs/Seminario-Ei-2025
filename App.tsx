@@ -170,9 +170,8 @@ const AppContent: React.FC = () => {
     };
 
     const generateWhatsAppMessage = () => {
-        const message = t.language === 'es' 
-            ? `¡Hola! Me interesa inscribirme al Seminario Internacional de Inteligencia Energética del 5-7 de diciembre 2025 en Ciudad de México. ¿Podrían brindarme más información sobre el proceso de inscripción y formas de pago?`
-            : `Hello! I'm interested in registering for the International Energy Intelligence Conference on December 5-7, 2025 in Mexico City. Could you provide me with more information about the registration process and payment methods?`;
+        // Always generate Spanish message for WhatsApp
+        const message = `¡Hola! Me interesa inscribirme al Seminario Internacional de Inteligencia Energética del 5-7 de diciembre 2025 en Ciudad de México. ¿Podrían brindarme más información sobre el proceso de inscripción y formas de pago?`;
         return encodeURIComponent(message);
     };
 
@@ -422,7 +421,7 @@ const AppContent: React.FC = () => {
                     <p className="text-xl italic mb-6">"{t.footer.quote}"</p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
                         <a 
-                            href="https://inteligencia-energetica.com/home-ei" 
+                            href="https://www.institutocentrobioenergetica.com" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
