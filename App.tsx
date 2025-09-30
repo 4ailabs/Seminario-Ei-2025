@@ -417,7 +417,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
             </main>
 
-            <footer className="text-center p-8 text-slate-400 bg-slate-900 border-t border-slate-800">
+            <footer className="text-center p-8 pb-24 sm:pb-8 text-slate-400 bg-slate-900 border-t border-slate-800 safe-area-inset-bottom">
                 <div className="max-w-4xl mx-auto">
                     <p className="text-xl italic mb-6">"{t.footer.quote}"</p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
