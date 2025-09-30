@@ -11,7 +11,7 @@ export const useLazyImage = (src: string, options: UseLazyImageOptions = {}) => 
   const [isLoaded, setIsLoaded] = useState(false);
   const [isError, setIsError] = useState(false);
   const [isInView, setIsInView] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const { threshold = 0.1, rootMargin = '50px', fallbackSrc } = options;
 
@@ -30,8 +30,8 @@ export const useLazyImage = (src: string, options: UseLazyImageOptions = {}) => 
       }
     );
 
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
     }
 
     return () => observer.disconnect();
@@ -51,7 +51,7 @@ export const useLazyImage = (src: string, options: UseLazyImageOptions = {}) => 
   };
 
   return {
-    imgRef,
+    containerRef,
     imageSrc,
     isLoaded,
     isError,

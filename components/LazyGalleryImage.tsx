@@ -1,5 +1,4 @@
-import React from 'react';
-import { useLazyImage } from '../useLazyImage';
+import React, { useState, useRef, useEffect } from 'react';
 
 interface LazyGalleryImageProps {
   src: string;
@@ -12,31 +11,45 @@ const LazyGalleryImage: React.FC<LazyGalleryImageProps> = ({
   index, 
   alt = `Seminario anterior ${index + 1}` 
 }) => {
-  // Optimizar URL de Squarespace para diferentes tamaños
-  const getOptimizedSrc = (originalSrc: string, width: number = 400) => {
-    // Reemplazar el parámetro format con un tamaño específico
-    return originalSrc.replace(/format=\d+w/, `format=${width}w`);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Intersection Observer para lazy loading
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '50px',
+      }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const handleLoad = () => {
+    setIsLoaded(true);
+    setIsError(false);
   };
 
-  const optimizedSrc = getOptimizedSrc(src, 400);
-  const fallbackSrc = getOptimizedSrc(src, 200); // Imagen más pequeña como fallback
-
-  const {
-    imgRef,
-    imageSrc,
-    isLoaded,
-    isError,
-    isInView,
-    handleLoad,
-    handleError,
-  } = useLazyImage(optimizedSrc, { 
-    threshold: 0.1, 
-    rootMargin: '100px',
-    fallbackSrc 
-  });
+  const handleError = () => {
+    setIsError(true);
+    setIsLoaded(false);
+  };
 
   return (
-    <div className="relative overflow-hidden rounded-lg bg-slate-800 group">
+    <div ref={containerRef} className="relative overflow-hidden rounded-lg bg-slate-800 group">
       {/* Placeholder/Skeleton */}
       {!isLoaded && !isError && (
         <div className="w-full h-48 sm:h-56 bg-slate-700 animate-pulse flex items-center justify-center">
@@ -44,11 +57,10 @@ const LazyGalleryImage: React.FC<LazyGalleryImageProps> = ({
         </div>
       )}
 
-      {/* Imagen real */}
-      {imageSrc && (
+      {/* Imagen real - solo cargar cuando esté en vista */}
+      {isInView && (
         <img
-          ref={imgRef}
-          src={imageSrc}
+          src={src}
           alt={alt}
           className={`w-full h-48 sm:h-56 object-cover transition-all duration-500 ${
             isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
