@@ -32,6 +32,8 @@ import { useIntersectionObserver } from './useIntersectionObserver';
 import ChatButton from './components/ChatButton';
 import SessionsPage from './pages/SessionsPage';
 import SessionDetailPage from './pages/SessionDetailPage';
+import LazyGalleryImage from './components/LazyGalleryImage';
+import LazyVimeoVideo from './components/LazyVimeoVideo';
 import { sessionsData } from './data/sessionsData';
 
 
@@ -640,7 +642,7 @@ const AppContent: React.FC = () => {
                         </div>
                         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 max-w-7xl mx-auto">
                             {galleryImages.map((image, index) => (
-                                <GalleryImage 
+                                <LazyGalleryImage 
                                     key={index} 
                                     src={image} 
                                     index={index}
@@ -832,17 +834,6 @@ const galleryImages = [
     "https://images.squarespace-cdn.com/content/v1/63937c55c3c2e84a13a3ede9/f2040dfc-6559-4e92-810d-37e50e60570d/44028273_1920602174660813_2667927813331353600_n.jpg?format=2500w"
 ];
 
-// --- Gallery Image Component ---
-const GalleryImage: React.FC<{ src: string; index: number }> = ({ src, index }) => (
-    <div className="relative overflow-hidden rounded-lg bg-slate-800">
-        <img
-            src={src}
-            alt={`Seminario anterior ${index + 1}`}
-            className="w-full h-48 sm:h-56 object-cover"
-            loading="lazy"
-        />
-    </div>
-);
 
 
 // --- Webinar Card Component ---
@@ -873,17 +864,11 @@ const WebinarCard: React.FC<{ webinar: { title: string; description: string; vid
             <h3 className="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2 min-h-[3.5rem]">{webinar.title}</h3>
             <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-4 flex-1 line-clamp-3">{webinar.description}</p>
             
-            {/* Embedded Video with official Vimeo embed code */}
-            <div className="relative w-full rounded-lg overflow-hidden mb-4" style={{padding: '56.25% 0 0 0', position: 'relative'}}>
-                <iframe 
-                    src={getVimeoEmbedUrl(webinar.videoUrl)} 
-                    frameBorder="0" 
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-                    referrerPolicy="strict-origin-when-cross-origin" 
-                    style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} 
-                    title={webinar.title}
-                ></iframe>
-            </div>
+            {/* Lazy Loaded Video */}
+            <LazyVimeoVideo 
+                videoUrl={webinar.videoUrl}
+                title={webinar.title}
+            />
         </div>
     );
 };
