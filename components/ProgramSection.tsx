@@ -95,7 +95,7 @@ const ProgramSection: React.FC = () => {
   };
 
   const handleViewSessions = () => {
-    window.location.href = '/sesiones';
+    window.location.href = '/sesion/1';
   };
 
   return (
@@ -158,8 +158,8 @@ const ProgramSection: React.FC = () => {
                 <div key={index} className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
                   <div>
-                    <h4 className="text-sm sm:text-base font-semibold text-white mb-1">{topic.title}</h4>
-                    <p className="text-slate-400 text-xs sm:text-sm">{topic.description}</p>
+                    <h4 className="text-sm sm:text-base font-semibold text-white mb-1">{topic?.title || 'Tema'}</h4>
+                    <p className="text-slate-400 text-xs sm:text-sm">{topic?.description || 'Descripción no disponible'}</p>
                   </div>
                 </div>
               ))}
@@ -169,7 +169,7 @@ const ProgramSection: React.FC = () => {
               onClick={handleViewSessions}
               className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105"
             >
-              Ver Detalles Completos
+              Ver Primera Sesión
             </button>
           </div>
         </div>

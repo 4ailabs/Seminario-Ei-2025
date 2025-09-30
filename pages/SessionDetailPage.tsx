@@ -103,6 +103,31 @@ const SessionDetailPage: React.FC<SessionDetailPageProps> = ({ sessions }) => {
           
           {/* Temporarily hidden - will be reactivated later */}
           {/* <MaterialsNeeded materials={session.materials} /> */}
+          
+          {/* Navigation between sessions */}
+          <div className="flex justify-between items-center pt-8 border-t border-slate-700">
+            {sessionId > 1 ? (
+              <button
+                onClick={() => navigate(`/sesion/${sessionId - 1}`)}
+                className="flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg transition-colors"
+              >
+                ← Sesión {sessionId - 1}
+              </button>
+            ) : (
+              <div></div>
+            )}
+            
+            {sessionId < 5 ? (
+              <button
+                onClick={() => navigate(`/sesion/${sessionId + 1}`)}
+                className="flex items-center gap-2 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors"
+              >
+                Sesión {sessionId + 1} →
+              </button>
+            ) : (
+              <div></div>
+            )}
+          </div>
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@ interface Session {
   time: string;
   location: string;
   description: string;
-  topics: string[];
+  topics: Array<string | { id: string; title: string; description: string; duration: string; subTopics: Array<{ title: string; description: string }> }>;
 }
 
 interface SessionsPageProps {
@@ -98,7 +98,7 @@ const SessionsPage: React.FC<SessionsPageProps> = ({ sessions }) => {
                       key={index}
                       className="px-2 sm:px-3 py-1 sm:py-1.5 bg-slate-700 text-cyan-400 text-xs sm:text-sm rounded-full"
                     >
-                      {topic}
+                      {typeof topic === 'string' ? topic : topic?.title || 'Tema'}
                     </span>
                   ))}
                   {session.topics.length > 3 && (
