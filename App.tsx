@@ -297,19 +297,22 @@ const AppContent: React.FC = () => {
                         <p className="text-center text-base sm:text-lg text-slate-400 mt-4 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">{t.testimonials.subtitle}</p>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
                             <TestimonialCard
-                                quote={t.testimonials.testimonials[0].quote}
+                                content={t.testimonials.testimonials[0].quote}
                                 name={t.testimonials.testimonials[0].name}
                                 role={t.testimonials.testimonials[0].role}
+                                index={0}
                             />
                             <TestimonialCard
-                                quote={t.testimonials.testimonials[1].quote}
+                                content={t.testimonials.testimonials[1].quote}
                                 name={t.testimonials.testimonials[1].name}
                                 role={t.testimonials.testimonials[1].role}
+                                index={1}
                             />
                             <TestimonialCard
-                                quote={t.testimonials.testimonials[2].quote}
+                                content={t.testimonials.testimonials[2].quote}
                                 name={t.testimonials.testimonials[2].name}
                                 role={t.testimonials.testimonials[2].role}
+                                index={2}
                             />
                         </div>
                     </div>
