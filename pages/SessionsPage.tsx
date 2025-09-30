@@ -38,71 +38,71 @@ const SessionsPage: React.FC<SessionsPageProps> = ({ sessions }) => {
     <div className="min-h-screen bg-slate-900 text-slate-300">
       {/* Header */}
       <div className="bg-slate-800 border-b border-slate-700">
-        <div className="max-w-6xl mx-auto px-3 sm:px-4 py-6 sm:py-8">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-white">Programa de Sesiones</h1>
-          <p className="text-base sm:text-lg lg:text-xl text-slate-400">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 text-white leading-tight">Programa de Sesiones</h1>
+          <p className="text-base sm:text-lg lg:text-xl text-slate-400 leading-relaxed max-w-3xl">
             Explora cada sesión en detalle y accede a todos los recursos disponibles
           </p>
         </div>
       </div>
 
-            {/* Sessions Grid */}
-            <div className="max-w-6xl mx-auto px-3 sm:px-4 py-8 sm:py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+      {/* Sessions Grid */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 pb-16 sm:pb-20 lg:pb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {sessions.map((session) => (
             <div
               key={session.id}
               onClick={() => handleSessionClick(session.id)}
-              className="bg-slate-800 rounded-xl shadow-lg p-4 sm:p-6 hover:shadow-xl transition-all duration-300 cursor-pointer group border border-slate-700 hover:border-cyan-400"
+              className="bg-slate-800 rounded-xl shadow-lg p-5 sm:p-6 lg:p-7 hover:shadow-xl transition-all duration-300 cursor-pointer group border border-slate-700 hover:border-cyan-400 hover:-translate-y-1 active:scale-95 touch-manipulation"
             >
               {/* Session Number */}
-              <div className="flex items-center justify-between mb-3 sm:mb-4">
-                <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br ${getSessionColor(session.id)} text-white rounded-lg flex items-center justify-center font-bold text-base sm:text-lg`}>
+              <div className="flex items-center justify-between mb-4 sm:mb-5">
+                <div className={`w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br ${getSessionColor(session.id)} text-white rounded-lg flex items-center justify-center font-bold text-lg sm:text-xl`}>
                   {session.id}
                 </div>
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 group-hover:text-cyan-400 transition-colors" />
+                <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-slate-400 group-hover:text-cyan-400 transition-colors" />
               </div>
 
               {/* Session Title */}
-              <h3 className="text-base sm:text-lg lg:text-xl font-bold text-white mb-2 sm:mb-3 group-hover:text-cyan-400 transition-colors">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4 group-hover:text-cyan-400 transition-colors leading-tight">
                 {session.title}
               </h3>
 
               {/* Session Info */}
-              <div className="space-y-1 sm:space-y-2 mb-3 sm:mb-4">
-                <div className="flex items-center gap-2 text-slate-400">
-                  <Calendar className="w-3 h-3 sm:w-4 sm:h-4 text-emerald-400 flex-shrink-0" />
-                  <span className="text-xs sm:text-sm">{session.date}</span>
+              <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-5">
+                <div className="flex items-center gap-3 text-slate-400">
+                  <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 flex-shrink-0" />
+                  <span className="text-sm sm:text-base">{session.date}</span>
                 </div>
-                <div className="flex items-center gap-2 text-slate-400">
-                  <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-blue-400 flex-shrink-0" />
-                  <span className="text-xs sm:text-sm">{session.time}</span>
+                <div className="flex items-center gap-3 text-slate-400">
+                  <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400 flex-shrink-0" />
+                  <span className="text-sm sm:text-base">{session.time}</span>
                 </div>
-                <div className="flex items-center gap-2 text-slate-400">
-                  <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-purple-400 flex-shrink-0" />
-                  <span className="text-xs sm:text-sm">{session.location}</span>
+                <div className="flex items-center gap-3 text-slate-400">
+                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 flex-shrink-0" />
+                  <span className="text-sm sm:text-base">{session.location}</span>
                 </div>
               </div>
 
               {/* Description */}
-              <p className="text-slate-300 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-3">
+              <p className="text-slate-300 text-sm sm:text-base mb-4 sm:mb-5 line-clamp-3 leading-relaxed">
                 {session.description}
               </p>
 
               {/* Topics Preview */}
-              <div className="mb-3 sm:mb-4">
-                <h4 className="text-xs sm:text-sm font-semibold text-slate-300 mb-1 sm:mb-2">Temas principales:</h4>
-                <div className="flex flex-wrap gap-1">
+              <div className="mb-4 sm:mb-5">
+                <h4 className="text-sm sm:text-base font-semibold text-slate-300 mb-2 sm:mb-3">Temas principales:</h4>
+                <div className="flex flex-wrap gap-2">
                   {session.topics.slice(0, 3).map((topic, index) => (
                     <span
                       key={index}
-                      className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-slate-700 text-cyan-400 text-xs rounded-full"
+                      className="px-2 sm:px-3 py-1 sm:py-1.5 bg-slate-700 text-cyan-400 text-xs sm:text-sm rounded-full"
                     >
                       {topic}
                     </span>
                   ))}
                   {session.topics.length > 3 && (
-                    <span className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-slate-600 text-slate-300 text-xs rounded-full">
+                    <span className="px-2 sm:px-3 py-1 sm:py-1.5 bg-slate-600 text-slate-300 text-xs sm:text-sm rounded-full">
                       +{session.topics.length - 3} más
                     </span>
                   )}
@@ -110,8 +110,8 @@ const SessionsPage: React.FC<SessionsPageProps> = ({ sessions }) => {
               </div>
 
               {/* Action Button */}
-              <div className="pt-3 sm:pt-4 border-t border-slate-600">
-                <span className="text-cyan-400 font-medium text-xs sm:text-sm group-hover:text-cyan-300">
+              <div className="pt-4 sm:pt-5 border-t border-slate-600">
+                <span className="text-cyan-400 font-medium text-sm sm:text-base group-hover:text-cyan-300 transition-colors">
                   Ver detalles completos →
                 </span>
               </div>

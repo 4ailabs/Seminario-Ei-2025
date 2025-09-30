@@ -90,16 +90,20 @@ const SessionDetailPage: React.FC<SessionDetailPageProps> = ({ sessions }) => {
         sessionColor={getSessionColor(session.id)}
       />
 
-      <div className="max-w-6xl mx-auto px-3 sm:px-4 py-12 sm:py-16 lg:py-20">
-        <SessionObjectives objectives={session.objectives} sessionColor={getSessionColor(session.id)} />
-        
-        {session.multimedia.length > 0 && (
-          <MultimediaContent items={session.multimedia} />
-        )}
-        
-        <DetailedTopics topics={session.topics} />
-        
-        <MaterialsNeeded materials={session.materials} />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 pb-16 sm:pb-20 lg:pb-24">
+        <div className="space-y-8 sm:space-y-12 lg:space-y-16">
+          <SessionObjectives objectives={session.objectives} sessionColor={getSessionColor(session.id)} />
+          
+          {/* Temporarily hidden - will be reactivated later */}
+          {/* {session.multimedia.length > 0 && (
+            <MultimediaContent items={session.multimedia} />
+          )} */}
+          
+          <DetailedTopics topics={session.topics} />
+          
+          {/* Temporarily hidden - will be reactivated later */}
+          {/* <MaterialsNeeded materials={session.materials} /> */}
+        </div>
       </div>
     </div>
   );
