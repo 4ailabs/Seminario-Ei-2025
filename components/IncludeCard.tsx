@@ -17,16 +17,39 @@ interface IncludeCardProps {
 const IncludeCard: React.FC<IncludeCardProps> = React.memo(({ title, description, index }) => {
   const getIcon = (title: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
+      // Materiales
+      'Materiales': <BookOpenIcon className="w-6 h-6 text-cyan-400" />,
+      'Materials': <BookOpenIcon className="w-6 h-6 text-cyan-400" />,
       'Material Digital': <BookOpenIcon className="w-6 h-6 text-cyan-400" />,
       'Digital Material': <BookOpenIcon className="w-6 h-6 text-cyan-400" />,
-      'Certificado': <AwardIcon className="w-6 h-6 text-yellow-400" />,
-      'Certificate': <AwardIcon className="w-6 h-6 text-yellow-400" />,
-      'Acceso Móvil': <SmartphoneIcon className="w-6 h-6 text-green-400" />,
-      'Mobile Access': <SmartphoneIcon className="w-6 h-6 text-green-400" />,
-      'Grabaciones': <FileTextIcon className="w-6 h-6 text-purple-400" />,
-      'Recordings': <FileTextIcon className="w-6 h-6 text-purple-400" />,
+      
+      // Manuales
+      'Manuales': <FileTextIcon className="w-6 h-6 text-green-400" />,
+      'Manuals': <FileTextIcon className="w-6 h-6 text-green-400" />,
+      
+      // Protocolos
+      'Protocolos': <RefreshCwIcon className="w-6 h-6 text-yellow-400" />,
+      'Protocols': <RefreshCwIcon className="w-6 h-6 text-yellow-400" />,
+      
+      // Certificación
+      'Certificación': <AwardIcon className="w-6 h-6 text-purple-400" />,
+      'Certification': <AwardIcon className="w-6 h-6 text-purple-400" />,
+      'Certificado': <AwardIcon className="w-6 h-6 text-purple-400" />,
+      'Certificate': <AwardIcon className="w-6 h-6 text-purple-400" />,
+      
+      // App Oficial
+      'App Oficial': <SmartphoneIcon className="w-6 h-6 text-pink-400" />,
+      'Official App': <SmartphoneIcon className="w-6 h-6 text-pink-400" />,
+      'Acceso Móvil': <SmartphoneIcon className="w-6 h-6 text-pink-400" />,
+      'Mobile Access': <SmartphoneIcon className="w-6 h-6 text-pink-400" />,
+      
+      // Extensiones
       'Extensiones 2026': <RefreshCwIcon className="w-6 h-6 text-orange-400" />,
-      '2026 Extensions': <RefreshCwIcon className="w-6 h-6 text-orange-400" />
+      '2026 Extensions': <RefreshCwIcon className="w-6 h-6 text-orange-400" />,
+      
+      // Grabaciones
+      'Grabaciones': <FileTextIcon className="w-6 h-6 text-blue-400" />,
+      'Recordings': <FileTextIcon className="w-6 h-6 text-blue-400" />
     };
     return iconMap[title] || <CheckIcon className="w-6 h-6 text-cyan-400" />;
   };

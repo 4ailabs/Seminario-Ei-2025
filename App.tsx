@@ -364,9 +364,9 @@ const AppContent: React.FC = () => {
                             {t.includes.items.map((item, index) => (
                                 <IncludeCard
                                     key={index}
-                                    icon={getIncludeIcon(item.title)}
                                     title={item.title}
                                     description={item.description}
+                                    index={index}
                                 />
                             ))}
                         </div>
@@ -517,24 +517,6 @@ const galleryImages = [
 // --- Webinar Card Component ---
 
 
-// --- Function to get include icon with different colors ---
-const getIncludeIcon = (title: string) => {
-    const iconMap: { [key: string]: React.ReactNode } = {
-        'Materiales': <BookOpen className="w-6 h-6 text-blue-400" />,
-        'Materials': <BookOpen className="w-6 h-6 text-blue-400" />,
-        'Manuales': <FileText className="w-6 h-6 text-green-400" />,
-        'Manuals': <FileText className="w-6 h-6 text-green-400" />,
-        'Protocolos': <Zap className="w-6 h-6 text-yellow-400" />,
-        'Protocols': <Zap className="w-6 h-6 text-yellow-400" />,
-        'Certificación': <Award className="w-6 h-6 text-purple-400" />,
-        'Certification': <Award className="w-6 h-6 text-purple-400" />,
-        'App Oficial': <Smartphone className="w-6 h-6 text-pink-400" />,
-        'Official App': <Smartphone className="w-6 h-6 text-pink-400" />,
-        'Extensiones 2026': <RefreshCw className="w-6 h-6 text-orange-400" />,
-        '2026 Extensions': <RefreshCw className="w-6 h-6 text-orange-400" />
-    };
-    return iconMap[title] || <Check className="w-6 h-6 text-cyan-400" />;
-};
 
 
 export default App;
