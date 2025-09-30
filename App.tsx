@@ -537,34 +537,8 @@ const AppContent: React.FC = () => {
                     <ProgramSection/>
                 </AnimatedSection>
                 
-                {/* --- Gallery Section --- */}
-                <AnimatedSection id="galeria" className="bg-slate-800 py-12 sm:py-16 md:py-24" delay={250}>
-                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="text-center mb-8 sm:mb-12">
-                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
-                                {t.gallery.title}
-                            </h2>
-                            <p className="text-lg sm:text-xl text-cyan-400 font-semibold mb-4">
-                                {t.gallery.subtitle}
-                            </p>
-                            <p className="text-slate-300 max-w-3xl mx-auto text-sm sm:text-base leading-relaxed">
-                                {t.gallery.description}
-                            </p>
-                        </div>
-                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 max-w-7xl mx-auto">
-                            {galleryImages.map((image, index) => (
-                                <GalleryImage 
-                                    key={index} 
-                                    src={image} 
-                                    index={index}
-                                />
-                            ))}
-                        </div>
-                    </div>
-                </AnimatedSection>
-                
                 {/* --- Webinars Section --- */}
-                <AnimatedSection id="webinars" className="bg-slate-900 py-12 sm:py-16 md:py-24" delay={300}>
+                <AnimatedSection id="webinars" className="bg-slate-900 py-12 sm:py-16 md:py-24" delay={250}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-8 sm:mb-12">
                             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
@@ -650,8 +624,34 @@ const AppContent: React.FC = () => {
                     </div>
                 </AnimatedSection>
 
+                {/* --- Gallery Section --- */}
+                <AnimatedSection id="galeria" className="bg-slate-800 py-12 sm:py-16 md:py-24" delay={900}>
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="text-center mb-8 sm:mb-12">
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
+                                {t.gallery.title}
+                            </h2>
+                            <p className="text-lg sm:text-xl text-cyan-400 font-semibold mb-4">
+                                {t.gallery.subtitle}
+                            </p>
+                            <p className="text-slate-300 max-w-3xl mx-auto text-sm sm:text-base leading-relaxed">
+                                {t.gallery.description}
+                            </p>
+                        </div>
+                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 max-w-7xl mx-auto">
+                            {galleryImages.map((image, index) => (
+                                <GalleryImage 
+                                    key={index} 
+                                    src={image} 
+                                    index={index}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                </AnimatedSection>
+
                 {/* --- Includes Section --- */}
-                <AnimatedSection id="incluye" className="py-12 sm:py-16 md:py-24" delay={900}>
+                <AnimatedSection id="incluye" className="py-12 sm:py-16 md:py-24" delay={1000}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-6 text-white leading-tight">
                             {t.includes.title}
@@ -673,7 +673,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
 
                 {/* --- Extensions & Investment Section --- */}
-                 <AnimatedSection id="inversion" className="py-12 sm:py-16 md:py-24 bg-slate-900" delay={1000}>
+                 <AnimatedSection id="inversion" className="py-12 sm:py-16 md:py-24 bg-slate-900" delay={1100}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                         <h2 className="flex flex-col sm:flex-row items-center justify-center text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
                             <GemIcon className="w-6 h-6 sm:w-8 sm:h-8 mr-0 sm:mr-3 mb-2 sm:mb-0 text-cyan-400" />
@@ -857,7 +857,7 @@ const WebinarCard: React.FC<{ webinar: { title: string; description: string; vid
     };
 
     return (
-        <div className="bg-slate-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10 group">
+        <div className="bg-slate-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10 group h-full flex flex-col">
             <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-3">
                     <div className="p-3 bg-cyan-500/10 rounded-xl group-hover:bg-cyan-500/20 transition-colors duration-300">
@@ -870,8 +870,8 @@ const WebinarCard: React.FC<{ webinar: { title: string; description: string; vid
                     </div>
                 </div>
             </div>
-            <h3 className="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">{webinar.title}</h3>
-            <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-4">{webinar.description}</p>
+            <h3 className="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2 min-h-[3.5rem]">{webinar.title}</h3>
+            <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-4 flex-1 line-clamp-3">{webinar.description}</p>
             
             {/* Embedded Video with official Vimeo embed code */}
             <div className="relative w-full rounded-lg overflow-hidden mb-4" style={{padding: '56.25% 0 0 0', position: 'relative'}}>
