@@ -40,7 +40,7 @@ const Header: React.FC<HeaderProps> = ({ onScrollTo }) => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-slate-900/80 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`}>
       <div className="container mx-auto px-3 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
         <a 
-          href="https://inteligencia-energetica.com/" 
+          href="https://inteligencia-energetica.com/home-ei" 
           target="_blank" 
           rel="noopener noreferrer"
           className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-300"
