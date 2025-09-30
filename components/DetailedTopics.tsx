@@ -35,20 +35,20 @@ const DetailedTopics: React.FC<DetailedTopicsProps> = ({ topics }) => {
               <div className={`inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-white bg-gradient-to-br ${index % 2 === 0 ? 'from-cyan-400 to-blue-500' : 'from-emerald-400 to-green-500'} rounded-lg flex-shrink-0`}>
                 <span className="text-sm sm:text-base lg:text-lg font-bold">{index + 1}</span>
               </div>
-              <h3 className="text-base sm:text-lg lg:text-xl font-bold text-white ml-3 sm:ml-4 leading-tight flex-1">{topic.title}</h3>
+              <h3 className="text-base sm:text-lg lg:text-xl font-bold text-white ml-3 sm:ml-4 leading-tight flex-1">{topic?.title || 'Tema'}</h3>
             </div>
             <p className="text-sm sm:text-base lg:text-lg text-slate-300 leading-relaxed mb-4 sm:mb-5">
-              {topic.description}
+              {topic?.description || 'Descripción no disponible'}
             </p>
             
-            {topic.subTopics.length > 0 && (
+            {topic?.subTopics && topic.subTopics.length > 0 && (
               <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-slate-300">
                 {topic.subTopics.map((subTopic, subIndex) => (
                   <li key={subIndex} className="flex items-start gap-2">
                     <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400 mt-0.5 flex-shrink-0" />
                     <div className="flex-1">
-                      <span className="font-medium text-slate-300">{subTopic.title}:</span>
-                      <span className="text-slate-400 ml-1">{subTopic.description}</span>
+                      <span className="font-medium text-slate-300">{subTopic?.title || 'Tema'}:</span>
+                      <span className="text-slate-400 ml-1">{subTopic?.description || 'Descripción no disponible'}</span>
                     </div>
                   </li>
                 ))}

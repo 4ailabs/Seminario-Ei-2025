@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Sparkles, Zap, Compass, Brain, Award } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 
 const ProgramSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState(1);
   const { t } = useLanguage();
-  const navigate = useNavigate();
   
   const scheduleData = {
     1: {
@@ -97,7 +95,7 @@ const ProgramSection: React.FC = () => {
   };
 
   const handleViewSessions = () => {
-    navigate('/sesiones');
+    window.location.href = '/sesiones';
   };
 
   return (
