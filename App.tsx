@@ -151,12 +151,12 @@ const BackToTop: React.FC = () => {
     return (
         <button
             onClick={scrollToTop}
-            className={`fixed bottom-8 right-8 z-50 p-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full shadow-lg transition-all duration-300 transform ${
+            className={`fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-50 p-3 sm:p-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full shadow-lg transition-all duration-300 transform ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
-            } hover:scale-110 active:scale-95`}
+            } hover:scale-110 active:scale-95 min-w-[48px] min-h-[48px] flex items-center justify-center`}
             aria-label="Back to top"
         >
-            <ArrowUp className="w-6 h-6" strokeWidth={2} />
+            <ArrowUp className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={2} />
         </button>
     );
 };
@@ -474,17 +474,17 @@ const App: React.FC = () => {
 
 
 const BenefitCard: React.FC<{ icon: React.ReactNode, title: string, benefits: string[] }> = ({ icon, title, benefits }) => (
-    <div className="bg-slate-800/50 p-4 sm:p-6 rounded-xl border border-slate-700 h-full transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/10">
+    <div className="bg-slate-800/50 p-5 sm:p-6 rounded-xl border border-slate-700 h-full transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/10 touch-manipulation">
         <div className="flex items-center mb-4 sm:mb-5">
-            <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 text-cyan-400 bg-slate-900 rounded-lg flex-shrink-0">
+            <div className="inline-flex items-center justify-center w-12 h-12 sm:w-12 sm:h-12 text-cyan-400 bg-slate-900 rounded-lg flex-shrink-0">
                 {icon}
             </div>
-            <h3 className="text-lg sm:text-xl font-bold text-white ml-3 sm:ml-4 leading-tight">{title}</h3>
+            <h3 className="text-base sm:text-xl font-bold text-white ml-3 sm:ml-4 leading-tight">{title}</h3>
         </div>
-        <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-slate-300">
+        <ul className="space-y-3 sm:space-y-3 text-sm sm:text-base text-slate-300">
             {benefits.map((benefit, index) => (
                 <li key={index} className="flex items-start">
-                    <CheckIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-cyan-400 flex-shrink-0 mt-0.5" /> 
+                    <CheckIcon className="w-5 h-5 sm:w-5 sm:h-5 mr-2 text-cyan-400 flex-shrink-0 mt-0.5" />
                     <span className="leading-relaxed">{benefit}</span>
                 </li>
             ))}

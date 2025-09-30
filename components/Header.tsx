@@ -85,7 +85,7 @@ const Header: React.FC<HeaderProps> = ({ onScrollTo }) => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden p-2 text-white hover:text-cyan-400 transition-colors duration-300"
+          className="md:hidden p-3 text-white hover:text-cyan-400 transition-colors duration-300 touch-manipulation min-w-[48px] min-h-[48px] flex items-center justify-center"
           aria-label="Toggle mobile menu"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -100,8 +100,8 @@ const Header: React.FC<HeaderProps> = ({ onScrollTo }) => {
 
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-lg border-t border-slate-700 shadow-lg max-h-[90vh] overflow-y-auto overscroll-contain">
-          <nav className="container mx-auto px-3 py-4">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-slate-900/98 backdrop-blur-lg border-t border-slate-700 shadow-lg max-h-[calc(100vh-60px)] overflow-y-auto overscroll-contain safe-area-inset-bottom">
+          <nav className="container mx-auto px-4 py-4">
             {navLinks.map(link => (
               link.isRoute ? (
                 <a

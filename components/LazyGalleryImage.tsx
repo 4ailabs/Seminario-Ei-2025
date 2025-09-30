@@ -26,8 +26,8 @@ const LazyGalleryImage: React.FC<LazyGalleryImageProps> = ({
         }
       },
       {
-        threshold: 0.1,
-        rootMargin: '50px',
+        threshold: 0.01,
+        rootMargin: '100px',
       }
     );
 
@@ -66,6 +66,8 @@ const LazyGalleryImage: React.FC<LazyGalleryImageProps> = ({
             isLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
           } group-hover:scale-105`}
           loading="lazy"
+          decoding="async"
+          fetchpriority="low"
           onLoad={handleLoad}
           onError={handleError}
         />
