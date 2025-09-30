@@ -8,11 +8,12 @@ const ChatButton: React.FC = () => {
   return (
     <>
       {/* Floating Chat Button */}
-      <button
-        onClick={() => setIsOpen(true)}
-        className="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-40 p-3 sm:p-4 bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 text-white rounded-full shadow-xl transition-all duration-300 transform hover:scale-110 active:scale-95 group touch-manipulation min-w-[56px] min-h-[56px] sm:min-w-[64px] sm:min-h-[64px] flex items-center justify-center border-2 border-cyan-400/30"
-        aria-label="Abrir chat - ¿Tienes preguntas?"
-      >
+      {!isOpen && (
+        <button
+          onClick={() => setIsOpen(true)}
+          className="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-50 p-3 sm:p-4 bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 text-white rounded-full shadow-xl transition-all duration-300 transform hover:scale-110 active:scale-95 group touch-manipulation min-w-[56px] min-h-[56px] sm:min-w-[64px] sm:min-h-[64px] flex items-center justify-center border-2 border-cyan-400/30"
+          aria-label="Abrir chat - ¿Tienes preguntas?"
+        >
         <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7" strokeWidth={2} />
         
         {/* Pulse animation - only on desktop */}
@@ -23,9 +24,10 @@ const ChatButton: React.FC = () => {
           ¿Tienes preguntas?
           <div className="absolute left-full top-1/2 -translate-y-1/2 border-4 border-transparent border-l-slate-900"></div>
         </div>
-        
+
         {/* Mobile badge - removed to avoid visual confusion */}
-      </button>
+        </button>
+      )}
 
       {/* Chat Window */}
       <ChatWindow isOpen={isOpen} onClose={() => setIsOpen(false)} />

@@ -63,11 +63,11 @@ const ProgramSection: React.FC = () => {
     };
 
     return (
-      <div
-        className={`w-full text-left p-3 sm:p-4 rounded-lg transition-all duration-300 border-2 relative overflow-hidden group ${
-          activeTab === session 
-            ? `bg-gradient-to-br ${getSessionColor(session)} text-white shadow-lg border-white/30 transform scale-105` 
-            : 'bg-slate-800 hover:bg-slate-700 text-slate-300 border-slate-600 hover:border-slate-500 hover:shadow-md hover:scale-102'
+      <button
+        className={`w-full text-left p-3 sm:p-4 rounded-lg transition-all duration-300 border-2 relative overflow-hidden group touch-manipulation ${
+          activeTab === session
+            ? `bg-gradient-to-br ${getSessionColor(session)} text-white shadow-lg border-white/30 transform scale-105`
+            : 'bg-slate-800/95 hover:bg-slate-700 text-slate-300 border-slate-600 hover:border-slate-500 hover:shadow-md hover:scale-102'
         }`}
         onClick={() => setActiveTab(session)}
       >
@@ -90,7 +90,7 @@ const ProgramSection: React.FC = () => {
             {scheduleData[session as keyof typeof scheduleData].date}
           </p>
         </div>
-      </div>
+      </button>
     );
   };
 
@@ -132,7 +132,7 @@ const ProgramSection: React.FC = () => {
         </div>
         
         <div className="lg:w-2/3">
-          <div className="bg-slate-800/50 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-slate-700">
+          <div className="bg-slate-800/95 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-slate-700 shadow-xl">
             <div className="flex items-center gap-3 mb-6">
               <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br ${
                 activeTab === 1 ? 'from-blue-500 to-cyan-500' :

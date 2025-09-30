@@ -151,7 +151,7 @@ const BackToTop: React.FC = () => {
     return (
         <button
             onClick={scrollToTop}
-            className={`fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-50 p-3 sm:p-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full shadow-lg transition-all duration-300 transform ${
+            className={`fixed bottom-20 right-4 sm:bottom-24 sm:right-8 z-40 p-3 sm:p-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full shadow-lg transition-all duration-300 transform ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
             } hover:scale-110 active:scale-95 min-w-[48px] min-h-[48px] flex items-center justify-center`}
             aria-label="Back to top"
