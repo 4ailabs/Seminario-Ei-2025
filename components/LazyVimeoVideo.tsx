@@ -18,6 +18,8 @@ const LazyVimeoVideo: React.FC<LazyVimeoVideoProps> = ({
 
   // Extract video ID and hash from Vimeo URL
   const getVimeoEmbedUrl = (url: string) => {
+    console.log('Processing video URL:', url);
+    
     if (!url || typeof url !== 'string') {
       console.error('Invalid video URL:', url);
       setHasError(true);
@@ -26,8 +28,12 @@ const LazyVimeoVideo: React.FC<LazyVimeoVideoProps> = ({
     
     try {
       const parts = url.split('/');
+      console.log('URL parts:', parts);
+      
       const videoId = parts[parts.length - 2];
       const hash = parts[parts.length - 1];
+      
+      console.log('Video ID:', videoId, 'Hash:', hash);
       
       if (!videoId || !hash) {
         console.error('Invalid Vimeo URL format:', url);
@@ -35,7 +41,10 @@ const LazyVimeoVideo: React.FC<LazyVimeoVideoProps> = ({
         return '';
       }
       
-      return `https://player.vimeo.com/video/${videoId}?h=${hash}&badge=0&autopause=0&player_id=0&app_id=58479`;
+      const embedUrl = `https://player.vimeo.com/video/${videoId}?h=${hash}&badge=0&autopause=0&player_id=0&app_id=58479`;
+      console.log('Generated embed URL:', embedUrl);
+      
+      return embedUrl;
     } catch (error) {
       console.error('Error parsing video URL:', error);
       setHasError(true);
