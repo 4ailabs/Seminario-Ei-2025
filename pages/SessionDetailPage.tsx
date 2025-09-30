@@ -5,6 +5,7 @@ import SessionObjectives from '../components/SessionObjectives';
 import MultimediaContent from '../components/MultimediaContent';
 import DetailedTopics from '../components/DetailedTopics';
 import MaterialsNeeded from '../components/MaterialsNeeded';
+import ChatButton from '../components/ChatButton';
 
 interface SessionData {
   id: number;
@@ -130,6 +131,9 @@ const SessionDetailPage: React.FC<SessionDetailPageProps> = ({ sessions }) => {
           </div>
         </div>
       </div>
+      
+      {/* Chat Button - Always visible on mobile */}
+      <ChatButton />
     </div>
   );
 };

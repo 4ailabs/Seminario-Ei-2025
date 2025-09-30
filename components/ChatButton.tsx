@@ -11,7 +11,7 @@ const ChatButton: React.FC = () => {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed left-4 sm:bottom-6 sm:left-6 z-[60] p-4 sm:p-4 bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 text-white rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 active:scale-95 group touch-manipulation min-w-[64px] min-h-[64px] sm:min-w-[64px] sm:min-h-[64px] flex items-center justify-center border-2 border-cyan-400/50 chat-button-iphone16 dynamic-island-chat"
+          className="fixed left-4 sm:bottom-6 sm:left-6 z-[9999] p-4 sm:p-4 bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 text-white rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 active:scale-95 group touch-manipulation min-w-[64px] min-h-[64px] sm:min-w-[64px] sm:min-h-[64px] flex items-center justify-center border-2 border-cyan-400/50 chat-button-iphone16 dynamic-island-chat"
           style={{ bottom: 'calc(env(safe-area-inset-bottom, 0px) + 32px)' }}
           aria-label="Abrir chat - ¿Tienes preguntas?"
         >

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Calendar, Clock, MapPin, ArrowRight } from 'lucide-react';
+import ChatButton from '../components/ChatButton';
 
 interface Session {
   id: number;
@@ -119,6 +120,9 @@ const SessionsPage: React.FC<SessionsPageProps> = ({ sessions }) => {
           ))}
         </div>
       </div>
+      
+      {/* Chat Button - Always visible on mobile */}
+      <ChatButton />
     </div>
   );
 };
