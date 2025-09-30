@@ -95,7 +95,7 @@ const ProgramSection: React.FC = () => {
   };
 
   const handleViewSessions = () => {
-    window.location.href = '/sesion/1';
+    window.location.href = `/sesion/${activeTab}`;
   };
 
   return (
@@ -169,7 +169,7 @@ const ProgramSection: React.FC = () => {
               onClick={handleViewSessions}
               className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105"
             >
-              Ver Primera Sesión
+              Ver Sesión {activeTab}
             </button>
           </div>
         </div>
