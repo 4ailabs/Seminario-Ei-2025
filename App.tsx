@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import { 
     Sparkles, 
     Zap, 
@@ -18,6 +19,7 @@ import {
     MessageCircle,
     Languages,
     ArrowUp,
+    ArrowRight,
     Timer,
     BookOpen,
     FileText,
@@ -28,6 +30,9 @@ import {
 import { LanguageProvider, useLanguage } from './LanguageContext';
 import { useIntersectionObserver } from './useIntersectionObserver';
 import ChatButton from './components/ChatButton';
+import SessionsPage from './pages/SessionsPage';
+import SessionDetailPage from './pages/SessionDetailPage';
+import { sessionsData } from './data/sessionsData';
 
 
 // --- Icons ---
@@ -83,6 +88,7 @@ const Header: React.FC<{ onScrollTo: (id: string) => void }> = ({ onScrollTo }) 
 
     const navLinks = [
         { id: 'programa', text: t.nav.programa },
+        { id: 'sesiones', text: 'Sesiones', isRoute: true },
         { id: 'galeria', text: t.nav.galeria },
         { id: 'webinars', text: t.nav.webinars },
         { id: 'para-quien', text: t.nav.paraQuien },
@@ -119,7 +125,11 @@ const Header: React.FC<{ onScrollTo: (id: string) => void }> = ({ onScrollTo }) 
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex items-center space-x-6">
                     {navLinks.map(link => (
-                         <a href={`#${link.id}`} onClick={(e) => {e.preventDefault(); onScrollTo(link.id)}} key={link.id} className="text-slate-300 hover:text-cyan-400 transition-colors duration-300">{link.text}</a>
+                        link.isRoute ? (
+                            <a href={`/${link.id}`} key={link.id} className="text-slate-300 hover:text-cyan-400 transition-colors duration-300">{link.text}</a>
+                        ) : (
+                            <a href={`#${link.id}`} onClick={(e) => {e.preventDefault(); onScrollTo(link.id)}} key={link.id} className="text-slate-300 hover:text-cyan-400 transition-colors duration-300">{link.text}</a>
+                        )
                     ))}
                 </nav>
                 
@@ -160,14 +170,24 @@ const Header: React.FC<{ onScrollTo: (id: string) => void }> = ({ onScrollTo }) 
                 <div className="md:hidden absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-lg border-t border-slate-700 shadow-lg max-h-[80vh] overflow-y-auto">
                     <nav className="container mx-auto px-4 py-4">
                         {navLinks.map(link => (
-                            <a
-                                href={`#${link.id}`}
-                                onClick={(e) => {e.preventDefault(); handleMobileNavClick(link.id)}}
-                                key={link.id}
-                                className="block py-4 text-slate-300 hover:text-cyan-400 transition-colors duration-300 border-b border-slate-700 last:border-b-0 touch-manipulation text-base"
-                            >
-                                {link.text}
-                            </a>
+                            link.isRoute ? (
+                                <a
+                                    href={`/${link.id}`}
+                                    key={link.id}
+                                    className="block py-4 text-slate-300 hover:text-cyan-400 transition-colors duration-300 border-b border-slate-700 last:border-b-0 touch-manipulation text-base"
+                                >
+                                    {link.text}
+                                </a>
+                            ) : (
+                                <a
+                                    href={`#${link.id}`}
+                                    onClick={(e) => {e.preventDefault(); handleMobileNavClick(link.id)}}
+                                    key={link.id}
+                                    className="block py-4 text-slate-300 hover:text-cyan-400 transition-colors duration-300 border-b border-slate-700 last:border-b-0 touch-manipulation text-base"
+                                >
+                                    {link.text}
+                                </a>
+                            )
                         ))}
                         {/* Mobile Language Toggle */}
                         <div className="flex items-center justify-between py-4 border-b border-slate-700">
@@ -198,6 +218,7 @@ const Header: React.FC<{ onScrollTo: (id: string) => void }> = ({ onScrollTo }) 
 const ProgramSection: React.FC = () => {
     const [activeTab, setActiveTab] = useState(1);
     const { t } = useLanguage();
+    const navigate = useNavigate();
     
     const scheduleData = {
         1: {
@@ -256,14 +277,14 @@ const ProgramSection: React.FC = () => {
         };
 
         return (
-        <button
+        <div
+            className={`w-full text-left p-3 sm:p-4 rounded-lg transition-all duration-300 border-2 relative overflow-hidden group ${
+                activeTab === session 
+                    ? `bg-gradient-to-br ${getSessionColor(session)} text-white shadow-lg border-white/30 transform scale-105` 
+                    : 'bg-slate-800 hover:bg-slate-700 text-slate-300 border-slate-600 hover:border-slate-500 hover:shadow-md hover:scale-102'
+            }`}
             onClick={() => setActiveTab(session)}
-                className={`w-full text-left p-3 sm:p-4 rounded-lg transition-all duration-300 border-2 relative overflow-hidden ${
-                    activeTab === session 
-                        ? `bg-gradient-to-br ${getSessionColor(session)} text-white shadow-lg border-white/30 transform scale-105` 
-                        : 'bg-slate-800 hover:bg-slate-700 text-slate-300 border-slate-600 hover:border-slate-500 hover:shadow-md hover:scale-102'
-                }`}
-            >
+        >
                 {/* Efecto de brillo para la sesión activa */}
                 {activeTab === session && (
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
@@ -277,11 +298,23 @@ const ProgramSection: React.FC = () => {
                         </span>
                     </div>
                     <span className="font-bold text-sm sm:text-base block">{label}</span>
-                    {activeTab === session && (
-                        <div className="mt-2 w-full h-1 bg-white rounded-full opacity-60"></div>
-                    )}
+                    <div className="mt-2 flex items-center justify-between">
+                        {activeTab === session && (
+                            <div className="w-full h-1 bg-white rounded-full opacity-60"></div>
+                        )}
+                        <button
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                navigate(`/sesion/${session}`);
+                            }}
+                            className="flex items-center gap-1 px-3 py-1 bg-white/20 hover:bg-white/30 rounded-lg transition-colors text-xs font-medium group/btn"
+                        >
+                            <span>Explorar</span>
+                            <ArrowRight className="w-3 h-3 group-hover/btn:translate-x-0.5 transition-transform" />
+                        </button>
+                    </div>
                 </div>
-        </button>
+        </div>
     );
     };
     
@@ -727,7 +760,13 @@ const AppContent: React.FC = () => {
 const App: React.FC = () => {
     return (
         <LanguageProvider>
-            <AppContent />
+            <Router>
+                <Routes>
+                    <Route path="/" element={<AppContent />} />
+                    <Route path="/sesiones" element={<SessionsPage sessions={sessionsData} />} />
+                    <Route path="/sesion/:id" element={<SessionDetailPage sessions={sessionsData} />} />
+                </Routes>
+            </Router>
         </LanguageProvider>
     );
 };
