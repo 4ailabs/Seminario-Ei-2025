@@ -244,7 +244,13 @@ const AppContent: React.FC = () => {
                         </div>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
                             {t.webinars.videos.map((webinar, index) => (
-                                <WebinarCard key={index} webinar={webinar} />
+                                <WebinarCard 
+                                    key={index} 
+                                    title={webinar.title}
+                                    description={webinar.description}
+                                    videoUrl={webinar.videoUrl}
+                                    index={index}
+                                />
                             ))}
                         </div>
                     </div>
