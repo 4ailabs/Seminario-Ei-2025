@@ -105,7 +105,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/50 backdrop-blur-sm">
-      <div className="bg-slate-900 rounded-t-3xl sm:rounded-2xl shadow-2xl w-full h-[85vh] sm:h-[600px] sm:max-w-md flex flex-col border border-slate-700 sm:border-t-0">
+      <div className="bg-slate-900 rounded-t-3xl sm:rounded-2xl shadow-2xl w-full h-[90vh] sm:h-[600px] sm:max-w-md flex flex-col border border-slate-700 sm:border-t-0 safe-area-inset-bottom chat-container">
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-slate-700 sticky top-0 bg-slate-900 z-10">
           <div className="flex items-center gap-3">
@@ -131,7 +131,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose }) => {
         </div>
 
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 -webkit-overflow-scrolling-touch">
+        <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 -webkit-overflow-scrolling-touch overscroll-contain">
           {messages.map((message) => (
             <div
               key={message.id}
@@ -195,7 +195,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose }) => {
         )}
 
         {/* Input */}
-        <div className="p-3 sm:p-4 border-t border-slate-700 bg-slate-900 sticky bottom-0">
+        <div className="p-3 sm:p-4 border-t border-slate-700 bg-slate-900 sticky bottom-0 pb-safe">
           <div className="flex gap-2">
             <input
               type="text"
@@ -203,7 +203,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose }) => {
               onChange={(e) => setInputMessage(e.target.value)}
               onKeyPress={handleKeyPress}
               placeholder={language === 'es' ? 'Escribe tu pregunta...' : 'Type your question...'}
-              className="flex-1 bg-slate-800 border border-slate-600 rounded-lg px-3 py-2.5 sm:py-2 text-white placeholder-slate-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 text-base touch-manipulation"
+              className="flex-1 bg-slate-800 border border-slate-600 rounded-lg px-3 py-3 sm:py-2 text-white placeholder-slate-400 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 text-base touch-manipulation min-h-[44px]"
               disabled={isLoading}
               autoComplete="off"
               autoCorrect="off"
@@ -213,7 +213,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ isOpen, onClose }) => {
             <button
               onClick={handleSendMessage}
               disabled={!inputMessage.trim() || isLoading}
-              className="p-2.5 sm:p-2 bg-cyan-500 hover:bg-cyan-600 disabled:bg-slate-700 disabled:cursor-not-allowed text-white rounded-lg transition-colors touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center"
+              className="p-3 sm:p-2 bg-cyan-500 hover:bg-cyan-600 disabled:bg-slate-700 disabled:cursor-not-allowed text-white rounded-lg transition-colors touch-manipulation min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label={language === 'es' ? 'Enviar mensaje' : 'Send message'}
             >
               {isLoading ? (

@@ -90,8 +90,8 @@ const SessionDetailPage: React.FC<SessionDetailPageProps> = ({ sessions }) => {
         sessionColor={getSessionColor(session.id)}
       />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 pb-16 sm:pb-20 lg:pb-24">
-        <div className="space-y-8 sm:space-y-12 lg:space-y-16">
+      <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 py-6 sm:py-12 lg:py-16 pb-12 sm:pb-20 lg:pb-24">
+        <div className="space-y-6 sm:space-y-12 lg:space-y-16">
           <SessionObjectives objectives={session.objectives} sessionColor={getSessionColor(session.id)} />
           
           {/* Temporarily hidden - will be reactivated later */}

@@ -101,7 +101,7 @@ const CountdownTimer: React.FC<{ targetDate: string }> = ({ targetDate }) => {
 
     const TimeUnit: React.FC<{ value: number; label: string }> = ({ value, label }) => (
         <div className="text-center">
-            <div className="bg-slate-800 text-white text-lg sm:text-xl font-bold rounded-md p-2 sm:p-3 min-w-[50px] sm:min-w-[60px] flex items-center justify-center">
+            <div className="bg-slate-800 text-white text-base sm:text-lg md:text-xl font-bold rounded-md p-2 sm:p-3 min-w-[45px] sm:min-w-[50px] md:min-w-[60px] flex items-center justify-center">
                 {value.toString().padStart(2, '0')}
             </div>
             <div className="text-slate-400 text-xs mt-1 font-medium">
@@ -182,7 +182,7 @@ const AppContent: React.FC = () => {
 
             <main>
                 {/* --- Hero Section --- */}
-                <section className="relative min-h-screen flex items-center justify-center text-center px-4 py-20 sm:py-24 overflow-hidden">
+                <section className="relative min-h-screen flex items-center justify-center text-center px-3 sm:px-4 py-16 sm:py-20 md:py-24 overflow-hidden">
                     <div className="absolute inset-0 animated-gradient"></div>
                     <div className="absolute inset-0 bg-slate-900/60"></div>
                     <div className="relative z-10 max-w-6xl mx-auto">
@@ -193,7 +193,7 @@ const AppContent: React.FC = () => {
                                     alt="Logo Seminario Inteligencia Energética" 
                                     className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain mb-4"
                                 />
-                                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white tracking-tight leading-tight text-center">
+                                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-white tracking-tight leading-tight text-center">
                                     {t.hero.title}
                                 </h1>
                             </div>

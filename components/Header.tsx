@@ -38,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({ onScrollTo }) => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-slate-900/80 backdrop-blur-lg shadow-lg' : 'bg-transparent'}`}>
-      <div className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+      <div className="container mx-auto px-3 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
         <a 
           href="https://inteligencia-energetica.com/home-ei" 
           target="_blank" 
@@ -50,7 +50,7 @@ const Header: React.FC<HeaderProps> = ({ onScrollTo }) => {
             alt="Logo Seminario Inteligencia Energética" 
             className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
           />
-          <div className="text-lg sm:text-xl font-bold text-white tracking-wider">
+          <div className="text-base sm:text-lg md:text-xl font-bold text-white tracking-wider">
             <span className="text-cyan-400">Inteligencia</span> Energética
           </div>
         </a>
@@ -100,8 +100,8 @@ const Header: React.FC<HeaderProps> = ({ onScrollTo }) => {
 
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-lg border-t border-slate-700 shadow-lg max-h-[85vh] overflow-y-auto">
-          <nav className="container mx-auto px-4 py-6">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-lg border-t border-slate-700 shadow-lg max-h-[90vh] overflow-y-auto overscroll-contain">
+          <nav className="container mx-auto px-3 py-4">
             {navLinks.map(link => (
               link.isRoute ? (
                 <a
