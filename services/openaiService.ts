@@ -25,6 +25,11 @@ class OpenAIService {
     const prompts = {
       es: `Eres un asistente virtual especializado en el Seminario Internacional de Inteligencia Energética. 
       
+      🎯 WEBINAR GRATUITO - "Priming Neurofisiológico - Entrena tu Cerebro para Estados Óptimos"
+      📅 Ya transmitido - Disponible para ver 24/7
+      🔗 Ver webinar: https://tu-dominio.com/webinar-2
+      💬 Info del seminario: WhatsApp +52 557 907 6626
+      
       INFORMACIÓN DEL SEMINARIO:
       - Fechas: Diciembre 2025 - Febrero 2026 (5 sesiones)
       - Ubicación: Ciudad de México, México (Sesiones 1-3) / Online (Sesiones 4-5)
@@ -93,6 +98,11 @@ class OpenAIService {
       Responde de manera amigable, profesional y detallada. Si no tienes información específica, sugiere contactar vía WhatsApp al +52 557 907 6626.`,
       
       en: `You are a virtual assistant specialized in the International Energy Intelligence Conference.
+      
+      🎯 FREE WEBINAR - "Neurophysiological Priming - Train Your Brain for Optimal States"
+      📅 Already aired - Available to watch 24/7
+      🔗 Watch webinar: https://tu-dominio.com/webinar-2
+      💬 Seminar info: WhatsApp +52 557 907 6626
       
       BASIC SEMINAR INFORMATION:
       - Dates: December 2025 - February 2026 (5 sessions)
@@ -238,7 +248,8 @@ class OpenAIService {
         'ubicacion': 'Las primeras 3 sesiones se llevarán a cabo en Ciudad de México, México. Las sesiones 4 y 5 serán online.',
         'modalidad': 'El seminario está disponible en modalidad presencial y online.',
         'incluye': 'El seminario incluye: materiales completos, manuales detallados, protocolos de transformación, certificación oficial, acceso a la app oficial con recursos digitales y extensiones 2026.',
-        'default': 'Gracias por tu interés en el Seminario Internacional de Inteligencia Energética. ¿Te gustaría saber más sobre precios, fechas, ubicación o qué incluye el seminario? También puedes contactarnos directamente vía WhatsApp al +52 557 907 6626.'
+        'webinar': '¡Perfecto! Te invito a ver nuestro webinar gratuito "Priming Neurofisiológico - Entrena tu Cerebro para Estados Óptimos". Es una técnica revolucionaria que está transformando el rendimiento de cientos de profesionales. 🔗 Ver gratis: https://tu-dominio.com/webinar-2 o contacta vía WhatsApp al +52 557 907 6626 para más información del seminario completo.',
+        'default': 'Gracias por tu interés en el Seminario Internacional de Inteligencia Energética. ¿Te gustaría saber más sobre precios, fechas, ubicación, nuestro webinar destacado del 6 de diciembre, o qué incluye el seminario? También puedes contactarnos directamente vía WhatsApp al +52 557 907 6626.'
       },
       en: {
         'price': 'The Early Bird price is $8,000 MXN (valid until October 16, 2025) and the regular price is $9,500 MXN. It includes materials, manuals, protocols, certification, official app access, and 2026 extensions.',
@@ -246,7 +257,8 @@ class OpenAIService {
         'location': 'The first 3 sessions will be held in Mexico City, Mexico. Sessions 4 and 5 will be online.',
         'modality': 'The seminar is available in both in-person and online modalities.',
         'includes': 'The seminar includes: complete materials, detailed manuals, transformation protocols, official certification, official app access with digital resources, and 2026 extensions.',
-        'default': 'Thank you for your interest in the International Energy Intelligence Conference. Would you like to know more about prices, dates, location, or what the seminar includes? You can also contact us directly via WhatsApp at +52 557 907 6626.'
+        'webinar': 'Perfect! I invite you to watch our free webinar "Neurophysiological Priming - Train Your Brain for Optimal States". It\'s a revolutionary technique that\'s transforming the performance of hundreds of professionals. 🔗 Watch free: https://tu-dominio.com/webinar-2 or contact via WhatsApp at +52 557 907 6626 for more information about the complete seminar.',
+        'default': 'Thank you for your interest in the International Energy Intelligence Conference. Would you like to know more about prices, dates, location, our featured webinar on December 6th, or what the seminar includes? You can also contact us directly via WhatsApp at +52 557 907 6626.'
       }
     };
 
@@ -254,6 +266,9 @@ class OpenAIService {
     const lowerMessage = message.toLowerCase();
     
     // Simple keyword matching
+    if (lowerMessage.includes('webinar') || lowerMessage.includes('priming') || lowerMessage.includes('neurofisiológico') || lowerMessage.includes('cerebro') || lowerMessage.includes('brain')) {
+      return { text: langResponses['webinar'], success: true };
+    }
     if (lowerMessage.includes('precio') || lowerMessage.includes('price') || lowerMessage.includes('costo') || lowerMessage.includes('cost')) {
       return { text: langResponses['precio'] || langResponses['price'], success: true };
     }

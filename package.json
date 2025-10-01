@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/react-router-dom": "^5.3.3",
     "lucide-react": "^0.542.0",
     "openai": "^5.23.1",
     "react": "^19.1.1",
