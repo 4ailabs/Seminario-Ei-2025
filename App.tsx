@@ -22,13 +22,15 @@ import {
     Smartphone,
     RefreshCw,
     Sparkles,
-    Compass
+    Compass,
+    Play
 } from 'lucide-react';
 import { LanguageProvider, useLanguage } from './LanguageContext';
 import { useIntersectionObserver } from './useIntersectionObserver';
 import ChatButton from './components/ChatButton';
 import SessionsPage from './pages/SessionsPage';
 import SessionDetailPage from './pages/SessionDetailPage';
+import WebinarLandingPage from './pages/WebinarLandingPage';
 import LazyGalleryImage from './components/LazyGalleryImage';
 import LazyVimeoVideo from './components/LazyVimeoVideo';
 import Header from './components/Header';
@@ -163,7 +165,7 @@ const BackToTop: React.FC = () => {
 
 // --- Main App Component ---
 const AppContent: React.FC = () => {
-    const { t } = useLanguage();
+    const { language, t } = useLanguage();
     
     const handleScrollTo = (id: string) => {
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -180,6 +182,32 @@ const AppContent: React.FC = () => {
             <Header onScrollTo={handleScrollTo} />
 
             <main>
+                {/* --- Webinar Banner --- */}
+                <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-4 mt-16 sm:mt-20">
+                    <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
+                        <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
+                            <div className="bg-white/20 p-1.5 sm:p-2 rounded-lg flex-shrink-0">
+                                <Play className="w-4 h-4 sm:w-5 sm:h-5" />
+                            </div>
+                            <div className="min-w-0 flex-1">
+                                <h3 className="font-bold text-base sm:text-lg leading-tight">
+                                    {language === 'es' ? '¡Webinar Gratuito!' : 'Free Webinar!'}
+                                </h3>
+                                <p className="text-xs sm:text-sm opacity-90 leading-tight truncate">
+                                    {language === 'es' ? 'Priming Neurofisiológico' : 'Neurophysiological Priming'}
+                                </p>
+                            </div>
+                        </div>
+                        <a 
+                            href="/webinar-2"
+                            className="bg-white text-cyan-600 font-bold py-2 px-4 sm:px-6 rounded-full hover:bg-gray-100 transition duration-300 flex items-center gap-2 text-sm sm:text-base whitespace-nowrap flex-shrink-0 touch-manipulation"
+                        >
+                            {language === 'es' ? 'Ver' : 'Watch'}
+                            <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
+                        </a>
+                    </div>
+                </div>
+
                 {/* --- Hero Section --- */}
                 <section className="relative min-h-screen flex items-center justify-center text-center px-3 sm:px-4 py-16 sm:py-20 md:py-24 overflow-hidden">
                     <div className="absolute inset-0 animated-gradient"></div>
@@ -465,6 +493,7 @@ const App: React.FC = () => {
                     <Route path="/" element={<AppContent />} />
                     <Route path="/sesiones" element={<SessionsPage sessions={sessionsData} />} />
                     <Route path="/sesion/:id" element={<SessionDetailPage sessions={sessionsData} />} />
+                    <Route path="/webinar-2" element={<WebinarLandingPage />} />
                 </Routes>
             </Router>
         </LanguageProvider>
