@@ -2,6 +2,7 @@ export interface Translations {
   // Navigation
   nav: {
     programa: string;
+    ubicacion: string;
     webinars: string;
     galeria: string;
     paraQuien: string;
@@ -146,6 +147,7 @@ export const translations: Record<string, Translations> = {
   es: {
     nav: {
       programa: "Programa",
+      ubicacion: "Ubicación",
       webinars: "Webinars",
       galeria: "Galería",
       paraQuien: "Para Quién",
@@ -157,7 +159,7 @@ export const translations: Record<string, Translations> = {
     },
     hero: {
       title: "Seminario Internacional de Inteligencia Energética",
-      location: "Ciudad de México, México",
+      location: "Hotel Galería Plaza Reforma, Ciudad de México",
       date: "Diciembre 2025 - Febrero 2026",
       subtitle: "Ahora potenciado con herramientas de Inteligencia Artificial para acelerar tu transformación.",
       description: "Una experiencia transformadora de 5 sesiones para transformar tu cerebro reactivo en una herramienta de creación consciente.",
@@ -446,6 +448,7 @@ export const translations: Record<string, Translations> = {
   en: {
     nav: {
       programa: "Program",
+      ubicacion: "Location",
       webinars: "Webinars",
       galeria: "Gallery",
       paraQuien: "Who is it for",
@@ -457,7 +460,7 @@ export const translations: Record<string, Translations> = {
     },
     hero: {
       title: "International Energy Intelligence Conference",
-      location: "Mexico City, Mexico",
+      location: "Hotel Galería Plaza Reforma, Mexico City",
       date: "December 2025 - February 2026",
       subtitle: "Now enhanced with Artificial Intelligence tools to accelerate your transformation.",
       description: "A transformative 5-session experience to transform your reactive brain into a conscious creation tool.",

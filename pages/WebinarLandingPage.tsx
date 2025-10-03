@@ -2,7 +2,7 @@ import React from 'react';
 import { useLanguage } from '../LanguageContext';
 import LazyVimeoVideo from '../components/LazyVimeoVideo';
 import ChatButton from '../components/ChatButton';
-import { ArrowLeft, Play, Clock, Users, Star } from 'lucide-react';
+import { ArrowLeft, Play, Clock, Users, Star, MapPin, Phone, Globe } from 'lucide-react';
 
 const WebinarLandingPage: React.FC = () => {
     const { language, t } = useLanguage();
@@ -11,10 +11,24 @@ const WebinarLandingPage: React.FC = () => {
         es: {
             title: "Priming Neurofisiológico",
             subtitle: "Entrena tu Cerebro para Estados Óptimos",
-            date: "Ya transmitido - Disponible para ver",
+            date: "Evento Presencial",
             time: "Duración: 1 hora",
-            location: "Grabación disponible 24/7",
+            location: "Hotel Galería Plaza Reforma",
             videoUrl: "https://vimeo.com/1122509089/a1f5880cc0",
+            hotelInfo: {
+                name: "Hotel Galería Plaza Reforma",
+                address: "Paseo de la Reforma 334, Juárez, 06600 Ciudad de México, CDMX",
+                phone: "+52 55 5230 1712",
+                website: "https://www.galeriaplazahotels.com.mx/es/reforma/",
+                amenities: [
+                    "Ubicación estratégica en zona financiera y turística",
+                    "A unas cuadras de Paseo de la Reforma",
+                    "Cerca de Roma Norte, Condesa y Centro Histórico",
+                    "Alberca en el penthouse con vista a la ciudad",
+                    "Business Club con desayunos y cocteles",
+                    "Restaurantes y bares exclusivos"
+                ]
+            },
             benefits: [
                 "Aprende técnicas de priming neurofisiológico",
                 "Entrena tu cerebro para estados óptimos de rendimiento",
@@ -33,10 +47,24 @@ const WebinarLandingPage: React.FC = () => {
         en: {
             title: "Neurophysiological Priming",
             subtitle: "Train Your Brain for Optimal States",
-            date: "Already aired - Available to watch",
+            date: "In-Person Event",
             time: "Duration: 1 hour",
-            location: "Recording available 24/7",
+            location: "Hotel Galería Plaza Reforma",
             videoUrl: "https://vimeo.com/1122509089/a1f5880cc0",
+            hotelInfo: {
+                name: "Hotel Galería Plaza Reforma",
+                address: "Paseo de la Reforma 334, Juárez, 06600 Mexico City, CDMX",
+                phone: "+52 55 5230 1712",
+                website: "https://www.galeriaplazahotels.com.mx/es/reforma/",
+                amenities: [
+                    "Strategic location in financial and tourist district",
+                    "A few blocks from Paseo de la Reforma",
+                    "Near Roma Norte, Condesa and Historic Center",
+                    "Penthouse pool with city views",
+                    "Business Club with breakfasts and cocktails",
+                    "Exclusive restaurants and bars"
+                ]
+            },
             benefits: [
                 "Learn neurophysiological priming techniques",
                 "Train your brain for optimal performance states",
@@ -142,6 +170,80 @@ const WebinarLandingPage: React.FC = () => {
                 </div>
             </section>
 
+            {/* Hotel Information Section */}
+            <section className="py-8 sm:py-12 px-4">
+                <div className="container mx-auto max-w-4xl">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center">
+                        {language === 'es' ? 'Ubicación del Evento' : 'Event Location'}
+                    </h3>
+                    <div className="bg-slate-800 rounded-xl p-6 sm:p-8">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                            {/* Hotel Details */}
+                            <div className="space-y-6">
+                                <div>
+                                    <h4 className="text-lg font-semibold text-cyan-400 mb-4">
+                                        {data.hotelInfo.name}
+                                    </h4>
+                                    <div className="space-y-3">
+                                        <div className="flex items-start gap-3">
+                                            <MapPin className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                                            <div>
+                                                <p className="text-slate-300 text-sm sm:text-base">
+                                                    {data.hotelInfo.address}
+                                                </p>
+                                                <p className="text-slate-400 text-xs mt-1">
+                                                    {language === 'es' 
+                                                        ? 'Ubicado en la principal zona financiera y turística de la Ciudad'
+                                                        : 'Located in the main financial and tourist district of the City'
+                                                    }
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-center gap-3">
+                                            <Phone className="w-5 h-5 text-green-400 flex-shrink-0" />
+                                            <a 
+                                                href={`tel:${data.hotelInfo.phone}`}
+                                                className="text-slate-300 hover:text-white transition-colors"
+                                            >
+                                                {data.hotelInfo.phone}
+                                            </a>
+                                        </div>
+                                        <div className="flex items-center gap-3">
+                                            <Globe className="w-5 h-5 text-purple-400 flex-shrink-0" />
+                                            <a 
+                                                href={data.hotelInfo.website}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-slate-300 hover:text-white transition-colors text-sm sm:text-base"
+                                            >
+                                                {language === 'es' ? 'Visitar sitio web' : 'Visit website'}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Amenities */}
+                            <div>
+                                <h5 className="text-lg font-semibold text-white mb-4">
+                                    {language === 'es' ? 'Amenidades del Hotel' : 'Hotel Amenities'}
+                                </h5>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    {data.hotelInfo.amenities.map((amenity, index) => (
+                                        <div key={index} className="flex items-start gap-2">
+                                            <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
+                                            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                                                {amenity}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Testimonials Section */}
             <section className="py-8 sm:py-12 px-4">
                 <div className="container mx-auto max-w-4xl">
@@ -178,8 +280,8 @@ const WebinarLandingPage: React.FC = () => {
                     </h3>
                     <p className="text-blue-100 mb-6 text-sm sm:text-base leading-relaxed">
                         {language === 'es'
-                            ? 'Descubre más sobre nuestro Seminario Internacional de Inteligencia Energética con 5 sesiones presenciales y online.'
-                            : 'Discover more about our International Energy Intelligence Seminar with 5 in-person and online sessions.'
+                            ? 'Descubre más sobre nuestro Seminario Internacional de Inteligencia Energética con 5 sesiones presenciales y online en el Hotel Galería Plaza Reforma.'
+                            : 'Discover more about our International Energy Intelligence Seminar with 5 in-person and online sessions at Hotel Galería Plaza Reforma.'
                         }
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">

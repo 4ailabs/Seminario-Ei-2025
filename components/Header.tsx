@@ -19,17 +19,26 @@ const Header: React.FC<HeaderProps> = ({ onScrollTo }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
+  // Main navigation items (visible on desktop)
+  const mainNavLinks = [
     { id: 'programa', text: t.nav.programa },
+    { id: 'ubicacion', text: t.nav.ubicacion },
     { id: 'sesiones', text: 'Sesiones', isRoute: true },
-    { id: 'galeria', text: t.nav.galeria },
+    { id: 'inversion', text: t.nav.inversion },
+  ];
+
+  // Secondary navigation items (in mobile menu or dropdown)
+  const secondaryNavLinks = [
     { id: 'webinars', text: t.nav.webinars },
+    { id: 'galeria', text: t.nav.galeria },
     { id: 'para-quien', text: t.nav.paraQuien },
     { id: 'resultados', text: t.nav.resultados },
     { id: 'testimonios', text: t.nav.testimonios },
     { id: 'incluye', text: t.nav.incluye },
-    { id: 'inversion', text: t.nav.inversion },
   ];
+
+  // All links for mobile menu
+  const allNavLinks = [...mainNavLinks, ...secondaryNavLinks];
 
   const handleMobileNavClick = (id: string) => {
     onScrollTo(id);
@@ -56,18 +65,29 @@ const Header: React.FC<HeaderProps> = ({ onScrollTo }) => {
         </a>
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6">
-          {navLinks.map(link => (
+        <nav className="hidden lg:flex items-center space-x-4">
+          {mainNavLinks.map(link => (
             link.isRoute ? (
-              <a href={`/${link.id}`} key={link.id} className="text-slate-300 hover:text-cyan-400 transition-colors duration-300">{link.text}</a>
+              <a href={`/${link.id}`} key={link.id} className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 text-sm font-medium">{link.text}</a>
             ) : (
-              <a href={`#${link.id}`} onClick={(e) => {e.preventDefault(); onScrollTo(link.id)}} key={link.id} className="text-slate-300 hover:text-cyan-400 transition-colors duration-300">{link.text}</a>
+              <a href={`#${link.id}`} onClick={(e) => {e.preventDefault(); onScrollTo(link.id)}} key={link.id} className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 text-sm font-medium">{link.text}</a>
+            )
+          ))}
+        </nav>
+
+        {/* Tablet Navigation (hidden on mobile, visible on tablet) */}
+        <nav className="hidden md:flex lg:hidden items-center space-x-3">
+          {mainNavLinks.slice(0, 3).map(link => (
+            link.isRoute ? (
+              <a href={`/${link.id}`} key={link.id} className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 text-xs font-medium">{link.text}</a>
+            ) : (
+              <a href={`#${link.id}`} onClick={(e) => {e.preventDefault(); onScrollTo(link.id)}} key={link.id} className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 text-xs font-medium">{link.text}</a>
             )
           ))}
         </nav>
         
         {/* Language Toggle */}
-        <div className="hidden md:flex items-center gap-2 mr-4">
+        <div className="hidden lg:flex items-center gap-2 mr-3">
           <Languages className="w-4 h-4 text-slate-300" />
           <button
             onClick={() => setLanguage(language === 'es' ? 'en' : 'es')}
@@ -78,15 +98,15 @@ const Header: React.FC<HeaderProps> = ({ onScrollTo }) => {
         </div>
 
         {/* Desktop CTA Button */}
-         <a href="#inversion" onClick={(e) => {e.preventDefault(); onScrollTo('inversion')}} className="hidden md:block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-5 rounded-full text-sm transition duration-300 ease-in-out transform hover:scale-105">
+         <a href="#inversion" onClick={(e) => {e.preventDefault(); onScrollTo('inversion')}} className="hidden md:block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded-full text-sm transition duration-300 ease-in-out transform hover:scale-105">
             {t.nav.inscribirse}
         </a>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile/Tablet Menu Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden p-3 text-white hover:text-cyan-400 transition-colors duration-300 touch-manipulation min-w-[48px] min-h-[48px] flex items-center justify-center"
-          aria-label="Toggle mobile menu"
+          className="lg:hidden p-3 text-white hover:text-cyan-400 transition-colors duration-300 touch-manipulation min-w-[48px] min-h-[48px] flex items-center justify-center"
+          aria-label="Toggle menu"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {isMobileMenuOpen ? (
@@ -98,33 +118,59 @@ const Header: React.FC<HeaderProps> = ({ onScrollTo }) => {
         </button>
       </div>
 
-      {/* Mobile Navigation Menu */}
+      {/* Mobile/Tablet Navigation Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-slate-900/98 backdrop-blur-lg border-t border-slate-700 shadow-lg max-h-[calc(100vh-60px)] overflow-y-auto overscroll-contain safe-area-inset-bottom">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-slate-900/98 backdrop-blur-lg border-t border-slate-700 shadow-lg max-h-[calc(100vh-60px)] overflow-y-auto overscroll-contain safe-area-inset-bottom">
           <nav className="container mx-auto px-4 py-4">
-            {navLinks.map(link => (
-              link.isRoute ? (
-                <a
-                  href={`/${link.id}`}
-                  key={link.id}
-                  className="block py-4 px-2 text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50 transition-all duration-300 border-b border-slate-700 last:border-b-0 touch-manipulation text-base font-medium rounded-lg"
-                >
-                  {link.text}
-                </a>
-              ) : (
+            {/* Main Navigation */}
+            <div className="mb-4">
+              <h3 className="text-cyan-400 text-sm font-semibold mb-3 px-2">
+                {language === 'es' ? 'Navegación Principal' : 'Main Navigation'}
+              </h3>
+              {mainNavLinks.map(link => (
+                link.isRoute ? (
+                  <a
+                    href={`/${link.id}`}
+                    key={link.id}
+                    className="block py-3 px-2 text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50 transition-all duration-300 border-b border-slate-700 last:border-b-0 touch-manipulation text-base font-medium rounded-lg"
+                  >
+                    {link.text}
+                  </a>
+                ) : (
+                  <a
+                    href={`#${link.id}`}
+                    onClick={(e) => {e.preventDefault(); handleMobileNavClick(link.id)}}
+                    key={link.id}
+                    className="block py-3 px-2 text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50 transition-all duration-300 border-b border-slate-700 last:border-b-0 touch-manipulation text-base font-medium rounded-lg"
+                  >
+                    {link.text}
+                  </a>
+                )
+              ))}
+            </div>
+
+            {/* Secondary Navigation */}
+            <div className="mb-4">
+              <h3 className="text-cyan-400 text-sm font-semibold mb-3 px-2">
+                {language === 'es' ? 'Más Información' : 'More Information'}
+              </h3>
+              {secondaryNavLinks.map(link => (
                 <a
                   href={`#${link.id}`}
                   onClick={(e) => {e.preventDefault(); handleMobileNavClick(link.id)}}
                   key={link.id}
-                  className="block py-4 px-2 text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50 transition-all duration-300 border-b border-slate-700 last:border-b-0 touch-manipulation text-base font-medium rounded-lg"
+                  className="block py-2 px-2 text-slate-400 hover:text-cyan-400 hover:bg-slate-800/50 transition-all duration-300 border-b border-slate-700 last:border-b-0 touch-manipulation text-sm font-medium rounded-lg"
                 >
                   {link.text}
                 </a>
-              )
-            ))}
+              ))}
+            </div>
+
             {/* Mobile Language Toggle */}
             <div className="flex items-center justify-between py-4 px-2 border-b border-slate-700">
-              <span className="text-slate-300 text-base font-medium">Idioma</span>
+              <span className="text-slate-300 text-base font-medium">
+                {language === 'es' ? 'Idioma' : 'Language'}
+              </span>
               <button
                 onClick={() => setLanguage(language === 'es' ? 'en' : 'es')}
                 className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 text-base font-medium touch-manipulation px-4 py-2 rounded-lg hover:bg-slate-800/50"

@@ -23,7 +23,9 @@ import {
     RefreshCw,
     Sparkles,
     Compass,
-    Play
+    Play,
+    Phone,
+    Globe
 } from 'lucide-react';
 import { LanguageProvider, useLanguage } from './LanguageContext';
 import { useIntersectionObserver } from './useIntersectionObserver';
@@ -173,7 +175,7 @@ const AppContent: React.FC = () => {
 
     const generateWhatsAppMessage = () => {
         // Always generate Spanish message for WhatsApp
-        const message = `¡Hola! Me interesa inscribirme al Seminario Internacional de Inteligencia Energética del 5-7 de diciembre 2025 en Ciudad de México. ¿Podrían brindarme más información sobre el proceso de inscripción y formas de pago?`;
+        const message = `¡Hola! Me interesa inscribirme al Seminario Internacional de Inteligencia Energética del 5-7 de diciembre 2025 en el Hotel Galería Plaza Reforma, Ciudad de México. ¿Podrían brindarme más información sobre el proceso de inscripción y formas de pago?`;
         return encodeURIComponent(message);
     };
 
@@ -270,6 +272,94 @@ const AppContent: React.FC = () => {
                         </AnimatedSection>
                     </div>
                 </section>
+
+                {/* --- Hotel Information Section --- */}
+                <AnimatedSection id="ubicacion" className="bg-slate-800 py-8 sm:py-12 px-4" delay={150}>
+                    <div className="container mx-auto max-w-4xl">
+                        <h2 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center">
+                            {language === 'es' ? 'Ubicación del Evento' : 'Event Location'}
+                        </h2>
+                        <div className="bg-slate-900 rounded-xl p-6 sm:p-8 border border-slate-700">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                {/* Hotel Details */}
+                                <div className="space-y-4">
+                                    <div>
+                                        <h3 className="text-lg font-semibold text-cyan-400 mb-3">
+                                            Hotel Galería Plaza Reforma
+                                        </h3>
+                                        <div className="space-y-3">
+                                            <div className="flex items-start gap-3">
+                                                <MapPin className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                                                <div>
+                                                    <p className="text-slate-300 text-sm sm:text-base">
+                                                        Paseo de la Reforma 334, Juárez, 06600 Ciudad de México, CDMX
+                                                    </p>
+                                                    <p className="text-slate-400 text-xs mt-1">
+                                                        {language === 'es' 
+                                                            ? 'Ubicado en la principal zona financiera y turística de la Ciudad'
+                                                            : 'Located in the main financial and tourist district of the City'
+                                                        }
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="flex items-center gap-3">
+                                                <Phone className="w-5 h-5 text-green-400 flex-shrink-0" />
+                                                <a 
+                                                    href="tel:+525552301712"
+                                                    className="text-slate-300 hover:text-white transition-colors"
+                                                >
+                                                    +52 55 5230 1712
+                                                </a>
+                                            </div>
+                                            <div className="flex items-center gap-3">
+                                                <Globe className="w-5 h-5 text-purple-400 flex-shrink-0" />
+                                                <a 
+                                                    href="https://www.galeriaplazahotels.com.mx/es/reforma/"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-slate-300 hover:text-white transition-colors text-sm sm:text-base"
+                                                >
+                                                    {language === 'es' ? 'Visitar sitio web' : 'Visit website'}
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Amenities */}
+                                <div>
+                                    <h4 className="text-lg font-semibold text-white mb-3">
+                                        {language === 'es' ? 'Amenidades del Hotel' : 'Hotel Amenities'}
+                                    </h4>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                        {(language === 'es' ? [
+                                            "Ubicación estratégica en zona financiera",
+                                            "Cerca de Paseo de la Reforma",
+                                            "Acceso a Roma Norte y Condesa",
+                                            "Alberca en el penthouse",
+                                            "Business Club",
+                                            "Restaurantes exclusivos"
+                                        ] : [
+                                            "Strategic financial district location",
+                                            "Near Paseo de la Reforma",
+                                            "Access to Roma Norte and Condesa",
+                                            "Penthouse pool",
+                                            "Business Club",
+                                            "Exclusive restaurants"
+                                        ]).map((amenity, index) => (
+                                            <div key={index} className="flex items-start gap-2">
+                                                <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
+                                                <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                                                    {amenity}
+                                                </p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </AnimatedSection>
 
                 {/* --- Program Section --- */}
                 <AnimatedSection id="programa" delay={200}>

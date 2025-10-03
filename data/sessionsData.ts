@@ -4,6 +4,7 @@ export interface SessionData {
   date: string;
   time: string;
   location: string;
+  description: string;
   objectives: string[];
   multimedia: Array<{
     id: string;
@@ -34,7 +35,8 @@ export const sessionsData: SessionData[] = [
     title: "Neuroplasticidad, IA y Sistemas de Inteligencia Estratégica",
     date: "5 de Diciembre 2025",
     time: "10:00 AM - 6:00 PM",
-    location: "Ciudad de México",
+    location: "Hotel Galería Plaza Reforma, Ciudad de México",
+    description: "Primera sesión presencial enfocada en transformar el cerebro reactivo y dominar técnicas de priming neurofisiológico con apoyo de IA.",
     objectives: [
       "Explorar la evolución del cerebro y sus bases neurobiológicas",
       "Aprender técnicas de priming neurofisiológico para estados óptimos",
@@ -210,7 +212,8 @@ export const sessionsData: SessionData[] = [
     title: "Bioenergética y Context Engineering Aplicado",
     date: "6 de Diciembre 2025",
     time: "10:00 AM - 6:00 PM",
-    location: "Ciudad de México",
+    location: "Hotel Galería Plaza Reforma, Ciudad de México",
+    description: "Segunda sesión presencial dedicada a la bioenergética y el desarrollo de context engineering aplicado para optimizar el rendimiento físico y mental.",
     objectives: [
       "Dominar el arte de formular preguntas de alta calidad",
       "Aplicar el marco metodológico de Context Engineering",
@@ -328,7 +331,8 @@ export const sessionsData: SessionData[] = [
     title: "Sistemas de Decisión Consciente - Experiencia Vivencial",
     date: "7 de Diciembre 2025",
     time: "10:00 AM - 6:00 PM",
-    location: "Ciudad de México",
+    location: "Hotel Galería Plaza Reforma, Ciudad de México",
+    description: "Tercera sesión presencial enfocada en sistemas de decisión consciente y experiencias vivenciales para transformar patrones de comportamiento.",
     objectives: [
       "Aprender el marco de transformación personal basado en enfoque, significado y acción",
       "Entrenar la atención y utilizar preguntas transformadoras",
@@ -443,6 +447,7 @@ export const sessionsData: SessionData[] = [
     date: "25 de Enero 2026 (Online)",
     time: "10:00 AM - 6:00 PM",
     location: "Sesión Online",
+    description: "Cuarta sesión online dedicada a la consolidación de conocimientos y profundización de técnicas aprendidas en las sesiones presenciales.",
     objectives: [
       "Evaluar el progreso personal y ajustar estrategias",
       "Aprender los cuatro protocolos principales de bioenergética",
@@ -565,6 +570,7 @@ export const sessionsData: SessionData[] = [
     date: "22 de Febrero 2026 (Online)",
     time: "10:00 AM - 6:00 PM",
     location: "Sesión Online",
+    description: "Quinta sesión online final enfocada en el desarrollo de maestría en las técnicas y la proyección de un futuro de evolución continua.",
     objectives: [
       "Transformar descubrimientos en arquetipos y estrategias claras",
       "Crear un plan de acción concreto",
