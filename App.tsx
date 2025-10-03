@@ -155,12 +155,12 @@ const BackToTop: React.FC = () => {
     return (
         <button
             onClick={scrollToTop}
-            className={`fixed bottom-20 right-4 sm:bottom-24 sm:right-8 z-50 p-3 sm:p-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full shadow-lg transition-all duration-300 transform back-to-top-iphone16 ${
+            className={`fixed bottom-16 right-4 sm:bottom-20 md:bottom-24 sm:right-8 z-50 p-2.5 sm:p-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full shadow-lg transition-all duration-300 transform back-to-top-iphone16 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
-            } hover:scale-110 active:scale-95 min-w-[48px] min-h-[48px] flex items-center justify-center`}
+            } hover:scale-110 active:scale-95 min-w-[44px] min-h-[44px] sm:min-w-[48px] sm:min-h-[48px] flex items-center justify-center touch-manipulation`}
             aria-label="Back to top"
         >
-            <ArrowUp className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={2} />
+            <ArrowUp className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" strokeWidth={2} />
         </button>
     );
 };
@@ -185,21 +185,21 @@ const AppContent: React.FC = () => {
 
             <main>
                 {/* --- Webinar Banner --- */}
-                <div className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-4 px-3 sm:py-3 sm:px-4 mt-16 sm:mt-20 shadow-xl relative overflow-hidden">
+                <div className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-3 px-4 sm:py-4 sm:px-6 mt-16 sm:mt-20 shadow-xl relative overflow-hidden">
                     {/* Background decoration */}
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
-                    <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
+                    <div className="absolute top-0 right-0 w-20 h-20 sm:w-32 sm:h-32 bg-white/5 rounded-full -translate-y-10 translate-x-10 sm:-translate-y-16 sm:translate-x-16"></div>
+                    <div className="absolute bottom-0 left-0 w-16 h-16 sm:w-24 sm:h-24 bg-white/5 rounded-full translate-y-8 -translate-x-8 sm:translate-y-12 sm:-translate-x-12"></div>
                     
                     <div className="container mx-auto relative z-10">
-                        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
+                        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-6">
                             {/* Content */}
-                            <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0 text-center sm:text-left">
-                                <div className="bg-white/25 backdrop-blur-sm p-2 sm:p-2.5 rounded-xl flex-shrink-0 shadow-lg">
-                                    <Play className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                            <div className="flex items-center gap-3 flex-1 min-w-0 text-center sm:text-left">
+                                <div className="bg-white/25 backdrop-blur-sm p-2 rounded-xl flex-shrink-0 shadow-lg">
+                                    <Play className="w-5 h-5 text-white" />
                                 </div>
                                 <div className="min-w-0 flex-1">
-                                    <div className="inline-flex items-center gap-2 mb-1">
+                                    <div className="flex flex-col sm:flex-row items-center sm:items-center gap-1 sm:gap-2 mb-1">
                                         <span className="bg-yellow-400 text-blue-900 text-xs font-bold px-2 py-0.5 rounded-full">
                                             {language === 'es' ? 'GRATIS' : 'FREE'}
                                         </span>
@@ -207,10 +207,10 @@ const AppContent: React.FC = () => {
                                             {language === 'es' ? 'DISPONIBLE 24/7' : 'AVAILABLE 24/7'}
                                         </span>
                                     </div>
-                                    <h3 className="font-bold text-lg sm:text-xl leading-tight mb-1">
+                                    <h3 className="font-bold text-base sm:text-xl leading-tight mb-1">
                                         {language === 'es' ? '¡Webinar Gratuito!' : 'Free Webinar!'}
                                     </h3>
-                                    <p className="text-sm sm:text-base opacity-95 leading-tight font-medium">
+                                    <p className="text-xs sm:text-base opacity-95 leading-tight font-medium">
                                         {language === 'es' ? 'Priming Neurofisiológico' : 'Neurophysiological Priming'}
                                     </p>
                                 </div>
@@ -219,53 +219,53 @@ const AppContent: React.FC = () => {
                             {/* CTA Button */}
                             <a 
                                 href="/webinar-2"
-                                className="bg-white/25 hover:bg-white/35 backdrop-blur-sm text-white font-bold py-3 px-6 sm:py-2.5 sm:px-8 rounded-full transition-all duration-300 flex items-center gap-2 text-sm sm:text-base whitespace-nowrap flex-shrink-0 touch-manipulation shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 border border-white/20"
+                                className="bg-white/25 hover:bg-white/35 backdrop-blur-sm text-white font-bold py-2.5 px-4 sm:py-2.5 sm:px-8 rounded-full transition-all duration-300 flex items-center justify-center gap-2 text-sm whitespace-nowrap flex-shrink-0 touch-manipulation shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 border border-white/20 w-full sm:w-auto"
                             >
-                                <Play className="w-4 h-4 sm:w-5 sm:h-5" />
+                                <Play className="w-4 h-4" />
                                 <span className="font-semibold">
                                     {language === 'es' ? 'Ver Ahora' : 'Watch Now'}
                                 </span>
-                                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                                <ArrowRight className="w-4 h-4" />
                             </a>
                         </div>
                     </div>
                 </div>
 
                 {/* --- Hero Section --- */}
-                <section className="relative min-h-screen flex items-center justify-center text-center px-3 sm:px-4 py-16 sm:py-20 md:py-24 overflow-hidden">
+                <section className="relative min-h-screen flex items-center justify-center text-center px-4 py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
                     <div className="absolute inset-0 animated-gradient"></div>
                     <div className="absolute inset-0 bg-slate-900/60"></div>
                     <div className="relative z-10 max-w-6xl mx-auto">
                         <AnimatedSection>
-                            <div className="flex flex-col items-center mb-8">
+                            <div className="flex flex-col items-center mb-6 sm:mb-8">
                                 <img 
                                     src="/images/logo-seminario.png" 
                                     alt="Logo Seminario Inteligencia Energética" 
-                                    className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain mb-4"
+                                    className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain mb-3 sm:mb-4"
                                 />
-                                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-white tracking-tight leading-tight text-center">
+                                <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-white tracking-tight leading-tight text-center px-2">
                                     {t.hero.title}
                                 </h1>
                             </div>
-                            <p className="flex flex-col sm:flex-row items-center justify-center text-base sm:text-lg md:text-xl text-cyan-400 font-semibold mb-4 gap-2">
+                            <div className="flex flex-col items-center justify-center text-sm sm:text-base md:text-lg lg:text-xl text-cyan-400 font-semibold mb-3 sm:mb-4 gap-1 sm:gap-2">
                                 <span className="flex items-center">
-                                    <MapPinIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0" />
+                                    <MapPinIcon className="w-4 h-4 mr-2 flex-shrink-0" />
                                     {t.hero.location}
                                 </span>
                                 <span className="hidden sm:inline">|</span>
                                 <span>{t.hero.date}</span>
-                            </p>
-                             <p className="text-sm sm:text-base md:text-lg text-yellow-300 mb-6 max-w-4xl mx-auto font-semibold leading-relaxed">
+                            </div>
+                            <p className="text-sm sm:text-base md:text-lg text-yellow-300 mb-4 sm:mb-6 max-w-4xl mx-auto font-semibold leading-relaxed px-4">
                                 {t.hero.subtitle}
                             </p>
-                            <p className="text-sm sm:text-base md:text-lg text-slate-300 mb-10 max-w-4xl mx-auto leading-relaxed">
+                            <p className="text-sm sm:text-base md:text-lg text-slate-300 mb-6 sm:mb-8 md:mb-10 max-w-4xl mx-auto leading-relaxed px-4">
                                 {t.hero.description}
                             </p>
-                            <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
-                                <a href="#inversion" onClick={(e) => {e.preventDefault(); handleScrollTo('inversion')}} className="bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 text-white font-bold py-4 px-8 rounded-full text-base sm:text-lg transition duration-300 ease-in-out transform hover:scale-105 active:scale-95 shadow-lg touch-manipulation ripple btn-enhanced pulse-cta">
+                            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 md:gap-6 px-4">
+                                <a href="#inversion" onClick={(e) => {e.preventDefault(); handleScrollTo('inversion')}} className="bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-sm sm:text-base md:text-lg transition duration-300 ease-in-out transform hover:scale-105 active:scale-95 shadow-lg touch-manipulation w-full sm:w-auto">
                                     {t.hero.ctaInscribirse}
                                 </a>
-                                <a href="#programa" onClick={(e) => {e.preventDefault(); handleScrollTo('programa')}} className="bg-slate-700/50 hover:bg-slate-700 active:bg-slate-600 border border-slate-600 text-white font-bold py-4 px-8 rounded-full text-base sm:text-lg transition duration-300 touch-manipulation ripple btn-enhanced">
+                                <a href="#programa" onClick={(e) => {e.preventDefault(); handleScrollTo('programa')}} className="bg-slate-700/50 hover:bg-slate-700 active:bg-slate-600 border border-slate-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-sm sm:text-base md:text-lg transition duration-300 touch-manipulation w-full sm:w-auto">
                                     {t.hero.ctaVerPrograma}
                                 </a>
                             </div>
@@ -274,24 +274,24 @@ const AppContent: React.FC = () => {
                 </section>
 
                 {/* --- Hotel Information Section --- */}
-                <AnimatedSection id="ubicacion" className="bg-slate-800 py-8 sm:py-12 px-4" delay={150}>
+                <AnimatedSection id="ubicacion" className="bg-slate-800 py-6 sm:py-8 md:py-12 px-4" delay={150}>
                     <div className="container mx-auto max-w-4xl">
-                        <h2 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center">
+                        <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-4 sm:mb-6 text-center">
                             {language === 'es' ? 'Ubicación del Evento' : 'Event Location'}
                         </h2>
-                        <div className="bg-slate-900 rounded-xl p-6 sm:p-8 border border-slate-700">
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div className="bg-slate-900 rounded-xl p-4 sm:p-6 md:p-8 border border-slate-700">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
                                 {/* Hotel Details */}
-                                <div className="space-y-4">
+                                <div className="space-y-3 sm:space-y-4">
                                     <div>
-                                        <h3 className="text-lg font-semibold text-cyan-400 mb-3">
+                                        <h3 className="text-base sm:text-lg font-semibold text-cyan-400 mb-2 sm:mb-3">
                                             Hotel Galería Plaza Reforma
                                         </h3>
-                                        <div className="space-y-3">
-                                            <div className="flex items-start gap-3">
-                                                <MapPin className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                                        <div className="space-y-2 sm:space-y-3">
+                                            <div className="flex items-start gap-2 sm:gap-3">
+                                                <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400 mt-0.5 flex-shrink-0" />
                                                 <div>
-                                                    <p className="text-slate-300 text-sm sm:text-base">
+                                                    <p className="text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed">
                                                         Paseo de la Reforma 334, Juárez, 06600 Ciudad de México, CDMX
                                                     </p>
                                                     <p className="text-slate-400 text-xs mt-1">
@@ -302,22 +302,22 @@ const AppContent: React.FC = () => {
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div className="flex items-center gap-3">
-                                                <Phone className="w-5 h-5 text-green-400 flex-shrink-0" />
+                                            <div className="flex items-center gap-2 sm:gap-3">
+                                                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 flex-shrink-0" />
                                                 <a 
                                                     href="tel:+525552301712"
-                                                    className="text-slate-300 hover:text-white transition-colors"
+                                                    className="text-slate-300 hover:text-white transition-colors text-sm sm:text-base"
                                                 >
                                                     +52 55 5230 1712
                                                 </a>
                                             </div>
-                                            <div className="flex items-center gap-3">
-                                                <Globe className="w-5 h-5 text-purple-400 flex-shrink-0" />
+                                            <div className="flex items-center gap-2 sm:gap-3">
+                                                <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 flex-shrink-0" />
                                                 <a 
                                                     href="https://www.galeriaplazahotels.com.mx/es/reforma/"
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="text-slate-300 hover:text-white transition-colors text-sm sm:text-base"
+                                                    className="text-slate-300 hover:text-white transition-colors text-xs sm:text-sm md:text-base break-all"
                                                 >
                                                     {language === 'es' ? 'Visitar sitio web' : 'Visit website'}
                                                 </a>
@@ -328,10 +328,10 @@ const AppContent: React.FC = () => {
 
                                 {/* Amenities */}
                                 <div>
-                                    <h4 className="text-lg font-semibold text-white mb-3">
+                                    <h4 className="text-base sm:text-lg font-semibold text-white mb-2 sm:mb-3">
                                         {language === 'es' ? 'Amenidades del Hotel' : 'Hotel Amenities'}
                                     </h4>
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                    <div className="grid grid-cols-1 gap-2">
                                         {(language === 'es' ? [
                                             "Ubicación estratégica en zona financiera",
                                             "Cerca de Paseo de la Reforma",
@@ -348,7 +348,7 @@ const AppContent: React.FC = () => {
                                             "Exclusive restaurants"
                                         ]).map((amenity, index) => (
                                             <div key={index} className="flex items-start gap-2">
-                                                <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
+                                                <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></div>
                                                 <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
                                                     {amenity}
                                                 </p>
@@ -512,41 +512,41 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
 
                 {/* --- Extensions & Investment Section --- */}
-                 <AnimatedSection id="inversion" className="py-12 sm:py-16 md:py-24 bg-slate-900" delay={1100}>
+                 <AnimatedSection id="inversion" className="py-8 sm:py-12 md:py-16 lg:py-24 bg-slate-900" delay={1100}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                        <h2 className="flex flex-col sm:flex-row items-center justify-center text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
-                            <GemIcon className="w-6 h-6 sm:w-8 sm:h-8 mr-0 sm:mr-3 mb-2 sm:mb-0 text-cyan-400" />
+                        <h2 className="flex flex-col sm:flex-row items-center justify-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4 leading-tight">
+                            <GemIcon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 mr-0 sm:mr-3 mb-2 sm:mb-0 text-cyan-400" />
                             {t.investment.title}
                         </h2>
-                        <p className="text-base sm:text-lg text-slate-400 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">{t.investment.subtitle}</p>
+                        <p className="text-sm sm:text-base md:text-lg text-slate-400 mb-6 sm:mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed px-2">{t.investment.subtitle}</p>
 
-                        <div className="max-w-sm sm:max-w-lg mx-auto bg-gradient-to-br from-slate-800 to-slate-900 p-6 sm:p-8 rounded-2xl shadow-2xl border border-cyan-500/30 relative">
-                            <div className="absolute -top-3 sm:-top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-slate-900 font-bold px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm">CUPOS LIMITADOS</div>
+                        <div className="max-w-xs sm:max-w-sm md:max-w-lg mx-auto bg-gradient-to-br from-slate-800 to-slate-900 p-4 sm:p-6 md:p-8 rounded-2xl shadow-2xl border border-cyan-500/30 relative">
+                            <div className="absolute -top-2 sm:-top-3 md:-top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-slate-900 font-bold px-2 sm:px-3 md:px-4 py-1 rounded-full text-xs sm:text-sm">CUPOS LIMITADOS</div>
                             
                             {/* Countdown Timer */}
-                            <div className="mb-6 p-4 bg-slate-900/50 rounded-xl border border-yellow-400/30">
-                                <p className="text-center text-yellow-400 text-sm font-semibold mb-3">¡Oferta Early Bird termina en!</p>
+                            <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-slate-900/50 rounded-xl border border-yellow-400/30">
+                                <p className="text-center text-yellow-400 text-xs sm:text-sm font-semibold mb-2 sm:mb-3">¡Oferta Early Bird termina en!</p>
                                 <CountdownTimer targetDate="2025-10-16T23:59:59" />
                             </div>
                             
-                            <div className="mb-4 sm:mb-6">
-                                <p className="text-base sm:text-lg font-semibold text-yellow-400">{t.investment.earlyBird}</p>
-                                <p className="text-3xl sm:text-4xl font-bold text-white tracking-tight">{t.investment.earlyBirdPrice}</p>
-                                <p className="text-slate-400 text-sm sm:text-base">{t.investment.validUntil}</p>
+                            <div className="mb-3 sm:mb-4 md:mb-6">
+                                <p className="text-sm sm:text-base md:text-lg font-semibold text-yellow-400">{t.investment.earlyBird}</p>
+                                <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">{t.investment.earlyBirdPrice}</p>
+                                <p className="text-slate-400 text-xs sm:text-sm md:text-base">{t.investment.validUntil}</p>
                             </div>
-                            <div className="mb-6 sm:mb-8">
-                                <p className="text-base sm:text-lg font-semibold text-slate-300">{t.investment.regular}</p>
-                                <p className="text-xl sm:text-2xl font-bold text-slate-500">{t.investment.regularPrice}</p>
+                            <div className="mb-4 sm:mb-6 md:mb-8">
+                                <p className="text-sm sm:text-base md:text-lg font-semibold text-slate-300">{t.investment.regular}</p>
+                                <p className="text-lg sm:text-xl md:text-2xl font-bold text-slate-500">{t.investment.regularPrice}</p>
                             </div>
-                            <p className="text-slate-400 mb-4 text-sm sm:text-base leading-relaxed">{t.investment.includes}</p>
-                            <div className="bg-slate-700/50 p-4 rounded-lg mb-6 sm:mb-8">
-                                <p className="text-cyan-400 text-sm sm:text-base font-medium text-center leading-relaxed">
+                            <p className="text-slate-400 mb-3 sm:mb-4 text-xs sm:text-sm md:text-base leading-relaxed px-2">{t.investment.includes}</p>
+                            <div className="bg-slate-700/50 p-3 sm:p-4 rounded-lg mb-4 sm:mb-6 md:mb-8">
+                                <p className="text-cyan-400 text-xs sm:text-sm md:text-base font-medium text-center leading-relaxed">
                                     {t.investment.reservationInfo}
                                 </p>
                             </div>
                             <div className="flex justify-center">
-                                <a href={`https://wa.me/+525579076626?text=${generateWhatsAppMessage()}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 active:bg-green-700 text-white font-bold py-4 px-6 sm:py-3 sm:px-8 rounded-full text-base sm:text-lg transition duration-300 transform hover:scale-105 active:scale-95 shadow-lg shadow-green-500/20 touch-manipulation ripple btn-enhanced">
-                                    <WhatsAppIcon className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
+                                <a href={`https://wa.me/+525579076626?text=${generateWhatsAppMessage()}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 active:bg-green-700 text-white font-bold py-3 sm:py-4 md:py-3 px-4 sm:px-6 md:px-8 rounded-full text-sm sm:text-base md:text-lg transition duration-300 transform hover:scale-105 active:scale-95 shadow-lg shadow-green-500/20 touch-manipulation w-full sm:w-auto">
+                                    <WhatsAppIcon className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 sm:mr-3" />
                                     {t.investment.ctaWhatsApp}
                                 </a>
                             </div>
@@ -555,20 +555,20 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
             </main>
 
-            <footer className="text-center p-8 pb-24 sm:pb-8 text-slate-400 bg-slate-900 border-t border-slate-800 safe-area-inset-bottom">
+            <footer className="text-center p-6 sm:p-8 pb-20 sm:pb-8 text-slate-400 bg-slate-900 border-t border-slate-800 safe-area-inset-bottom">
                 <div className="max-w-4xl mx-auto">
-                    <p className="text-xl italic mb-6">"{t.footer.quote}"</p>
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+                    <p className="text-base sm:text-lg md:text-xl italic mb-4 sm:mb-6 px-4">"{t.footer.quote}"</p>
+                    <div className="flex flex-col items-center justify-center gap-3 sm:gap-4 md:gap-8 px-4">
                         <a 
                             href="https://www.institutocentrobioenergetica.com" 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+                            className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium text-sm sm:text-base"
                         >
                             <img 
                                 src="/images/logo-seminario.png" 
                                 alt="Logo Inteligencia Energética" 
-                                className="w-6 h-6 object-contain"
+                                className="w-5 h-5 sm:w-6 sm:h-6 object-contain"
                             />
                             Visita nuestro sitio principal
                         </a>
@@ -577,12 +577,12 @@ const AppContent: React.FC = () => {
                             href="https://www.institutocentrobioenergetica.com" 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="text-slate-400 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                            className="text-slate-400 hover:text-cyan-400 transition-colors duration-300 font-medium text-sm sm:text-base"
                         >
                             Instituto Centro Bioenergética
                         </a>
                         <div className="hidden sm:block w-px h-6 bg-slate-600"></div>
-                        <p className="text-sm text-slate-500">
+                        <p className="text-xs sm:text-sm text-slate-500 text-center">
                             © 2025 Seminario Internacional de Inteligencia Energética
                         </p>
                     </div>
