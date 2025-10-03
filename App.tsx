@@ -184,10 +184,10 @@ const AppContent: React.FC = () => {
             <Header onScrollTo={handleScrollTo} />
 
             <main>
-                {/* --- Webinar Banner --- */}
-                <div className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-3 px-4 sm:py-4 sm:px-6 mt-16 sm:mt-20 shadow-xl relative overflow-hidden">
+                {/* --- Webinar 4 Banner --- */}
+                <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-4 sm:py-4 sm:px-6 mt-16 sm:mt-20 shadow-xl relative overflow-hidden">
                     {/* Background decoration */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-700/20 to-pink-700/20"></div>
                     <div className="absolute top-0 right-0 w-20 h-20 sm:w-32 sm:h-32 bg-white/5 rounded-full -translate-y-10 translate-x-10 sm:-translate-y-16 sm:translate-x-16"></div>
                     <div className="absolute bottom-0 left-0 w-16 h-16 sm:w-24 sm:h-24 bg-white/5 rounded-full translate-y-8 -translate-x-8 sm:translate-y-12 sm:-translate-x-12"></div>
                     
@@ -200,30 +200,32 @@ const AppContent: React.FC = () => {
                                 </div>
                                 <div className="min-w-0 flex-1">
                                     <div className="flex flex-col sm:flex-row items-center sm:items-center gap-1 sm:gap-2 mb-1">
-                                        <span className="bg-yellow-400 text-blue-900 text-xs font-bold px-2 py-0.5 rounded-full">
-                                            {language === 'es' ? 'GRATIS' : 'FREE'}
+                                        <span className="bg-yellow-400 text-purple-900 text-xs font-bold px-2 py-0.5 rounded-full">
+                                            {language === 'es' ? 'HOY' : 'TODAY'}
                                         </span>
                                         <span className="text-yellow-200 text-xs font-medium">
-                                            {language === 'es' ? 'DISPONIBLE 24/7' : 'AVAILABLE 24/7'}
+                                            {language === 'es' ? '3 OCTUBRE, 5:00 PM' : 'OCT 3, 5:00 PM'}
                                         </span>
                                     </div>
                                     <h3 className="font-bold text-base sm:text-xl leading-tight mb-1">
-                                        {language === 'es' ? '¡Webinar Gratuito!' : 'Free Webinar!'}
+                                        {language === 'es' ? '¡Webinar 4 Gratuito!' : 'Free Webinar 4!'}
                                     </h3>
                                     <p className="text-xs sm:text-base opacity-95 leading-tight font-medium">
-                                        {language === 'es' ? 'Priming Neurofisiológico' : 'Neurophysiological Priming'}
+                                        {language === 'es' ? 'Construye Tu Verdad: El Método Que Convierte Tu Historia En Poder' : 'Build Your Truth: The Method That Converts Your Story Into Power'}
                                     </p>
                                 </div>
                             </div>
                             
                             {/* CTA Button */}
                             <a 
-                                href="/webinar-2"
+                                href="https://us02web.zoom.us/j/86951126810?pwd=twS2ZxHFFmTkcaYTTZebsbFaTY8Joo.1"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="bg-white/25 hover:bg-white/35 backdrop-blur-sm text-white font-bold py-2.5 px-4 sm:py-2.5 sm:px-8 rounded-full transition-all duration-300 flex items-center justify-center gap-2 text-sm whitespace-nowrap flex-shrink-0 touch-manipulation shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 border border-white/20 w-full sm:w-auto"
                             >
                                 <Play className="w-4 h-4" />
                                 <span className="font-semibold">
-                                    {language === 'es' ? 'Ver Ahora' : 'Watch Now'}
+                                    {language === 'es' ? 'Unirse al Webinar' : 'Join Webinar'}
                                 </span>
                                 <ArrowRight className="w-4 h-4" />
                             </a>
