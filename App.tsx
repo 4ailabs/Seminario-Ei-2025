@@ -184,54 +184,6 @@ const AppContent: React.FC = () => {
             <Header onScrollTo={handleScrollTo} />
 
             <main>
-                {/* --- Webinar 4 Banner --- */}
-                <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-4 sm:py-4 sm:px-6 mt-16 sm:mt-20 shadow-xl relative overflow-hidden">
-                    {/* Background decoration */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-700/20 to-pink-700/20"></div>
-                    <div className="absolute top-0 right-0 w-20 h-20 sm:w-32 sm:h-32 bg-white/5 rounded-full -translate-y-10 translate-x-10 sm:-translate-y-16 sm:translate-x-16"></div>
-                    <div className="absolute bottom-0 left-0 w-16 h-16 sm:w-24 sm:h-24 bg-white/5 rounded-full translate-y-8 -translate-x-8 sm:translate-y-12 sm:-translate-x-12"></div>
-                    
-                    <div className="container mx-auto relative z-10">
-                        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-6">
-                            {/* Content */}
-                            <div className="flex items-center gap-3 flex-1 min-w-0 text-center sm:text-left">
-                                <div className="bg-white/25 backdrop-blur-sm p-2 rounded-xl flex-shrink-0 shadow-lg">
-                                    <Play className="w-5 h-5 text-white" />
-                                </div>
-                                <div className="min-w-0 flex-1">
-                                    <div className="flex flex-col sm:flex-row items-center sm:items-center gap-1 sm:gap-2 mb-1">
-                                        <span className="bg-yellow-400 text-purple-900 text-xs font-bold px-2 py-0.5 rounded-full">
-                                            {language === 'es' ? 'HOY' : 'TODAY'}
-                                        </span>
-                                        <span className="text-yellow-200 text-xs font-medium">
-                                            {language === 'es' ? '3 OCTUBRE, 5:00 PM' : 'OCT 3, 5:00 PM'}
-                                        </span>
-                                    </div>
-                                    <h3 className="font-bold text-base sm:text-xl leading-tight mb-1">
-                                        {language === 'es' ? '¡Webinar 4 Gratuito!' : 'Free Webinar 4!'}
-                                    </h3>
-                                    <p className="text-xs sm:text-base opacity-95 leading-tight font-medium">
-                                        {language === 'es' ? 'Construye Tu Verdad: El Método Que Convierte Tu Historia En Poder' : 'Build Your Truth: The Method That Converts Your Story Into Power'}
-                                    </p>
-                                </div>
-                            </div>
-                            
-                            {/* CTA Button */}
-                            <a 
-                                href="https://us02web.zoom.us/j/86951126810?pwd=twS2ZxHFFmTkcaYTTZebsbFaTY8Joo.1"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="bg-white/25 hover:bg-white/35 backdrop-blur-sm text-white font-bold py-2.5 px-4 sm:py-2.5 sm:px-8 rounded-full transition-all duration-300 flex items-center justify-center gap-2 text-sm whitespace-nowrap flex-shrink-0 touch-manipulation shadow-lg hover:shadow-xl transform hover:scale-105 active:scale-95 border border-white/20 w-full sm:w-auto"
-                            >
-                                <Play className="w-4 h-4" />
-                                <span className="font-semibold">
-                                    {language === 'es' ? 'Unirse al Webinar' : 'Join Webinar'}
-                                </span>
-                                <ArrowRight className="w-4 h-4" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
                 {/* --- Hero Section --- */}
                 <section className="relative min-h-screen flex items-center justify-center text-center px-4 py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
