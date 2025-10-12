@@ -29,12 +29,10 @@ const Header: React.FC<HeaderProps> = ({ onScrollTo }) => {
 
   // Secondary navigation items (in mobile menu or dropdown)
   const secondaryNavLinks = [
-    { id: 'webinars', text: t.nav.webinars },
-    { id: 'galeria', text: t.nav.galeria },
     { id: 'para-quien', text: t.nav.paraQuien },
     { id: 'resultados', text: t.nav.resultados },
     { id: 'testimonios', text: t.nav.testimonios },
-    { id: 'incluye', text: t.nav.incluye },
+    { id: 'galeria', text: t.nav.galeria },
   ];
 
   // All links for mobile menu
@@ -120,7 +118,7 @@ const Header: React.FC<HeaderProps> = ({ onScrollTo }) => {
 
       {/* Mobile/Tablet Navigation Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-slate-900/98 backdrop-blur-lg border-t border-slate-700 shadow-lg max-h-[calc(100vh-60px)] overflow-y-auto overscroll-contain safe-area-inset-bottom">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-slate-900 backdrop-blur-xl border-t border-slate-700 shadow-2xl max-h-[calc(100vh-60px)] overflow-y-auto overscroll-contain safe-area-inset-bottom">
           <nav className="container mx-auto px-4 py-4">
             {/* Main Navigation */}
             <div className="mb-4">

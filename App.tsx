@@ -666,7 +666,7 @@ const AppContent: React.FC = () => {
             </footer>
 
             <BackToTop />
-            <ChatButton />
+            {/* <ChatButton /> */}
             <StickyCtaBar onScrollTo={handleScrollTo} />
             <SocialProofBadge />
         </div>
