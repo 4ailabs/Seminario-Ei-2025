@@ -44,6 +44,9 @@ import InfoCard from './components/InfoCard';
 import WebinarCard from './components/WebinarCard';
 import TestimonialCard from './components/TestimonialCard';
 import IncludeCard from './components/IncludeCard';
+import StickyCtaBar from './components/StickyCtaBar';
+import CountdownTimer from './components/CountdownTimer';
+import SocialProofBadge from './components/SocialProofBadge';
 import { 
   MapPinIcon, 
   SparklesIcon, 
@@ -73,61 +76,7 @@ import { sessionsData } from './data/sessionsData';
 // --- Program Section Component ---
 
 
-// --- Countdown Timer Component ---
-const CountdownTimer: React.FC<{ targetDate: string }> = ({ targetDate }) => {
-    const [timeLeft, setTimeLeft] = useState({
-        days: 0,
-        hours: 0,
-        minutes: 0,
-        seconds: 0
-    });
-
-    useEffect(() => {
-        const calculateTimeLeft = () => {
-            const difference = new Date(targetDate).getTime() - new Date().getTime();
-            
-            if (difference > 0) {
-                setTimeLeft({
-                    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-                    hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-                    minutes: Math.floor((difference / 1000 / 60) % 60),
-                    seconds: Math.floor((difference / 1000) % 60)
-                });
-            } else {
-                setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-            }
-        };
-
-        calculateTimeLeft();
-        const timer = setInterval(calculateTimeLeft, 1000);
-
-        return () => clearInterval(timer);
-    }, [targetDate]);
-
-    const TimeUnit: React.FC<{ value: number; label: string }> = ({ value, label }) => (
-        <div className="text-center">
-            <div className="bg-slate-800 text-white text-base sm:text-lg md:text-xl font-bold rounded-md p-2 sm:p-3 min-w-[45px] sm:min-w-[50px] md:min-w-[60px] flex items-center justify-center">
-                {value.toString().padStart(2, '0')}
-            </div>
-            <div className="text-slate-400 text-xs mt-1 font-medium">
-                {label}
-            </div>
-        </div>
-    );
-
-    return (
-        <div className="flex items-center justify-center gap-1 sm:gap-2 flex-wrap">
-            <Timer className="w-4 h-4 text-yellow-400 mr-1" />
-            <TimeUnit value={timeLeft.days} label="Días" />
-            <span className="text-slate-400 text-sm sm:text-base mx-1">:</span>
-            <TimeUnit value={timeLeft.hours} label="Horas" />
-            <span className="text-slate-400 text-sm sm:text-base mx-1">:</span>
-            <TimeUnit value={timeLeft.minutes} label="Min" />
-            <span className="text-slate-400 text-sm sm:text-base mx-1">:</span>
-            <TimeUnit value={timeLeft.seconds} label="Seg" />
-        </div>
-    );
-};
+// --- Countdown Timer Component moved to separate file ---
 
 // --- Back to Top Component ---
 const BackToTop: React.FC = () => {
@@ -176,7 +125,7 @@ const AppContent: React.FC = () => {
 
     const generateWhatsAppMessage = () => {
         // Always generate Spanish message for WhatsApp
-        const message = `¡Hola! Me interesa inscribirme al Seminario Internacional de Inteligencia Energética del 5-7 de diciembre 2025 en el Hotel Galería Plaza Reforma, Ciudad de México. ¿Podrían brindarme más información sobre el proceso de inscripción y formas de pago?`;
+        const message = `¡Hola! Me interesa inscribirme al Seminario Internacional de Inteligencia Energética (5-7 Dic 2025 + sesiones 24 Ene & 28 Feb 2026) en el Hotel Galería Plaza Reforma, Ciudad de México. ¿Podrían brindarme más información sobre el proceso de inscripción y formas de pago?`;
         return encodeURIComponent(message);
     };
 
@@ -204,6 +153,25 @@ const AppContent: React.FC = () => {
                                     <MapPinIcon className="w-4 h-4 mr-2 flex-shrink-0" />
                                     {t.hero.location}
                                 </span>
+                                <div className="text-yellow-300 font-bold flex flex-col gap-1 text-center">
+                                    <span className="text-base sm:text-lg md:text-xl">
+                                        {language === 'es' ? '5-7 Diciembre 2025' : 'December 5-7, 2025'}
+                                    </span>
+                                    <div className="text-xs sm:text-sm text-cyan-400 font-medium px-2">
+                                        {language === 'es' ? '+ 2 Sesiones: 24 Ene & 28 Feb 2026' : '+ 2 Sessions: Jan 24 & Feb 28, 2026'}
+                                    </div>
+                                </div>
+                                <div className="flex flex-col sm:flex-row items-center gap-3 mt-4 mb-2">
+                                    <span className="text-green-400 text-base sm:text-lg font-bold uppercase tracking-wide">
+                                        {language === 'es' ? 'Modalidad Presencial' : 'In-Person Modality'}
+                                    </span>
+                                    <span className="text-slate-500 text-lg font-bold hidden sm:inline">
+                                        |
+                                    </span>
+                                    <span className="text-blue-400 text-base sm:text-lg font-bold uppercase tracking-wide">
+                                        {language === 'es' ? 'Versión Online' : 'Online Version'}
+                                    </span>
+                                </div>
                             </div>
                             <p className="text-sm sm:text-base md:text-lg text-yellow-300 mb-4 sm:mb-6 max-w-4xl mx-auto font-semibold leading-relaxed px-4">
                                 {t.hero.subtitle}
@@ -224,36 +192,63 @@ const AppContent: React.FC = () => {
                 </section>
 
                 {/* --- Hotel Information Section --- */}
-                <AnimatedSection id="ubicacion" className="bg-slate-800 py-6 sm:py-8 md:py-12 px-4" delay={150}>
-                    <div className="container mx-auto max-w-4xl">
-                        <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-4 sm:mb-6 text-center">
-                            {language === 'es' ? 'Ubicación del Evento' : 'Event Location'}
-                        </h2>
-                        <div className="bg-slate-900 rounded-xl p-4 sm:p-6 md:p-8 border border-slate-700">
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-                                {/* Hotel Details */}
-                                <div className="space-y-3 sm:space-y-4">
-                                    <div>
-                                        <h3 className="text-base sm:text-lg font-semibold text-cyan-400 mb-2 sm:mb-3">
+                <AnimatedSection id="ubicacion" className="relative py-12 sm:py-16 md:py-24 overflow-hidden" delay={150}>
+                    {/* Background with subtle pattern */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-900/30 to-slate-950/50"></div>
+                    <div className="absolute inset-0 opacity-5" style={{
+                        backgroundImage: 'radial-gradient(circle at 2px 2px, rgb(148, 163, 184) 1px, transparent 0)',
+                        backgroundSize: '40px 40px'
+                    }}></div>
+                    
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        {/* Header */}
+                        <div className="text-center mb-8 sm:mb-10 md:mb-16 px-4">
+                            <div className="inline-block mb-3 sm:mb-4">
+                                <span className="bg-slate-500/20 text-slate-300 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold tracking-wide">
+                                    {language === 'es' ? 'CDMX, MÉXICO' : 'CDMX, MEXICO'}
+                                </span>
+                            </div>
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6 px-2">
+                                {language === 'es' ? 'Ubicación del Evento' : 'Event Location'}
+                            </h2>
+                            <p className="text-slate-300 text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed px-2">
+                                {language === 'es' 
+                                    ? 'En el corazón de la zona financiera y turística de la Ciudad de México' 
+                                    : 'In the heart of Mexico City\'s financial and tourist district'}
+                            </p>
+                        </div>
+
+                        {/* Main Content */}
+                        <div className="max-w-6xl mx-auto">
+                            <div className="bg-slate-900/60 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-slate-700/20 overflow-hidden">
+                                <div className="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-slate-700/10">
+                                    
+                                    {/* Hotel Details */}
+                                    <div className="p-6 sm:p-8 md:p-10 group hover:bg-slate-500/5 transition-all duration-300">
+                                        <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">
                                             Hotel Galería Plaza Reforma
                                         </h3>
-                                        <div className="space-y-2 sm:space-y-3">
-                                            <div className="flex items-start gap-2 sm:gap-3">
-                                                <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                                        <div className="space-y-4">
+                                            <div className="flex items-start gap-3">
+                                                <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-cyan-500/10 flex-shrink-0">
+                                                    <MapPin className="w-5 h-5 text-cyan-400" />
+                                                </div>
                                                 <div>
-                                                    <p className="text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed">
+                                                    <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
                                                         Paseo de la Reforma 334, Juárez, 06600 Ciudad de México, CDMX
                                                     </p>
-                                                    <p className="text-slate-400 text-xs mt-1">
+                                                    <p className="text-slate-500 text-xs sm:text-sm mt-1">
                                                         {language === 'es' 
-                                                            ? 'Ubicado en la principal zona financiera y turística de la Ciudad'
-                                                            : 'Located in the main financial and tourist district of the City'
+                                                            ? 'Zona financiera y turística premium'
+                                                            : 'Premium financial and tourist district'
                                                         }
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div className="flex items-center gap-2 sm:gap-3">
-                                                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 flex-shrink-0" />
+                                            <div className="flex items-center gap-3">
+                                                <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-green-500/10 flex-shrink-0">
+                                                    <Phone className="w-5 h-5 text-green-400" />
+                                                </div>
                                                 <a 
                                                     href="tel:+525552301712"
                                                     className="text-slate-300 hover:text-white transition-colors text-sm sm:text-base"
@@ -261,49 +256,139 @@ const AppContent: React.FC = () => {
                                                     +52 55 5230 1712
                                                 </a>
                                             </div>
-                                            <div className="flex items-center gap-2 sm:gap-3">
-                                                <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 flex-shrink-0" />
+                                            <div className="flex items-center gap-3">
+                                                <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-purple-500/10 flex-shrink-0">
+                                                    <Globe className="w-5 h-5 text-purple-400" />
+                                                </div>
                                                 <a 
                                                     href="https://www.galeriaplazahotels.com.mx/es/reforma/"
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="text-slate-300 hover:text-white transition-colors text-xs sm:text-sm md:text-base break-all"
+                                                    className="text-slate-300 hover:text-white transition-colors text-sm sm:text-base break-words"
                                                 >
                                                     {language === 'es' ? 'Visitar sitio web' : 'Visit website'}
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                {/* Amenities */}
-                                <div>
-                                    <h4 className="text-base sm:text-lg font-semibold text-white mb-2 sm:mb-3">
-                                        {language === 'es' ? 'Amenidades del Hotel' : 'Hotel Amenities'}
-                                    </h4>
-                                    <div className="grid grid-cols-1 gap-2">
-                                        {(language === 'es' ? [
-                                            "Ubicación estratégica en zona financiera",
-                                            "Cerca de Paseo de la Reforma",
-                                            "Acceso a Roma Norte y Condesa",
-                                            "Alberca en el penthouse",
-                                            "Business Club",
-                                            "Restaurantes exclusivos"
-                                        ] : [
-                                            "Strategic financial district location",
-                                            "Near Paseo de la Reforma",
-                                            "Access to Roma Norte and Condesa",
-                                            "Penthouse pool",
-                                            "Business Club",
-                                            "Exclusive restaurants"
-                                        ]).map((amenity, index) => (
-                                            <div key={index} className="flex items-start gap-2">
-                                                <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></div>
-                                                <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                                                    {amenity}
-                                                </p>
-                                            </div>
-                                        ))}
+                                    {/* Amenities */}
+                                    <div className="p-6 sm:p-8 md:p-10 group hover:bg-slate-500/5 transition-all duration-300">
+                                        <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">
+                                            {language === 'es' ? 'Amenidades' : 'Amenities'}
+                                        </h3>
+                                        <div className="space-y-2.5 sm:space-y-3">
+                                            {(language === 'es' ? [
+                                                "Ubicación estratégica en zona financiera",
+                                                "Cerca de Paseo de la Reforma",
+                                                "Acceso a Roma Norte y Condesa",
+                                                "Alberca en el penthouse",
+                                                "Business Club",
+                                                "Restaurantes exclusivos"
+                                            ] : [
+                                                "Strategic financial district location",
+                                                "Near Paseo de la Reforma",
+                                                "Access to Roma Norte and Condesa",
+                                                "Penthouse pool",
+                                                "Business Club",
+                                                "Exclusive restaurants"
+                                            ]).map((amenity, index) => (
+                                                <div key={index} className="flex items-start gap-2 sm:gap-3">
+                                                    <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
+                                                    <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+                                                        {amenity}
+                                                    </p>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </AnimatedSection>
+
+                {/* --- Online Modality Benefits --- */}
+                <AnimatedSection className="relative py-12 sm:py-16 md:py-24 overflow-hidden" delay={150}>
+                    {/* Background with subtle pattern */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-blue-950/50 via-blue-900/30 to-blue-950/50"></div>
+                    <div className="absolute inset-0 opacity-10" style={{
+                        backgroundImage: 'radial-gradient(circle at 2px 2px, rgb(59, 130, 246) 1px, transparent 0)',
+                        backgroundSize: '40px 40px'
+                    }}></div>
+                    
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        {/* Header */}
+                        <div className="text-center mb-8 sm:mb-10 md:mb-16 px-4">
+                            <div className="inline-block mb-3 sm:mb-4">
+                                <span className="bg-blue-500/20 text-blue-300 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold tracking-wide">
+                                    {language === 'es' ? 'TRANSMISIÓN PROFESIONAL' : 'PROFESSIONAL STREAMING'}
+                                </span>
+                            </div>
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6 px-2">
+                                {language === 'es' ? 'Participa desde cualquier lugar' : 'Join from anywhere'}
+                            </h2>
+                            <p className="text-slate-300 text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed px-2">
+                                {language === 'es' 
+                                    ? 'Misma calidad que estar presente. Tecnología de transmisión en vivo de nivel profesional.' 
+                                    : 'Same quality as being there. Professional-level live streaming technology.'}
+                            </p>
+                        </div>
+
+                        {/* Main Content - Horizontal Layout */}
+                        <div className="max-w-6xl mx-auto">
+                            <div className="bg-slate-900/60 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-blue-500/20 overflow-hidden">
+                                <div className="grid grid-cols-1 lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-blue-500/10">
+                                    
+                                    {/* HD */}
+                                    <div className="p-6 sm:p-8 md:p-10 text-center group hover:bg-blue-500/5 transition-all duration-300">
+                                        <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-blue-500/10 mb-4 sm:mb-6 group-hover:bg-blue-500/20 transition-colors duration-300">
+                                            <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                            </svg>
+                                        </div>
+                                        <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3">
+                                            {language === 'es' ? 'Calidad HD' : 'HD Quality'}
+                                        </h3>
+                                        <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+                                            {language === 'es' 
+                                                ? 'Video en alta definición 1080p para que no pierdas ningún detalle' 
+                                                : '1080p high definition video so you don\'t miss any detail'}
+                                        </p>
+                                    </div>
+
+                                    {/* Live */}
+                                    <div className="p-6 sm:p-8 md:p-10 text-center group hover:bg-blue-500/5 transition-all duration-300">
+                                        <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-blue-500/10 mb-4 sm:mb-6 group-hover:bg-blue-500/20 transition-colors duration-300">
+                                            <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.636 18.364a9 9 0 010-12.728m12.728 0a9 9 0 010 12.728m-9.9-2.829a5 5 0 010-7.07m7.072 0a5 5 0 010 7.07M13 12a1 1 0 11-2 0 1 1 0 012 0z" />
+                                            </svg>
+                                        </div>
+                                        <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3">
+                                            {language === 'es' ? 'Totalmente En Vivo' : 'Fully Live'}
+                                        </h3>
+                                        <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+                                            {language === 'es' 
+                                                ? 'Transmisión en tiempo real sin delays. Vive cada momento al instante' 
+                                                : 'Real-time streaming without delays. Experience every moment instantly'}
+                                        </p>
+                                    </div>
+
+                                    {/* Multi-camera */}
+                                    <div className="p-6 sm:p-8 md:p-10 text-center group hover:bg-blue-500/5 transition-all duration-300">
+                                        <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-blue-500/10 mb-4 sm:mb-6 group-hover:bg-blue-500/20 transition-colors duration-300">
+                                            <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                                            </svg>
+                                        </div>
+                                        <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3">
+                                            {language === 'es' ? 'Sistema Multicámara' : 'Multi-camera System'}
+                                        </h3>
+                                        <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+                                            {language === 'es' 
+                                                ? 'Múltiples ángulos profesionales capturan cada movimiento y técnica' 
+                                                : 'Multiple professional angles capture every movement and technique'}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -486,11 +571,15 @@ const AppContent: React.FC = () => {
                         <p className="text-sm sm:text-base md:text-lg text-slate-400 mb-6 sm:mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed px-2">{t.investment.subtitle}</p>
 
                         <div className="max-w-xs sm:max-w-sm md:max-w-lg mx-auto bg-gradient-to-br from-slate-800 to-slate-900 p-4 sm:p-6 md:p-8 rounded-2xl shadow-2xl border border-cyan-500/30 relative">
-                            <div className="absolute -top-2 sm:-top-3 md:-top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-slate-900 font-bold px-2 sm:px-3 md:px-4 py-1 rounded-full text-xs sm:text-sm">CUPOS LIMITADOS</div>
+                            <div className="absolute -top-2 sm:-top-3 md:-top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-slate-900 font-bold px-2 sm:px-3 md:px-4 py-1 rounded-full text-xs sm:text-sm">
+                                {language === 'es' ? 'CUPOS LIMITADOS' : 'LIMITED SPOTS'}
+                            </div>
                             
                             {/* Countdown Timer */}
                             <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-slate-900/50 rounded-xl border border-yellow-400/30">
-                                <p className="text-center text-yellow-400 text-xs sm:text-sm font-semibold mb-2 sm:mb-3">¡Oferta Early Bird termina en!</p>
+                                <p className="text-center text-yellow-400 text-xs sm:text-sm font-semibold mb-2 sm:mb-3">
+                                    {language === 'es' ? '¡Oferta Early Bird termina en!' : 'Early Bird Offer ends in!'}
+                                </p>
                                 <CountdownTimer targetDate="2025-10-16T23:59:59" />
                             </div>
                             
@@ -498,6 +587,16 @@ const AppContent: React.FC = () => {
                                 <p className="text-sm sm:text-base md:text-lg font-semibold text-yellow-400">{t.investment.earlyBird}</p>
                                 <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">{t.investment.earlyBirdPrice}</p>
                                 <p className="text-slate-400 text-xs sm:text-sm md:text-base">{t.investment.validUntil}</p>
+                                
+                                {/* Early Bird Benefit */}
+                                <div className="mt-4 p-3 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg border border-green-500/30">
+                                    <p className="text-green-300 text-sm font-semibold mb-1">
+                                        🎁 {language === 'es' ? 'Beneficio Early Bird' : 'Early Bird Benefit'}
+                                    </p>
+                                    <p className="text-green-200 text-xs leading-relaxed">
+                                        {language === 'es' ? 'Acceso GRATIS a las grabaciones del seminario' : 'FREE access to seminar recordings'}
+                                    </p>
+                                </div>
                             </div>
                             <div className="mb-4 sm:mb-6 md:mb-8">
                                 <p className="text-sm sm:text-base md:text-lg font-semibold text-slate-300">{t.investment.regular}</p>
@@ -514,6 +613,18 @@ const AppContent: React.FC = () => {
                                     <WhatsAppIcon className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 sm:mr-3" />
                                     {t.investment.ctaWhatsApp}
                                 </a>
+                            </div>
+                        </div>
+                        
+                        {/* Additional Note */}
+                        <div className="mt-8 max-w-2xl mx-auto">
+                            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-4">
+                                <p className="text-slate-400 text-xs sm:text-sm text-center leading-relaxed">
+                                    <span className="text-slate-500">*</span> {language === 'es' 
+                                        ? 'Si pagas después del 16 de octubre, las grabaciones tendrán costo extra tanto para modalidad presencial como online'
+                                        : 'If you pay after October 16, recordings will have an extra cost for both in-person and online modalities'
+                                    }
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -556,6 +667,8 @@ const AppContent: React.FC = () => {
 
             <BackToTop />
             <ChatButton />
+            <StickyCtaBar onScrollTo={handleScrollTo} />
+            <SocialProofBadge />
         </div>
     );
 };
