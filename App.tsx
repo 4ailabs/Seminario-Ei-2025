@@ -141,7 +141,7 @@ const AppContent: React.FC = () => {
                     <div className="absolute inset-0 bg-slate-900/60"></div>
                     <div className="relative z-10 max-w-6xl mx-auto">
                         <AnimatedSection>
-                            <div className="flex flex-col items-center mb-6 sm:mb-8">
+                            <div className="flex flex-col items-center mb-6 sm:mb-8 mt-16 sm:mt-8 md:mt-0">
                                 <img 
                                     src="/images/portada-seminario-ei.png" 
                                     alt="Seminario Internacional de Inteligencia Energética" 
