@@ -367,17 +367,23 @@ const AppContent: React.FC = () => {
                             <BenefitCard 
                                 icon={<HeartPulse className="w-7 h-7 text-red-400" />} 
                                 title={t.results.cards[0].title} 
-                                benefits={t.results.cards[0].benefits} 
+                                benefits={t.results.cards[0].benefits}
+                                bgColor="bg-gradient-to-br from-red-500/10 to-pink-500/10"
+                                borderColor="border-red-500/30"
                             />
                             <BenefitCard 
                                 icon={<Briefcase className="w-7 h-7 text-emerald-400" />} 
                                 title={t.results.cards[1].title} 
-                                benefits={t.results.cards[1].benefits} 
+                                benefits={t.results.cards[1].benefits}
+                                bgColor="bg-gradient-to-br from-emerald-500/10 to-green-500/10"
+                                borderColor="border-emerald-500/30"
                             />
                             <BenefitCard 
                                 icon={<User className="w-7 h-7 text-indigo-400" />} 
                                 title={t.results.cards[2].title} 
-                                benefits={t.results.cards[2].benefits} 
+                                benefits={t.results.cards[2].benefits}
+                                bgColor="bg-gradient-to-br from-indigo-500/10 to-purple-500/10"
+                                borderColor="border-indigo-500/30"
                             />
                         </div>
                     </div>
@@ -561,8 +567,14 @@ const App: React.FC = () => {
 };
 
 
-const BenefitCard: React.FC<{ icon: React.ReactNode, title: string, benefits: string[] }> = ({ icon, title, benefits }) => (
-    <div className="bg-slate-800/50 p-5 sm:p-6 rounded-xl border border-slate-700 h-full transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/10 touch-manipulation">
+const BenefitCard: React.FC<{ 
+    icon: React.ReactNode, 
+    title: string, 
+    benefits: string[], 
+    bgColor?: string, 
+    borderColor?: string 
+}> = ({ icon, title, benefits, bgColor = "bg-slate-800/50", borderColor = "border-slate-700" }) => (
+    <div className={`${bgColor} ${borderColor} p-5 sm:p-6 rounded-xl border h-full transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/10 touch-manipulation`}>
         <div className="flex items-center mb-4 sm:mb-5">
             <div className="inline-flex items-center justify-center w-12 h-12 sm:w-12 sm:h-12 text-cyan-400 bg-slate-900 rounded-lg flex-shrink-0">
                 {icon}
