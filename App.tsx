@@ -193,21 +193,16 @@ const AppContent: React.FC = () => {
                         <AnimatedSection>
                             <div className="flex flex-col items-center mb-6 sm:mb-8">
                                 <img 
-                                    src="/images/logo-seminario.png" 
-                                    alt="Logo Seminario Inteligencia Energética" 
-                                    className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain mb-3 sm:mb-4"
+                                    src="/images/portada-seminario-ei.png" 
+                                    alt="Seminario Internacional de Inteligencia Energética" 
+                                    className="w-full max-w-3xl mx-auto mb-6 rounded-lg shadow-2xl"
                                 />
-                                <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-white tracking-tight leading-tight text-center px-2">
-                                    {t.hero.title}
-                                </h1>
                             </div>
                             <div className="flex flex-col items-center justify-center text-sm sm:text-base md:text-lg lg:text-xl text-cyan-400 font-semibold mb-3 sm:mb-4 gap-1 sm:gap-2">
                                 <span className="flex items-center">
                                     <MapPinIcon className="w-4 h-4 mr-2 flex-shrink-0" />
                                     {t.hero.location}
                                 </span>
-                                <span className="hidden sm:inline">|</span>
-                                <span>{t.hero.date}</span>
                             </div>
                             <p className="text-sm sm:text-base md:text-lg text-yellow-300 mb-4 sm:mb-6 max-w-4xl mx-auto font-semibold leading-relaxed px-4">
                                 {t.hero.subtitle}
