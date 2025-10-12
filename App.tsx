@@ -192,7 +192,7 @@ const AppContent: React.FC = () => {
                 </section>
 
                 {/* --- Hotel Information Section --- */}
-                <AnimatedSection id="ubicacion" className="relative py-12 sm:py-16 md:py-24 overflow-hidden" delay={150}>
+                <AnimatedSection id="ubicacion" className="relative py-16 sm:py-20 md:py-24 overflow-hidden" delay={150}>
                     {/* Background with subtle pattern */}
                     <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-900/30 to-slate-950/50"></div>
                     <div className="absolute inset-0 opacity-5" style={{
@@ -309,7 +309,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
 
                 {/* --- Online Modality Benefits --- */}
-                <AnimatedSection className="relative py-12 sm:py-16 md:py-24 overflow-hidden" delay={150}>
+                <AnimatedSection className="relative py-16 sm:py-20 md:py-24 overflow-hidden" delay={150}>
                     {/* Background with subtle pattern */}
                     <div className="absolute inset-0 bg-gradient-to-b from-blue-950/50 via-blue-900/30 to-blue-950/50"></div>
                     <div className="absolute inset-0 opacity-10" style={{
@@ -342,8 +342,8 @@ const AppContent: React.FC = () => {
                                     
                                     {/* HD */}
                                     <div className="p-6 sm:p-8 md:p-10 text-center group hover:bg-blue-500/5 transition-all duration-300">
-                                        <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-blue-500/10 mb-4 sm:mb-6 group-hover:bg-blue-500/20 transition-colors duration-300">
-                                            <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-blue-500/20 to-cyan-500/20 mb-4 sm:mb-6 group-hover:from-blue-500/30 group-hover:to-cyan-500/30 transition-all duration-300 shadow-lg shadow-blue-500/20">
+                                            <svg className="w-8 h-8 sm:w-10 sm:h-10 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                                             </svg>
                                         </div>
@@ -358,9 +358,9 @@ const AppContent: React.FC = () => {
                                     </div>
 
                                     {/* Live */}
-                                    <div className="p-6 sm:p-8 md:p-10 text-center group hover:bg-blue-500/5 transition-all duration-300">
-                                        <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-blue-500/10 mb-4 sm:mb-6 group-hover:bg-blue-500/20 transition-colors duration-300">
-                                            <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <div className="p-6 sm:p-8 md:p-10 text-center group hover:bg-green-500/5 transition-all duration-300">
+                                        <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-green-500/20 to-emerald-500/20 mb-4 sm:mb-6 group-hover:from-green-500/30 group-hover:to-emerald-500/30 transition-all duration-300 shadow-lg shadow-green-500/20">
+                                            <svg className="w-8 h-8 sm:w-10 sm:h-10 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.636 18.364a9 9 0 010-12.728m12.728 0a9 9 0 010 12.728m-9.9-2.829a5 5 0 010-7.07m7.072 0a5 5 0 010 7.07M13 12a1 1 0 11-2 0 1 1 0 012 0z" />
                                             </svg>
                                         </div>
@@ -375,9 +375,9 @@ const AppContent: React.FC = () => {
                                     </div>
 
                                     {/* Multi-camera */}
-                                    <div className="p-6 sm:p-8 md:p-10 text-center group hover:bg-blue-500/5 transition-all duration-300">
-                                        <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-blue-500/10 mb-4 sm:mb-6 group-hover:bg-blue-500/20 transition-colors duration-300">
-                                            <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <div className="p-6 sm:p-8 md:p-10 text-center group hover:bg-purple-500/5 transition-all duration-300">
+                                        <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-purple-500/20 to-violet-500/20 mb-4 sm:mb-6 group-hover:from-purple-500/30 group-hover:to-violet-500/30 transition-all duration-300 shadow-lg shadow-purple-500/20">
+                                            <svg className="w-8 h-8 sm:w-10 sm:h-10 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                                             </svg>
                                         </div>
@@ -402,7 +402,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
                 
                 {/* --- Webinars Section --- */}
-                <AnimatedSection id="webinars" className="bg-slate-900 py-12 sm:py-16 md:py-24" delay={250}>
+                <AnimatedSection id="webinars" className="bg-slate-900 py-16 sm:py-20 md:py-24" delay={250}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-8 sm:mb-12">
                             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
@@ -430,7 +430,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
                 
                 {/* --- Who is it for Section --- */}
-                <AnimatedSection id="para-quien" className="bg-slate-900 py-12 sm:py-16 md:py-24" delay={400}>
+                <AnimatedSection id="para-quien" className="bg-slate-900 py-16 sm:py-20 md:py-24" delay={400}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-white leading-tight">{t.whoIsItFor.title}</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-7xl mx-auto">
@@ -443,7 +443,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
                 
                 {/* --- Results Section --- */}
-                <AnimatedSection id="resultados" className="py-12 sm:py-16 md:py-24" delay={600}>
+                <AnimatedSection id="resultados" className="py-16 sm:py-20 md:py-24" delay={600}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="flex flex-col sm:flex-row items-center justify-center text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-white leading-tight">
                             <SparklesIcon className="w-6 h-6 sm:w-8 sm:h-8 mr-0 sm:mr-3 mb-2 sm:mb-0 text-yellow-400" />
@@ -476,7 +476,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
 
                 {/* --- Testimonials Section --- */}
-                <AnimatedSection id="testimonios" className="bg-slate-900 py-12 sm:py-16 md:py-24" delay={800}>
+                <AnimatedSection id="testimonios" className="bg-slate-900 py-16 sm:py-20 md:py-24" delay={800}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-white leading-tight">{t.testimonials.title}</h2>
                         <p className="text-center text-base sm:text-lg text-slate-400 mt-4 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">{t.testimonials.subtitle}</p>
@@ -504,7 +504,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
 
                 {/* --- Gallery Preview Section --- */}
-                <AnimatedSection id="galeria" className="bg-slate-800 py-12 sm:py-16 md:py-24" delay={900}>
+                <AnimatedSection id="galeria" className="bg-slate-800 py-16 sm:py-20 md:py-24" delay={900}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-8 sm:mb-12">
                             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
@@ -540,7 +540,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
 
                 {/* --- Includes Section --- */}
-                <AnimatedSection id="incluye" className="py-12 sm:py-16 md:py-24" delay={1000}>
+                <AnimatedSection id="incluye" className="py-16 sm:py-20 md:py-24" delay={1000}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-6 text-white leading-tight">
                             {t.includes.title}
