@@ -32,7 +32,7 @@ const Header: React.FC<HeaderProps> = ({ onScrollTo }) => {
     { id: 'para-quien', text: t.nav.paraQuien },
     { id: 'resultados', text: t.nav.resultados },
     { id: 'testimonios', text: t.nav.testimonios },
-    { id: 'galeria', text: t.nav.galeria },
+    // { id: 'galeria', text: t.nav.galeria },
   ];
 
   // All links for mobile menu

@@ -246,25 +246,25 @@ const AppContent: React.FC = () => {
                                                 </div>
                                             </div>
                                             <div className="flex items-center gap-3">
-                                                <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-green-500/10 flex-shrink-0">
-                                                    <Phone className="w-5 h-5 text-green-400" />
+                                                <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-cyan-500/10 flex-shrink-0">
+                                                    <Phone className="w-5 h-5 text-cyan-400" />
                                                 </div>
                                                 <a 
                                                     href="tel:+525552301712"
-                                                    className="text-slate-300 hover:text-white transition-colors text-sm sm:text-base"
+                                                    className="text-slate-300 hover:text-white transition-colors text-sm sm:text-base flex items-center min-h-[40px]"
                                                 >
                                                     +52 55 5230 1712
                                                 </a>
                                             </div>
                                             <div className="flex items-center gap-3">
-                                                <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-purple-500/10 flex-shrink-0">
-                                                    <Globe className="w-5 h-5 text-purple-400" />
+                                                <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-cyan-500/10 flex-shrink-0">
+                                                    <Globe className="w-5 h-5 text-cyan-400" />
                                                 </div>
                                                 <a 
                                                     href="https://www.galeriaplazahotels.com.mx/es/reforma/"
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="text-slate-300 hover:text-white transition-colors text-sm sm:text-base break-words"
+                                                    className="text-slate-300 hover:text-white transition-colors text-sm sm:text-base break-words flex items-center min-h-[40px]"
                                                 >
                                                     {language === 'es' ? 'Visitar sitio web' : 'Visit website'}
                                                 </a>
@@ -504,7 +504,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
 
                 {/* --- Gallery Preview Section --- */}
-                <AnimatedSection id="galeria" className="bg-slate-800 py-20 sm:py-24 md:py-28" delay={900}>
+                {/* <AnimatedSection id="galeria" className="bg-slate-800 py-20 sm:py-24 md:py-28" delay={900}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-8 sm:mb-12">
                             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
@@ -525,7 +525,6 @@ const AppContent: React.FC = () => {
                             </a>
                         </div>
                         
-                        {/* Gallery Preview - Show only first 6 images */}
                         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 max-w-5xl mx-auto">
                             {galleryImages.slice(0, 6).map((image, index) => (
                                 <ErrorBoundary key={index}>
@@ -537,7 +536,7 @@ const AppContent: React.FC = () => {
                             ))}
                         </div>
                     </div>
-                </AnimatedSection>
+                </AnimatedSection> */}
 
                 {/* --- Includes Section --- */}
                 <AnimatedSection id="incluye" className="py-20 sm:py-24 md:py-28" delay={1000}>
