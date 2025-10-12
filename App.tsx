@@ -192,7 +192,7 @@ const AppContent: React.FC = () => {
                 </section>
 
                 {/* --- Hotel Information Section --- */}
-                <AnimatedSection id="ubicacion" className="relative py-16 sm:py-20 md:py-24 overflow-hidden" delay={150}>
+                <AnimatedSection id="ubicacion" className="relative py-20 sm:py-24 md:py-28 overflow-hidden" delay={150}>
                     {/* Background with subtle pattern */}
                     <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-900/30 to-slate-950/50"></div>
                     <div className="absolute inset-0 opacity-5" style={{
@@ -309,7 +309,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
 
                 {/* --- Online Modality Benefits --- */}
-                <AnimatedSection className="relative py-16 sm:py-20 md:py-24 overflow-hidden" delay={150}>
+                <AnimatedSection className="relative py-20 sm:py-24 md:py-28 overflow-hidden" delay={150}>
                     {/* Background with subtle pattern */}
                     <div className="absolute inset-0 bg-gradient-to-b from-blue-950/50 via-blue-900/30 to-blue-950/50"></div>
                     <div className="absolute inset-0 opacity-10" style={{
@@ -402,7 +402,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
                 
                 {/* --- Webinars Section --- */}
-                <AnimatedSection id="webinars" className="bg-slate-900 py-16 sm:py-20 md:py-24" delay={250}>
+                <AnimatedSection id="webinars" className="bg-slate-900 py-20 sm:py-24 md:py-28" delay={250}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-8 sm:mb-12">
                             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
@@ -430,7 +430,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
                 
                 {/* --- Who is it for Section --- */}
-                <AnimatedSection id="para-quien" className="bg-slate-900 py-16 sm:py-20 md:py-24" delay={400}>
+                <AnimatedSection id="para-quien" className="bg-slate-900 py-20 sm:py-24 md:py-28" delay={400}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-white leading-tight">{t.whoIsItFor.title}</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-7xl mx-auto">
@@ -443,7 +443,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
                 
                 {/* --- Results Section --- */}
-                <AnimatedSection id="resultados" className="py-16 sm:py-20 md:py-24" delay={600}>
+                <AnimatedSection id="resultados" className="py-20 sm:py-24 md:py-28" delay={600}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="flex flex-col sm:flex-row items-center justify-center text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-white leading-tight">
                             <SparklesIcon className="w-6 h-6 sm:w-8 sm:h-8 mr-0 sm:mr-3 mb-2 sm:mb-0 text-yellow-400" />
@@ -476,7 +476,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
 
                 {/* --- Testimonials Section --- */}
-                <AnimatedSection id="testimonios" className="bg-slate-900 py-16 sm:py-20 md:py-24" delay={800}>
+                <AnimatedSection id="testimonios" className="bg-slate-900 py-20 sm:py-24 md:py-28" delay={800}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-white leading-tight">{t.testimonials.title}</h2>
                         <p className="text-center text-base sm:text-lg text-slate-400 mt-4 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">{t.testimonials.subtitle}</p>
@@ -504,7 +504,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
 
                 {/* --- Gallery Preview Section --- */}
-                <AnimatedSection id="galeria" className="bg-slate-800 py-16 sm:py-20 md:py-24" delay={900}>
+                <AnimatedSection id="galeria" className="bg-slate-800 py-20 sm:py-24 md:py-28" delay={900}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-8 sm:mb-12">
                             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
@@ -540,7 +540,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
 
                 {/* --- Includes Section --- */}
-                <AnimatedSection id="incluye" className="py-16 sm:py-20 md:py-24" delay={1000}>
+                <AnimatedSection id="incluye" className="py-20 sm:py-24 md:py-28" delay={1000}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4 sm:mb-6 text-white leading-tight">
                             {t.includes.title}
