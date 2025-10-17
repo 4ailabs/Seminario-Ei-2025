@@ -239,7 +239,7 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 px-3 py-4 sm:p-6 text-white pb-safe">
+    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 px-3 py-4 sm:p-6 text-white pb-safe overflow-y-auto overscroll-behavior-y-contain" style={{ WebkitOverflowScrolling: 'touch' }}>
       {/* Back to Home Button */}
       <div className="max-w-4xl mx-auto mb-3">
         <a 
@@ -350,8 +350,9 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
                         value={input.index !== undefined ? (sessionData[input.key as keyof typeof sessionData] as string[])?.[input.index] || '' : (sessionData[input.key as keyof typeof sessionData] as string) || ''}
                         onChange={(e) => actualizarInput(input.key, e.target.value, input.index)}
                         placeholder={input.placeholder}
-                        rows={4}
-                        className="w-full bg-slate-700/50 border border-cyan-500/30 rounded-lg px-3 sm:px-4 py-2 sm:py-3 text-white text-sm sm:text-base placeholder-slate-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
+                        rows={3}
+                        className="w-full bg-slate-700/50 border border-cyan-500/30 rounded-lg px-3 sm:px-4 py-2 sm:py-3 text-white text-sm sm:text-base placeholder-slate-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all resize-none"
+                        style={{ minHeight: '80px', maxHeight: '200px' }}
                       />
                     ) : (
                       <input
