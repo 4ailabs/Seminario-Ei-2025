@@ -232,8 +232,6 @@ export default function TRSBApp() {
       ]
     }
   ];
-
-  const faseActual = fases[fase];
   
   const actualizarInput = (key: string, valor: string | number, index: number | null = null) => {
     if (index !== null) {
