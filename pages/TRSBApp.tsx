@@ -283,32 +283,42 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
 
           {/* Instrucciones */}
           <div className="bg-slate-900/50 backdrop-blur-sm rounded-lg p-4 sm:p-6 mb-4 sm:mb-6 border border-slate-700/50">
-            <h3 className="text-base sm:text-lg font-bold text-cyan-400 mb-3 sm:mb-4 flex items-center gap-2">
+            <h3 className="text-base sm:text-lg font-bold text-cyan-400 mb-4 sm:mb-5 flex items-center gap-2 pb-3 border-b border-slate-700/50">
               <Zap size={18} className="text-cyan-400" /> Instrucciones
             </h3>
-            <ul className="space-y-3 sm:space-y-4">
-              {faseActual.instrucciones.map((instr, idx) => (
-                <li key={idx} className="flex gap-2 sm:gap-3 text-slate-100 text-sm sm:text-base">
-                  <span className="text-cyan-400 font-bold min-w-6 sm:min-w-8 flex-shrink-0">{idx + 1}.</span>
-                  <span className="leading-relaxed">{instr}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="space-y-4 sm:space-y-5">
+              {faseActual.instrucciones.map((instr, idx) => {
+                const esAccion = instr.includes(':') || instr.startsWith('PREGUNTA') || instr.startsWith('PARTE') || instr.startsWith('PREPARACIÓN') || instr.startsWith('RALENTIZACIÓN') || instr.startsWith('ANCLAJE') || instr.startsWith('EVALUACIÓN') || instr.startsWith('RECONOCIMIENTO');
+                return (
+                  <div key={idx} className={`${esAccion ? 'bg-slate-800/40 rounded-lg p-3 sm:p-4 border-l-4 border-cyan-500' : ''}`}>
+                    <div className="flex gap-2 sm:gap-3 text-slate-100 text-sm sm:text-base">
+                      <span className="text-cyan-400 font-bold min-w-6 sm:min-w-8 flex-shrink-0 mt-0.5">{idx + 1}</span>
+                      <p className="leading-relaxed">{instr}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
           {/* Sub-fases (solo para fase 3) */}
           {faseActual.subFases && (
             <div className="bg-slate-900/50 backdrop-blur-sm rounded-lg p-4 sm:p-6 mb-4 sm:mb-6 border border-purple-500/30">
-              <h3 className="text-base sm:text-lg font-bold text-purple-400 mb-3 sm:mb-4">Partes del Reprocesamiento</h3>
-              <div className="space-y-3 sm:space-y-4">
+              <h3 className="text-base sm:text-lg font-bold text-purple-400 mb-4 sm:mb-5 pb-3 border-b border-purple-500/20">Partes del Reprocesamiento</h3>
+              <div className="space-y-4 sm:space-y-5">
                 {faseActual.subFases.map((subFase, idx) => (
-                  <div key={idx} className="border-l-4 border-purple-400 pl-3 sm:pl-4 py-2 bg-slate-800/30 rounded-r">
-                    <h4 className="font-bold text-purple-300 mb-2 text-sm sm:text-base">{subFase.nombre}</h4>
-                    <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-slate-300">
-                      {subFase.instrucciones.map((instr, i) => (
-                        <li key={i} className="ml-2 sm:ml-4 leading-relaxed">• {instr}</li>
-                      ))}
-                    </ul>
+                  <div key={idx} className="border-l-4 border-purple-400 pl-3 sm:pl-4 py-3 bg-slate-800/40 rounded-r">
+                    <h4 className="font-bold text-purple-300 mb-3 text-sm sm:text-base">{subFase.nombre}</h4>
+                    <div className="space-y-2.5 sm:space-y-3">
+                      {subFase.instrucciones.map((instr, i) => {
+                        const esFrase = instr.startsWith("'");
+                        return (
+                          <div key={i} className={`text-xs sm:text-sm leading-relaxed ${esFrase ? 'ml-4 sm:ml-6 text-cyan-200 italic bg-slate-900/30 rounded px-3 py-2' : 'text-slate-300'}`}>
+                            {esFrase ? instr : `• ${instr}`}
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -318,11 +328,11 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
           {/* Input Fields */}
           {faseActual.inputs && faseActual.inputs.length > 0 && (
             <div className="bg-slate-900/50 backdrop-blur-sm rounded-lg p-4 sm:p-6 mb-4 sm:mb-6 border border-slate-700/50">
-              <h3 className="text-base sm:text-lg font-bold text-cyan-400 mb-3 sm:mb-4">Registra Aquí</h3>
-              <div className="space-y-3 sm:space-y-4">
+              <h3 className="text-base sm:text-lg font-bold text-cyan-400 mb-4 sm:mb-5 pb-3 border-b border-slate-700/50">Registra Aquí</h3>
+              <div className="space-y-4 sm:space-y-5">
                 {faseActual.inputs.map((input, idx) => (
-                  <div key={idx}>
-                    <label className="block text-sm sm:text-base font-bold text-slate-300 mb-2">
+                  <div key={idx} className="bg-slate-800/30 rounded-lg p-3 sm:p-4">
+                    <label className="block text-sm sm:text-base font-semibold text-cyan-300 mb-2">
                       {input.label}
                     </label>
                     {input.type === 'textarea' ? (
@@ -331,7 +341,7 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
                         onChange={(e) => actualizarInput(input.key, e.target.value, input.index)}
                         placeholder={input.placeholder}
                         rows={4}
-                        className="w-full bg-slate-700/50 border border-cyan-500/30 rounded-lg px-4 py-2 text-white placeholder-slate-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
+                        className="w-full bg-slate-700/50 border border-cyan-500/30 rounded-lg px-3 sm:px-4 py-2 sm:py-3 text-white text-sm sm:text-base placeholder-slate-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
                       />
                     ) : (
                       <input
@@ -341,7 +351,7 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
                         placeholder={input.placeholder}
                         min={input.min}
                         max={input.max}
-                        className="w-full bg-slate-700/50 border border-cyan-500/30 rounded-lg px-4 py-2 text-white placeholder-slate-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
+                        className="w-full bg-slate-700/50 border border-cyan-500/30 rounded-lg px-3 sm:px-4 py-2 sm:py-3 text-white text-sm sm:text-base placeholder-slate-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
                       />
                     )}
                   </div>
