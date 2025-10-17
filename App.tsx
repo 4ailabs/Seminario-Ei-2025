@@ -34,6 +34,7 @@ import SessionsPage from './pages/SessionsPage';
 import SessionDetailPage from './pages/SessionDetailPage';
 import WebinarLandingPage from './pages/WebinarLandingPage';
 import GalleryPage from './pages/GalleryPage';
+import TRSBApp from './pages/TRSBApp';
 import LazyGalleryImage from './components/LazyGalleryImage';
 import LazyVimeoVideo from './components/LazyVimeoVideo';
 import Header from './components/Header';
@@ -186,10 +187,69 @@ const AppContent: React.FC = () => {
                                 <a href="#programa" onClick={(e) => {e.preventDefault(); handleScrollTo('programa')}} className="bg-slate-700/50 hover:bg-slate-700 active:bg-slate-600 border border-slate-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-sm sm:text-base md:text-lg transition duration-300 touch-manipulation w-full sm:w-auto">
                                     {t.hero.ctaVerPrograma}
                                 </a>
+                                <a href="/trsb" className="bg-purple-600 hover:bg-purple-700 active:bg-purple-800 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-sm sm:text-base md:text-lg transition duration-300 ease-in-out transform hover:scale-105 active:scale-95 shadow-lg touch-manipulation w-full sm:w-auto flex items-center justify-center gap-2">
+                                    App TRSB
+                                </a>
                             </div>
                         </AnimatedSection>
                     </div>
                 </section>
+
+                {/* --- Webinar TRSB Banner --- */}
+                <AnimatedSection className="bg-gradient-to-r from-purple-900 via-purple-800 to-purple-900 py-8 sm:py-12 relative overflow-hidden" delay={100}>
+                    {/* Animated background effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+                    
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="max-w-6xl mx-auto">
+                            <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8">
+                                {/* Left side - Content */}
+                                <div className="flex-1 text-center lg:text-left">
+                                    <div className="inline-block bg-cyan-500/20 backdrop-blur-sm border border-cyan-400/30 rounded-full px-4 py-1 mb-4">
+                                        <span className="text-cyan-300 text-sm font-semibold">WEBINAR EN VIVO HOY</span>
+                                    </div>
+                                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 leading-tight">
+                                        De Reactivo a Creativo en 90 Días
+                                    </h2>
+                                    <p className="text-lg sm:text-xl text-purple-200 mb-4 font-semibold">
+                                        TRSB en Acción - Webinar Experiencial
+                                    </p>
+                                    <p className="text-slate-300 text-sm sm:text-base mb-4">
+                                        Técnica de Reprocesamiento Somato-Cognitivo Bilateral - 45 minutos + Práctica guiada de 12 minutos
+                                    </p>
+                                    <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-sm text-cyan-300">
+                                        <div className="flex items-center gap-2 bg-slate-900/50 backdrop-blur-sm rounded-lg px-3 py-2">
+                                            <Clock size={16} />
+                                            <span>Hoy • Early Bird termina</span>
+                                        </div>
+                                        <div className="flex items-center gap-2 bg-slate-900/50 backdrop-blur-sm rounded-lg px-3 py-2">
+                                            <Zap size={16} />
+                                            <span>Práctica experiencial incluida</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Right side - CTA */}
+                                <div className="flex flex-col gap-4 items-center lg:items-end">
+                                    <a 
+                                        href="/trsb" 
+                                        className="group relative bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold py-4 px-8 rounded-xl text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-400/60 flex items-center gap-3 touch-manipulation active:scale-95"
+                                    >
+                                        <span>Acceder a la App TRSB</span>
+                                        <ArrowRight className="group-hover:translate-x-1 transition-transform" size={24} />
+                                    </a>
+                                    <p className="text-xs sm:text-sm text-purple-200 text-center max-w-xs">
+                                        Usa la app para tu práctica diaria de 5 minutos durante los 90 días de transformación
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Decorative elements */}
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"></div>
+                </AnimatedSection>
 
                 {/* --- Hotel Information Section --- */}
                 <AnimatedSection id="ubicacion" className="relative py-20 sm:py-24 md:py-28 overflow-hidden" delay={150}>
@@ -683,6 +743,7 @@ const App: React.FC = () => {
                     <Route path="/sesion/:id" element={<SessionDetailPage sessions={sessionsData} />} />
                     <Route path="/webinar-2" element={<WebinarLandingPage />} />
                     <Route path="/galeria" element={<GalleryPage />} />
+                    <Route path="/trsb" element={<TRSBApp />} />
                 </Routes>
             </Router>
         </LanguageProvider>
