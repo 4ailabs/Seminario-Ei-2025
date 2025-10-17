@@ -306,21 +306,31 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
             <div className="bg-slate-900/50 backdrop-blur-sm rounded-lg p-4 sm:p-6 mb-4 sm:mb-6 border border-purple-500/30">
               <h3 className="text-base sm:text-lg font-bold text-purple-400 mb-4 sm:mb-5 pb-3 border-b border-purple-500/20">Partes del Reprocesamiento</h3>
               <div className="space-y-4 sm:space-y-5">
-                {faseActual.subFases.map((subFase, idx) => (
-                  <div key={idx} className="bg-slate-800/40 rounded-lg p-3 sm:p-4">
-                    <h4 className="font-bold text-purple-300 mb-3 text-sm sm:text-base">{subFase.nombre}</h4>
-                    <div className="space-y-2.5 sm:space-y-3">
-                      {subFase.instrucciones.map((instr, i) => {
-                        const esFrase = instr.startsWith("'");
-                        return (
-                          <div key={i} className={`text-xs sm:text-sm leading-relaxed ${esFrase ? 'ml-3 sm:ml-4 text-cyan-200 italic bg-slate-900/40 rounded px-3 py-2' : 'text-slate-300'}`}>
-                            {esFrase ? instr : `• ${instr}`}
-                          </div>
-                        );
-                      })}
+                {faseActual.subFases.map((subFase, idx) => {
+                  // Colores por parte: A=cyan, B=purple, C=green
+                  const colores = [
+                    { bg: 'bg-cyan-900/20', titulo: 'text-cyan-300', frase: 'text-cyan-200' },
+                    { bg: 'bg-purple-900/20', titulo: 'text-purple-300', frase: 'text-purple-200' },
+                    { bg: 'bg-green-900/20', titulo: 'text-green-300', frase: 'text-green-200' }
+                  ];
+                  const color = colores[idx] || colores[0];
+                  
+                  return (
+                    <div key={idx} className={`${color.bg} rounded-lg p-3 sm:p-4 border border-slate-700/30`}>
+                      <h4 className={`font-bold ${color.titulo} mb-3 text-sm sm:text-base`}>{subFase.nombre}</h4>
+                      <div className="space-y-2.5 sm:space-y-3">
+                        {subFase.instrucciones.map((instr, i) => {
+                          const esFrase = instr.startsWith("'");
+                          return (
+                            <div key={i} className={`text-xs sm:text-sm leading-relaxed ${esFrase ? `ml-3 sm:ml-4 ${color.frase} italic bg-slate-900/40 rounded px-3 py-2` : 'text-slate-300'}`}>
+                              {esFrase ? instr : `• ${instr}`}
+                            </div>
+                          );
+                        })}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           )}
