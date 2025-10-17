@@ -290,7 +290,7 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
               {faseActual.instrucciones.map((instr, idx) => {
                 const esAccion = instr.includes(':') || instr.startsWith('PREGUNTA') || instr.startsWith('PARTE') || instr.startsWith('PREPARACIÓN') || instr.startsWith('RALENTIZACIÓN') || instr.startsWith('ANCLAJE') || instr.startsWith('EVALUACIÓN') || instr.startsWith('RECONOCIMIENTO');
                 return (
-                  <div key={idx} className={`${esAccion ? 'bg-slate-800/40 rounded-lg p-3 sm:p-4 border-l-4 border-cyan-500' : ''}`}>
+                  <div key={idx} className={`${esAccion ? 'bg-slate-800/40 rounded-lg p-3 sm:p-4' : ''}`}>
                     <div className="flex gap-2 sm:gap-3 text-slate-100 text-sm sm:text-base">
                       <span className="text-cyan-400 font-bold min-w-6 sm:min-w-8 flex-shrink-0 mt-0.5">{idx + 1}</span>
                       <p className="leading-relaxed">{instr}</p>
@@ -307,13 +307,13 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
               <h3 className="text-base sm:text-lg font-bold text-purple-400 mb-4 sm:mb-5 pb-3 border-b border-purple-500/20">Partes del Reprocesamiento</h3>
               <div className="space-y-4 sm:space-y-5">
                 {faseActual.subFases.map((subFase, idx) => (
-                  <div key={idx} className="border-l-4 border-purple-400 pl-3 sm:pl-4 py-3 bg-slate-800/40 rounded-r">
+                  <div key={idx} className="bg-slate-800/40 rounded-lg p-3 sm:p-4">
                     <h4 className="font-bold text-purple-300 mb-3 text-sm sm:text-base">{subFase.nombre}</h4>
                     <div className="space-y-2.5 sm:space-y-3">
                       {subFase.instrucciones.map((instr, i) => {
                         const esFrase = instr.startsWith("'");
                         return (
-                          <div key={i} className={`text-xs sm:text-sm leading-relaxed ${esFrase ? 'ml-4 sm:ml-6 text-cyan-200 italic bg-slate-900/30 rounded px-3 py-2' : 'text-slate-300'}`}>
+                          <div key={i} className={`text-xs sm:text-sm leading-relaxed ${esFrase ? 'ml-3 sm:ml-4 text-cyan-200 italic bg-slate-900/40 rounded px-3 py-2' : 'text-slate-300'}`}>
                             {esFrase ? instr : `• ${instr}`}
                           </div>
                         );
