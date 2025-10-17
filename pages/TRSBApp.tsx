@@ -586,19 +586,7 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
         <div className="text-center mb-4 sm:mb-6">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent leading-tight">APP TRSB</h1>
           <p className="text-cyan-200 text-sm sm:text-base mb-1">Técnica de Reprocesamiento Somato-Cognitivo Bilateral</p>
-          <p className="text-slate-400 text-xs sm:text-sm mb-3">Tu guía para la práctica diaria de transformación</p>
-          
-          {/* Enlace al Manual */}
-          <a
-            href="https://framerusercontent.com/assets/7xbnvz17j6qSeEWlVi4O6dYms0.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-cyan-900/30 hover:bg-cyan-900/50 border border-cyan-500/30 hover:border-cyan-400/50 rounded-lg px-4 py-2 text-cyan-300 hover:text-cyan-200 transition-all text-sm touch-manipulation active:scale-95"
-          >
-            <FileText size={16} />
-            <span>Ver Manual Completo</span>
-            <Download size={14} />
-          </a>
+          <p className="text-slate-400 text-xs sm:text-sm">Tu guía para la práctica diaria de transformación</p>
         </div>
 
         {/* Progress Bar */}
