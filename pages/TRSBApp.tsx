@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronRight, ChevronLeft, Check, Zap, AlertCircle, Clock, Eye, Wind, HelpCircle, Edit3, Heart, Brain, Target, Sparkles } from 'lucide-react';
+import { ChevronRight, ChevronLeft, Check, Zap, AlertCircle, Clock, Eye, Wind, HelpCircle, Edit3, Heart, Brain, Target, Sparkles, FileText, Download } from 'lucide-react';
 
 interface InputField {
   label: string;
@@ -506,13 +506,39 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
           </div>
 
           {/* Info adicional */}
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
-            <h3 className="text-lg font-bold text-cyan-400 mb-3">💡 Recomendación</h3>
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 mb-6">
+            <h3 className="text-lg font-bold text-cyan-400 mb-3 flex items-center gap-2">
+              <Sparkles size={20} />
+              Recomendación
+            </h3>
+            <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
               Si es tu primera vez, te recomendamos la <strong className="text-cyan-400">Sesión Completa</strong> para familiarizarte con todo el proceso.
               Para tu práctica diaria de 90 días, usa la <strong className="text-purple-400">Práctica Rápida</strong>.
             </p>
           </div>
+
+          {/* Manual PDF */}
+          <a
+            href="https://framerusercontent.com/assets/7xbnvz17j6qSeEWlVi4O6dYms0.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-gradient-to-r from-cyan-900/30 to-blue-900/30 border border-cyan-500/40 rounded-xl p-6 hover:border-cyan-400/60 hover:from-cyan-900/40 hover:to-blue-900/40 transition-all shadow-lg hover:shadow-cyan-500/20 touch-manipulation active:scale-98"
+          >
+            <div className="flex items-center gap-4">
+              <div className="bg-cyan-500/20 p-4 rounded-lg">
+                <FileText size={32} className="text-cyan-400" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg font-bold text-cyan-300 mb-1 flex items-center gap-2">
+                  Manual Completo TRSB
+                  <Download size={18} className="text-cyan-400" />
+                </h3>
+                <p className="text-slate-300 text-sm">
+                  Descarga el manual detallado con toda la metodología, fundamentos científicos y guías de práctica
+                </p>
+              </div>
+            </div>
+          </a>
         </div>
 
         {/* Toast Notification */}
@@ -560,7 +586,19 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
         <div className="text-center mb-4 sm:mb-6">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent leading-tight">APP TRSB</h1>
           <p className="text-cyan-200 text-sm sm:text-base mb-1">Técnica de Reprocesamiento Somato-Cognitivo Bilateral</p>
-          <p className="text-slate-400 text-xs sm:text-sm">Tu guía para la práctica diaria de transformación</p>
+          <p className="text-slate-400 text-xs sm:text-sm mb-3">Tu guía para la práctica diaria de transformación</p>
+          
+          {/* Enlace al Manual */}
+          <a
+            href="https://framerusercontent.com/assets/7xbnvz17j6qSeEWlVi4O6dYms0.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-cyan-900/30 hover:bg-cyan-900/50 border border-cyan-500/30 hover:border-cyan-400/50 rounded-lg px-4 py-2 text-cyan-300 hover:text-cyan-200 transition-all text-sm touch-manipulation active:scale-95"
+          >
+            <FileText size={16} />
+            <span>Ver Manual Completo</span>
+            <Download size={14} />
+          </a>
         </div>
 
         {/* Progress Bar */}
