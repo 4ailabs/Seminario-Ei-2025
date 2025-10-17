@@ -40,27 +40,27 @@ export interface Translations {
       session1: {
         title: string;
         date: string;
-        topics: Array<{ title: string; description: string }>;
+        topics: Array<{ title: string; description: string; videoUrl?: string }>;
       };
       session2: {
         title: string;
         date: string;
-        topics: Array<{ title: string; description: string }>;
+        topics: Array<{ title: string; description: string; videoUrl?: string }>;
       };
       session3: {
         title: string;
         date: string;
-        topics: Array<{ title: string; description: string }>;
+        topics: Array<{ title: string; description: string; videoUrl?: string }>;
       };
       session4: {
         title: string;
         date: string;
-        topics: Array<{ title: string; description: string }>;
+        topics: Array<{ title: string; description: string; videoUrl?: string }>;
       };
       session5: {
         title: string;
         date: string;
-        topics: Array<{ title: string; description: string }>;
+        topics: Array<{ title: string; description: string; videoUrl?: string }>;
       };
     };
   };
@@ -236,6 +236,11 @@ export const translations: Record<string, Translations> = {
           date: "7 de Diciembre 2025",
           topics: [
             {
+              title: "Webinar de Introducción - El arte de la pregunta en terapia bioenergética",
+              description: "Video preparatorio que explora el arte de formular preguntas profundas en terapia bioenergética y cómo dominar el Context Engineering para diseñar la sanación.",
+              videoUrl: "https://vimeo.com/1122510598/a3a96d10d9"
+            },
+            {
               title: "Los Tres Elementos de Decisión Consciente",
               description: "Aprende el marco de transformación personal basado en el enfoque, el significado y la acción específica."
             },
@@ -258,6 +263,11 @@ export const translations: Record<string, Translations> = {
           date: "25 de Enero 2026 (Online)",
           topics: [
             {
+              title: "Webinar de Introducción - Construye Tu Historia",
+              description: "Video preparatorio que explora cómo transformar tu narrativa personal en una herramienta de empoderamiento y poder personal.",
+              videoUrl: "https://vimeo.com/1128316658/533a84ac61"
+            },
+            {
               title: "Revisión de Progreso y Ajustes",
               description: "Evaluación del progreso personal y ajustes en las estrategias implementadas."
             },
@@ -279,6 +289,11 @@ export const translations: Record<string, Translations> = {
           title: "Maestría y Proyección Futura",
           date: "22 de Febrero 2026 (Online)",
           topics: [
+            {
+              title: "Webinar de Introducción - Construyendo nuestra vida con LEGO Serious Play",
+              description: "Video preparatorio que explora la metodología LSP para materializar ideas y construir estrategias de vida concretas pensando con las manos.",
+              videoUrl: "https://vimeo.com/1128316786/429fc7015f"
+            },
             {
               title: "Descubrimiento de insights y estrategias con LSP",
               description: "Transforma los descubrimientos de los modelos en arquetipos, estrategias claras y un plan de acción concreto."
@@ -433,6 +448,24 @@ export const translations: Record<string, Translations> = {
           description: "Video preparatorio para la segunda sesión, profundizando en las técnicas de transformación energética.",
           videoUrl: "https://vimeo.com/1122509089/a1f5880cc0",
           session: "Sesión 2"
+        },
+        {
+          title: "El arte de la pregunta en la terapia bioenergética: Domina el Context Engineering y diseña la sanación",
+          description: "Video preparatorio para la tercera sesión, explorando el arte de formular preguntas profundas en terapia bioenergética y cómo el Context Engineering transforma la práctica profesional.",
+          videoUrl: "https://vimeo.com/1122510598/a3a96d10d9",
+          session: "Sesión 3"
+        },
+        {
+          title: "Construye Tu Historia: El Método Que Convierte Tu Historia En Poder",
+          description: "Video preparatorio para la cuarta sesión, descubriendo cómo transformar tu narrativa personal en una herramienta de empoderamiento y consolidación del aprendizaje.",
+          videoUrl: "https://vimeo.com/1128316658/533a84ac61",
+          session: "Sesión 4"
+        },
+        {
+          title: "Construyendo nuestra vida con LEGO Serious Play",
+          description: "Video preparatorio para la quinta sesión, explorando la metodología LSP para materializar ideas y construir estrategias de vida concretas a través del pensamiento con las manos.",
+          videoUrl: "https://vimeo.com/1128316786/429fc7015f",
+          session: "Sesión 5"
         }
       ]
     },
@@ -537,6 +570,11 @@ export const translations: Record<string, Translations> = {
           date: "December 7, 2025",
           topics: [
             {
+              title: "Introduction Webinar - The Art of Questioning in Bioenergetic Therapy",
+              description: "Preparation video exploring the art of formulating deep questions in bioenergetic therapy and how to master Context Engineering to design healing.",
+              videoUrl: "https://vimeo.com/1122510598/a3a96d10d9"
+            },
+            {
               title: "The Three Elements of Conscious Decision",
               description: "Learn the personal transformation framework based on focus, meaning, and specific action."
             },
@@ -559,6 +597,11 @@ export const translations: Record<string, Translations> = {
           date: "January 25, 2026 (Online)",
           topics: [
             {
+              title: "Introduction Webinar - Build Your Story",
+              description: "Preparation video exploring how to transform your personal narrative into an empowerment tool and personal power.",
+              videoUrl: "https://vimeo.com/1128316658/533a84ac61"
+            },
+            {
               title: "Progress Review and Adjustments",
               description: "Evaluation of personal progress and adjustments in implemented strategies."
             },
@@ -580,6 +623,11 @@ export const translations: Record<string, Translations> = {
           title: "Mastery and Future Projection",
           date: "February 22, 2026 (Online)",
           topics: [
+            {
+              title: "Introduction Webinar - Building Our Life with LEGO Serious Play",
+              description: "Preparation video exploring the LSP methodology to materialize ideas and build concrete life strategies by thinking with your hands.",
+              videoUrl: "https://vimeo.com/1128316786/429fc7015f"
+            },
             {
               title: "Insight and strategy discovery with LSP",
               description: "Transform model discoveries into archetypes, clear strategies, and a concrete action plan."
@@ -734,6 +782,24 @@ export const translations: Record<string, Translations> = {
           description: "Preparation video for the second session, delving deeper into energy transformation techniques.",
           videoUrl: "https://vimeo.com/1122509089/a1f5880cc0",
           session: "Session 2"
+        },
+        {
+          title: "The Art of Questioning in Bioenergetic Therapy: Master Context Engineering and Design Healing",
+          description: "Preparation video for the third session, exploring the art of formulating deep questions in bioenergetic therapy and how Context Engineering transforms professional practice.",
+          videoUrl: "https://vimeo.com/1122510598/a3a96d10d9",
+          session: "Session 3"
+        },
+        {
+          title: "Build Your Story: The Method That Turns Your Story Into Power",
+          description: "Preparation video for the fourth session, discovering how to transform your personal narrative into an empowerment tool and consolidate learning.",
+          videoUrl: "https://vimeo.com/1128316658/533a84ac61",
+          session: "Session 4"
+        },
+        {
+          title: "Building Our Life with LEGO Serious Play",
+          description: "Preparation video for the fifth session, exploring the LSP methodology to materialize ideas and build concrete life strategies through thinking with your hands.",
+          videoUrl: "https://vimeo.com/1128316786/429fc7015f",
+          session: "Session 5"
         }
       ]
     },

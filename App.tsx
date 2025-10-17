@@ -402,9 +402,9 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
                 
                 {/* --- Webinars Section --- */}
-                <AnimatedSection id="webinars" className="bg-slate-900 py-20 sm:py-24 md:py-28" delay={250}>
+                <AnimatedSection id="webinars" className="bg-slate-900 py-12 sm:py-16 md:py-20" delay={250}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="text-center mb-8 sm:mb-12">
+                        <div className="text-center mb-6 sm:mb-8">
                             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
                                 {t.webinars.title}
                             </h2>
@@ -415,7 +415,7 @@ const AppContent: React.FC = () => {
                                 {t.webinars.description}
                             </p>
                         </div>
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 max-w-7xl mx-auto">
                             {t.webinars.videos.map((webinar, index) => (
                                 <WebinarCard 
                                     key={index} 
