@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronRight, ChevronLeft, Check, Zap, AlertCircle, Clock } from 'lucide-react';
+import { ChevronRight, ChevronLeft, Check, Zap, AlertCircle, Clock, Eye, Wind, HelpCircle, Edit3, Heart, Brain, Target, Sparkles } from 'lucide-react';
 
 interface InputField {
   label: string;
@@ -92,11 +92,11 @@ export default function TRSBApp() {
       duracion: "2 min",
       titulo: "Preparación y Contexto",
       instrucciones: [
-        "Encuentra un lugar tranquilo donde no serás interrumpido durante los próximos 12 minutos.",
-        "Siéntate cómodamente con la espalda recta si es posible.",
-        "Esta es tu práctica TRSB (Técnica de Reprocesamiento Somato-Cognitivo Bilateral). Es una técnica basada en neurociencia que estimula ambos hemisferios cerebrales mientras trabajas con creencias limitantes.",
-        "Tiene 4 fases y dura aproximadamente 12 minutos. Sigue cada paso con atención.",
-        "Cuando estés listo, presiona 'Siguiente' para comenzar."
+        "PREPARACIÓN:Encuentra un lugar tranquilo sin interrupciones",
+        "PREPARACIÓN:Siéntate cómodamente con la espalda recta",
+        "CONTEXTO:Técnica TRSB: Estimula ambos hemisferios cerebrales para trabajar creencias limitantes",
+        "CONTEXTO:Duración: 12 minutos en 4 fases",
+        "ACCIÓN:Presiona 'Siguiente' cuando estés listo para comenzar"
       ],
       inputs: [] as InputField[]
     },
@@ -106,14 +106,17 @@ export default function TRSBApp() {
       duracion: "2 min",
       titulo: "Identificación de la Creencia",
       instrucciones: [
-        "Cierra los ojos suavemente o mira hacia abajo.",
-        "Respira profundo 3 veces. Lentamente.",
-        "Pregúntate: ¿Cuál es la creencia que más me limita en este momento? (Común: No merezco / No soy suficiente / No puedo / El mundo es peligroso)",
-        "No pienses demasiado. Deja que la respuesta surja naturalmente.",
-        "Ahora pregúntate: ¿Dónde siento esta creencia en mi cuerpo? (Común: Pecho / Estómago / Garganta / Hombros / Cabeza)",
-        "Localiza esa sensación. ¿Cómo la describirías? (Presión / Tensión / Nudo / Vacío / Peso / Opresión)",
-        "En escala de 0 a 10, donde 0 es nada y 10 es máximo, ¿cuál es la intensidad de esta sensación AHORA?",
-        "Registra tus respuestas abajo. El número inicial será importante para medir tu cambio al final."
+        "ACCIÓN:Cierra los ojos suavemente o mira hacia abajo",
+        "RESPIRACIÓN:Respira profundo 3 veces, lentamente",
+        "PREGUNTA:¿Cuál es la creencia que más me limita ahora?",
+        "EJEMPLO:No merezco • No soy suficiente • No puedo • El mundo es peligroso",
+        "REFLEXIÓN:Deja que la respuesta surja naturalmente, sin forzar",
+        "PREGUNTA:¿Dónde siento esta creencia en mi cuerpo?",
+        "EJEMPLO:Pecho • Estómago • Garganta • Hombros • Cabeza",
+        "PREGUNTA:¿Cómo describirías esa sensación?",
+        "EJEMPLO:Presión • Tensión • Nudo • Vacío • Peso • Opresión",
+        "EVALUACIÓN:Intensidad de 0 a 10 (donde 0=nada, 10=máximo)",
+        "REGISTRO:Anota tus respuestas abajo para medir el cambio"
       ],
       inputs: [
         { label: "Mi creencia limitante", key: "creencia", type: "text", placeholder: "ej: No merezco / No soy suficiente / No puedo" },
@@ -128,18 +131,21 @@ export default function TRSBApp() {
       duracion: "3 min",
       titulo: "Acceso a la Herida Original",
       instrucciones: [
-        "PREPARACIÓN SOMÁTICA: Cierra los ojos suavemente. Respira profundo 3 veces.",
-        "Lleva tu atención a esa sensación en tu cuerpo que identificaste (en el pecho, estómago, garganta...)",
-        "Siente esa sensación. No la juzgues, solo obsérvala. Permite que esté ahí.",
-        "Respira hacia esa sensación. Imagina que le envías oxígeno, espacio, permiso para existir.",
-        "Ahora, vamos a explorar el origen. Las preguntas pueden traer memorias, emociones o sensaciones. Todo lo que surja es válido.",
-        "Manteniendo la conexión con esa sensación corporal, pregúntate:",
-        "PREGUNTA 1: ¿Cuándo fue la primera vez que sentí esta creencia? ¿Qué edad tenía? (Tómate 15 segundos. Permite que una memoria, imagen o emoción emerja)",
-        "No fuerces. Lo que surja es lo correcto. Puede ser claro o difuso. Registra lo que venga.",
-        "PREGUNTA 2: ¿Quién me enseñó que esto era verdad? ¿Un padre, una madre, un evento? (Tómate otros 15 segundos)",
-        "Observa sin juzgar. Registra tu respuesta con compasión hacia ti.",
-        "PREGUNTA 3: ¿Se repitió este patrón? ¿Cómo lo usé para protegerme? (Tómate 15 segundos)",
-        "Respira profundo. Lo que acabas de traer a la conciencia es valiente. Has identificado el patrón que sostiene esta creencia."
+        "ACCIÓN:Cierra los ojos suavemente",
+        "RESPIRACIÓN:Respira profundo 3 veces",
+        "ATENCIÓN:Lleva tu atención a la sensación corporal que identificaste",
+        "OBSERVACIÓN:Siente la sensación sin juzgar, solo observa",
+        "RESPIRACIÓN:Respira hacia esa sensación, envíale oxígeno y espacio",
+        "CONTEXTO:Vamos a explorar el origen - todo lo que surja es válido",
+        "PREGUNTA:¿Cuándo fue la primera vez que sentí esta creencia?",
+        "TIEMPO:Tómate 15 segundos - permite que emerja una memoria o emoción",
+        "REFLEXIÓN:No fuerces, lo que surja es correcto (claro o difuso)",
+        "PREGUNTA:¿Quién me enseñó que esto era verdad?",
+        "EJEMPLO:Un padre, una madre, un evento específico",
+        "TIEMPO:Tómate 15 segundos",
+        "PREGUNTA:¿Se repitió este patrón? ¿Cómo lo usé para protegerme?",
+        "TIEMPO:Tómate 15 segundos",
+        "RECONOCIMIENTO:Traer esto a la conciencia es valiente - has identificado el patrón"
       ],
       inputs: [
         { label: "¿Cuándo fue la primera vez? ¿Qué edad tenía?", key: "respuestaHerida", index: 0, type: "text", placeholder: "ej: A los 7 años cuando mi papá me dijo que nunca sería suficiente..." },
@@ -153,54 +159,54 @@ export default function TRSBApp() {
       duracion: "5 min",
       titulo: "Reprocesamiento Bilateral - PALMADITAS",
       instrucciones: [
-        "Cruza tus brazos sobre el pecho - mano derecha en hombro izquierdo, mano izquierda en hombro derecho. Es como darte un abrazo a ti mismo.",
-        "Acomódate bien. Mantén esta posición durante los próximos 5 minutos.",
-        "Ahora vas a hacer palmaditas alternadas: IZQUIERDA... DERECHA... IZQUIERDA... DERECHA... muy lentamente.",
-        "El ritmo es: 1 palmadita cada 2 segundos. Lento y deliberado. Como un metrónomo amoroso.",
-        "MANTÉN EL RITMO continuo durante toda esta fase mientras sigues las 3 partes que vienen abajo:",
-        "PARTE A (90 seg): Reconocimiento de la herida",
-        "PARTE B (60 seg): Validación y compasión hacia ti mismo",
-        "PARTE C (90 seg): Instalación de la nueva verdad (palmaditas más firmes)",
-        "Lee cada parte abajo y sigue las instrucciones mientras continúas las palmaditas."
+        "POSICIÓN:Cruza brazos sobre el pecho (mano derecha en hombro izquierdo, mano izquierda en hombro derecho)",
+        "PREPARACIÓN:Acomódate bien en esta posición para los próximos 5 minutos",
+        "ACCIÓN:Palmaditas alternadas - IZQUIERDA... DERECHA... IZQUIERDA... DERECHA",
+        "RITMO:1 palmadita cada 2 segundos - lento y deliberado",
+        "IMPORTANTE:Mantén el ritmo continuo durante toda la fase",
+        "ESTRUCTURA:3 partes a continuación",
+        "PARTE A:Reconocimiento (90 seg)",
+        "PARTE B:Validación y compasión (60 seg)",
+        "PARTE C:Nueva verdad con palmaditas más firmes (90 seg)"
       ],
       subFases: [
         {
           nombre: "PARTE A: RECONOCIMIENTO DE LA HERIDA (90 seg)",
           instrucciones: [
-            "Mientras continúas las palmaditas alternadas, repite MENTALMENTE estas frases:",
-            "'Reconozco esa herida' (haz 5 palmaditas mientras lo repites mentalmente)",
-            "'Veo a ese niño/niña que fue enseñado que [TU CREENCIA]' (5 palmaditas)",
-            "'No fue mi culpa' (5 palmaditas)",
-            "'Era un niño/niña que solo quería ser visto, amado, seguro' (5 palmaditas)",
-            "'Y en su lugar, aprendí miedo' (5 palmaditas)",
-            "Ahora continúa las palmaditas en SILENCIO durante 30 segundos. Solo el ritmo. Solo la sensación."
+            "INSTRUCCIÓN:Continúa palmaditas alternadas mientras repites MENTALMENTE",
+            "FRASE:'Reconozco esa herida' (5 palmaditas)",
+            "FRASE:'Veo a ese niño/niña que fue enseñado que [TU CREENCIA]' (5 palmaditas)",
+            "FRASE:'No fue mi culpa' (5 palmaditas)",
+            "FRASE:'Era un niño/niña que solo quería ser visto, amado, seguro' (5 palmaditas)",
+            "FRASE:'Y en su lugar, aprendí miedo' (5 palmaditas)",
+            "SILENCIO:Continúa palmaditas 30 segundos en silencio - solo ritmo y sensación"
           ]
         },
         {
           nombre: "PARTE B: VALIDACIÓN Y COMPASIÓN (60 seg)",
           instrucciones: [
-            "Imagina a ese niño/niña de la memoria aquí contigo ahora. Mírale con compasión.",
-            "Continúa las palmaditas y repite MENTALMENTE, hablándole:",
-            "'A ti te digo: siento que fuiste lastimado' (5 palmaditas)",
-            "'Siento que nadie te enseñó que SÍ merecías' (5 palmaditas)",
-            "'Pero quiero que sepas algo importante:' (5 palmaditas)",
-            "'No merecías ese dolor' (5 palmaditas)",
-            "'Y lo que te enseñaron NO ES VERDAD' (5 palmaditas)",
-            "Continúa las palmaditas en SILENCIO durante 45 segundos. Siente la compasión hacia ti mismo."
+            "VISUALIZACIÓN:Imagina a ese niño/niña aquí contigo, mírale con compasión",
+            "INSTRUCCIÓN:Continúa palmaditas mientras repites MENTALMENTE",
+            "FRASE:'A ti te digo: siento que fuiste lastimado' (5 palmaditas)",
+            "FRASE:'Siento que nadie te enseñó que SÍ merecías' (5 palmaditas)",
+            "FRASE:'Pero quiero que sepas algo importante' (5 palmaditas)",
+            "FRASE:'No merecías ese dolor' (5 palmaditas)",
+            "FRASE:'Y lo que te enseñaron NO ES VERDAD' (5 palmaditas)",
+            "SILENCIO:Continúa palmaditas 45 segundos - siente la compasión hacia ti"
           ]
         },
         {
           nombre: "PARTE C: INSTALACIÓN DE LA NUEVA VERDAD (90 seg)",
           instrucciones: [
-            "Ahora tus palmaditas se vuelven un poco MÁS FIRMES. Con convicción y poder.",
-            "Mientras haces las palmaditas, DECLARA MENTALMENTE estas verdades con fuerza:",
-            "'SÍ merezco' / 'SÍ soy suficiente' / 'SÍ puedo' - según tu creencia (10 palmaditas firmes)",
-            "'Merezco/Soy/Puedo porque EXISTO' (10 palmaditas firmes)",
-            "'Merezco éxito, amor, descanso, seguridad' (10 palmaditas firmes)",
-            "'Merezco elegir para mí' (10 palmaditas firmes)",
-            "'Desinstalo el programa viejo AHORA' (10 palmaditas firmes)",
-            "'Instalo la nueva verdad en cada célula de mi cuerpo' (10 palmaditas firmes)",
-            "Continúa las palmaditas FIRMES en SILENCIO durante 60 segundos. Siente la nueva verdad instalándose."
+            "CAMBIO:Palmaditas MÁS FIRMES - con convicción y poder",
+            "INSTRUCCIÓN:DECLARA MENTALMENTE estas verdades con fuerza",
+            "AFIRMACIÓN:'SÍ merezco / SÍ soy suficiente / SÍ puedo' (10 palmaditas firmes)",
+            "AFIRMACIÓN:'Merezco/Soy/Puedo porque EXISTO' (10 palmaditas firmes)",
+            "AFIRMACIÓN:'Merezco éxito, amor, descanso, seguridad' (10 palmaditas firmes)",
+            "AFIRMACIÓN:'Merezco elegir para mí' (10 palmaditas firmes)",
+            "AFIRMACIÓN:'Desinstalo el programa viejo AHORA' (10 palmaditas firmes)",
+            "AFIRMACIÓN:'Instalo la nueva verdad en cada célula' (10 palmaditas firmes)",
+            "SILENCIO:Continúa palmaditas FIRMES 60 segundos - siente la nueva verdad instalándose"
           ]
         }
       ]
@@ -211,20 +217,19 @@ export default function TRSBApp() {
       duracion: "2 min",
       titulo: "Anclaje, Evaluación y Cierre",
       instrucciones: [
-        "RALENTIZACIÓN: Empieza a disminuir el ritmo de las palmaditas lentamente.",
-        "Cada palmadita ahora es más espaciada, más profunda. 1 palmadita cada 3 segundos.",
-        "Haz 5 palmaditas muy lentamente... sintiendo cada una.",
-        "ANCLAJE: Ahora coloca ambas manos sobre tu corazón.",
-        "Respira profundo 3 veces. Muy lentamente. (Inhala profundo... exhala completamente... Inhala... exhala... Inhala... exhala...)",
-        "Cuando estés listo, abre los ojos suavemente.",
-        "Tómate 10 segundos para regresar al presente.",
-        "Bienvenido de vuelta.",
-        "EVALUACIÓN: La misma creencia que al inicio tenía una intensidad de [TU NÚMERO INICIAL], ¿qué intensidad tiene ahora en escala 0-10?",
-        "Registra el número abajo. Observa el cambio.",
-        "Pregúntate: ¿Qué cambió exactamente? ¿Qué emergió durante esta práctica? ¿Qué sentí?",
-        "Registra tus observaciones en el campo de abajo.",
-        "RECONOCIMIENTO: Lo que acabas de hacer fue trabajo real y valiente. Tu cerebro acaba de reprocesar una creencia que ha estado activa durante años.",
-        "Para transformación permanente, practica TRSB 5 minutos diarios durante 90 días. Esta app te guiará en cada sesión."
+        "RALENTIZACIÓN:Disminuye el ritmo de palmaditas lentamente",
+        "RITMO:1 palmadita cada 3 segundos - más espaciadas y profundas",
+        "ACCIÓN:Haz 5 palmaditas muy lentas, sintiendo cada una",
+        "ANCLAJE:Coloca ambas manos sobre tu corazón",
+        "RESPIRACIÓN:Respira profundo 3 veces muy lentamente",
+        "EJEMPLO:Inhala profundo... exhala... Inhala... exhala... Inhala... exhala",
+        "ACCIÓN:Abre los ojos suavemente cuando estés listo",
+        "TIEMPO:Tómate 10 segundos para regresar al presente",
+        "EVALUACIÓN:¿Qué intensidad tiene ahora la creencia? (escala 0-10)",
+        "REGISTRO:Anota el número y observa el cambio",
+        "REFLEXIÓN:¿Qué cambió? ¿Qué emergió? ¿Qué sentiste?",
+        "RECONOCIMIENTO:Trabajo valiente - tu cerebro reprocesó una creencia de años",
+        "PRÁCTICA:Para transformación permanente: 5 min diarios durante 90 días"
       ],
       inputs: [
         { label: "Intensidad final (0-10)", key: "intensidadFinal", type: "number", min: 0, max: 10 },
@@ -596,14 +601,58 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
             <h3 className="text-base sm:text-lg font-bold text-cyan-400 mb-4 sm:mb-5 flex items-center gap-2 pb-3 border-b border-slate-700/50">
               <Zap size={18} className="text-cyan-400" /> Instrucciones
             </h3>
-            <div className="space-y-4 sm:space-y-5">
+            <div className="space-y-2 sm:space-y-3">
               {faseActual.instrucciones.map((instr, idx) => {
-                const esAccion = instr.includes(':') || instr.startsWith('PREGUNTA') || instr.startsWith('PARTE') || instr.startsWith('PREPARACIÓN') || instr.startsWith('RALENTIZACIÓN') || instr.startsWith('ANCLAJE') || instr.startsWith('EVALUACIÓN') || instr.startsWith('RECONOCIMIENTO');
+                const [tipo, texto] = instr.includes(':') ? instr.split(':', 2) : ['', instr];
+
+                // Configuración de iconos y colores por tipo
+                const tipoConfig: Record<string, { icon: any, color: string, bg: string, border: string }> = {
+                  'PREPARACIÓN': { icon: Target, color: 'text-blue-400', bg: 'bg-blue-900/20', border: 'border-blue-500/30' },
+                  'ACCIÓN': { icon: Zap, color: 'text-cyan-400', bg: 'bg-cyan-900/20', border: 'border-cyan-500/30' },
+                  'RESPIRACIÓN': { icon: Wind, color: 'text-green-400', bg: 'bg-green-900/20', border: 'border-green-500/30' },
+                  'PREGUNTA': { icon: HelpCircle, color: 'text-yellow-400', bg: 'bg-yellow-900/20', border: 'border-yellow-500/30' },
+                  'REFLEXIÓN': { icon: Brain, color: 'text-purple-400', bg: 'bg-purple-900/20', border: 'border-purple-500/30' },
+                  'CONTEXTO': { icon: Sparkles, color: 'text-slate-400', bg: 'bg-slate-800/30', border: 'border-slate-600/30' },
+                  'TIEMPO': { icon: Clock, color: 'text-orange-400', bg: 'bg-orange-900/20', border: 'border-orange-500/30' },
+                  'REGISTRO': { icon: Edit3, color: 'text-pink-400', bg: 'bg-pink-900/20', border: 'border-pink-500/30' },
+                  'EJEMPLO': { icon: Sparkles, color: 'text-slate-400', bg: 'bg-slate-800/20', border: 'border-slate-600/20' },
+                  'ATENCIÓN': { icon: Eye, color: 'text-indigo-400', bg: 'bg-indigo-900/20', border: 'border-indigo-500/30' },
+                  'OBSERVACIÓN': { icon: Eye, color: 'text-indigo-400', bg: 'bg-indigo-900/20', border: 'border-indigo-500/30' },
+                  'EVALUACIÓN': { icon: Target, color: 'text-teal-400', bg: 'bg-teal-900/20', border: 'border-teal-500/30' },
+                  'RECONOCIMIENTO': { icon: Heart, color: 'text-rose-400', bg: 'bg-rose-900/20', border: 'border-rose-500/30' },
+                  'POSICIÓN': { icon: Target, color: 'text-blue-400', bg: 'bg-blue-900/20', border: 'border-blue-500/30' },
+                  'RITMO': { icon: Clock, color: 'text-orange-400', bg: 'bg-orange-900/20', border: 'border-orange-500/30' },
+                  'IMPORTANTE': { icon: AlertCircle, color: 'text-red-400', bg: 'bg-red-900/20', border: 'border-red-500/30' },
+                  'ESTRUCTURA': { icon: Target, color: 'text-slate-400', bg: 'bg-slate-800/30', border: 'border-slate-600/30' },
+                  'PARTE A': { icon: Sparkles, color: 'text-cyan-400', bg: 'bg-cyan-900/20', border: 'border-cyan-500/30' },
+                  'PARTE B': { icon: Sparkles, color: 'text-purple-400', bg: 'bg-purple-900/20', border: 'border-purple-500/30' },
+                  'PARTE C': { icon: Sparkles, color: 'text-green-400', bg: 'bg-green-900/20', border: 'border-green-500/30' },
+                  'INSTRUCCIÓN': { icon: Zap, color: 'text-cyan-400', bg: 'bg-cyan-900/20', border: 'border-cyan-500/30' },
+                  'FRASE': { icon: Heart, color: 'text-purple-300', bg: 'bg-purple-900/10', border: 'border-purple-500/20' },
+                  'SILENCIO': { icon: Wind, color: 'text-blue-300', bg: 'bg-blue-900/20', border: 'border-blue-500/30' },
+                  'VISUALIZACIÓN': { icon: Eye, color: 'text-indigo-400', bg: 'bg-indigo-900/20', border: 'border-indigo-500/30' },
+                  'AFIRMACIÓN': { icon: Sparkles, color: 'text-green-400', bg: 'bg-green-900/20', border: 'border-green-500/30' },
+                  'CAMBIO': { icon: Zap, color: 'text-amber-400', bg: 'bg-amber-900/20', border: 'border-amber-500/30' },
+                  'RALENTIZACIÓN': { icon: Clock, color: 'text-blue-400', bg: 'bg-blue-900/20', border: 'border-blue-500/30' },
+                  'ANCLAJE': { icon: Heart, color: 'text-rose-400', bg: 'bg-rose-900/20', border: 'border-rose-500/30' },
+                  'PRÁCTICA': { icon: Target, color: 'text-cyan-400', bg: 'bg-cyan-900/20', border: 'border-cyan-500/30' }
+                };
+
+                const config = tipoConfig[tipo] || { icon: Zap, color: 'text-slate-400', bg: 'bg-slate-800/20', border: 'border-slate-600/20' };
+                const IconComponent = config.icon;
+
                 return (
-                  <div key={idx} className={`${esAccion ? 'bg-slate-800/40 rounded-lg p-3 sm:p-4' : ''}`}>
-                    <div className="flex gap-2 sm:gap-3 text-slate-100 text-sm sm:text-base">
-                      <span className="text-cyan-400 font-bold min-w-6 sm:min-w-8 flex-shrink-0 mt-0.5">{idx + 1}</span>
-                      <p className="leading-relaxed">{instr}</p>
+                  <div key={idx} className={`${config.bg} ${config.border} border rounded-lg p-2.5 sm:p-3 transition-all hover:scale-[1.01]`}>
+                    <div className="flex gap-2 sm:gap-3 items-start">
+                      <IconComponent size={18} className={`${config.color} flex-shrink-0 mt-0.5`} />
+                      {tipo && (
+                        <span className={`${config.color} font-bold text-xs uppercase tracking-wide flex-shrink-0`}>
+                          {tipo}:
+                        </span>
+                      )}
+                      <p className="text-slate-100 text-sm sm:text-base leading-relaxed flex-1">
+                        {texto || instr}
+                      </p>
                     </div>
                   </div>
                 );
@@ -619,21 +668,47 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
                 {faseActual.subFases.map((subFase, idx) => {
                   // Colores por parte: A=cyan, B=purple, C=green
                   const colores = [
-                    { bg: 'bg-cyan-900/20', titulo: 'text-cyan-300', frase: 'text-cyan-200' },
-                    { bg: 'bg-purple-900/20', titulo: 'text-purple-300', frase: 'text-purple-200' },
-                    { bg: 'bg-green-900/20', titulo: 'text-green-300', frase: 'text-green-200' }
+                    { bg: 'bg-cyan-900/20', titulo: 'text-cyan-300', border: 'border-cyan-500/30' },
+                    { bg: 'bg-purple-900/20', titulo: 'text-purple-300', border: 'border-purple-500/30' },
+                    { bg: 'bg-green-900/20', titulo: 'text-green-300', border: 'border-green-500/30' }
                   ];
                   const color = colores[idx] || colores[0];
-                  
+
                   return (
-                    <div key={idx} className={`${color.bg} rounded-lg p-3 sm:p-4 border border-slate-700/30`}>
-                      <h4 className={`font-bold ${color.titulo} mb-3 text-sm sm:text-base`}>{subFase.nombre}</h4>
-                      <div className="space-y-2.5 sm:space-y-3">
+                    <div key={idx} className={`${color.bg} ${color.border} border rounded-lg p-3 sm:p-4`}>
+                      <h4 className={`font-bold ${color.titulo} mb-3 text-sm sm:text-base flex items-center gap-2`}>
+                        <Heart size={16} className={color.titulo} />
+                        {subFase.nombre}
+                      </h4>
+                      <div className="space-y-2">
                         {subFase.instrucciones.map((instr, i) => {
-                          const esFrase = instr.startsWith("'");
+                          const [tipo, texto] = instr.includes(':') ? instr.split(':', 2) : ['', instr];
+
+                          const tipoConfig: Record<string, { icon: any, color: string, bg: string, border: string }> = {
+                            'INSTRUCCIÓN': { icon: Zap, color: 'text-cyan-400', bg: 'bg-cyan-900/20', border: 'border-cyan-500/30' },
+                            'FRASE': { icon: Heart, color: 'text-purple-300', bg: 'bg-purple-900/10', border: 'border-purple-500/20' },
+                            'SILENCIO': { icon: Wind, color: 'text-blue-300', bg: 'bg-blue-900/20', border: 'border-blue-500/30' },
+                            'VISUALIZACIÓN': { icon: Eye, color: 'text-indigo-400', bg: 'bg-indigo-900/20', border: 'border-indigo-500/30' },
+                            'AFIRMACIÓN': { icon: Sparkles, color: 'text-green-400', bg: 'bg-green-900/20', border: 'border-green-500/30' },
+                            'CAMBIO': { icon: Zap, color: 'text-amber-400', bg: 'bg-amber-900/20', border: 'border-amber-500/30' }
+                          };
+
+                          const config = tipoConfig[tipo] || { icon: Sparkles, color: 'text-slate-400', bg: 'bg-slate-800/20', border: 'border-slate-600/20' };
+                          const IconComponent = config.icon;
+
                           return (
-                            <div key={i} className={`text-xs sm:text-sm leading-relaxed ${esFrase ? `ml-3 sm:ml-4 ${color.frase} italic bg-slate-900/40 rounded px-3 py-2` : 'text-slate-300'}`}>
-                              {esFrase ? instr : `• ${instr}`}
+                            <div key={i} className={`${config.bg} ${config.border} border rounded-lg p-2 sm:p-2.5`}>
+                              <div className="flex gap-2 items-start">
+                                <IconComponent size={16} className={`${config.color} flex-shrink-0 mt-0.5`} />
+                                {tipo && (
+                                  <span className={`${config.color} font-bold text-xs uppercase tracking-wide flex-shrink-0`}>
+                                    {tipo}:
+                                  </span>
+                                )}
+                                <p className="text-slate-100 text-xs sm:text-sm leading-relaxed flex-1">
+                                  {texto || instr}
+                                </p>
+                              </div>
                             </div>
                           );
                         })}
