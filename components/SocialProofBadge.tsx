@@ -29,23 +29,26 @@ const SocialProofBadge: React.FC = () => {
     {
       icon: <TrendingUp className="w-4 h-4" />,
       text: '12ª Edición del Seminario',
-      color: 'from-blue-500 to-cyan-500',
-      bgColor: 'bg-blue-500/10',
-      borderColor: 'border-blue-500/30'
+      color: 'from-blue-600 to-blue-700',
+      bgColor: 'bg-blue-50',
+      borderColor: 'border-blue-200',
+      textColor: 'text-blue-900'
     },
     {
       icon: <Users className="w-4 h-4" />,
       text: '+2,000 participantes en 12 ediciones',
-      color: 'from-purple-500 to-pink-500',
-      bgColor: 'bg-purple-500/10',
-      borderColor: 'border-purple-500/30'
+      color: 'from-purple-600 to-purple-700',
+      bgColor: 'bg-purple-50',
+      borderColor: 'border-purple-200',
+      textColor: 'text-purple-900'
     },
     {
       icon: <Star className="w-4 h-4" />,
       text: '5-7 Dic 2025 + 2 sesiones 2026',
-      color: 'from-yellow-500 to-orange-500',
-      bgColor: 'bg-yellow-500/10',
-      borderColor: 'border-yellow-500/30'
+      color: 'from-amber-500 to-orange-600',
+      bgColor: 'bg-amber-50',
+      borderColor: 'border-amber-200',
+      textColor: 'text-amber-900'
     }
   ];
 
@@ -53,23 +56,26 @@ const SocialProofBadge: React.FC = () => {
     {
       icon: <TrendingUp className="w-4 h-4" />,
       text: '12th Edition of the Seminar',
-      color: 'from-blue-500 to-cyan-500',
-      bgColor: 'bg-blue-500/10',
-      borderColor: 'border-blue-500/30'
+      color: 'from-blue-600 to-blue-700',
+      bgColor: 'bg-blue-50',
+      borderColor: 'border-blue-200',
+      textColor: 'text-blue-900'
     },
     {
       icon: <Users className="w-4 h-4" />,
       text: '+2,000 participants in 12 editions',
-      color: 'from-purple-500 to-pink-500',
-      bgColor: 'bg-purple-500/10',
-      borderColor: 'border-purple-500/30'
+      color: 'from-purple-600 to-purple-700',
+      bgColor: 'bg-purple-50',
+      borderColor: 'border-purple-200',
+      textColor: 'text-purple-900'
     },
     {
       icon: <Star className="w-4 h-4" />,
       text: 'Dec 5-7, 2025 + 2 sessions 2026',
-      color: 'from-yellow-500 to-orange-500',
-      bgColor: 'bg-yellow-500/10',
-      borderColor: 'border-yellow-500/30'
+      color: 'from-amber-500 to-orange-600',
+      bgColor: 'bg-amber-50',
+      borderColor: 'border-amber-200',
+      textColor: 'text-amber-900'
     }
   ];
 
@@ -84,19 +90,19 @@ const SocialProofBadge: React.FC = () => {
       <div
         className={`
           ${badge.bgColor} ${badge.borderColor}
-          backdrop-blur-md rounded-full border-2
-          px-3 sm:px-4 py-1.5 sm:py-2 shadow-xl
-          transform transition-all duration-500 hover:scale-105
+          rounded-full border
+          px-3 sm:px-4 py-1.5 sm:py-2 shadow-sm
+          transform transition-all duration-200 hover:shadow-md
           max-w-[260px] sm:max-w-[280px] md:max-w-xs
         `}
       >
         <div className="flex items-center gap-1.5 sm:gap-2">
-          <div className={`bg-gradient-to-br ${badge.color} p-1 sm:p-1.5 rounded-full flex-shrink-0`}>
-            <div className="w-3 h-3 sm:w-4 sm:h-4">
+          <div className={`bg-gradient-to-br ${badge.color} p-1 sm:p-1.5 rounded-full flex-shrink-0 shadow-sm`}>
+            <div className="w-3 h-3 sm:w-4 sm:h-4 text-white">
               {badge.icon}
             </div>
           </div>
-          <p className="text-white text-[10px] sm:text-xs md:text-sm font-semibold leading-tight">
+          <p className={`${badge.textColor} text-[10px] sm:text-xs md:text-sm font-semibold leading-tight`}>
             {badge.text}
           </p>
         </div>
