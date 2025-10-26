@@ -407,13 +407,13 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
   // Pantalla de selección de modo
   if (!modoSeleccionado) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 px-3 py-4 sm:p-6 text-white flex items-center justify-center" style={{ WebkitOverflowScrolling: 'touch', touchAction: 'pan-y' }}>
+      <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white px-3 py-4 sm:p-6 text-slate-800 flex items-center justify-center" style={{ WebkitOverflowScrolling: 'touch', touchAction: 'pan-y' }}>
         <div className="max-w-4xl w-full mx-auto">
           {/* Back to Home */}
           <div className="mb-6">
             <a
               href="/"
-              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors text-sm touch-manipulation active:scale-95"
+              className="inline-flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-all duration-200 text-sm touch-manipulation active:scale-95 font-medium"
             >
               <ChevronLeft size={18} />
               <span>Volver</span>
@@ -421,51 +421,53 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
           </div>
 
           {/* Header */}
-          <div className="text-center mb-8 sm:mb-12">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent leading-tight">
+          <div className="text-center mb-12 sm:mb-16">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-3 text-slate-900 leading-tight tracking-tight">
               Elige Tu Práctica TRSB
             </h1>
-            <p className="text-slate-300 text-base sm:text-lg mb-2">
+            <p className="text-slate-600 text-base sm:text-lg mb-2 font-normal">
               Selecciona el tipo de sesión que prefieres realizar
             </p>
           </div>
 
           {/* Opciones de modo */}
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <div className="grid md:grid-cols-2 gap-4 mb-8">
             {/* Modo Completo */}
             <button
               onClick={() => {
                 setModoSeleccionado('completa');
                 mostrarNotificacion('Modo completo seleccionado (12 min)');
               }}
-              className="bg-slate-800/80 backdrop-blur-sm border-2 border-cyan-500/50 rounded-2xl p-6 sm:p-8 hover:border-cyan-400 hover:bg-slate-800 transition-all shadow-xl shadow-cyan-500/10 hover:shadow-cyan-500/20 touch-manipulation active:scale-98 text-left"
+              className="group bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 hover:border-slate-300 hover:shadow-xl transition-all duration-300 shadow-sm touch-manipulation active:scale-[0.98] text-left"
             >
-              <div className="flex items-center gap-3 mb-4">
-                <Clock size={32} className="text-cyan-400" />
-                <h2 className="text-2xl sm:text-3xl font-bold text-cyan-400">Sesión Completa</h2>
+              <div className="flex items-center gap-4 mb-5">
+                <div className="w-12 h-12 rounded-full bg-cyan-50 flex items-center justify-center group-hover:bg-cyan-100 transition-colors duration-300">
+                  <Clock size={24} className="text-cyan-600" />
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900 tracking-tight">Sesión Completa</h2>
               </div>
-              <p className="text-slate-200 text-base sm:text-lg mb-4 font-semibold">12 minutos • 5 fases</p>
-              <ul className="space-y-3 text-slate-300 text-sm sm:text-base mb-6">
-                <li className="flex items-start gap-2">
-                  <Check size={20} className="text-green-400 flex-shrink-0 mt-0.5" />
-                  <span>Identificación profunda de la creencia</span>
+              <p className="text-slate-600 text-base sm:text-lg mb-5 font-medium">12 minutos • 5 fases</p>
+              <ul className="space-y-2.5 text-slate-700 text-sm sm:text-base mb-6">
+                <li className="flex items-start gap-3">
+                  <Check size={18} className="text-cyan-500 flex-shrink-0 mt-1" strokeWidth={2.5} />
+                  <span className="leading-relaxed">Identificación profunda de la creencia</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <Check size={20} className="text-green-400 flex-shrink-0 mt-0.5" />
-                  <span>Acceso a la herida original</span>
+                <li className="flex items-start gap-3">
+                  <Check size={18} className="text-cyan-500 flex-shrink-0 mt-1" strokeWidth={2.5} />
+                  <span className="leading-relaxed">Acceso a la herida original</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <Check size={20} className="text-green-400 flex-shrink-0 mt-0.5" />
-                  <span>Reprocesamiento bilateral completo</span>
+                <li className="flex items-start gap-3">
+                  <Check size={18} className="text-cyan-500 flex-shrink-0 mt-1" strokeWidth={2.5} />
+                  <span className="leading-relaxed">Reprocesamiento bilateral completo</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <Check size={20} className="text-green-400 flex-shrink-0 mt-0.5" />
-                  <span>Evaluación y anclaje profundo</span>
+                <li className="flex items-start gap-3">
+                  <Check size={18} className="text-cyan-500 flex-shrink-0 mt-1" strokeWidth={2.5} />
+                  <span className="leading-relaxed">Evaluación y anclaje profundo</span>
                 </li>
               </ul>
-              <div className="bg-cyan-900/30 rounded-lg p-4 border border-cyan-500/30">
-                <p className="text-cyan-200 text-xs sm:text-sm">
-                  <strong>Recomendado para:</strong> Primera sesión, trabajo profundo, transformación completa
+              <div className="bg-cyan-50/50 rounded-xl p-4 border border-cyan-100">
+                <p className="text-cyan-900 text-xs sm:text-sm leading-relaxed">
+                  <strong className="font-semibold">Recomendado para:</strong> Primera sesión, trabajo profundo, transformación completa
                 </p>
               </div>
             </button>
@@ -476,44 +478,48 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
                 setModoSeleccionado('rapida');
                 mostrarNotificacion('Modo rápido seleccionado (5 min)');
               }}
-              className="bg-slate-800/80 backdrop-blur-sm border-2 border-purple-500/50 rounded-2xl p-6 sm:p-8 hover:border-purple-400 hover:bg-slate-800 transition-all shadow-xl shadow-purple-500/10 hover:shadow-purple-500/20 touch-manipulation active:scale-98 text-left"
+              className="group bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 hover:border-slate-300 hover:shadow-xl transition-all duration-300 shadow-sm touch-manipulation active:scale-[0.98] text-left"
             >
-              <div className="flex items-center gap-3 mb-4">
-                <Zap size={32} className="text-purple-400" />
-                <h2 className="text-2xl sm:text-3xl font-bold text-purple-400">Práctica Rápida</h2>
+              <div className="flex items-center gap-4 mb-5">
+                <div className="w-12 h-12 rounded-full bg-purple-50 flex items-center justify-center group-hover:bg-purple-100 transition-colors duration-300">
+                  <Zap size={24} className="text-purple-600" />
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900 tracking-tight">Práctica Rápida</h2>
               </div>
-              <p className="text-slate-200 text-base sm:text-lg mb-4 font-semibold">5 minutos • 4 fases</p>
-              <ul className="space-y-3 text-slate-300 text-sm sm:text-base mb-6">
-                <li className="flex items-start gap-2">
-                  <Check size={20} className="text-green-400 flex-shrink-0 mt-0.5" />
-                  <span>Identificación de la creencia</span>
+              <p className="text-slate-600 text-base sm:text-lg mb-5 font-medium">5 minutos • 4 fases</p>
+              <ul className="space-y-2.5 text-slate-700 text-sm sm:text-base mb-6">
+                <li className="flex items-start gap-3">
+                  <Check size={18} className="text-purple-500 flex-shrink-0 mt-1" strokeWidth={2.5} />
+                  <span className="leading-relaxed">Identificación de la creencia</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <Check size={20} className="text-green-400 flex-shrink-0 mt-0.5" />
-                  <span>Reprocesamiento bilateral directo</span>
+                <li className="flex items-start gap-3">
+                  <Check size={18} className="text-purple-500 flex-shrink-0 mt-1" strokeWidth={2.5} />
+                  <span className="leading-relaxed">Reprocesamiento bilateral directo</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <Check size={20} className="text-green-400 flex-shrink-0 mt-0.5" />
-                  <span>Evaluación y cierre rápido</span>
+                <li className="flex items-start gap-3">
+                  <Check size={18} className="text-purple-500 flex-shrink-0 mt-1" strokeWidth={2.5} />
+                  <span className="leading-relaxed">Evaluación y cierre rápido</span>
                 </li>
               </ul>
-              <div className="bg-purple-900/30 rounded-lg p-4 border border-purple-500/30">
-                <p className="text-purple-200 text-xs sm:text-sm">
-                  <strong>Recomendado para:</strong> Práctica diaria de 90 días, mantenimiento, sesiones regulares
+              <div className="bg-purple-50/50 rounded-xl p-4 border border-purple-100">
+                <p className="text-purple-900 text-xs sm:text-sm leading-relaxed">
+                  <strong className="font-semibold">Recomendado para:</strong> Práctica diaria de 90 días, mantenimiento, sesiones regulares
                 </p>
               </div>
             </button>
           </div>
 
           {/* Info adicional */}
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 mb-6">
-            <h3 className="text-lg font-bold text-cyan-400 mb-3 flex items-center gap-2">
-              <Sparkles size={20} />
+          <div className="bg-slate-50/50 border border-slate-200 rounded-xl p-6 mb-6">
+            <h3 className="text-lg font-semibold text-slate-900 mb-3 flex items-center gap-2">
+              <div className="w-6 h-6 rounded-full bg-cyan-50 flex items-center justify-center">
+                <Sparkles size={14} className="text-cyan-600" />
+              </div>
               Recomendación
             </h3>
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
-              Si es tu primera vez, te recomendamos la <strong className="text-cyan-400">Sesión Completa</strong> para familiarizarte con todo el proceso.
-              Para tu práctica diaria de 90 días, usa la <strong className="text-purple-400">Práctica Rápida</strong>.
+            <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
+              Si es tu primera vez, te recomendamos la <strong className="text-cyan-600 font-semibold">Sesión Completa</strong> para familiarizarte con todo el proceso.
+              Para tu práctica diaria de 90 días, usa la <strong className="text-purple-600 font-semibold">Práctica Rápida</strong>.
             </p>
           </div>
 
@@ -522,18 +528,18 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
             href="https://framerusercontent.com/assets/7xbnvz17j6qSeEWlVi4O6dYms0.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="block bg-gradient-to-r from-cyan-900/30 to-blue-900/30 border border-cyan-500/40 rounded-xl p-6 hover:border-cyan-400/60 hover:from-cyan-900/40 hover:to-blue-900/40 transition-all shadow-lg hover:shadow-cyan-500/20 touch-manipulation active:scale-98"
+            className="block bg-white border border-slate-200 rounded-xl p-6 hover:border-slate-300 hover:shadow-xl transition-all duration-300 shadow-sm touch-manipulation active:scale-[0.98]"
           >
             <div className="flex items-center gap-4">
-              <div className="bg-cyan-500/20 p-4 rounded-lg">
-                <FileText size={32} className="text-cyan-400" />
+              <div className="w-14 h-14 rounded-full bg-cyan-50 flex items-center justify-center flex-shrink-0">
+                <FileText size={28} className="text-cyan-600" />
               </div>
               <div className="flex-1">
-                <h3 className="text-lg font-bold text-cyan-300 mb-1 flex items-center gap-2">
+                <h3 className="text-lg font-semibold text-slate-900 mb-1 flex items-center gap-2">
                   Manual Completo TRSB
-                  <Download size={18} className="text-cyan-400" />
+                  <Download size={16} className="text-cyan-600" />
                 </h3>
-                <p className="text-slate-300 text-sm">
+                <p className="text-slate-600 text-sm leading-relaxed">
                   Descarga el manual detallado con toda la metodología, fundamentos científicos y guías de práctica
                 </p>
               </div>
@@ -544,8 +550,8 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
         {/* Toast Notification */}
         {mostrarToast && (
           <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 animate-slide-up">
-            <div className="bg-slate-800/95 backdrop-blur-md border border-cyan-500/50 rounded-xl px-6 py-4 shadow-2xl shadow-cyan-500/20 max-w-md mx-4">
-              <p className="text-white text-sm sm:text-base text-center leading-relaxed">
+            <div className="bg-slate-900/95 backdrop-blur-md border border-slate-700 rounded-xl px-6 py-4 shadow-2xl max-w-md mx-4">
+              <p className="text-white text-sm sm:text-base text-center leading-relaxed font-medium">
                 {mensajeToast}
               </p>
             </div>
@@ -563,19 +569,19 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
   const faseActual = fasesActuales[fase];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 px-3 py-4 sm:p-6 text-white pb-safe overflow-y-auto overscroll-behavior-y-contain" style={{ WebkitOverflowScrolling: 'touch', touchAction: 'pan-y' }}>
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white px-3 py-4 sm:p-6 text-slate-800 pb-safe overflow-y-auto overscroll-behavior-y-contain" style={{ WebkitOverflowScrolling: 'touch', touchAction: 'pan-y' }}>
       {/* Back to Home Button & Reset */}
-      <div className="max-w-4xl mx-auto mb-3 flex justify-between items-center">
+      <div className="max-w-4xl mx-auto mb-4 flex justify-between items-center">
         <a
           href="/"
-          className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors text-sm touch-manipulation active:scale-95"
+          className="inline-flex items-center gap-2 text-slate-500 hover:text-slate-900 transition-all duration-200 text-sm touch-manipulation active:scale-95 font-medium"
         >
           <ChevronLeft size={18} />
           <span>Volver</span>
         </a>
         <button
           onClick={reiniciarSesion}
-          className="text-xs text-slate-400 hover:text-red-400 transition-colors touch-manipulation active:scale-95"
+          className="text-xs text-slate-400 hover:text-red-500 transition-colors duration-200 touch-manipulation active:scale-95 font-medium"
         >
           Reiniciar sesión
         </button>
@@ -583,28 +589,28 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
 
       {/* Header */}
       <div className="max-w-4xl mx-auto mb-6 sm:mb-8">
-        <div className="text-center mb-4 sm:mb-6">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent leading-tight">APP TRSB</h1>
-          <p className="text-cyan-200 text-sm sm:text-base mb-1">Técnica de Reprocesamiento Somato-Cognitivo Bilateral</p>
-          <p className="text-slate-400 text-xs sm:text-sm">Tu guía para la práctica diaria de transformación</p>
+        <div className="text-center mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-2 text-slate-900 leading-tight tracking-tight">APP TRSB</h1>
+          <p className="text-slate-600 text-sm sm:text-base mb-1 font-normal">Técnica de Reprocesamiento Somato-Cognitivo Bilateral</p>
+          <p className="text-slate-500 text-xs sm:text-sm">Tu guía para la práctica diaria de transformación</p>
         </div>
 
         {/* Progress Bar */}
-        <div className="w-full bg-slate-700/50 h-3 rounded-full overflow-hidden mb-4 shadow-inner">
+        <div className="w-full bg-slate-200 h-2 rounded-full overflow-hidden mb-4">
           <div
-            className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 h-full transition-all duration-500 shadow-lg shadow-cyan-500/50"
+            className="bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 h-full transition-all duration-500"
             style={{ width: `${((fase + 1) / fasesActuales.length) * 100}%` }}
           />
         </div>
 
         <div className="flex items-center justify-between text-sm">
-          <span className="text-cyan-200 font-medium">
+          <span className="text-slate-700 font-medium">
             Fase {fase + 1} de {fasesActuales.length} • {faseActual.duracion}
           </span>
-          <span className={`px-3 py-1 rounded-full text-xs font-bold ${
+          <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
             modoSeleccionado === 'completa'
-              ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30'
-              : 'bg-purple-500/20 text-purple-300 border border-purple-500/30'
+              ? 'bg-cyan-50 text-cyan-700 border border-cyan-200'
+              : 'bg-purple-50 text-purple-700 border border-purple-200'
           }`}>
             {modoSeleccionado === 'completa' ? '12 min' : '5 min'}
           </span>
@@ -613,19 +619,22 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
 
       {/* Main Content */}
       <div className="max-w-4xl mx-auto">
-        <div className={`bg-slate-800/80 backdrop-blur-sm rounded-xl p-4 sm:p-6 md:p-8 mb-4 sm:mb-6 border border-slate-700 shadow-xl shadow-cyan-500/5 transition-all duration-300 ${
+        <div className={`bg-white rounded-2xl p-5 sm:p-7 md:p-9 mb-4 sm:mb-6 border border-slate-200 shadow-sm transition-all duration-300 ${
           animandoTransicion ? 'opacity-0 transform scale-95' : 'opacity-100 transform scale-100'
         }`}>
           {/* Fase Header */}
-          <div className="mb-4 sm:mb-6">
-            <div className="text-3xl sm:text-4xl mb-2">{faseActual.nombre}</div>
-            <h2 className="text-xl sm:text-2xl font-bold text-cyan-400 mb-2 sm:mb-4">{faseActual.titulo}</h2>
+          <div className="mb-6 sm:mb-8">
+            <div className="text-2xl sm:text-3xl mb-2 text-slate-900 font-semibold">{faseActual.nombre}</div>
+            <h2 className="text-xl sm:text-2xl font-medium text-cyan-600 mb-2 sm:mb-4 tracking-tight">{faseActual.titulo}</h2>
           </div>
 
           {/* Instrucciones */}
-          <div className="bg-slate-900/50 backdrop-blur-sm rounded-lg p-4 sm:p-6 mb-4 sm:mb-6 border border-slate-700/50">
-            <h3 className="text-base sm:text-lg font-bold text-cyan-400 mb-4 sm:mb-5 flex items-center gap-2 pb-3 border-b border-slate-700/50">
-              <Zap size={18} className="text-cyan-400" /> Instrucciones
+          <div className="bg-slate-50/50 rounded-xl p-4 sm:p-6 mb-4 sm:mb-6 border border-slate-200">
+            <h3 className="text-base sm:text-lg font-semibold text-slate-900 mb-4 sm:mb-5 flex items-center gap-2 pb-3 border-b border-slate-200">
+              <div className="w-6 h-6 rounded-full bg-cyan-50 flex items-center justify-center">
+                <Zap size={14} className="text-cyan-600" />
+              </div>
+              Instrucciones
             </h3>
             <div className="space-y-2 sm:space-y-3">
               {faseActual.instrucciones.map((instr, idx) => {
@@ -633,50 +642,52 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
 
                 // Configuración de iconos y colores por tipo
                 const tipoConfig: Record<string, { icon: any, color: string, bg: string, border: string }> = {
-                  'PREPARACIÓN': { icon: Target, color: 'text-blue-400', bg: 'bg-blue-900/20', border: 'border-blue-500/30' },
-                  'ACCIÓN': { icon: Zap, color: 'text-cyan-400', bg: 'bg-cyan-900/20', border: 'border-cyan-500/30' },
-                  'RESPIRACIÓN': { icon: Wind, color: 'text-green-400', bg: 'bg-green-900/20', border: 'border-green-500/30' },
-                  'PREGUNTA': { icon: HelpCircle, color: 'text-yellow-400', bg: 'bg-yellow-900/20', border: 'border-yellow-500/30' },
-                  'REFLEXIÓN': { icon: Brain, color: 'text-purple-400', bg: 'bg-purple-900/20', border: 'border-purple-500/30' },
-                  'CONTEXTO': { icon: Sparkles, color: 'text-slate-400', bg: 'bg-slate-800/30', border: 'border-slate-600/30' },
-                  'TIEMPO': { icon: Clock, color: 'text-orange-400', bg: 'bg-orange-900/20', border: 'border-orange-500/30' },
-                  'REGISTRO': { icon: Edit3, color: 'text-pink-400', bg: 'bg-pink-900/20', border: 'border-pink-500/30' },
-                  'EJEMPLO': { icon: Sparkles, color: 'text-slate-400', bg: 'bg-slate-800/20', border: 'border-slate-600/20' },
-                  'ATENCIÓN': { icon: Eye, color: 'text-indigo-400', bg: 'bg-indigo-900/20', border: 'border-indigo-500/30' },
-                  'OBSERVACIÓN': { icon: Eye, color: 'text-indigo-400', bg: 'bg-indigo-900/20', border: 'border-indigo-500/30' },
-                  'EVALUACIÓN': { icon: Target, color: 'text-teal-400', bg: 'bg-teal-900/20', border: 'border-teal-500/30' },
-                  'RECONOCIMIENTO': { icon: Heart, color: 'text-rose-400', bg: 'bg-rose-900/20', border: 'border-rose-500/30' },
-                  'POSICIÓN': { icon: Target, color: 'text-blue-400', bg: 'bg-blue-900/20', border: 'border-blue-500/30' },
-                  'RITMO': { icon: Clock, color: 'text-orange-400', bg: 'bg-orange-900/20', border: 'border-orange-500/30' },
-                  'IMPORTANTE': { icon: AlertCircle, color: 'text-red-400', bg: 'bg-red-900/20', border: 'border-red-500/30' },
-                  'ESTRUCTURA': { icon: Target, color: 'text-slate-400', bg: 'bg-slate-800/30', border: 'border-slate-600/30' },
-                  'PARTE A': { icon: Sparkles, color: 'text-cyan-400', bg: 'bg-cyan-900/20', border: 'border-cyan-500/30' },
-                  'PARTE B': { icon: Sparkles, color: 'text-purple-400', bg: 'bg-purple-900/20', border: 'border-purple-500/30' },
-                  'PARTE C': { icon: Sparkles, color: 'text-green-400', bg: 'bg-green-900/20', border: 'border-green-500/30' },
-                  'INSTRUCCIÓN': { icon: Zap, color: 'text-cyan-400', bg: 'bg-cyan-900/20', border: 'border-cyan-500/30' },
-                  'FRASE': { icon: Heart, color: 'text-purple-300', bg: 'bg-purple-900/10', border: 'border-purple-500/20' },
-                  'SILENCIO': { icon: Wind, color: 'text-blue-300', bg: 'bg-blue-900/20', border: 'border-blue-500/30' },
-                  'VISUALIZACIÓN': { icon: Eye, color: 'text-indigo-400', bg: 'bg-indigo-900/20', border: 'border-indigo-500/30' },
-                  'AFIRMACIÓN': { icon: Sparkles, color: 'text-green-400', bg: 'bg-green-900/20', border: 'border-green-500/30' },
-                  'CAMBIO': { icon: Zap, color: 'text-amber-400', bg: 'bg-amber-900/20', border: 'border-amber-500/30' },
-                  'RALENTIZACIÓN': { icon: Clock, color: 'text-blue-400', bg: 'bg-blue-900/20', border: 'border-blue-500/30' },
-                  'ANCLAJE': { icon: Heart, color: 'text-rose-400', bg: 'bg-rose-900/20', border: 'border-rose-500/30' },
-                  'PRÁCTICA': { icon: Target, color: 'text-cyan-400', bg: 'bg-cyan-900/20', border: 'border-cyan-500/30' }
+                  'PREPARACIÓN': { icon: Target, color: 'text-blue-600', bg: 'bg-blue-50', border: 'border-blue-200' },
+                  'ACCIÓN': { icon: Zap, color: 'text-cyan-600', bg: 'bg-cyan-50', border: 'border-cyan-200' },
+                  'RESPIRACIÓN': { icon: Wind, color: 'text-green-600', bg: 'bg-green-50', border: 'border-green-200' },
+                  'PREGUNTA': { icon: HelpCircle, color: 'text-yellow-600', bg: 'bg-yellow-50', border: 'border-yellow-200' },
+                  'REFLEXIÓN': { icon: Brain, color: 'text-purple-600', bg: 'bg-purple-50', border: 'border-purple-200' },
+                  'CONTEXTO': { icon: Sparkles, color: 'text-slate-600', bg: 'bg-slate-100', border: 'border-slate-300' },
+                  'TIEMPO': { icon: Clock, color: 'text-orange-600', bg: 'bg-orange-50', border: 'border-orange-200' },
+                  'REGISTRO': { icon: Edit3, color: 'text-pink-600', bg: 'bg-pink-50', border: 'border-pink-200' },
+                  'EJEMPLO': { icon: Sparkles, color: 'text-slate-600', bg: 'bg-slate-100', border: 'border-slate-300' },
+                  'ATENCIÓN': { icon: Eye, color: 'text-indigo-600', bg: 'bg-indigo-50', border: 'border-indigo-200' },
+                  'OBSERVACIÓN': { icon: Eye, color: 'text-indigo-600', bg: 'bg-indigo-50', border: 'border-indigo-200' },
+                  'EVALUACIÓN': { icon: Target, color: 'text-teal-600', bg: 'bg-teal-50', border: 'border-teal-200' },
+                  'RECONOCIMIENTO': { icon: Heart, color: 'text-rose-600', bg: 'bg-rose-50', border: 'border-rose-200' },
+                  'POSICIÓN': { icon: Target, color: 'text-blue-600', bg: 'bg-blue-50', border: 'border-blue-200' },
+                  'RITMO': { icon: Clock, color: 'text-orange-600', bg: 'bg-orange-50', border: 'border-orange-200' },
+                  'IMPORTANTE': { icon: AlertCircle, color: 'text-red-600', bg: 'bg-red-50', border: 'border-red-200' },
+                  'ESTRUCTURA': { icon: Target, color: 'text-slate-600', bg: 'bg-slate-100', border: 'border-slate-300' },
+                  'PARTE A': { icon: Sparkles, color: 'text-cyan-600', bg: 'bg-cyan-50', border: 'border-cyan-200' },
+                  'PARTE B': { icon: Sparkles, color: 'text-purple-600', bg: 'bg-purple-50', border: 'border-purple-200' },
+                  'PARTE C': { icon: Sparkles, color: 'text-green-600', bg: 'bg-green-50', border: 'border-green-200' },
+                  'INSTRUCCIÓN': { icon: Zap, color: 'text-cyan-600', bg: 'bg-cyan-50', border: 'border-cyan-200' },
+                  'FRASE': { icon: Heart, color: 'text-purple-600', bg: 'bg-purple-50', border: 'border-purple-200' },
+                  'SILENCIO': { icon: Wind, color: 'text-blue-600', bg: 'bg-blue-50', border: 'border-blue-200' },
+                  'VISUALIZACIÓN': { icon: Eye, color: 'text-indigo-600', bg: 'bg-indigo-50', border: 'border-indigo-200' },
+                  'AFIRMACIÓN': { icon: Sparkles, color: 'text-green-600', bg: 'bg-green-50', border: 'border-green-200' },
+                  'CAMBIO': { icon: Zap, color: 'text-amber-600', bg: 'bg-amber-50', border: 'border-amber-200' },
+                  'RALENTIZACIÓN': { icon: Clock, color: 'text-blue-600', bg: 'bg-blue-50', border: 'border-blue-200' },
+                  'ANCLAJE': { icon: Heart, color: 'text-rose-600', bg: 'bg-rose-50', border: 'border-rose-200' },
+                  'PRÁCTICA': { icon: Target, color: 'text-cyan-600', bg: 'bg-cyan-50', border: 'border-cyan-200' }
                 };
 
-                const config = tipoConfig[tipo] || { icon: Zap, color: 'text-slate-400', bg: 'bg-slate-800/20', border: 'border-slate-600/20' };
+                const config = tipoConfig[tipo] || { icon: Zap, color: 'text-slate-600', bg: 'bg-slate-100', border: 'border-slate-300' };
                 const IconComponent = config.icon;
 
                 return (
-                  <div key={idx} className={`${config.bg} ${config.border} border rounded-lg p-2.5 sm:p-3 transition-all hover:scale-[1.01]`}>
-                    <div className="flex gap-2 sm:gap-3 items-start">
-                      <IconComponent size={18} className={`${config.color} flex-shrink-0 mt-0.5`} />
+                  <div key={idx} className={`${config.bg}/50 ${config.border} border rounded-xl p-3 sm:p-3.5 transition-all duration-200`}>
+                    <div className="flex gap-2.5 sm:gap-3 items-start">
+                      <div className={`w-5 h-5 rounded-full ${config.bg} flex items-center justify-center flex-shrink-0 mt-0.5`}>
+                        <IconComponent size={12} className={`${config.color}`} strokeWidth={2.5} />
+                      </div>
                       {tipo && (
-                        <span className={`${config.color} font-bold text-xs uppercase tracking-wide flex-shrink-0`}>
+                        <span className={`${config.color} font-semibold text-xs uppercase tracking-wide flex-shrink-0`}>
                           {tipo}:
                         </span>
                       )}
-                      <p className="text-slate-100 text-sm sm:text-base leading-relaxed flex-1">
+                      <p className="text-slate-800 text-sm sm:text-base leading-relaxed flex-1">
                         {texto || instr}
                       </p>
                     </div>
@@ -688,50 +699,59 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
 
           {/* Sub-fases (solo para fase 3) */}
           {faseActual.subFases && (
-            <div className="bg-slate-900/50 backdrop-blur-sm rounded-lg p-4 sm:p-6 mb-4 sm:mb-6 border border-purple-500/30">
-              <h3 className="text-base sm:text-lg font-bold text-purple-400 mb-4 sm:mb-5 pb-3 border-b border-purple-500/20">Partes del Reprocesamiento</h3>
-              <div className="space-y-4 sm:space-y-5">
+            <div className="bg-slate-50/50 rounded-xl p-4 sm:p-6 mb-4 sm:mb-6 border border-slate-200">
+              <h3 className="text-base sm:text-lg font-semibold text-slate-900 mb-4 sm:mb-5 pb-3 border-b border-slate-200 flex items-center gap-2">
+                <div className="w-6 h-6 rounded-full bg-purple-50 flex items-center justify-center">
+                  <Heart size={14} className="text-purple-600" />
+                </div>
+                Partes del Reprocesamiento
+              </h3>
+              <div className="space-y-4">
                 {faseActual.subFases.map((subFase, idx) => {
                   // Colores por parte: A=cyan, B=purple, C=green
                   const colores = [
-                    { bg: 'bg-cyan-900/20', titulo: 'text-cyan-300', border: 'border-cyan-500/30' },
-                    { bg: 'bg-purple-900/20', titulo: 'text-purple-300', border: 'border-purple-500/30' },
-                    { bg: 'bg-green-900/20', titulo: 'text-green-300', border: 'border-green-500/30' }
+                    { bg: 'bg-cyan-50/50', bgHeader: 'bg-cyan-50', titulo: 'text-cyan-700', border: 'border-cyan-200', iconColor: 'text-cyan-600' },
+                    { bg: 'bg-purple-50/50', bgHeader: 'bg-purple-50', titulo: 'text-purple-700', border: 'border-purple-200', iconColor: 'text-purple-600' },
+                    { bg: 'bg-green-50/50', bgHeader: 'bg-green-50', titulo: 'text-green-700', border: 'border-green-200', iconColor: 'text-green-600' }
                   ];
                   const color = colores[idx] || colores[0];
 
                   return (
-                    <div key={idx} className={`${color.bg} ${color.border} border rounded-lg p-3 sm:p-4`}>
-                      <h4 className={`font-bold ${color.titulo} mb-3 text-sm sm:text-base flex items-center gap-2`}>
-                        <Heart size={16} className={color.titulo} />
+                    <div key={idx} className={`${color.bg} ${color.border} border rounded-xl p-4 sm:p-5`}>
+                      <h4 className={`font-semibold ${color.titulo} mb-4 text-sm sm:text-base flex items-center gap-2`}>
+                        <div className={`w-6 h-6 rounded-full ${color.bgHeader} flex items-center justify-center`}>
+                          <Heart size={12} className={color.iconColor} strokeWidth={2.5} />
+                        </div>
                         {subFase.nombre}
                       </h4>
-                      <div className="space-y-2">
+                      <div className="space-y-2.5">
                         {subFase.instrucciones.map((instr, i) => {
                           const [tipo, texto] = instr.includes(':') ? instr.split(':', 2) : ['', instr];
 
                           const tipoConfig: Record<string, { icon: any, color: string, bg: string, border: string }> = {
-                            'INSTRUCCIÓN': { icon: Zap, color: 'text-cyan-400', bg: 'bg-cyan-900/20', border: 'border-cyan-500/30' },
-                            'FRASE': { icon: Heart, color: 'text-purple-300', bg: 'bg-purple-900/10', border: 'border-purple-500/20' },
-                            'SILENCIO': { icon: Wind, color: 'text-blue-300', bg: 'bg-blue-900/20', border: 'border-blue-500/30' },
-                            'VISUALIZACIÓN': { icon: Eye, color: 'text-indigo-400', bg: 'bg-indigo-900/20', border: 'border-indigo-500/30' },
-                            'AFIRMACIÓN': { icon: Sparkles, color: 'text-green-400', bg: 'bg-green-900/20', border: 'border-green-500/30' },
-                            'CAMBIO': { icon: Zap, color: 'text-amber-400', bg: 'bg-amber-900/20', border: 'border-amber-500/30' }
+                            'INSTRUCCIÓN': { icon: Zap, color: 'text-cyan-600', bg: 'bg-cyan-50', border: 'border-cyan-200' },
+                            'FRASE': { icon: Heart, color: 'text-purple-600', bg: 'bg-purple-50', border: 'border-purple-200' },
+                            'SILENCIO': { icon: Wind, color: 'text-blue-600', bg: 'bg-blue-50', border: 'border-blue-200' },
+                            'VISUALIZACIÓN': { icon: Eye, color: 'text-indigo-600', bg: 'bg-indigo-50', border: 'border-indigo-200' },
+                            'AFIRMACIÓN': { icon: Sparkles, color: 'text-green-600', bg: 'bg-green-50', border: 'border-green-200' },
+                            'CAMBIO': { icon: Zap, color: 'text-amber-600', bg: 'bg-amber-50', border: 'border-amber-200' }
                           };
 
-                          const config = tipoConfig[tipo] || { icon: Sparkles, color: 'text-slate-400', bg: 'bg-slate-800/20', border: 'border-slate-600/20' };
+                          const config = tipoConfig[tipo] || { icon: Sparkles, color: 'text-slate-600', bg: 'bg-slate-100', border: 'border-slate-300' };
                           const IconComponent = config.icon;
 
                           return (
-                            <div key={i} className={`${config.bg} ${config.border} border rounded-lg p-2 sm:p-2.5`}>
-                              <div className="flex gap-2 items-start">
-                                <IconComponent size={16} className={`${config.color} flex-shrink-0 mt-0.5`} />
+                            <div key={i} className={`${config.bg}/50 ${config.border} border rounded-xl p-3 sm:p-3.5 bg-white/60`}>
+                              <div className="flex gap-2.5 sm:gap-3 items-start">
+                                <div className={`w-5 h-5 rounded-full ${config.bg} flex items-center justify-center flex-shrink-0 mt-0.5`}>
+                                  <IconComponent size={12} className={`${config.color}`} strokeWidth={2.5} />
+                                </div>
                                 {tipo && (
-                                  <span className={`${config.color} font-bold text-xs uppercase tracking-wide flex-shrink-0`}>
+                                  <span className={`${config.color} font-semibold text-xs uppercase tracking-wide flex-shrink-0`}>
                                     {tipo}:
                                   </span>
                                 )}
-                                <p className="text-slate-100 text-xs sm:text-sm leading-relaxed flex-1">
+                                <p className="text-slate-800 text-xs sm:text-sm leading-relaxed flex-1">
                                   {texto || instr}
                                 </p>
                               </div>
@@ -748,12 +768,17 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
 
           {/* Input Fields */}
           {faseActual.inputs && faseActual.inputs.length > 0 && (
-            <div className="bg-slate-900/50 backdrop-blur-sm rounded-lg p-4 sm:p-6 mb-4 sm:mb-6 border border-slate-700/50">
-              <h3 className="text-base sm:text-lg font-bold text-cyan-400 mb-4 sm:mb-5 pb-3 border-b border-slate-700/50">Registra Aquí</h3>
-              <div className="space-y-4 sm:space-y-5">
+            <div className="bg-slate-50/50 rounded-xl p-4 sm:p-6 mb-4 sm:mb-6 border border-slate-200">
+              <h3 className="text-base sm:text-lg font-semibold text-slate-900 mb-4 sm:mb-5 pb-3 border-b border-slate-200 flex items-center gap-2">
+                <div className="w-6 h-6 rounded-full bg-cyan-50 flex items-center justify-center">
+                  <Edit3 size={14} className="text-cyan-600" />
+                </div>
+                Registra Aquí
+              </h3>
+              <div className="space-y-4">
                 {faseActual.inputs.map((input, idx) => (
-                  <div key={idx} className="bg-slate-800/30 rounded-lg p-3 sm:p-4">
-                    <label className="block text-sm sm:text-base font-semibold text-cyan-300 mb-2">
+                  <div key={idx} className="space-y-2">
+                    <label className="block text-sm sm:text-base font-medium text-slate-700">
                       {input.label}
                     </label>
                     {input.type === 'textarea' ? (
@@ -763,7 +788,7 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
                         placeholder={input.placeholder}
                         rows={3}
                         autoComplete="off"
-                        className="w-full bg-slate-700/50 border border-cyan-500/30 rounded-lg px-3 sm:px-4 py-2 sm:py-3 text-white text-sm sm:text-base placeholder-slate-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all resize-none"
+                        className="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-900 text-sm sm:text-base placeholder-slate-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none transition-all resize-none shadow-sm"
                         style={{ minHeight: '80px', maxHeight: '200px', touchAction: 'pan-y' }}
                       />
                     ) : (
@@ -776,7 +801,7 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
                         max={input.max}
                         inputMode={input.type === 'number' ? 'numeric' : 'text'}
                         autoComplete="off"
-                        className="w-full bg-slate-700/50 border border-cyan-500/30 rounded-lg px-3 sm:px-4 py-2 sm:py-3 text-white text-sm sm:text-base placeholder-slate-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all"
+                        className="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-900 text-sm sm:text-base placeholder-slate-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 focus:outline-none transition-all shadow-sm"
                       />
                     )}
                   </div>
@@ -787,16 +812,31 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
 
           {/* Resumen si es última fase */}
           {fase === fases.length - 1 && (
-            <div className="bg-gradient-to-r from-green-900/50 to-emerald-900/50 backdrop-blur-sm rounded-xl p-6 mb-6 border border-green-500/50 shadow-xl shadow-green-500/10">
-              <h3 className="text-lg font-bold text-green-300 mb-4 flex items-center gap-2">
-                <Check size={24} className="text-green-400" /> Resumen de Tu Sesión
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 mb-6 border border-green-200 shadow-sm">
+              <h3 className="text-lg font-semibold text-slate-900 mb-5 flex items-center gap-3">
+                <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
+                  <Check size={18} className="text-green-600" strokeWidth={2.5} />
+                </div>
+                Resumen de Tu Sesión
               </h3>
-              <div className="space-y-3 text-sm bg-slate-900/30 rounded-lg p-4 mb-4">
-                <p className="text-slate-200"><strong className="text-green-300">Fecha:</strong> {sessionData.fecha}</p>
-                <p className="text-slate-200"><strong className="text-green-300">Mi Creencia:</strong> "{sessionData.creencia}"</p>
-                <p className="text-slate-200"><strong className="text-green-300">Mi Cambio:</strong> <span className="text-xl font-bold text-green-400">{sessionData.intensidadInicial} → {sessionData.intensidadFinal}</span> <span className="text-green-400">(-{calcularCambio()} puntos)</span></p>
+              <div className="space-y-4 text-sm bg-white/80 rounded-xl p-5 mb-5 border border-green-100">
+                <div>
+                  <span className="text-slate-600 font-medium">Fecha:</span>{' '}
+                  <span className="text-slate-900 font-semibold">{sessionData.fecha}</span>
+                </div>
+                <div>
+                  <span className="text-slate-600 font-medium">Mi Creencia:</span>{' '}
+                  <span className="text-slate-900 font-semibold">"{sessionData.creencia}"</span>
+                </div>
+                <div>
+                  <span className="text-slate-600 font-medium">Mi Cambio:</span>{' '}
+                  <span className="text-2xl font-bold text-green-600">{sessionData.intensidadInicial} → {sessionData.intensidadFinal}</span>
+                  {' '}<span className="text-green-600 font-semibold">(-{calcularCambio()} puntos)</span>
+                </div>
                 {calcularCambio() >= 3 && (
-                  <p className="text-green-300 font-semibold mt-2">Cambio significativo! Tu sistema nervioso está reprocesando.</p>
+                  <div className="bg-green-100 border border-green-200 rounded-lg p-3 mt-3">
+                    <p className="text-green-800 font-semibold text-sm">¡Cambio significativo! Tu sistema nervioso está reprocesando.</p>
+                  </div>
                 )}
               </div>
                 <button
@@ -810,7 +850,7 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
                         mostrarNotificacion('❌ Error al copiar. Por favor, selecciona y copia manualmente.');
                       });
                   }}
-                  className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 px-6 py-3 rounded-lg font-bold transition shadow-lg shadow-green-500/50 text-sm sm:text-base touch-manipulation active:scale-95"
+                  className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 px-6 py-3 rounded-xl font-semibold transition-all duration-200 shadow-sm text-white text-sm sm:text-base touch-manipulation active:scale-[0.98]"
                 >
                   Copiar Mi Reporte de Sesión
                 </button>
@@ -820,35 +860,35 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
 
         {/* Error de Validación */}
         {errorValidacion && (
-          <div className="bg-red-900/50 border border-red-500/50 rounded-lg p-4 mb-4 flex items-start gap-3 animate-pulse">
-            <AlertCircle size={20} className="text-red-400 flex-shrink-0 mt-0.5" />
-            <p className="text-red-200 text-sm sm:text-base">{errorValidacion}</p>
+          <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-4 flex items-start gap-3">
+            <AlertCircle size={20} className="text-red-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
+            <p className="text-red-800 text-sm sm:text-base font-medium">{errorValidacion}</p>
           </div>
         )}
 
         {/* Navigation Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-between items-center">
+        <div className="flex flex-col sm:flex-row gap-3 justify-between items-center">
           <button
             onClick={faseAnterior}
             disabled={fase === 0}
-            className="flex items-center gap-2 px-6 py-3 bg-slate-700/50 hover:bg-slate-600 disabled:opacity-50 disabled:cursor-not-allowed rounded-lg font-bold transition border border-slate-600 w-full sm:w-auto touch-manipulation active:scale-95"
+            className="flex items-center gap-2 px-6 py-3 bg-white hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed rounded-xl font-semibold transition-all duration-200 border border-slate-300 w-full sm:w-auto touch-manipulation active:scale-[0.98] text-slate-700"
           >
-            <ChevronLeft size={20} /> Atrás
+            <ChevronLeft size={20} strokeWidth={2.5} /> Atrás
           </button>
 
           <div className="flex gap-2 flex-wrap justify-center">
             {fasesActuales.map((_f, idx) => (
               <div
                 key={idx}
-                className={`w-10 h-10 rounded-full font-bold transition-all flex items-center justify-center shadow-lg ${
+                className={`w-9 h-9 rounded-full font-semibold transition-all duration-300 flex items-center justify-center text-sm ${
                   idx === fase
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white scale-110 shadow-cyan-500/50'
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white scale-110 shadow-md'
                     : idx < fase
-                    ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-green-500/50'
-                    : 'bg-slate-700/50 text-slate-400 border border-slate-600'
+                    ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-sm'
+                    : 'bg-slate-200 text-slate-500 border border-slate-300'
                 }`}
               >
-                {idx < fase ? <Check size={20} /> : idx + 1}
+                {idx < fase ? <Check size={18} strokeWidth={3} /> : idx + 1}
               </div>
             ))}
           </div>
@@ -856,24 +896,24 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
           <button
             onClick={siguienteFase}
             disabled={fase === fasesActuales.length - 1}
-            className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 disabled:opacity-50 disabled:cursor-not-allowed rounded-lg font-bold transition shadow-lg shadow-cyan-500/50 w-full sm:w-auto touch-manipulation active:scale-95"
+            className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 disabled:opacity-40 disabled:cursor-not-allowed rounded-xl font-semibold transition-all duration-200 shadow-sm text-white w-full sm:w-auto touch-manipulation active:scale-[0.98]"
           >
-            Siguiente <ChevronRight size={20} />
+            Siguiente <ChevronRight size={20} strokeWidth={2.5} />
           </button>
         </div>
       </div>
 
       {/* Footer */}
       <div className="max-w-4xl mx-auto mt-8 sm:mt-12 text-center px-2">
-        <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-4 sm:p-6 shadow-lg">
+        <div className="bg-white border border-slate-200 rounded-xl p-4 sm:p-6 shadow-sm">
           <p className={`font-semibold mb-2 text-sm sm:text-base ${
-            modoSeleccionado === 'completa' ? 'text-cyan-400' : 'text-purple-400'
+            modoSeleccionado === 'completa' ? 'text-cyan-600' : 'text-purple-600'
           }`}>
             {modoSeleccionado === 'completa'
               ? 'Práctica TRSB Completa (12 minutos)'
               : 'Práctica TRSB Rápida (5 minutos)'}
           </p>
-          <p className="text-slate-300 text-xs sm:text-sm">
+          <p className="text-slate-600 text-xs sm:text-sm">
             {modoSeleccionado === 'completa'
               ? 'Sesión profunda para trabajar creencias desde su origen'
               : 'Práctica diaria para los 90 días de transformación'}
@@ -884,8 +924,8 @@ RECUERDA: La neuroplasticidad es acumulativa. Cada sesión recablea tu cerebro u
       {/* Toast Notification */}
       {mostrarToast && (
         <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 animate-slide-up">
-          <div className="bg-slate-800/95 backdrop-blur-md border border-cyan-500/50 rounded-xl px-6 py-4 shadow-2xl shadow-cyan-500/20 max-w-md mx-4">
-            <p className="text-white text-sm sm:text-base text-center leading-relaxed">
+          <div className="bg-slate-900/95 backdrop-blur-md border border-slate-700 rounded-xl px-6 py-4 shadow-2xl max-w-md mx-4">
+            <p className="text-white text-sm sm:text-base text-center leading-relaxed font-medium">
               {mensajeToast}
             </p>
           </div>

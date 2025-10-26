@@ -39,30 +39,30 @@ const StickyCtaBar: React.FC<StickyCtaBarProps> = ({ onScrollTo }) => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 transform transition-all duration-500 ease-out animate-slide-up">
+    <div className="fixed bottom-0 left-0 right-0 z-40 transform transition-all duration-300 ease-out animate-slide-up">
       {/* Gradiente de difuminado superior */}
-      <div className="absolute -top-8 left-0 right-0 h-8 bg-gradient-to-t from-slate-900 to-transparent pointer-events-none"></div>
+      <div className="absolute -top-8 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
 
-      <div className="bg-gradient-to-r from-slate-900/98 via-slate-800/98 to-slate-900/98 backdrop-blur-xl border-t border-cyan-500/30 shadow-2xl shadow-cyan-500/20">
+      <div className="bg-white/98 backdrop-blur-md border-t border-slate-200 shadow-sm">
         <div className="container mx-auto px-4 py-3 sm:py-4">
           <div className="flex items-center justify-between gap-3 sm:gap-4">
             {/* Precio y oferta */}
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-1">
-                <Sparkles className="w-4 h-4 text-yellow-400 flex-shrink-0 animate-pulse" />
-                <span className="text-yellow-400 text-xs sm:text-sm font-bold uppercase tracking-wide">
+                <Sparkles className="w-4 h-4 text-amber-500 flex-shrink-0" />
+                <span className="text-amber-600 text-xs sm:text-sm font-semibold uppercase tracking-wide">
                   Early Bird
                 </span>
               </div>
               <div className="flex items-baseline gap-2 flex-wrap">
-                <span className="text-white text-xl sm:text-2xl md:text-3xl font-black tracking-tight">
+                <span className="text-slate-900 text-xl sm:text-2xl md:text-3xl font-bold tracking-tight">
                   $8,000 MXN
                 </span>
-                <span className="text-slate-400 text-xs sm:text-sm line-through">
+                <span className="text-slate-500 text-xs sm:text-sm line-through">
                   $9,500 MXN
                 </span>
               </div>
-              <p className="text-slate-400 text-xs hidden sm:block">
+              <p className="text-slate-600 text-xs hidden sm:block">
                 {language === 'es' ? '+ Acceso GRATIS a grabaciones' : '+ FREE access to recordings'}
               </p>
             </div>
@@ -72,7 +72,7 @@ const StickyCtaBar: React.FC<StickyCtaBarProps> = ({ onScrollTo }) => {
               {/* Botón Ver Inversión (solo visible en pantallas grandes) */}
               <button
                 onClick={() => onScrollTo('inversion')}
-                className="hidden lg:flex items-center gap-2 bg-slate-700/80 hover:bg-slate-600 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-full text-sm transition-all duration-300 transform hover:scale-105 active:scale-95 border border-slate-600 hover:border-slate-500"
+                className="hidden lg:flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-900 font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-xl text-sm transition-all duration-200 active:scale-[0.98] border border-slate-200"
               >
                 {language === 'es' ? 'Ver Detalles' : 'View Details'}
                 <ArrowRight className="w-4 h-4" />
@@ -83,16 +83,13 @@ const StickyCtaBar: React.FC<StickyCtaBarProps> = ({ onScrollTo }) => {
                 href={`https://wa.me/+525579076626?text=${generateWhatsAppMessage()}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-full text-sm sm:text-base transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg shadow-green-500/30 touch-manipulation relative overflow-hidden group"
+                className="flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-xl text-sm sm:text-base transition-all duration-200 active:scale-[0.98] shadow-sm touch-manipulation"
               >
-                {/* Efecto de brillo animado */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
-
-                <WhatsAppIcon className="w-5 h-5 sm:w-5 sm:h-5 flex-shrink-0 relative z-10" />
-                <span className="relative z-10 hidden sm:inline">
+                <WhatsAppIcon className="w-5 h-5 sm:w-5 sm:h-5 flex-shrink-0" />
+                <span className="hidden sm:inline">
                   {language === 'es' ? '¡Inscríbete Ahora!' : 'Register Now!'}
                 </span>
-                <span className="relative z-10 sm:hidden">
+                <span className="sm:hidden">
                   {language === 'es' ? 'Inscríbete' : 'Register'}
                 </span>
               </a>
@@ -102,7 +99,7 @@ const StickyCtaBar: React.FC<StickyCtaBarProps> = ({ onScrollTo }) => {
       </div>
 
       {/* Safe area para iPhone */}
-      <div className="bg-slate-900/98 h-[env(safe-area-inset-bottom)]"></div>
+      <div className="bg-white/98 h-[env(safe-area-inset-bottom)]"></div>
     </div>
   );
 };
