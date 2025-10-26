@@ -244,7 +244,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
 
                 {/* --- Hotel Information Section --- */}
-                <AnimatedSection id="ubicacion" className="relative py-20 sm:py-24 md:py-28 overflow-hidden bg-gradient-to-b from-white to-slate-50" delay={150}>
+                <AnimatedSection id="ubicacion" className="relative py-24 sm:py-28 md:py-32 overflow-hidden bg-gradient-to-b from-white to-slate-50" delay={150}>
 
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         {/* Header */}
@@ -355,7 +355,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
 
                 {/* --- Online Modality Benefits --- */}
-                <AnimatedSection className="relative py-20 sm:py-24 md:py-28 overflow-hidden bg-white" delay={150}>
+                <AnimatedSection className="relative py-24 sm:py-28 md:py-32 overflow-hidden bg-white" delay={150}>
 
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         {/* Header */}
@@ -442,7 +442,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
                 
                 {/* --- Webinars Section --- */}
-                <AnimatedSection id="webinars" className="bg-white py-12 sm:py-16 md:py-20" delay={250}>
+                <AnimatedSection id="webinars" className="bg-white py-16 sm:py-20 md:py-24" delay={250}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-6 sm:mb-8">
                             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4 leading-tight">
@@ -470,7 +470,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
                 
                 {/* --- Who is it for Section --- */}
-                <AnimatedSection id="para-quien" className="bg-white py-20 sm:py-24 md:py-28" delay={400}>
+                <AnimatedSection id="para-quien" className="bg-white py-24 sm:py-28 md:py-32" delay={400}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-slate-900 leading-tight">{t.whoIsItFor.title}</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-7xl mx-auto">
@@ -483,7 +483,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
                 
                 {/* --- Results Section --- */}
-                <AnimatedSection id="resultados" className="bg-gradient-to-b from-slate-50 to-white py-20 sm:py-24 md:py-28" delay={600}>
+                <AnimatedSection id="resultados" className="bg-gradient-to-b from-slate-50 to-white py-24 sm:py-28 md:py-32" delay={600}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="flex flex-col sm:flex-row items-center justify-center text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8 sm:mb-12 text-slate-900 leading-tight tracking-tight">
                             <SparklesIcon className="w-6 h-6 sm:w-8 sm:h-8 mr-0 sm:mr-3 mb-2 sm:mb-0 text-amber-500" />
@@ -516,7 +516,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
 
                 {/* --- Testimonials Section --- */}
-                <AnimatedSection id="testimonios" className="bg-white py-20 sm:py-24 md:py-28" delay={800}>
+                <AnimatedSection id="testimonios" className="bg-white py-24 sm:py-28 md:py-32" delay={800}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-900 leading-tight">{t.testimonials.title}</h2>
                         <p className="text-center text-base sm:text-lg text-slate-600 mt-4 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">{t.testimonials.subtitle}</p>
@@ -579,7 +579,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection> */}
 
                 {/* --- Includes Section --- */}
-                <AnimatedSection id="incluye" className="bg-white py-20 sm:py-24 md:py-28" delay={1000}>
+                <AnimatedSection id="incluye" className="bg-white py-24 sm:py-28 md:py-32" delay={1000}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-4 sm:mb-6 text-slate-900 leading-tight tracking-tight">
                             {t.includes.title}
@@ -601,7 +601,7 @@ const AppContent: React.FC = () => {
                 </AnimatedSection>
 
                 {/* --- Extensions & Investment Section --- */}
-                 <AnimatedSection id="inversion" className="py-8 sm:py-12 md:py-16 lg:py-24 bg-gradient-to-b from-slate-50 to-white" delay={1100}>
+                 <AnimatedSection id="inversion" className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gradient-to-b from-slate-50 to-white" delay={1100}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                         <h2 className="flex flex-col sm:flex-row items-center justify-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-slate-900 mb-3 sm:mb-4 leading-tight tracking-tight">
                             <GemIcon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 mr-0 sm:mr-3 mb-2 sm:mb-0 text-blue-600" />
