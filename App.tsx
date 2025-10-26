@@ -243,6 +243,9 @@ const AppContent: React.FC = () => {
                     </div>
                 </AnimatedSection>
 
+                {/* Divider */}
+                <div className="w-full border-t border-slate-200"></div>
+
                 {/* --- Hotel Information Section --- */}
                 <AnimatedSection id="ubicacion" className="relative py-24 sm:py-28 md:py-32 overflow-hidden bg-gradient-to-b from-white to-slate-50" delay={150}>
 
@@ -353,6 +356,9 @@ const AppContent: React.FC = () => {
                         </div>
                     </div>
                 </AnimatedSection>
+
+                {/* Divider */}
+                <div className="w-full border-t border-slate-200"></div>
 
                 {/* --- Online Modality Benefits --- */}
                 <AnimatedSection className="relative py-24 sm:py-28 md:py-32 overflow-hidden bg-white" delay={150}>
@@ -468,6 +474,9 @@ const AppContent: React.FC = () => {
                         </div>
                     </div>
                 </AnimatedSection>
+
+                {/* Divider */}
+                <div className="w-full border-t border-slate-200"></div>
                 
                 {/* --- Who is it for Section --- */}
                 <AnimatedSection id="para-quien" className="bg-white py-24 sm:py-28 md:py-32" delay={400}>
@@ -481,6 +490,9 @@ const AppContent: React.FC = () => {
                         </div>
                     </div>
                 </AnimatedSection>
+
+                {/* Divider */}
+                <div className="w-full border-t border-slate-200"></div>
                 
                 {/* --- Results Section --- */}
                 <AnimatedSection id="resultados" className="bg-gradient-to-b from-slate-50 to-white py-24 sm:py-28 md:py-32" delay={600}>
@@ -514,6 +526,9 @@ const AppContent: React.FC = () => {
                         </div>
                     </div>
                 </AnimatedSection>
+
+                {/* Divider */}
+                <div className="w-full border-t border-slate-200"></div>
 
                 {/* --- Testimonials Section --- */}
                 <AnimatedSection id="testimonios" className="bg-white py-24 sm:py-28 md:py-32" delay={800}>
@@ -578,6 +593,9 @@ const AppContent: React.FC = () => {
                     </div>
                 </AnimatedSection> */}
 
+                {/* Divider */}
+                <div className="w-full border-t border-slate-200"></div>
+
                 {/* --- Includes Section --- */}
                 <AnimatedSection id="incluye" className="bg-white py-24 sm:py-28 md:py-32" delay={1000}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -599,6 +617,9 @@ const AppContent: React.FC = () => {
                         </div>
                     </div>
                 </AnimatedSection>
+
+                {/* Divider */}
+                <div className="w-full border-t border-slate-200"></div>
 
                 {/* --- Extensions & Investment Section --- */}
                  <AnimatedSection id="inversion" className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gradient-to-b from-slate-50 to-white" delay={1100}>
