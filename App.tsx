@@ -137,7 +137,7 @@ const AppContent: React.FC = () => {
             <main>
 
                 {/* --- Hero Section --- */}
-                <section className="relative min-h-screen flex items-center justify-center text-center px-4 py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden bg-gradient-to-b from-white to-slate-50">
+                <section className="relative min-h-[90vh] flex items-center justify-center text-center px-4 py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden bg-gradient-to-b from-white to-slate-50">
                     <div className="absolute inset-0 bg-gradient-to-b from-white to-slate-50"></div>
                     <div className="relative z-10 max-w-6xl mx-auto">
                         <AnimatedSection>
