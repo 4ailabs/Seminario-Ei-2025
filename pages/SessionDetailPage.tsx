@@ -61,12 +61,12 @@ const SessionDetailPage: React.FC<SessionDetailPageProps> = ({ sessions }) => {
 
   if (!session) {
     return (
-      <div className="min-h-screen bg-slate-900 text-slate-300 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-800 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-white mb-4">Sesión no encontrada</h1>
+          <h1 className="text-2xl font-semibold text-slate-900 mb-4">Sesión no encontrada</h1>
           <button
             onClick={() => navigate('/')}
-            className="px-6 py-3 bg-cyan-400 text-slate-900 rounded-lg hover:bg-cyan-300 transition-colors font-medium"
+            className="px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all duration-200 font-medium active:scale-[0.98]"
           >
             Volver al inicio
           </button>
@@ -80,7 +80,7 @@ const SessionDetailPage: React.FC<SessionDetailPageProps> = ({ sessions }) => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-900 text-slate-300">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-800">
       <SessionHeader
         sessionNumber={session.id}
         title={session.title}
@@ -106,11 +106,11 @@ const SessionDetailPage: React.FC<SessionDetailPageProps> = ({ sessions }) => {
           {/* <MaterialsNeeded materials={session.materials} /> */}
           
           {/* Navigation between sessions */}
-          <div className="flex justify-between items-center pt-8 border-t border-slate-700">
+          <div className="flex justify-between items-center pt-8 border-t border-slate-200">
             {sessionId > 1 ? (
               <button
                 onClick={() => navigate(`/sesion/${sessionId - 1}`)}
-                className="flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-300 text-slate-700 rounded-xl hover:bg-slate-50 transition-all duration-200 active:scale-[0.98]"
               >
                 ← Sesión {sessionId - 1}
               </button>
@@ -121,7 +121,7 @@ const SessionDetailPage: React.FC<SessionDetailPageProps> = ({ sessions }) => {
             {sessionId < 5 ? (
               <button
                 onClick={() => navigate(`/sesion/${sessionId + 1}`)}
-                className="flex items-center gap-2 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-xl transition-all duration-200 active:scale-[0.98] shadow-sm"
               >
                 Sesión {sessionId + 1} →
               </button>
