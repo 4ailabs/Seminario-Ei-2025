@@ -642,8 +642,8 @@ const AppContent: React.FC = () => {
                                 <p className="text-lg sm:text-xl md:text-2xl font-bold text-slate-500 line-through">{t.investment.regularPrice}</p>
                             </div>
                             <p className="text-slate-700 mb-3 sm:mb-4 text-xs sm:text-sm md:text-base leading-relaxed px-2 font-medium">{t.investment.includes}</p>
-                            <div className="bg-cyan-50 p-3 sm:p-4 rounded-xl border border-cyan-200 mb-4 sm:mb-6 md:mb-8">
-                                <p className="text-cyan-800 text-xs sm:text-sm md:text-base font-medium text-center leading-relaxed">
+                            <div className="bg-slate-50 p-3 sm:p-4 rounded-xl border border-slate-200 mb-4 sm:mb-6 md:mb-8">
+                                <p className="text-slate-700 text-xs sm:text-sm md:text-base font-medium text-center leading-relaxed">
                                     {t.investment.reservationInfo}
                                 </p>
                             </div>
