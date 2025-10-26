@@ -657,8 +657,8 @@ const AppContent: React.FC = () => {
                         
                         {/* Additional Note */}
                         <div className="mt-8 max-w-2xl mx-auto">
-                            <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-4">
-                                <p className="text-slate-400 text-xs sm:text-sm text-center leading-relaxed">
+                            <div className="bg-slate-50 border border-slate-200 rounded-xl p-4">
+                                <p className="text-slate-600 text-xs sm:text-sm text-center leading-relaxed">
                                     <span className="text-slate-500">*</span> {language === 'es' 
                                         ? 'Si pagas después del 16 de octubre, las grabaciones tendrán costo extra tanto para modalidad presencial como online'
                                         : 'If you pay after October 16, recordings will have an extra cost for both in-person and online modalities'
