@@ -614,14 +614,6 @@ const AppContent: React.FC = () => {
                                 {language === 'es' ? 'CUPOS LIMITADOS' : 'LIMITED SPOTS'}
                             </div>
 
-                            {/* Countdown Timer */}
-                            <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-amber-50 rounded-xl border border-amber-200">
-                                <p className="text-center text-amber-800 text-xs sm:text-sm font-semibold mb-2 sm:mb-3">
-                                    {language === 'es' ? '¡Oferta Early Bird termina en!' : 'Early Bird Offer ends in!'}
-                                </p>
-                                <CountdownTimer targetDate="2025-10-16T23:59:59" />
-                            </div>
-
                             <div className="mb-3 sm:mb-4 md:mb-6">
                                 <p className="text-sm sm:text-base md:text-lg font-semibold text-amber-600">{t.investment.earlyBird}</p>
                                 <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">{t.investment.earlyBirdPrice}</p>
