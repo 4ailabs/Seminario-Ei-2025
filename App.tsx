@@ -69,6 +69,8 @@ import {
   RefreshCwIcon
 } from './components/Icons';
 import { sessionsData } from './data/sessionsData';
+import EquipoPage from './pages/EquipoPage';
+import ProtectedRoute from './components/ProtectedRoute';
 
 
 
@@ -119,6 +121,7 @@ const BackToTop: React.FC = () => {
 // --- Main App Component ---
 const AppContent: React.FC = () => {
     const { language, t } = useLanguage();
+    const navigate = useNavigate();
     
     const handleScrollTo = (id: string) => {
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -713,6 +716,13 @@ const AppContent: React.FC = () => {
                         <p className="text-xs sm:text-sm text-slate-500 text-center">
                             © 2025 Seminario Internacional de Inteligencia Energética
                         </p>
+                        <button
+                            onClick={() => navigate('/equipo')}
+                            className="text-xs text-slate-400 hover:text-slate-500 transition-colors duration-200 opacity-50 hover:opacity-70 mt-2"
+                            title="Acceso Equipo"
+                        >
+                            🔒 Equipo
+                        </button>
                     </div>
                 </div>
             </footer>
@@ -737,6 +747,11 @@ const App: React.FC = () => {
                     <Route path="/webinar-2" element={<WebinarLandingPage />} />
                     <Route path="/galeria" element={<GalleryPage />} />
                     <Route path="/trsb" element={<TRSBApp />} />
+                    <Route path="/equipo" element={
+                        <ProtectedRoute>
+                            <EquipoPage />
+                        </ProtectedRoute>
+                    } />
                 </Routes>
             </Router>
         </LanguageProvider>
