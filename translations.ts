@@ -184,19 +184,23 @@ export const translations: Record<string, Translations> = {
           topics: [
             {
               title: "Bienvenida y Encuadre del Seminario",
-              description: "Presentación del programa, objetivos de transformación y creación del contenedor seguro."
+              description: "Presentación del programa completo, objetivos de transformación y creación del contenedor seguro. Introducción al marco teórico científico basado en neuroplasticidad, Polyvagal Theory y bases de reprocesamiento bilateral."
             },
             {
-              title: "El Cerebro Reactivo",
-              description: "Neurobiología del sistema de supervivencia y cómo transformar patrones automáticos en decisiones conscientes."
+              title: "El Cerebro Reactivo: Neurobiología del Sistema de Supervivencia",
+              description: "Comprensión profunda de cómo el sistema nervioso procesa información emocional. Exploración de la neurobiología del sistema de supervivencia y adaptación, y cómo transformar patrones automáticos en decisiones conscientes mediante neuroplasticidad aplicada."
             },
             {
               title: "TRSB: Técnica de Reprocesamiento Somato-Cognitivo Bilateral",
-              description: "Fundamentos, las 4 etapas de transformación, protocolo completo y práctica guiada en parejas."
+              description: "Protocolo completo de reprocesamiento bilateral basado en investigación científica. Aprendizaje de fundamentos, las 4 etapas de transformación (identificación, procesamiento, integración, consolidación), protocolo paso a paso y práctica supervisada con casos reales."
+            },
+            {
+              title: "Técnicas de Visualización Neurofisiológica",
+              description: "Métodos para crear estados óptimos mediante visualización y regulación del sistema nervioso autónomo. Aprendizaje de técnicas de priming neurofisiológico para estados de alta performance."
             },
             {
               title: "PONS: Sistema de Posicionamiento Neurocognitivo",
-              description: "Las 8 posiciones de acceso visual, anclaje espacial de recursos e integración práctica."
+              description: "Sistema completo con las 8 posiciones de acceso visual para estados internos. Aprendizaje de anclaje espacial de recursos internos, técnicas de recuperación de recursos cuando se necesitan, e integración práctica en contextos terapéuticos y de vida cotidiana."
             },
           ]
         },
@@ -205,24 +209,28 @@ export const translations: Record<string, Translations> = {
           date: "6 de Diciembre 2025 (Presencial/Online)",
           topics: [
             {
-              title: "Bioenergética Holográfica",
-              description: "Los 13 hologramas bioenergéticos, las 20 sensaciones viscerales y dominio del test muscular."
+              title: "Bioenergética Holográfica: Sistema de Evaluación Energética",
+              description: "Dominio del sistema de 13 hologramas bioenergéticos y su correlación clínica. Identificación de las 20 sensaciones viscerales como indicadores diagnósticos precisos. Aplicación del protocolo de test muscular para evaluación bioenergética y comprensión de la conexión entre síntomas físicos y patrones energéticos."
             },
             {
-              title: "Protocolo de Rastreo Completo",
-              description: "Recesión de edad, búsqueda de sensación visceral, ámbito transgeneracional y demostración en vivo."
+              title: "Protocolo de Rastreo Completo: Del Síntoma al Origen",
+              description: "Protocolo sistemático que incluye recesión de edad para acceder a experiencias formativas, búsqueda de sensación visceral raíz, rastreo transgeneracional de patrones familiares y lealtades invisibles, integración de niveles (Presente, Pasado, Sistema), y demostración en vivo con casos reales de participantes voluntarios."
             },
             {
-              title: "Context Engineering: El Arte de la Pregunta",
-              description: "Esquema de Contexto de 4 Niveles (Presente, Pasado, Transgeneracional, Sistema Actual) y rastreo guiado con caso real."
+              title: "Context Engineering: El Arte de la Pregunta Estratégica",
+              description: "Dominio del Esquema de Contexto de 4 Niveles: Nivel Presente (patrones actuales), Nivel Pasado (orígenes históricos), Nivel Transgeneracional (patrones familiares), Nivel Sistema Actual (dinámicas que sostienen el patrón). Aprendizaje de formulación de preguntas estratégicas de alta calidad y rastreo guiado con casos reales."
             },
             {
-              title: "Los 4 Protocolos Bioenergéticos",
-              description: "Protocolo Alpha (síntomas físicos), Beta (conflictos emocionales), Gamma (dinámicas sistémicas), Delta (integración existencial) y algoritmo de decisión."
+              title: "Los 4 Protocolos Bioenergéticos: Intervención Diferenciada",
+              description: "Protocolo Alpha para síntomas físicos y manifestaciones corporales. Protocolo Beta para conflictos emocionales y bloqueos afectivos. Protocolo Gamma para dinámicas sistémicas y relaciones. Protocolo Delta para integración existencial y propósito. Algoritmo de decisión terapéutica para elegir el protocolo adecuado según cada caso."
+            },
+            {
+              title: "Context Bioenergetics: Fusión Metodológica",
+              description: "Integración de Bioenergética y Context Engineering para diseñar intervenciones terapéuticas de precisión. Aplicación práctica de la fusión metodológica en casos complejos y demostración de cómo combinar ambas herramientas para resultados profundos."
             },
             {
               title: "Sorpresa Especial",
-              description: "Introducción a una herramienta transformadora que trabajaremos al día siguiente."
+              description: "Introducción a una herramienta transformadora que trabajaremos al día siguiente. Preparación y contexto para la sesión 3."
             },
           ]
         },
@@ -404,8 +412,8 @@ export const translations: Record<string, Translations> = {
         },
         {
           icon: "📖",
-          title: "Manuales Completos",
-          description: "De todas las metodologías"
+          title: "Manuales Profesionales Completos",
+          description: "Manual de TRSB, Context Bioenergetics, Context Engineering, 4 Protocolos, Protocolo de las 7 Excepciones, Diseño de Rituales, Programa de 90 días, LSP Insight System"
         },
         {
           icon: "🎥",
@@ -419,13 +427,13 @@ export const translations: Record<string, Translations> = {
         },
         {
           icon: "📅",
-          title: "Sesiones Grupales Semanales",
-          description: "Durante 90 días"
+          title: "12 Sesiones Grupales Semanales",
+          description: "Seguimiento continuo durante 90 días post-seminario"
         },
         {
           icon: "🤖",
           title: "5 Apps de IA Personalizadas",
-          description: "Asistentes inteligentes disponibles 24/7"
+          description: "1. Asistente de Context Engineering, 2. Generador de Miracle Question, 3. Diseñador de Rituales Matutinos, 4. Coach de los 3 Elementos de Decisión, 5. Compañero de seguimiento de 90 días"
         },
         {
           icon: "🏆",
@@ -537,19 +545,23 @@ export const translations: Record<string, Translations> = {
           topics: [
             {
               title: "Welcome and Seminar Framework",
-              description: "Program presentation, transformation objectives, and creation of a safe container."
+              description: "Complete program presentation, transformation objectives, and creation of a safe container. Introduction to scientific theoretical framework based on neuroplasticity, Polyvagal Theory, and bilateral reprocessing foundations."
             },
             {
-              title: "The Reactive Brain",
-              description: "Neurobiology of the survival system and how to transform automatic patterns into conscious decisions."
+              title: "The Reactive Brain: Neurobiology of the Survival System",
+              description: "Deep understanding of how the nervous system processes emotional information. Exploration of the neurobiology of survival and adaptation systems, and how to transform automatic patterns into conscious decisions through applied neuroplasticity."
             },
             {
               title: "TRSB: Bilateral Somato-Cognitive Reprocessing Technique",
-              description: "Fundamentals, the 4 stages of transformation, complete protocol, and guided practice in pairs."
+              description: "Complete bilateral reprocessing protocol based on scientific research. Learning fundamentals, the 4 stages of transformation (identification, processing, integration, consolidation), step-by-step protocol, and supervised practice with real cases."
+            },
+            {
+              title: "Neurophysiological Visualization Techniques",
+              description: "Methods to create optimal states through visualization and regulation of the autonomic nervous system. Learning neurophysiological priming techniques for high-performance states."
             },
             {
               title: "PONS: Neurocognitive Positioning System",
-              description: "The 8 visual access positions, spatial anchoring of resources, and practical integration."
+              description: "Complete system with 8 visual access positions for internal states. Learning spatial anchoring of internal resources, techniques for resource recovery when needed, and practical integration in therapeutic and daily life contexts."
             },
           ]
         },
@@ -558,24 +570,28 @@ export const translations: Record<string, Translations> = {
           date: "December 6, 2025 (In-Person/Online)",
           topics: [
             {
-              title: "Holographic Bioenergetics",
-              description: "The 13 bioenergetic holograms, the 20 visceral sensations, and mastery of muscle testing."
+              title: "Holographic Bioenergetics: Energy Evaluation System",
+              description: "Mastery of the 13 bioenergetic holograms system and its clinical correlation. Identification of the 20 visceral sensations as precise diagnostic indicators. Application of muscle testing protocol for bioenergetic evaluation and understanding the connection between physical symptoms and energy patterns."
             },
             {
-              title: "Complete Tracking Protocol",
-              description: "Age regression, visceral sensation search, transgenerational scope, and live demonstration."
+              title: "Complete Tracking Protocol: From Symptom to Origin",
+              description: "Systematic protocol including age regression to access formative experiences, root visceral sensation search, transgenerational tracking of family patterns and invisible loyalties, integration of levels (Present, Past, System), and live demonstration with real cases from volunteer participants."
             },
             {
-              title: "Context Engineering: The Art of Questioning",
-              description: "4-Level Context Schema (Present, Past, Transgenerational, Current System) and guided tracking with a real case."
+              title: "Context Engineering: The Art of Strategic Questioning",
+              description: "Mastery of the 4-Level Context Schema: Present Level (current patterns), Past Level (historical origins), Transgenerational Level (family patterns), Current System Level (dynamics that sustain the pattern). Learning to formulate high-quality strategic questions and guided tracking with real cases."
             },
             {
-              title: "The 4 Bioenergetic Protocols",
-              description: "Alpha Protocol (physical symptoms), Beta (emotional conflicts), Gamma (systemic dynamics), Delta (existential integration), and decision algorithm."
+              title: "The 4 Bioenergetic Protocols: Differentiated Intervention",
+              description: "Alpha Protocol for physical symptoms and bodily manifestations. Beta Protocol for emotional conflicts and affective blockages. Gamma Protocol for systemic dynamics and relationships. Delta Protocol for existential integration and purpose. Therapeutic decision algorithm to choose the appropriate protocol according to each case."
+            },
+            {
+              title: "Context Bioenergetics: Methodological Fusion",
+              description: "Integration of Bioenergetics and Context Engineering to design precision therapeutic interventions. Practical application of methodological fusion in complex cases and demonstration of how to combine both tools for profound results."
             },
             {
               title: "Special Surprise",
-              description: "Introduction to a transformative tool that we will work with the next day."
+              description: "Introduction to a transformative tool that we will work with the next day. Preparation and context for session 3."
             },
           ]
         },
@@ -757,8 +773,8 @@ export const translations: Record<string, Translations> = {
         },
         {
           icon: "📖",
-          title: "Complete Manuals",
-          description: "Of all methodologies"
+          title: "Complete Professional Manuals",
+          description: "TRSB Manual, Context Bioenergetics, Context Engineering, 4 Protocols, 7 Exceptions Protocol, Ritual Design, 90-Day Program, LSP Insight System"
         },
         {
           icon: "🎥",
@@ -772,13 +788,13 @@ export const translations: Record<string, Translations> = {
         },
         {
           icon: "📅",
-          title: "Weekly Group Sessions",
-          description: "For 90 days"
+          title: "12 Weekly Group Sessions",
+          description: "Continuous follow-up for 90 days post-seminar"
         },
         {
           icon: "🤖",
           title: "5 Personalized AI Apps",
-          description: "Intelligent assistants available 24/7"
+          description: "1. Context Engineering Assistant, 2. Miracle Question Generator, 3. Morning Ritual Designer, 4. 3 Elements Decision Coach, 5. 90-Day Follow-up Companion"
         },
         {
           icon: "🏆",

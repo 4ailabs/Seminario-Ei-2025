@@ -64,10 +64,10 @@ const ProgramSection: React.FC = () => {
 
     return (
       <button
-        className={`w-full text-left p-3 sm:p-4 rounded-xl transition-all duration-200 border relative overflow-hidden group touch-manipulation ${
+        className={`w-full text-left p-3 sm:p-4 rounded-xl transition-all duration-200 border relative overflow-hidden group touch-manipulation min-h-[60px] sm:min-h-[auto] active:scale-[0.98] ${
           activeTab === session
             ? `bg-gradient-to-br ${getSessionColor(session)} text-white shadow-sm border-transparent`
-            : 'bg-white hover:bg-slate-50 text-slate-700 border-slate-200 hover:border-slate-300 hover:shadow-sm'
+            : 'bg-white hover:bg-slate-50 active:bg-slate-100 text-slate-700 border-slate-200 hover:border-slate-300 hover:shadow-sm'
         }`}
         onClick={() => setActiveTab(session)}
       >
@@ -127,8 +127,8 @@ const ProgramSection: React.FC = () => {
         </div>
 
         <div className="lg:w-2/3">
-          <div className="bg-white p-6 sm:p-8 rounded-2xl border-2 border-slate-200 shadow-md hover:shadow-lg transition-shadow duration-300">
-            <div className="flex items-center gap-3 mb-6">
+          <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl border-2 border-slate-200 shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div className="flex items-center gap-3 mb-4 sm:mb-6">
               <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br ${
                 activeTab === 1 ? 'from-blue-500 to-cyan-500' :
                 activeTab === 2 ? 'from-purple-500 to-pink-500' :
@@ -148,13 +148,13 @@ const ProgramSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="space-y-3 mb-6">
+            <div className="space-y-4 sm:space-y-3 mb-6">
               {scheduleData[activeTab as keyof typeof scheduleData].topics.map((topic, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="text-sm sm:text-base font-semibold text-slate-900 mb-1">{topic?.title || 'Tema'}</h4>
-                    <p className="text-slate-600 text-xs sm:text-sm">{topic?.description || 'Descripción no disponible'}</p>
+                <div key={index} className="flex items-start gap-3 sm:gap-4">
+                  <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2.5 flex-shrink-0"></div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="text-sm sm:text-base font-semibold text-slate-900 mb-1.5 sm:mb-1 leading-tight">{topic?.title || 'Tema'}</h4>
+                    <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">{topic?.description || 'Descripción no disponible'}</p>
                   </div>
                 </div>
               ))}
@@ -162,7 +162,7 @@ const ProgramSection: React.FC = () => {
 
             <button
               onClick={handleViewSessions}
-              className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 active:scale-[0.98]"
+              className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 sm:py-4 px-6 rounded-xl transition-all duration-200 active:scale-[0.98] touch-manipulation min-h-[48px] text-sm sm:text-base"
             >
               Ver Sesión {activeTab}
             </button>

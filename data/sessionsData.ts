@@ -36,13 +36,14 @@ export const sessionsData: SessionData[] = [
     date: "5 de Diciembre 2025",
     time: "10:00 AM - 6:00 PM",
     location: "Hotel Galería Plaza Reforma, Ciudad de México (Presencial/Online)",
-    description: "Primera sesión enfocada en transformar el cerebro reactivo y dominar técnicas de reprocesamiento bilateral y posicionamiento neurocognitivo.",
+    description: "La primera sesión establece los fundamentos neurobiológicos de la transformación consciente. Los participantes comprenderán cómo el sistema nervioso procesa información emocional y aprenderán protocolos de reprocesamiento bilateral basados en investigación científica actualizada.",
     objectives: [
-      "Crear el contenedor seguro y establecer objetivos de transformación",
-      "Comprender la neurobiología del sistema de supervivencia",
-      "Dominar la técnica TRSB: Técnica de Reprocesamiento Somato-Cognitivo Bilateral",
-      "Aprender el sistema PONS: Posicionamiento Neurocognitivo",
-      "Transformar patrones automáticos en decisiones conscientes"
+      "Comprender la neurobiología del sistema de supervivencia y adaptación",
+      "Dominar técnicas de visualización neurofisiológica para estados óptimos",
+      "Aprender TRSB: Técnica de Reprocesamiento Somato-Cognitivo Bilateral con sus 4 etapas",
+      "Dominar PONS: Sistema de Posicionamiento Neurocognitivo con las 8 posiciones de acceso visual",
+      "Practicar protocolos de reprocesamiento en sesiones supervisadas con casos reales",
+      "Transformar patrones automáticos en decisiones conscientes mediante neuroplasticidad aplicada"
     ],
     multimedia: [
       {
@@ -85,93 +86,110 @@ export const sessionsData: SessionData[] = [
       {
         id: "tema-1-1",
         title: "Bienvenida y Encuadre del Seminario",
-        description: "Presentación del programa, objetivos de transformación y creación del contenedor seguro.",
+        description: "Presentación del programa, objetivos de transformación y creación del contenedor seguro. Establecimiento de fundamentos neurobiológicos de la transformación consciente.",
         duration: "1 hora",
         subTopics: [
           {
             title: "Presentación del programa",
-            description: "Estructura completa del seminario y metodologías"
+            description: "Estructura completa del seminario, metodologías y marco teórico científico"
           },
           {
             title: "Objetivos de transformación",
-            description: "Establecimiento de metas y expectativas"
+            description: "Establecimiento de metas, expectativas y compromiso con el proceso de 90 días"
           },
           {
             title: "Creación del contenedor seguro",
-            description: "Fundamentos para un espacio de trabajo seguro y transformador"
+            description: "Fundamentos para un espacio de trabajo seguro y transformador basado en neurociencia"
+          },
+          {
+            title: "Marco teórico y científico",
+            description: "Introducción a neuroplasticidad, Polyvagal Theory, y bases de reprocesamiento bilateral"
           }
         ]
       },
       {
         id: "tema-1-2",
-        title: "El Cerebro Reactivo",
-        description: "Neurobiología del sistema de supervivencia y cómo transformar patrones automáticos en decisiones conscientes.",
+        title: "El Cerebro Reactivo: Neurobiología del Sistema de Supervivencia",
+        description: "Comprensión profunda de cómo el sistema nervioso procesa información emocional. Exploración de la neurobiología del sistema de supervivencia y adaptación, y cómo transformar patrones automáticos en decisiones conscientes mediante neuroplasticidad aplicada.",
         duration: "2 horas",
         subTopics: [
           {
-            title: "Neurobiología del sistema de supervivencia",
-            description: "Fundamentos científicos del cerebro reactivo"
+            title: "Neurobiología del sistema de supervivencia y adaptación",
+            description: "Fundamentos científicos del cerebro reactivo basados en investigación actualizada"
           },
           {
-            title: "Patrones automáticos",
-            description: "Comprensión de los mecanismos de respuesta automática"
+            title: "Procesamiento emocional en el sistema nervioso",
+            description: "Cómo el sistema nervioso procesa y almacena información emocional"
           },
           {
-            title: "Transformación a decisiones conscientes",
-            description: "Proceso de cambio de reactividad a consciencia"
+            title: "Patrones automáticos y respuestas reactivas",
+            description: "Comprensión de los mecanismos de respuesta automática y su origen neurobiológico"
+          },
+          {
+            title: "Transformación mediante neuroplasticidad",
+            description: "Proceso de cambio de reactividad a consciencia mediante neuroplasticidad aplicada"
           }
         ]
       },
       {
         id: "tema-1-3",
         title: "TRSB: Técnica de Reprocesamiento Somato-Cognitivo Bilateral",
-        description: "Fundamentos, las 4 etapas de transformación, protocolo completo y práctica guiada en parejas.",
+        description: "Protocolo completo de reprocesamiento bilateral basado en investigación científica. Aprendizaje de fundamentos, las 4 etapas de transformación, y práctica supervisada con casos reales.",
         duration: "2.5 horas",
         subTopics: [
           {
-            title: "Fundamentos de TRSB",
-            description: "Bases teóricas y científicas de la técnica"
+            title: "Fundamentos científicos de TRSB",
+            description: "Bases teóricas y científicas de la técnica de reprocesamiento somato-cognitivo bilateral"
           },
           {
             title: "Las 4 etapas de transformación",
-            description: "Proceso completo de reprocesamiento"
+            description: "Proceso completo de reprocesamiento desde identificación hasta integración"
           },
           {
-            title: "Protocolo completo",
-            description: "Aplicación paso a paso de la técnica"
+            title: "Protocolo completo paso a paso",
+            description: "Aplicación detallada de la técnica con guía estructurada"
           },
           {
-            title: "Práctica guiada en parejas",
-            description: "Ejercicio práctico con acompañamiento"
+            title: "Técnicas de visualización neurofisiológica",
+            description: "Métodos para crear estados óptimos mediante visualización y regulación del sistema nervioso autónomo"
+          },
+          {
+            title: "Práctica supervisada con casos reales",
+            description: "Ejercicio práctico en parejas y grupos pequeños bajo supervisión del facilitador"
           }
         ]
       },
       {
         id: "tema-1-4",
         title: "PONS: Sistema de Posicionamiento Neurocognitivo",
-        description: "Las 8 posiciones de acceso visual, anclaje espacial de recursos e integración práctica.",
+        description: "Sistema completo de posicionamiento con las 8 posiciones de acceso visual. Aprendizaje de anclaje espacial de recursos internos e integración práctica en contextos terapéuticos y personales.",
         duration: "2 horas",
         subTopics: [
           {
             title: "Las 8 posiciones de acceso visual",
-            description: "Sistema completo de posicionamiento"
+            description: "Sistema completo de posicionamiento neurocognitivo para acceso a estados internos"
           },
           {
             title: "Anclaje espacial de recursos",
-            description: "Técnicas de anclaje y recuperación de recursos"
+            description: "Técnicas avanzadas de anclaje y recuperación de recursos internos mediante posicionamiento"
           },
           {
-            title: "Integración práctica",
-            description: "Aplicación del sistema en situaciones reales"
+            title: "Integración de recursos en estados óptimos",
+            description: "Cómo acceder y mantener recursos internos cuando se necesitan"
+          },
+          {
+            title: "Integración práctica en contextos reales",
+            description: "Aplicación del sistema PONS en situaciones terapéuticas y de vida cotidiana"
           }
         ]
       }
     ],
     materials: [
-      "Ropa cómoda y holgada",
+      "Ropa cómoda y holgada para prácticas",
       "Botella de agua",
-      "Cuaderno para notas personales",
-      "Set básico de bricks LEGO® (será proporcionado)",
+      "Cuaderno para notas personales y reflexión",
+      "Manual de TRSB: Técnica de Reprocesamiento Somato-Cognitivo Bilateral (proporcionado)",
+      "Guía de técnicas de visualización neurofisiológica (proporcionado)",
       "Manta o cojín para meditación (opcional)"
     ]
   },
@@ -181,13 +199,15 @@ export const sessionsData: SessionData[] = [
     date: "6 de Diciembre 2025",
     time: "10:00 AM - 6:00 PM",
     location: "Hotel Galería Plaza Reforma, Ciudad de México (Presencial/Online)",
-    description: "Segunda sesión dedicada a la bioenergética holográfica, los protocolos de rastreo completo y el arte de la pregunta a través de Context Engineering.",
+    description: "Esta sesión integra sistemas de evaluación energética con metodologías de indagación estratégica. Los participantes aprenderán a identificar patrones bioenergéticos específicos y a diseñar intervenciones de precisión mediante la fusión de Bioenergética y Context Engineering (Context Bioenergetics).",
     objectives: [
-      "Dominar los 13 hologramas bioenergéticos y las 20 sensaciones viscerales",
-      "Aprender el protocolo de rastreo completo con recesión de edad",
-      "Dominar el test muscular y la búsqueda de sensación visceral",
-      "Aplicar el Esquema de Contexto de 4 Niveles",
-      "Conocer los 4 Protocolos Bioenergéticos (Alpha, Beta, Gamma, Delta)"
+      "Dominar el sistema de 13 hologramas bioenergéticos y su correlación clínica",
+      "Identificar las 20 sensaciones viscerales como indicadores diagnósticos precisos",
+      "Aplicar protocolo de test muscular para evaluación bioenergética",
+      "Dominar Context Engineering: Esquema de Contexto de 4 Niveles (Presente, Pasado, Transgeneracional, Sistema Actual)",
+      "Aprender los 4 Protocolos de intervención diferenciada (Alpha, Beta, Gamma, Delta) y su algoritmo de decisión",
+      "Realizar rastreo transgeneracional y identificación de patrones sistémicos",
+      "Diseñar intervenciones terapéuticas de precisión mediante Context Bioenergetics"
     ],
     multimedia: [
       {
@@ -220,77 +240,89 @@ export const sessionsData: SessionData[] = [
     topics: [
       {
         id: "tema-2-1",
-        title: "Bioenergética Holográfica",
-        description: "Los 13 hologramas bioenergéticos, las 20 sensaciones viscerales y dominio del test muscular.",
+        title: "Bioenergética Holográfica: Sistema de Evaluación Energética",
+        description: "Dominio del sistema de 13 hologramas bioenergéticos y su correlación clínica. Identificación de las 20 sensaciones viscerales como indicadores diagnósticos precisos y aplicación del protocolo de test muscular para evaluación bioenergética.",
         duration: "2.5 horas",
         subTopics: [
           {
-            title: "Los 13 hologramas bioenergéticos",
-            description: "Sistema completo de hologramas y su aplicación"
+            title: "Los 13 hologramas bioenergéticos y su correlación clínica",
+            description: "Sistema completo de hologramas bioenergéticos y su aplicación en diagnóstico diferencial"
           },
           {
-            title: "Las 20 sensaciones viscerales",
-            description: "Identificación y trabajo con sensaciones corporales"
+            title: "Las 20 sensaciones viscerales como indicadores diagnósticos",
+            description: "Identificación precisa de sensaciones corporales y su significado en evaluación energética"
           },
           {
-            title: "Dominio del test muscular",
-            description: "Técnica de kinesiología aplicada para diagnóstico"
+            title: "Protocolo de test muscular para evaluación bioenergética",
+            description: "Técnica de kinesiología aplicada para diagnóstico y evaluación de patrones energéticos"
+          },
+          {
+            title: "Correlación entre síntomas físicos y patrones energéticos",
+            description: "Comprensión de la conexión entre manifestaciones físicas y desequilibrios energéticos"
           }
         ]
       },
       {
         id: "tema-2-2",
-        title: "Protocolo de Rastreo Completo",
-        description: "Recesión de edad, búsqueda de sensación visceral, ámbito transgeneracional y demostración en vivo.",
+        title: "Protocolo de Rastreo Completo: Del Síntoma al Origen",
+        description: "Protocolo completo de rastreo que incluye recesión de edad, búsqueda de sensación visceral, ámbito transgeneracional y demostración en vivo con casos reales. Identificación de patrones sistémicos y transgeneracionales.",
         duration: "2.5 horas",
         subTopics: [
           {
-            title: "Recesión de edad",
-            description: "Técnica para acceder a experiencias pasadas"
+            title: "Recesión de edad y acceso a experiencias formativas",
+            description: "Técnica para acceder a experiencias pasadas que originaron patrones actuales"
           },
           {
-            title: "Búsqueda de sensación visceral",
-            description: "Identificación de la raíz corporal del síntoma"
+            title: "Búsqueda de sensación visceral raíz",
+            description: "Identificación precisa de la raíz corporal del síntoma mediante rastreo sistemático"
           },
           {
-            title: "Ámbito transgeneracional",
-            description: "Exploración de patrones familiares y sistémicos"
+            title: "Rastreo transgeneracional y patrones sistémicos",
+            description: "Exploración de patrones familiares, lealtades invisibles y dinámicas transgeneracionales"
           },
           {
-            title: "Demostración en vivo",
-            description: "Aplicación práctica del protocolo completo"
+            title: "Integración de niveles: Presente, Pasado y Sistema",
+            description: "Cómo integrar información de diferentes niveles temporales y sistémicos"
+          },
+          {
+            title: "Demostración en vivo con casos reales",
+            description: "Aplicación práctica del protocolo completo con participantes voluntarios"
           }
         ]
       },
       {
         id: "tema-2-3",
-        title: "Context Engineering: El Arte de la Pregunta",
-        description: "Esquema de Contexto de 4 Niveles (Presente, Pasado, Transgeneracional, Sistema Actual) y rastreo guiado con caso real.",
+        title: "Context Engineering: El Arte de la Pregunta Estratégica",
+        description: "Dominio del Esquema de Contexto de 4 Niveles para diseño de intervenciones de precisión. Aprendizaje de formulación de preguntas estratégicas y rastreo guiado con casos reales.",
         duration: "2 horas",
         subTopics: [
           {
-            title: "Esquema de Contexto de 4 Niveles",
-            description: "Marco metodológico completo de Context Engineering"
+            title: "Esquema de Contexto de 4 Niveles: Marco metodológico",
+            description: "Sistema completo de Context Engineering para evaluación y diseño de intervenciones"
           },
           {
-            title: "Nivel Presente",
-            description: "Exploración de patrones actuales"
+            title: "Nivel Presente: Patrones actuales y manifestaciones",
+            description: "Exploración de patrones actuales, síntomas presentes y dinámicas visibles"
           },
           {
-            title: "Nivel Pasado",
-            description: "Rastreo de orígenes históricos"
+            title: "Nivel Pasado: Orígenes históricos y experiencias formativas",
+            description: "Rastreo de orígenes históricos, eventos formativos y experiencias que crearon el patrón"
           },
           {
-            title: "Nivel Transgeneracional",
-            description: "Patrones familiares y sistémicos"
+            title: "Nivel Transgeneracional: Patrones familiares y sistémicos",
+            description: "Exploración de patrones familiares, lealtades invisibles y dinámicas transgeneracionales"
           },
           {
-            title: "Nivel Sistema Actual",
-            description: "Dinámicas actuales que sostienen el patrón"
+            title: "Nivel Sistema Actual: Dinámicas que sostienen el patrón",
+            description: "Identificación de dinámicas actuales, creencias y estructuras que mantienen el patrón activo"
+          },
+          {
+            title: "Formulación de preguntas estratégicas de alta calidad",
+            description: "El arte de crear preguntas que generan insights profundos y transformación"
           },
           {
             title: "Rastreo guiado con caso real",
-            description: "Aplicación práctica con caso de ejemplo"
+            description: "Aplicación práctica del Esquema de 4 Niveles con caso de ejemplo en vivo"
           }
         ]
       },
@@ -340,10 +372,13 @@ export const sessionsData: SessionData[] = [
       }
     ],
     materials: [
-      "Ropa cómoda",
-      "Cuaderno de trabajo",
-      "Objetos personales significativos",
-      "Lista de objetivos personales"
+      "Ropa cómoda para prácticas",
+      "Cuaderno de trabajo y reflexión",
+      "Manual de Context Bioenergetics: 13 hologramas y 20 sensaciones (proporcionado)",
+      "Guía de Context Engineering y Esquema de 4 Niveles (proporcionado)",
+      "Protocolo de los 4 Protocolos: Alpha, Beta, Gamma, Delta (proporcionado)",
+      "Algoritmo de decisión terapéutica (proporcionado)",
+      "Objetos personales significativos (opcional)"
     ]
   },
   {
@@ -352,14 +387,16 @@ export const sessionsData: SessionData[] = [
     date: "7 de Diciembre 2025",
     time: "10:00 AM - 6:00 PM",
     location: "Hotel Galería Plaza Reforma, Ciudad de México (Presencial/Online)",
-    description: "Tercera sesión enfocada en integración de metodologías, transformación sostenible, rituales y preparación para el seguimiento de 90 días.",
+    description: "La sesión final del bloque presencial se enfoca en la integración de metodologías y el diseño de sistemas de transformación a largo plazo. Se introducen herramientas avanzadas para casos complejos y se establece el protocolo de seguimiento estructurado.",
     objectives: [
-      "Diseñar rituales matutinos transformadores",
-      "Profundizar en la herramienta del sobre con las 3 preguntas poderosas",
-      "Aprender el Protocolo de las 7 Excepciones para casos complejos",
-      "Dominar los 3 Elementos de Decisión Consciente",
-      "Establecer el Programa Integral de 90 Días",
-      "Recibir introducción al LSP Insight System y herramientas de IA"
+      "Comprender la neurobiología del ritual y diseñar prácticas transformadoras personalizadas",
+      "Aplicar el Protocolo de las 7 Excepciones para casos resistentes al cambio",
+      "Dominar la Metodología de Decisión Consciente en tres elementos (Enfoque, Resignificación, Acción)",
+      "Establecer el Programa estructurado de 90 días post-seminario con seguimiento continuo",
+      "Introducirse al LSP Insight System (LEGO Serious Play adaptado para terapia)",
+      "Conocer herramientas de Inteligencia Artificial aplicadas a procesos terapéuticos",
+      "Realizar síntesis metodológica integral de todas las técnicas aprendidas",
+      "Recibir certificación de primer nivel al completar el bloque presencial"
     ],
     multimedia: [
       {
@@ -544,10 +581,15 @@ export const sessionsData: SessionData[] = [
       }
     ],
     materials: [
-      "Ropa cómoda",
-      "Cuaderno de reflexión",
-      "Objetos simbólicos personales",
-      "Lista de áreas de mejora"
+      "Ropa cómoda para prácticas",
+      "Cuaderno de reflexión y diseño",
+      "Manual del Protocolo de las 7 Excepciones (proporcionado)",
+      "Guía de Diseño de Rituales Transformadores (proporcionado)",
+      "Programa estructurado de 90 días (proporcionado)",
+      "Introducción al LSP Insight System (proporcionado)",
+      "Guía de herramientas de IA aplicadas a procesos terapéuticos (proporcionado)",
+      "Mapa de integración metodológica (proporcionado)",
+      "Objetos simbólicos personales (opcional)"
     ]
   },
   {
@@ -556,13 +598,14 @@ export const sessionsData: SessionData[] = [
     date: "25 de Enero 2026 (Online)",
     time: "10:00 AM - 6:00 PM",
     location: "Sesión Online",
-    description: "Cuarta sesión online enfocada en consolidación de aprendizajes, protocolos avanzados de bioenergética y aplicación del LSP Insight System.",
+    description: "Primera sesión de seguimiento que introduce metodología avanzada de materialización de insights mediante construcción física de modelos tridimensionales. Se revisa el progreso del programa de 90 días y se profundiza en protocolos avanzados.",
     objectives: [
-      "Revisar el progreso en los 90 días y hacer ajustes estratégicos",
-      "Profundizar en la aplicación práctica de los 4 Protocolos Bioenergéticos",
-      "Conectar comprensión con implementación efectiva",
-      "Dominar el LSP Insight System para materializar ideas",
-      "Construir físicamente conflictos y soluciones con LEGO®"
+      "Revisar y evaluar el progreso del programa de 90 días con ajustes estratégicos personalizados",
+      "Aplicar protocolos avanzados de Context Bioenergetics en casos complejos",
+      "Dominar los fundamentos del LSP Insight System y su metodología de acción efectiva",
+      "Construir modelos simbólicos tridimensionales para resolución de conflictos",
+      "Conectar comprensión teórica con implementación práctica mediante construcción física",
+      "Materializar ideas abstractas en objetos tangibles mediante 'pensar con las manos'"
     ],
     multimedia: [
       {
@@ -691,10 +734,14 @@ export const sessionsData: SessionData[] = [
       }
     ],
     materials: [
-      "Kit de LEGO® (proporcionado)",
-      "Cuaderno de trabajo",
-      "Cámara web funcionando",
-      "Espacio tranquilo para la sesión"
+      "Kit de LEGO® para LSP Insight System (proporcionado)",
+      "Cuaderno de trabajo y reflexión",
+      "Manual completo de LSP Insight System (proporcionado)",
+      "Guía de Metodología de Acción Efectiva (proporcionado)",
+      "Protocolos avanzados de Context Bioenergetics (proporcionado)",
+      "Cámara web funcionando para modalidad online",
+      "Espacio tranquilo y privado para la sesión",
+      "Acceso a las 5 aplicaciones de IA personalizadas"
     ]
   },
   {
@@ -703,13 +750,15 @@ export const sessionsData: SessionData[] = [
     date: "22 de Febrero 2026 (Online)",
     time: "10:00 AM - 6:00 PM",
     location: "Sesión Online",
-    description: "Quinta sesión online final enfocada en maestría de las técnicas, integración avanzada de IA y proyección de futuro con desarrollo continuo.",
+    description: "Sesión de cierre que consolida aprendizajes, evalúa transformación lograda y establece trayectoria de desarrollo profesional continuo. Se profundiza en metodología LSP para diseño estratégico y se integran herramientas avanzadas de IA.",
     objectives: [
-      "Transformar descubrimientos de LSP en arquetipos y estrategias claras",
-      "Crear plan de acción concreto para la vida",
-      "Integrar herramientas de IA como asistente estratégico",
-      "Integrar completamente todos los aprendizajes del programa",
-      "Establecer compromisos a largo plazo y plan de desarrollo continuo"
+      "Profundizar en metodología LSP para diseño estratégico de vida y proyectos",
+      "Transformar descubrimientos de modelos LSP en arquetipos identificables y planes de acción concretos",
+      "Integrar herramientas avanzadas de Inteligencia Artificial como asistente estratégico profesional",
+      "Evaluar progreso y consolidar cambios logrados durante todo el programa",
+      "Establecer compromisos profesionales y personales a largo plazo",
+      "Diseñar trayectoria de desarrollo continuo post-certificación",
+      "Recibir certificación final del programa completo en Inteligencia Energética"
     ],
     multimedia: [
       {
@@ -819,10 +868,14 @@ export const sessionsData: SessionData[] = [
       }
     ],
     materials: [
-      "Kit de LEGO® (proporcionado)",
-      "Cuaderno de síntesis",
-      "Acceso a herramientas de IA",
-      "Lista de objetivos a largo plazo"
+      "Kit de LEGO® para construcción avanzada (proporcionado)",
+      "Cuaderno de síntesis y proyección futura",
+      "Guía de integración avanzada de herramientas de IA (proporcionado)",
+      "Manual de diseño estratégico con LSP (proporcionado)",
+      "Plantilla de plan de desarrollo continuo (proporcionado)",
+      "Acceso completo a las 5 aplicaciones de IA personalizadas",
+      "Certificado de certificación profesional completa (al completar)",
+      "Lista de objetivos y compromisos a largo plazo"
     ]
   }
 ];
