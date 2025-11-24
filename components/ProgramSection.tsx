@@ -94,7 +94,7 @@ const ProgramSection: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-24">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-28">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-4 sm:mb-6 text-slate-900 tracking-tight leading-tight">{t.program.title}</h2>
       <p className="text-center text-slate-600 text-sm sm:text-base mb-8 sm:mb-12 max-w-2xl mx-auto">
         {t.program.subtitle}
@@ -127,7 +127,7 @@ const ProgramSection: React.FC = () => {
         </div>
 
         <div className="lg:w-2/3">
-          <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+          <div className="bg-white p-6 sm:p-8 rounded-2xl border-2 border-slate-200 shadow-md hover:shadow-lg transition-shadow duration-300">
             <div className="flex items-center gap-3 mb-6">
               <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br ${
                 activeTab === 1 ? 'from-blue-500 to-cyan-500' :

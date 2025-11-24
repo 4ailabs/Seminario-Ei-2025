@@ -179,109 +179,114 @@ export const translations: Record<string, Translations> = {
       },
       topics: {
         session1: {
-          title: "Neuroplasticidad, IA y Sistemas de Inteligencia Estratégica",
-          date: "5 de Diciembre 2025",
+          title: "Neuroplasticidad y Reprocesamiento Bilateral",
+          date: "5 de Diciembre 2025 (Presencial/Online)",
           topics: [
             {
-              title: "Webinar de Introducción",
-              description: "Video introductorio del seminario que establece las bases conceptuales y el contexto del programa de transformación energética.",
-              videoUrl: "https://vimeo.com/1122501757/9d6c991bc4"
+              title: "Bienvenida y Encuadre del Seminario",
+              description: "Presentación del programa, objetivos de transformación y creación del contenedor seguro."
             },
             {
-              title: "El cerebro reactivo: supervivencia vs. felicidad",
-              description: "Explora la evolución del cerebro, sus bases neurobiológicas y cómo pasar del piloto automático al control consciente."
+              title: "El Cerebro Reactivo",
+              description: "Neurobiología del sistema de supervivencia y cómo transformar patrones automáticos en decisiones conscientes."
             },
             {
-              title: "Priming neurofisiológico: entrenamiento de estados óptimos",
-              description: "Aprende a regular tu sistema nervioso autónomo a través de técnicas de visualización y respiración consciente."
+              title: "TRSB: Técnica de Reprocesamiento Somato-Cognitivo Bilateral",
+              description: "Fundamentos, las 4 etapas de transformación, protocolo completo y práctica guiada en parejas."
             },
             {
-              title: "Inteligencia Aumentada: IA para el Crecimiento",
-              description: "Utiliza modelos de IA como asistente para profundizar en los conceptos, generar nuevas perspectivas y personalizar tu aprendizaje."
-            },
-            {
-              title: "Workshop 1: Priming Neurofisiológico",
-              description: "Sesión práctica de entrenamiento en priming neurofisiológico y regulación del sistema nervioso autónomo."
-            },
-            {
-              title: "Workshop 2: Estado de Enfoque y Recursos",
-              description: "Taller práctico para desarrollar estados de enfoque óptimo y acceso a recursos internos."
+              title: "PONS: Sistema de Posicionamiento Neurocognitivo",
+              description: "Las 8 posiciones de acceso visual, anclaje espacial de recursos e integración práctica."
             },
           ]
         },
         session2: {
-          title: "Bioenergética y Context Engineering Aplicado",
-          date: "6 de Diciembre 2025",
+          title: "Bioenergética Holográfica y Context Engineering",
+          date: "6 de Diciembre 2025 (Presencial/Online)",
           topics: [
             {
-              title: "Context Engineering y Esquema de Contexto",
-              description: "Domina el arte de formular preguntas de alta calidad para pasar de un modelo reactivo a uno estructurado."
+              title: "Bioenergética Holográfica",
+              description: "Los 13 hologramas bioenergéticos, las 20 sensaciones viscerales y dominio del test muscular."
             },
             {
-              title: "Rastreo guiado con Esquema de Contexto",
-              description: "Aplica un marco metodológico para explorar los niveles Presente, Pasado y Sistema que sostienen tus patrones actuales."
+              title: "Protocolo de Rastreo Completo",
+              description: "Recesión de edad, búsqueda de sensación visceral, ámbito transgeneracional y demostración en vivo."
             },
             {
-              title: "Del síntoma al escenario energético",
-              description: "Aprende a identificar la sensación raíz corporal y a comprender la dinámica cuerpo-emoción-creencia."
+              title: "Context Engineering: El Arte de la Pregunta",
+              description: "Esquema de Contexto de 4 Niveles (Presente, Pasado, Transgeneracional, Sistema Actual) y rastreo guiado con caso real."
             },
             {
-              title: "Workshop: Context Engineering Bioenergético",
-              description: "Taller práctico de Context Engineering aplicado a la bioenergética y transformación personal."
+              title: "Los 4 Protocolos Bioenergéticos",
+              description: "Protocolo Alpha (síntomas físicos), Beta (conflictos emocionales), Gamma (dinámicas sistémicas), Delta (integración existencial) y algoritmo de decisión."
+            },
+            {
+              title: "Sorpresa Especial",
+              description: "Introducción a una herramienta transformadora que trabajaremos al día siguiente."
             },
           ]
         },
         session3: {
-          title: "Sistemas de Decisión Consciente - Experiencia Vivencial",
-          date: "7 de Diciembre 2025",
+          title: "Integración y Transformación Sostenible",
+          date: "7 de Diciembre 2025 (Presencial/Online)",
           topics: [
             {
-              title: "Webinar de Introducción - El arte de la pregunta en terapia bioenergética",
-              description: "Video preparatorio que explora el arte de formular preguntas profundas en terapia bioenergética y cómo dominar el Context Engineering para diseñar la sanación.",
-              videoUrl: "https://vimeo.com/1122510598/a3a96d10d9"
+              title: "El Poder de los Rituales",
+              description: "Neurobiología del ritual, diseño de ritual matutino transformador y práctica de creación personalizada."
             },
             {
-              title: "Los Tres Elementos de Decisión Consciente",
-              description: "Aprende el marco de transformación personal basado en el enfoque, el significado y la acción específica."
+              title: "Profundización de la Sorpresa",
+              description: "Trabajo experiencial con la herramienta del sobre, las 3 preguntas poderosas y compromiso público grupal."
             },
             {
-              title: "Maestría del Enfoque Consciente",
-              description: "Entrena tu atención y utiliza preguntas transformadoras para cultivar estados internos óptimos."
+              title: "Protocolo de las 7 Excepciones",
+              description: "Para casos que no responden a protocolos estándar: las 7 preguntas quirúrgicas y demostración con caso complejo."
             },
             {
-              title: "Resignificación y Reencuadre Consciente",
-              description: "Desarrolla la habilidad de asignar nuevos significados y reencuadrar limitaciones para potenciar tu vida."
+              title: "Los 3 Elementos de Decisión Consciente",
+              description: "Maestría del Enfoque, Resignificación y Reencuadre, y Acción Específica para transformación diaria."
             },
             {
-              title: "Síntesis de Transformación Integral y Certificación",
-              description: "Integra los aprendizajes de las primeras 3 sesiones, establece compromisos personalizados y recibe tu certificación inicial."
+              title: "Programa Integral de 90 Días",
+              description: "Estructura semanal de seguimiento, comunidad de apoyo y plan personalizado."
+            },
+            {
+              title: "Introducción al LSP Insight System",
+              description: "Preparación para la Sesión 4: LEGO® Serious Play® adaptado para terapia."
+            },
+            {
+              title: "Herramientas de IA para Tu Transformación",
+              description: "Presentación de asistentes inteligentes personalizados disponibles 24/7."
+            },
+            {
+              title: "Síntesis Integral y Cierre Inspirador",
+              description: "Mapa completo de las 6 metodologías, círculo de compromisos y entrega de certificados."
             }
           ]
         },
         session4: {
-          title: "Consolidación y Profundización",
+          title: "LSP Insight System: Del Símbolo a la Acción",
           date: "25 de Enero 2026 (Online)",
           topics: [
             {
-              title: "Webinar de Introducción - Construye Tu Historia",
-              description: "Video preparatorio que explora cómo transformar tu narrativa personal en una herramienta de empoderamiento y poder personal.",
-              videoUrl: "https://vimeo.com/1128316658/533a84ac61"
+              title: "Webinar Preparatorio: Construye Tu Historia",
+              description: "Cómo transformar tu narrativa personal en herramienta de empoderamiento."
             },
             {
               title: "Revisión de Progreso y Ajustes",
-              description: "Evaluación del progreso personal y ajustes en las estrategias implementadas."
+              description: "Evaluación del avance en los 90 días y ajustes estratégicos personalizados."
             },
             {
               title: "Protocolos Avanzados de Bioenergética",
-              description: "Los cuatro protocolos principales (Alpha, Beta, Gamma, Delta) y su aplicación práctica."
+              description: "Aplicación práctica profunda de los 4 Protocolos (Alpha, Beta, Gamma, Delta) en casos complejos."
             },
             {
               title: "Metodología de Acción Efectiva",
-              description: "Conecta la comprensión con la implementación a través de protocolos que aseguran un compromiso auténtico."
+              description: "Conectar comprensión con implementación a través de protocolos que aseguran compromiso auténtico."
             },
             {
-              title: "LSP Insight System: del símbolo a la acción",
-              description: "Descubre los principios de LEGO® Serious Play® para materializar ideas y 'pensar con las manos'."
+              title: "LSP Insight System: Del Símbolo a la Acción",
+              description: "Descubre los principios de LEGO® Serious Play® para materializar ideas y 'pensar con las manos'. Construcción física de conflictos y soluciones."
             }
           ]
         },
@@ -290,17 +295,16 @@ export const translations: Record<string, Translations> = {
           date: "22 de Febrero 2026 (Online)",
           topics: [
             {
-              title: "Webinar de Introducción - Construyendo nuestra vida con LEGO Serious Play",
-              description: "Video preparatorio que explora la metodología LSP para materializar ideas y construir estrategias de vida concretas pensando con las manos.",
-              videoUrl: "https://vimeo.com/1128316786/429fc7015f"
+              title: "Webinar Preparatorio: Construyendo Nuestra Vida con LEGO Serious Play",
+              description: "Metodología LSP para materializar estrategias de vida concretas."
             },
             {
-              title: "Descubrimiento de insights y estrategias con LSP",
-              description: "Transforma los descubrimientos de los modelos en arquetipos, estrategias claras y un plan de acción concreto."
+              title: "Descubrimiento de Insights y Estrategias con LSP",
+              description: "Transforma los descubrimientos de los modelos en arquetipos, estrategias claras y plan de acción concreto."
             },
             {
-              title: "Integración de Herramientas de IA",
-              description: "Uso avanzado de IA como asistente estratégico en tu práctica profesional y personal."
+              title: "Integración Avanzada de Herramientas de IA",
+              description: "Uso estratégico de IA como asistente en tu práctica profesional y personal."
             },
             {
               title: "Síntesis Final y Proyección",
@@ -389,47 +393,62 @@ export const translations: Record<string, Translations> = {
       subtitle: "Todo lo necesario para tu transformación energética está incluido",
       items: [
         {
-          icon: "📚",
-          title: "Materiales",
-          description: "Guías completas y recursos impresos"
+          icon: "🎯",
+          title: "3 Días Presenciales u Online",
+          description: "5-7 Diciembre 2025 en vivo"
+        },
+        {
+          icon: "🌐",
+          title: "2 Sesiones Online de Seguimiento",
+          description: "Enero y Febrero 2026"
         },
         {
           icon: "📖",
-          title: "Manuales",
-          description: "Documentación detallada de protocolos"
+          title: "Manuales Completos",
+          description: "De todas las metodologías"
         },
         {
-          icon: "⚡",
-          title: "Protocolos",
-          description: "Métodos probados de transformación"
+          icon: "🎥",
+          title: "Grabaciones de las 5 Sesiones",
+          description: "Acceso GRATIS a todas las grabaciones"
+        },
+        {
+          icon: "👥",
+          title: "Comunidad Privada de Apoyo",
+          description: "Red de apoyo continuo"
+        },
+        {
+          icon: "📅",
+          title: "Sesiones Grupales Semanales",
+          description: "Durante 90 días"
+        },
+        {
+          icon: "🤖",
+          title: "5 Apps de IA Personalizadas",
+          description: "Asistentes inteligentes disponibles 24/7"
         },
         {
           icon: "🏆",
-          title: "Certificación",
+          title: "Certificación Profesional",
           description: "Certificado oficial de participación"
         },
         {
-          icon: "📱",
-          title: "App Oficial",
-          description: "Acceso a recursos y herramientas digitales"
-        },
-        {
-          icon: "🔄",
-          title: "Extensiones 2026",
-          description: "Sesiones de seguimiento y consolidación"
+          icon: "💬",
+          title: "Soporte Continuo",
+          description: "Acompañamiento durante todo el proceso"
         }
       ]
     },
     investment: {
       title: "Inversión en tu Transformación",
-      subtitle: "La experiencia continúa con encuentros de seguimiento en 2026 para consolidar tu aprendizaje.",
+      subtitle: "EARLY BIRD: $8,000 MXN ~~$9,500 MXN~~ - Acceso GRATIS a grabaciones",
       earlyBird: "Precio Early Bird",
       regular: "Precio Regular",
       earlyBirdPrice: "$8,000 MXN",
       regularPrice: "$9,500 MXN",
       reservationInfo: "Aparta tu lugar con $3,000 MXN y paga el resto una semana antes del evento",
       validUntil: "Válido hasta el 16 de Octubre de 2025",
-      includes: "Precios para modalidad Presencial y Online.",
+      includes: "Precios para modalidad Presencial y Online. Incluye acceso GRATIS a grabaciones de las 5 sesiones.",
       ctaWhatsApp: "Inscríbete vía WhatsApp"
     },
     webinars: {
@@ -513,109 +532,114 @@ export const translations: Record<string, Translations> = {
       },
       topics: {
         session1: {
-          title: "Neuroplasticity, AI and Strategic Intelligence Systems",
-          date: "December 5, 2025",
+          title: "Neuroplasticity and Bilateral Reprocessing",
+          date: "December 5, 2025 (In-Person/Online)",
           topics: [
             {
-              title: "Introduction Webinar",
-              description: "Introductory video of the seminar that establishes the conceptual foundations and context of the energy transformation program.",
-              videoUrl: "https://vimeo.com/1122501757/9d6c991bc4"
+              title: "Welcome and Seminar Framework",
+              description: "Program presentation, transformation objectives, and creation of a safe container."
             },
             {
-              title: "The reactive brain: survival vs. happiness",
-              description: "Explore brain evolution, its neurobiological foundations, and how to move from autopilot to conscious control."
+              title: "The Reactive Brain",
+              description: "Neurobiology of the survival system and how to transform automatic patterns into conscious decisions."
             },
             {
-              title: "Neurophysiological priming: optimal state training",
-              description: "Learn to regulate your autonomic nervous system through visualization techniques and conscious breathing."
+              title: "TRSB: Bilateral Somato-Cognitive Reprocessing Technique",
+              description: "Fundamentals, the 4 stages of transformation, complete protocol, and guided practice in pairs."
             },
             {
-              title: "Augmented Intelligence: AI for Growth",
-              description: "Use AI models as assistants to deepen concepts, generate new perspectives, and personalize your learning."
-            },
-            {
-              title: "Workshop 1: Neurophysiological Priming",
-              description: "Practical session on neurophysiological priming training and autonomic nervous system regulation."
-            },
-            {
-              title: "Workshop 2: Focus State and Resources",
-              description: "Hands-on workshop to develop optimal focus states and access to internal resources."
+              title: "PONS: Neurocognitive Positioning System",
+              description: "The 8 visual access positions, spatial anchoring of resources, and practical integration."
             },
           ]
         },
         session2: {
-          title: "Bioenergetics and Applied Context Engineering",
-          date: "December 6, 2025",
+          title: "Holographic Bioenergetics and Context Engineering",
+          date: "December 6, 2025 (In-Person/Online)",
           topics: [
             {
-              title: "Context Engineering and Context Schema",
-              description: "Master the art of formulating high-quality questions to move from a reactive to a structured model."
+              title: "Holographic Bioenergetics",
+              description: "The 13 bioenergetic holograms, the 20 visceral sensations, and mastery of muscle testing."
             },
             {
-              title: "Guided tracking with Context Schema",
-              description: "Apply a methodological framework to explore Present, Past, and System levels that sustain your current patterns."
+              title: "Complete Tracking Protocol",
+              description: "Age regression, visceral sensation search, transgenerational scope, and live demonstration."
             },
             {
-              title: "From symptom to energetic scenario",
-              description: "Learn to identify root body sensations and understand body-emotion-belief dynamics."
+              title: "Context Engineering: The Art of Questioning",
+              description: "4-Level Context Schema (Present, Past, Transgenerational, Current System) and guided tracking with a real case."
             },
             {
-              title: "Workshop: Bioenergetic Context Engineering",
-              description: "Practical workshop on Context Engineering applied to bioenergetics and personal transformation."
+              title: "The 4 Bioenergetic Protocols",
+              description: "Alpha Protocol (physical symptoms), Beta (emotional conflicts), Gamma (systemic dynamics), Delta (existential integration), and decision algorithm."
+            },
+            {
+              title: "Special Surprise",
+              description: "Introduction to a transformative tool that we will work with the next day."
             },
           ]
         },
         session3: {
-          title: "Conscious Decision Systems - Lived Experience",
-          date: "December 7, 2025",
+          title: "Integration and Sustainable Transformation",
+          date: "December 7, 2025 (In-Person/Online)",
           topics: [
             {
-              title: "Introduction Webinar - The Art of Questioning in Bioenergetic Therapy",
-              description: "Preparation video exploring the art of formulating deep questions in bioenergetic therapy and how to master Context Engineering to design healing.",
-              videoUrl: "https://vimeo.com/1122510598/a3a96d10d9"
+              title: "The Power of Rituals",
+              description: "Neurobiology of ritual, design of transformative morning ritual, and practice of personalized creation."
             },
             {
-              title: "The Three Elements of Conscious Decision",
-              description: "Learn the personal transformation framework based on focus, meaning, and specific action."
+              title: "Deepening the Surprise",
+              description: "Experiential work with the envelope tool, the 3 powerful questions, and public group commitment."
             },
             {
-              title: "Mastery of Conscious Focus",
-              description: "Train your attention and use transformative questions to cultivate optimal internal states."
+              title: "The 7 Exceptions Protocol",
+              description: "For cases that don't respond to standard protocols: the 7 surgical questions and demonstration with a complex case."
             },
             {
-              title: "Conscious Reframing and Re-signification",
-              description: "Develop the ability to assign new meanings and reframe limitations to empower your life."
+              title: "The 3 Elements of Conscious Decision",
+              description: "Mastery of Focus, Re-signification and Reframing, and Specific Action for daily transformation."
             },
             {
-              title: "Integral Transformation Synthesis and Certification",
-              description: "Integrate learnings from the first 3 sessions, establish personalized commitments, and receive your initial certification."
+              title: "90-Day Integral Program",
+              description: "Weekly follow-up structure, support community, and personalized plan."
+            },
+            {
+              title: "Introduction to LSP Insight System",
+              description: "Preparation for Session 4: LEGO® Serious Play® adapted for therapy."
+            },
+            {
+              title: "AI Tools for Your Transformation",
+              description: "Presentation of personalized intelligent assistants available 24/7."
+            },
+            {
+              title: "Integral Synthesis and Inspiring Closing",
+              description: "Complete map of the 6 methodologies, commitment circle, and certificate delivery."
             }
           ]
         },
         session4: {
-          title: "Consolidation and Deepening",
+          title: "LSP Insight System: From Symbol to Action",
           date: "January 25, 2026 (Online)",
           topics: [
             {
-              title: "Introduction Webinar - Build Your Story",
-              description: "Preparation video exploring how to transform your personal narrative into an empowerment tool and personal power.",
-              videoUrl: "https://vimeo.com/1128316658/533a84ac61"
+              title: "Preparation Webinar: Build Your Story",
+              description: "How to transform your personal narrative into an empowerment tool."
             },
             {
               title: "Progress Review and Adjustments",
-              description: "Evaluation of personal progress and adjustments in implemented strategies."
+              description: "Evaluation of progress in the 90 days and personalized strategic adjustments."
             },
             {
               title: "Advanced Bioenergetics Protocols",
-              description: "The four main protocols (Alpha, Beta, Gamma, Delta) and their practical application."
+              description: "Deep practical application of the 4 Protocols (Alpha, Beta, Gamma, Delta) in complex cases."
             },
             {
               title: "Effective Action Methodology",
               description: "Connect understanding with implementation through protocols that ensure authentic commitment."
             },
             {
-              title: "LSP Insight System: from symbol to action",
-              description: "Discover LEGO® Serious Play® principles to materialize ideas and 'think with your hands'."
+              title: "LSP Insight System: From Symbol to Action",
+              description: "Discover LEGO® Serious Play® principles to materialize ideas and 'think with your hands'. Physical construction of conflicts and solutions."
             }
           ]
         },
@@ -624,17 +648,16 @@ export const translations: Record<string, Translations> = {
           date: "February 22, 2026 (Online)",
           topics: [
             {
-              title: "Introduction Webinar - Building Our Life with LEGO Serious Play",
-              description: "Preparation video exploring the LSP methodology to materialize ideas and build concrete life strategies by thinking with your hands.",
-              videoUrl: "https://vimeo.com/1128316786/429fc7015f"
+              title: "Preparation Webinar: Building Our Life with LEGO Serious Play",
+              description: "LSP methodology to materialize concrete life strategies."
             },
             {
-              title: "Insight and strategy discovery with LSP",
-              description: "Transform model discoveries into archetypes, clear strategies, and a concrete action plan."
+              title: "Discovery of Insights and Strategies with LSP",
+              description: "Transform model discoveries into archetypes, clear strategies, and concrete action plan."
             },
             {
-              title: "Integration of AI Tools",
-              description: "Advanced use of AI as a strategic assistant in your professional and personal practice."
+              title: "Advanced Integration of AI Tools",
+              description: "Strategic use of AI as an assistant in your professional and personal practice."
             },
             {
               title: "Final Synthesis and Projection",
@@ -723,47 +746,62 @@ export const translations: Record<string, Translations> = {
       subtitle: "Everything you need for your energy transformation is included",
       items: [
         {
-          icon: "📚",
-          title: "Materials",
-          description: "Complete guides and printed resources"
+          icon: "🎯",
+          title: "3 Days In-Person or Online",
+          description: "December 5-7, 2025 live"
+        },
+        {
+          icon: "🌐",
+          title: "2 Online Follow-up Sessions",
+          description: "January and February 2026"
         },
         {
           icon: "📖",
-          title: "Manuals",
-          description: "Detailed protocol documentation"
+          title: "Complete Manuals",
+          description: "Of all methodologies"
         },
         {
-          icon: "⚡",
-          title: "Protocols",
-          description: "Proven transformation methods"
+          icon: "🎥",
+          title: "Recordings of All 5 Sessions",
+          description: "FREE access to all recordings"
+        },
+        {
+          icon: "👥",
+          title: "Private Support Community",
+          description: "Continuous support network"
+        },
+        {
+          icon: "📅",
+          title: "Weekly Group Sessions",
+          description: "For 90 days"
+        },
+        {
+          icon: "🤖",
+          title: "5 Personalized AI Apps",
+          description: "Intelligent assistants available 24/7"
         },
         {
           icon: "🏆",
-          title: "Certification",
+          title: "Professional Certification",
           description: "Official participation certificate"
         },
         {
-          icon: "📱",
-          title: "Official App",
-          description: "Access to digital resources and tools"
-        },
-        {
-          icon: "🔄",
-          title: "2026 Extensions",
-          description: "Follow-up and consolidation sessions"
+          icon: "💬",
+          title: "Continuous Support",
+          description: "Support throughout the entire process"
         }
       ]
     },
     investment: {
       title: "Investment in Your Transformation",
-      subtitle: "The experience continues with follow-up meetings in 2026 to consolidate your learning.",
+      subtitle: "EARLY BIRD: $8,000 MXN ~~$9,500 MXN~~ - FREE access to recordings",
       earlyBird: "Early Bird Price",
       regular: "Regular Price",
       earlyBirdPrice: "$8,000 MXN",
       regularPrice: "$9,500 MXN",
       reservationInfo: "Reserve your spot with $3,000 MXN and pay the rest one week before the event",
       validUntil: "Valid until October 16, 2025",
-      includes: "Prices for both In-Person and Online modalities.",
+      includes: "Prices for both In-Person and Online modalities. Includes FREE access to recordings of all 5 sessions.",
       ctaWhatsApp: "Register via WhatsApp"
     },
     webinars: {

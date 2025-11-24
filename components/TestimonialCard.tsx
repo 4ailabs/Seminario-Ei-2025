@@ -10,7 +10,7 @@ interface TestimonialCardProps {
 
 const TestimonialCard: React.FC<TestimonialCardProps> = React.memo(({ name, role, content, index }) => {
   return (
-    <div className="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 hover:border-slate-300 transition-all duration-200 hover:shadow-sm touch-manipulation">
+    <div className="bg-white p-5 sm:p-6 rounded-2xl border-2 border-slate-200 hover:border-slate-300 transition-all duration-200 hover:shadow-md hover:-translate-y-1 touch-manipulation">
       <div className="flex items-start gap-3 sm:gap-4 mb-4">
         <QuoteIcon className="w-5 h-5 sm:w-6 sm:h-6 text-cyan-500 flex-shrink-0 mt-1" />
         <div className="flex-1">

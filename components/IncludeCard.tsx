@@ -55,7 +55,7 @@ const IncludeCard: React.FC<IncludeCardProps> = React.memo(({ title, description
   };
 
   return (
-    <div className="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 hover:border-slate-300 transition-all duration-200 hover:shadow-sm touch-manipulation">
+    <div className="bg-white p-5 sm:p-6 rounded-2xl border-2 border-slate-200 hover:border-slate-300 transition-all duration-200 hover:shadow-md hover:-translate-y-1 touch-manipulation">
       <div className="flex items-start gap-3 sm:gap-4">
         <div className="flex-shrink-0 mt-1">
           {getIcon(title)}

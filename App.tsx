@@ -144,13 +144,9 @@ const AppContent: React.FC = () => {
                     <div className="absolute inset-0 bg-gradient-to-b from-white to-slate-50"></div>
                     <div className="relative z-10 max-w-6xl mx-auto">
                         <AnimatedSection>
-                            <div className="flex flex-col items-center mb-6 sm:mb-8 mt-16 sm:mt-8 md:mt-0">
-                                <img
-                                    src="/images/portada-seminario-ei.png"
-                                    alt="Seminario Internacional de Inteligencia Energética"
-                                    className="w-full max-w-3xl mx-auto mb-6 rounded-2xl shadow-sm border border-slate-200"
-                                />
-                            </div>
+                            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 sm:mb-8 mt-16 sm:mt-8 md:mt-0 leading-tight px-4">
+                                {t.hero.title}
+                            </h1>
                             <div className="flex flex-col items-center justify-center text-sm sm:text-base md:text-lg lg:text-xl text-slate-800 font-medium mb-3 sm:mb-4 gap-1 sm:gap-2">
                                 <span className="flex items-center">
                                     <MapPinIcon className="w-4 h-4 mr-2 flex-shrink-0" />
@@ -189,20 +185,27 @@ const AppContent: React.FC = () => {
                                 <a href="#programa" onClick={(e) => {e.preventDefault(); handleScrollTo('programa')}} className="bg-white hover:bg-slate-50 active:bg-slate-100 border border-slate-300 text-slate-800 font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl text-sm sm:text-base md:text-lg transition-all duration-200 touch-manipulation w-full sm:w-auto active:scale-[0.98]">
                                     {t.hero.ctaVerPrograma}
                                 </a>
-                                <a href="/trsb" className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 active:from-purple-800 active:to-purple-900 text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl text-sm sm:text-base md:text-lg transition-all duration-200 shadow-sm touch-manipulation w-full sm:w-auto flex items-center justify-center gap-2 active:scale-[0.98]">
+                                {/* <a href="/trsb" className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 active:from-purple-800 active:to-purple-900 text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl text-sm sm:text-base md:text-lg transition-all duration-200 shadow-sm touch-manipulation w-full sm:w-auto flex items-center justify-center gap-2 active:scale-[0.98]">
                                     App TRSB
-                                </a>
+                                </a> */}
                             </div>
                         </AnimatedSection>
                     </div>
                 </section>
 
+                {/* --- Program Section --- */}
+                <AnimatedSection id="programa" className="bg-gradient-to-b from-slate-50 to-white" delay={200}>
+                    <ProgramSection/>
+                </AnimatedSection>
+
+                {/* Divider with more contrast */}
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
+
                 {/* --- Webinar TRSB Banner --- */}
-                <AnimatedSection className="bg-white py-8 sm:py-12 border-y border-slate-200" delay={100}>
+                {/* <AnimatedSection className="bg-white py-8 sm:py-12 border-y border-slate-200" delay={100}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="max-w-6xl mx-auto">
                             <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8">
-                                {/* Left side - Content */}
                                 <div className="flex-1 text-center lg:text-left">
                                     <div className="inline-block bg-blue-50 border border-blue-200 rounded-full px-4 py-1.5 mb-4">
                                         <span className="text-blue-700 text-sm font-semibold">WEBINAR EN VIVO HOY</span>
@@ -227,8 +230,6 @@ const AppContent: React.FC = () => {
                                         </div>
                                     </div>
                                 </div>
-
-                                {/* Right side - CTA */}
                                 <div className="flex flex-col gap-4 items-center lg:items-end">
                                     <a
                                         href="/trsb"
@@ -246,11 +247,10 @@ const AppContent: React.FC = () => {
                     </div>
                 </AnimatedSection>
 
-                {/* Divider */}
-                <div className="w-full border-t border-slate-200"></div>
+                <div className="w-full border-t border-slate-200"></div> */}
 
                 {/* --- Hotel Information Section --- */}
-                <AnimatedSection id="ubicacion" className="relative py-24 sm:py-28 md:py-32 overflow-hidden bg-gradient-to-b from-white to-slate-50" delay={150}>
+                <AnimatedSection id="ubicacion" className="relative py-24 sm:py-28 md:py-32 overflow-hidden bg-white" delay={150}>
 
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         {/* Header */}
@@ -272,7 +272,7 @@ const AppContent: React.FC = () => {
 
                         {/* Main Content */}
                         <div className="max-w-6xl mx-auto">
-                            <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                            <div className="bg-white rounded-2xl shadow-md border-2 border-slate-200 overflow-hidden">
                                 <div className="grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-slate-200">
 
                                     {/* Hotel Details */}
@@ -360,11 +360,11 @@ const AppContent: React.FC = () => {
                     </div>
                 </AnimatedSection>
 
-                {/* Divider */}
-                <div className="w-full border-t border-slate-200"></div>
+                {/* Divider with more contrast */}
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
 
                 {/* --- Online Modality Benefits --- */}
-                <AnimatedSection className="relative py-24 sm:py-28 md:py-32 overflow-hidden bg-white" delay={150}>
+                <AnimatedSection className="relative py-24 sm:py-28 md:py-32 overflow-hidden bg-gradient-to-b from-slate-50 to-white" delay={150}>
 
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         {/* Header */}
@@ -386,7 +386,7 @@ const AppContent: React.FC = () => {
 
                         {/* Main Content - Horizontal Layout */}
                         <div className="max-w-6xl mx-auto">
-                            <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                            <div className="bg-white rounded-2xl shadow-md border-2 border-slate-200 overflow-hidden">
                                 <div className="grid grid-cols-1 lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-slate-200">
 
                                     {/* HD */}
@@ -444,11 +444,9 @@ const AppContent: React.FC = () => {
                         </div>
                     </div>
                 </AnimatedSection>
-
-                {/* --- Program Section --- */}
-                <AnimatedSection id="programa" delay={200}>
-                    <ProgramSection/>
-                </AnimatedSection>
+                
+                {/* Divider with more contrast */}
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
                 
                 {/* --- Webinars Section --- */}
                 <AnimatedSection id="webinars" className="bg-white py-16 sm:py-20 md:py-24" delay={250}>
@@ -478,11 +476,11 @@ const AppContent: React.FC = () => {
                     </div>
                 </AnimatedSection>
 
-                {/* Divider */}
-                <div className="w-full border-t border-slate-200"></div>
+                {/* Divider with more contrast */}
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
                 
                 {/* --- Who is it for Section --- */}
-                <AnimatedSection id="para-quien" className="bg-white py-24 sm:py-28 md:py-32" delay={400}>
+                <AnimatedSection id="para-quien" className="bg-gradient-to-b from-slate-50 to-white py-24 sm:py-28 md:py-32" delay={400}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-slate-900 leading-tight">{t.whoIsItFor.title}</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-7xl mx-auto">
@@ -494,11 +492,11 @@ const AppContent: React.FC = () => {
                     </div>
                 </AnimatedSection>
 
-                {/* Divider */}
-                <div className="w-full border-t border-slate-200"></div>
+                {/* Divider with more contrast */}
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
                 
                 {/* --- Results Section --- */}
-                <AnimatedSection id="resultados" className="bg-gradient-to-b from-slate-50 to-white py-24 sm:py-28 md:py-32" delay={600}>
+                <AnimatedSection id="resultados" className="bg-white py-24 sm:py-28 md:py-32" delay={600}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="flex flex-col sm:flex-row items-center justify-center text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8 sm:mb-12 text-slate-900 leading-tight tracking-tight">
                             <SparklesIcon className="w-6 h-6 sm:w-8 sm:h-8 mr-0 sm:mr-3 mb-2 sm:mb-0 text-amber-500" />
@@ -530,11 +528,11 @@ const AppContent: React.FC = () => {
                     </div>
                 </AnimatedSection>
 
-                {/* Divider */}
-                <div className="w-full border-t border-slate-200"></div>
+                {/* Divider with more contrast */}
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
 
                 {/* --- Testimonials Section --- */}
-                <AnimatedSection id="testimonios" className="bg-white py-24 sm:py-28 md:py-32" delay={800}>
+                <AnimatedSection id="testimonios" className="bg-gradient-to-b from-slate-50 to-white py-24 sm:py-28 md:py-32" delay={800}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-900 leading-tight">{t.testimonials.title}</h2>
                         <p className="text-center text-base sm:text-lg text-slate-600 mt-4 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">{t.testimonials.subtitle}</p>
@@ -596,8 +594,8 @@ const AppContent: React.FC = () => {
                     </div>
                 </AnimatedSection> */}
 
-                {/* Divider */}
-                <div className="w-full border-t border-slate-200"></div>
+                {/* Divider with more contrast */}
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
 
                 {/* --- Includes Section --- */}
                 <AnimatedSection id="incluye" className="bg-white py-24 sm:py-28 md:py-32" delay={1000}>
@@ -621,11 +619,11 @@ const AppContent: React.FC = () => {
                     </div>
                 </AnimatedSection>
 
-                {/* Divider */}
-                <div className="w-full border-t border-slate-200"></div>
+                {/* Divider with more contrast */}
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
 
                 {/* --- Extensions & Investment Section --- */}
-                 <AnimatedSection id="inversion" className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gradient-to-b from-slate-50 to-white" delay={1100}>
+                 <AnimatedSection id="inversion" className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gradient-to-b from-white via-slate-50 to-white" delay={1100}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                         <h2 className="flex flex-col sm:flex-row items-center justify-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-slate-900 mb-3 sm:mb-4 leading-tight tracking-tight">
                             <GemIcon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 mr-0 sm:mr-3 mb-2 sm:mb-0 text-blue-600" />
@@ -729,7 +727,7 @@ const AppContent: React.FC = () => {
 
             <BackToTop />
             {/* <ChatButton /> */}
-            <StickyCtaBar onScrollTo={handleScrollTo} />
+            {/* <StickyCtaBar onScrollTo={handleScrollTo} /> */}
             <SocialProofBadge />
         </div>
     );

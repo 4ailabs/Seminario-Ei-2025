@@ -32,17 +32,17 @@ export interface SessionData {
 export const sessionsData: SessionData[] = [
   {
     id: 1,
-    title: "Neuroplasticidad, IA y Sistemas de Inteligencia Estratégica",
+    title: "Neuroplasticidad y Reprocesamiento Bilateral",
     date: "5 de Diciembre 2025",
     time: "10:00 AM - 6:00 PM",
-    location: "Hotel Galería Plaza Reforma, Ciudad de México",
-    description: "Primera sesión presencial enfocada en transformar el cerebro reactivo y dominar técnicas de priming neurofisiológico con apoyo de IA.",
+    location: "Hotel Galería Plaza Reforma, Ciudad de México (Presencial/Online)",
+    description: "Primera sesión enfocada en transformar el cerebro reactivo y dominar técnicas de reprocesamiento bilateral y posicionamiento neurocognitivo.",
     objectives: [
-      "Explorar la evolución del cerebro y sus bases neurobiológicas",
-      "Aprender técnicas de priming neurofisiológico para estados óptimos",
-      "Utilizar IA como asistente para el crecimiento personal",
-      "Desarrollar control consciente sobre el piloto automático",
-      "Practicar regulación del sistema nervioso autónomo"
+      "Crear el contenedor seguro y establecer objetivos de transformación",
+      "Comprender la neurobiología del sistema de supervivencia",
+      "Dominar la técnica TRSB: Técnica de Reprocesamiento Somato-Cognitivo Bilateral",
+      "Aprender el sistema PONS: Posicionamiento Neurocognitivo",
+      "Transformar patrones automáticos en decisiones conscientes"
     ],
     multimedia: [
       {
@@ -84,117 +84,85 @@ export const sessionsData: SessionData[] = [
     topics: [
       {
         id: "tema-1-1",
-        title: "Webinar de Introducción",
-        description: "Video introductorio del seminario que establece las bases conceptuales y el contexto del programa de transformación energética.",
-        duration: "30 min",
+        title: "Bienvenida y Encuadre del Seminario",
+        description: "Presentación del programa, objetivos de transformación y creación del contenedor seguro.",
+        duration: "1 hora",
         subTopics: [
           {
-            title: "Bases conceptuales",
-            description: "Fundamentos del programa de transformación energética"
+            title: "Presentación del programa",
+            description: "Estructura completa del seminario y metodologías"
           },
           {
-            title: "Contexto del seminario",
-            description: "Marco general y objetivos del programa"
+            title: "Objetivos de transformación",
+            description: "Establecimiento de metas y expectativas"
+          },
+          {
+            title: "Creación del contenedor seguro",
+            description: "Fundamentos para un espacio de trabajo seguro y transformador"
           }
         ]
       },
       {
         id: "tema-1-2",
-        title: "El cerebro reactivo: supervivencia vs. felicidad",
-        description: "Explora la evolución del cerebro, sus bases neurobiológicas y cómo pasar del piloto automático al control consciente.",
+        title: "El Cerebro Reactivo",
+        description: "Neurobiología del sistema de supervivencia y cómo transformar patrones automáticos en decisiones conscientes.",
         duration: "2 horas",
         subTopics: [
           {
-            title: "Evolución del cerebro",
-            description: "Desarrollo neurobiológico y adaptaciones evolutivas"
+            title: "Neurobiología del sistema de supervivencia",
+            description: "Fundamentos científicos del cerebro reactivo"
           },
           {
-            title: "Piloto automático vs control consciente",
-            description: "Transición de patrones reactivos a respuestas conscientes"
+            title: "Patrones automáticos",
+            description: "Comprensión de los mecanismos de respuesta automática"
           },
           {
-            title: "Bases neurobiológicas",
-            description: "Fundamentos científicos del comportamiento reactivo"
+            title: "Transformación a decisiones conscientes",
+            description: "Proceso de cambio de reactividad a consciencia"
           }
         ]
       },
       {
         id: "tema-1-3",
-        title: "Priming neurofisiológico: entrenamiento de estados óptimos",
-        description: "Aprende a regular tu sistema nervioso autónomo a través de técnicas de visualización y respiración consciente.",
-        duration: "1.5 horas",
+        title: "TRSB: Técnica de Reprocesamiento Somato-Cognitivo Bilateral",
+        description: "Fundamentos, las 4 etapas de transformación, protocolo completo y práctica guiada en parejas.",
+        duration: "2.5 horas",
         subTopics: [
           {
-            title: "Técnicas de visualización",
-            description: "Métodos para preparar el sistema nervioso"
+            title: "Fundamentos de TRSB",
+            description: "Bases teóricas y científicas de la técnica"
           },
           {
-            title: "Respiración consciente",
-            description: "Ejercicios de regulación del sistema autónomo"
+            title: "Las 4 etapas de transformación",
+            description: "Proceso completo de reprocesamiento"
           },
           {
-            title: "Estados óptimos",
-            description: "Desarrollo de capacidades de autorregulación"
+            title: "Protocolo completo",
+            description: "Aplicación paso a paso de la técnica"
+          },
+          {
+            title: "Práctica guiada en parejas",
+            description: "Ejercicio práctico con acompañamiento"
           }
         ]
       },
       {
         id: "tema-1-4",
-        title: "Inteligencia Aumentada: IA para el Crecimiento",
-        description: "Utiliza modelos de IA como asistente para profundizar en los conceptos, generar nuevas perspectivas y personalizar tu aprendizaje.",
-        duration: "1.5 horas",
-        subTopics: [
-          {
-            title: "IA como asistente",
-            description: "Herramientas de inteligencia artificial para el desarrollo personal"
-          },
-          {
-            title: "Nuevas perspectivas",
-            description: "Generación de insights y enfoques innovadores"
-          },
-          {
-            title: "Aprendizaje personalizado",
-            description: "Adaptación de contenidos a necesidades individuales"
-          }
-        ]
-      },
-      {
-        id: "tema-1-5",
-        title: "Workshop 1: Priming Neurofisiológico",
-        description: "Sesión práctica de entrenamiento en priming neurofisiológico y regulación del sistema nervioso autónomo.",
+        title: "PONS: Sistema de Posicionamiento Neurocognitivo",
+        description: "Las 8 posiciones de acceso visual, anclaje espacial de recursos e integración práctica.",
         duration: "2 horas",
         subTopics: [
           {
-            title: "Técnicas de priming",
-            description: "Métodos para preparar el sistema nervioso para estados óptimos"
+            title: "Las 8 posiciones de acceso visual",
+            description: "Sistema completo de posicionamiento"
           },
           {
-            title: "Regulación autónoma",
-            description: "Ejercicios para equilibrar el sistema nervioso simpático y parasimpático"
-          }
-        ]
-      },
-      {
-        id: "tema-1-6",
-        title: "Workshop 2: LSP Insight System - Exploración Simbólica con IA",
-        description: "Taller práctico utilizando el LSP Insight System, una fusión pionera entre LEGO® Serious Play®, acompañamiento simbólico y emocional, e inteligencia artificial generativa como facilitador reflexivo.",
-        duration: "1.5 horas",
-        subTopics: [
-          {
-            title: "Metodología LSP Insight",
-            description: "Introducción al sistema que combina construcción simbólica con IA para procesos profundos de exploración personal"
+            title: "Anclaje espacial de recursos",
+            description: "Técnicas de anclaje y recuperación de recursos"
           },
           {
-            title: "Construcción simbólica guiada",
-            description: "Protocolo para construir modelos con bricks según objetivos específicos de desarrollo personal"
-          },
-          {
-            title: "Acompañamiento con IA especializada",
-            description: "Interacción con asistente de IA entrenado para interpretación simbólica y formulación de preguntas exploratorias"
-          },
-          {
-            title: "Traducción simbólica a estrategia",
-            description: "Conversión del símbolo en acciones concretas y mapas internos para el avance personal"
+            title: "Integración práctica",
+            description: "Aplicación del sistema en situaciones reales"
           }
         ]
       }
@@ -209,17 +177,17 @@ export const sessionsData: SessionData[] = [
   },
   {
     id: 2,
-    title: "Bioenergética y Context Engineering Aplicado",
+    title: "Bioenergética Holográfica y Context Engineering",
     date: "6 de Diciembre 2025",
     time: "10:00 AM - 6:00 PM",
-    location: "Hotel Galería Plaza Reforma, Ciudad de México",
-    description: "Segunda sesión presencial dedicada a la bioenergética y el desarrollo de context engineering aplicado para optimizar el rendimiento físico y mental.",
+    location: "Hotel Galería Plaza Reforma, Ciudad de México (Presencial/Online)",
+    description: "Segunda sesión dedicada a la bioenergética holográfica, los protocolos de rastreo completo y el arte de la pregunta a través de Context Engineering.",
     objectives: [
-      "Dominar el arte de formular preguntas de alta calidad",
-      "Aplicar el marco metodológico de Context Engineering",
-      "Explorar los niveles Presente, Pasado y Sistema",
-      "Identificar la sensación raíz corporal",
-      "Comprender la dinámica cuerpo-emoción-creencia"
+      "Dominar los 13 hologramas bioenergéticos y las 20 sensaciones viscerales",
+      "Aprender el protocolo de rastreo completo con recesión de edad",
+      "Dominar el test muscular y la búsqueda de sensación visceral",
+      "Aplicar el Esquema de Contexto de 4 Niveles",
+      "Conocer los 4 Protocolos Bioenergéticos (Alpha, Beta, Gamma, Delta)"
     ],
     multimedia: [
       {
@@ -252,69 +220,121 @@ export const sessionsData: SessionData[] = [
     topics: [
       {
         id: "tema-2-1",
-        title: "Context Engineering y Esquema de Contexto",
-        description: "Domina el arte de formular preguntas de alta calidad para pasar de un modelo reactivo a uno estructurado.",
-        duration: "2 horas",
+        title: "Bioenergética Holográfica",
+        description: "Los 13 hologramas bioenergéticos, las 20 sensaciones viscerales y dominio del test muscular.",
+        duration: "2.5 horas",
         subTopics: [
           {
-            title: "Formulación de preguntas",
-            description: "Técnicas para crear preguntas que generen insights profundos"
+            title: "Los 13 hologramas bioenergéticos",
+            description: "Sistema completo de hologramas y su aplicación"
           },
           {
-            title: "Modelo reactivo vs estructurado",
-            description: "Diferencias entre respuestas automáticas y conscientes"
+            title: "Las 20 sensaciones viscerales",
+            description: "Identificación y trabajo con sensaciones corporales"
+          },
+          {
+            title: "Dominio del test muscular",
+            description: "Técnica de kinesiología aplicada para diagnóstico"
           }
         ]
       },
       {
         id: "tema-2-2",
-        title: "Rastreo guiado con Esquema de Contexto",
-        description: "Aplica un marco metodológico para explorar los niveles Presente, Pasado y Sistema que sostienen tus patrones actuales.",
+        title: "Protocolo de Rastreo Completo",
+        description: "Recesión de edad, búsqueda de sensación visceral, ámbito transgeneracional y demostración en vivo.",
         duration: "2.5 horas",
         subTopics: [
           {
-            title: "Nivel Presente",
-            description: "Exploración de patrones actuales y su manifestación"
+            title: "Recesión de edad",
+            description: "Técnica para acceder a experiencias pasadas"
           },
           {
-            title: "Nivel Pasado",
-            description: "Rastreo de orígenes y experiencias formativas"
+            title: "Búsqueda de sensación visceral",
+            description: "Identificación de la raíz corporal del síntoma"
           },
           {
-            title: "Nivel Sistema",
-            description: "Identificación de creencias y estructuras profundas"
+            title: "Ámbito transgeneracional",
+            description: "Exploración de patrones familiares y sistémicos"
+          },
+          {
+            title: "Demostración en vivo",
+            description: "Aplicación práctica del protocolo completo"
           }
         ]
       },
       {
         id: "tema-2-3",
-        title: "Del síntoma al escenario energético",
-        description: "Aprende a identificar la sensación raíz corporal y a comprender la dinámica cuerpo-emoción-creencia.",
+        title: "Context Engineering: El Arte de la Pregunta",
+        description: "Esquema de Contexto de 4 Niveles (Presente, Pasado, Transgeneracional, Sistema Actual) y rastreo guiado con caso real.",
         duration: "2 horas",
         subTopics: [
           {
-            title: "Identificación de sensaciones",
-            description: "Técnicas para reconocer señales corporales"
+            title: "Esquema de Contexto de 4 Niveles",
+            description: "Marco metodológico completo de Context Engineering"
           },
           {
-            title: "Dinámica cuerpo-emoción-creencia",
-            description: "Comprensión de la interconexión entre estos elementos"
+            title: "Nivel Presente",
+            description: "Exploración de patrones actuales"
+          },
+          {
+            title: "Nivel Pasado",
+            description: "Rastreo de orígenes históricos"
+          },
+          {
+            title: "Nivel Transgeneracional",
+            description: "Patrones familiares y sistémicos"
+          },
+          {
+            title: "Nivel Sistema Actual",
+            description: "Dinámicas actuales que sostienen el patrón"
+          },
+          {
+            title: "Rastreo guiado con caso real",
+            description: "Aplicación práctica con caso de ejemplo"
           }
         ]
       },
       {
         id: "tema-2-4",
-        title: "Workshop: Context Engineering Bioenergético",
-        description: "Taller práctico de Context Engineering aplicado a la bioenergética y transformación personal.",
-        duration: "1.5 horas",
+        title: "Los 4 Protocolos Bioenergéticos",
+        description: "Protocolo Alpha (síntomas físicos), Beta (conflictos emocionales), Gamma (dinámicas sistémicas), Delta (integración existencial) y algoritmo de decisión.",
+        duration: "2 horas",
         subTopics: [
           {
-            title: "Aplicación práctica",
-            description: "Ejercicios de Context Engineering en situaciones reales"
+            title: "Protocolo Alpha",
+            description: "Para síntomas físicos y manifestaciones corporales"
           },
           {
-            title: "Integración bioenergética",
-            description: "Combinación de técnicas de Context Engineering con bioenergética"
+            title: "Protocolo Beta",
+            description: "Para conflictos emocionales y bloqueos afectivos"
+          },
+          {
+            title: "Protocolo Gamma",
+            description: "Para dinámicas sistémicas y relaciones"
+          },
+          {
+            title: "Protocolo Delta",
+            description: "Para integración existencial y propósito"
+          },
+          {
+            title: "Algoritmo de decisión",
+            description: "Cómo elegir el protocolo adecuado para cada caso"
+          }
+        ]
+      },
+      {
+        id: "tema-2-5",
+        title: "Sorpresa Especial",
+        description: "Introducción a una herramienta transformadora que trabajaremos al día siguiente.",
+        duration: "30 min",
+        subTopics: [
+          {
+            title: "Presentación de la herramienta",
+            description: "Introducción a la metodología del sobre"
+          },
+          {
+            title: "Preparación para el día siguiente",
+            description: "Contexto y expectativas para la sesión 3"
           }
         ]
       }
@@ -328,17 +348,18 @@ export const sessionsData: SessionData[] = [
   },
   {
     id: 3,
-    title: "Sistemas de Decisión Consciente - Experiencia Vivencial",
+    title: "Integración y Transformación Sostenible",
     date: "7 de Diciembre 2025",
     time: "10:00 AM - 6:00 PM",
-    location: "Hotel Galería Plaza Reforma, Ciudad de México",
-    description: "Tercera sesión presencial enfocada en sistemas de decisión consciente y experiencias vivenciales para transformar patrones de comportamiento.",
+    location: "Hotel Galería Plaza Reforma, Ciudad de México (Presencial/Online)",
+    description: "Tercera sesión enfocada en integración de metodologías, transformación sostenible, rituales y preparación para el seguimiento de 90 días.",
     objectives: [
-      "Aprender el marco de transformación personal basado en enfoque, significado y acción",
-      "Entrenar la atención y utilizar preguntas transformadoras",
-      "Desarrollar la habilidad de asignar nuevos significados",
-      "Integrar los aprendizajes de las primeras 3 sesiones",
-      "Establecer compromisos personalizados y recibir certificación"
+      "Diseñar rituales matutinos transformadores",
+      "Profundizar en la herramienta del sobre con las 3 preguntas poderosas",
+      "Aprender el Protocolo de las 7 Excepciones para casos complejos",
+      "Dominar los 3 Elementos de Decisión Consciente",
+      "Establecer el Programa Integral de 90 Días",
+      "Recibir introducción al LSP Insight System y herramientas de IA"
     ],
     multimedia: [
       {
@@ -363,73 +384,161 @@ export const sessionsData: SessionData[] = [
     topics: [
       {
         id: "tema-3-1",
-        title: "Los Tres Elementos de Decisión Consciente",
-        description: "Aprende el marco de transformación personal basado en el enfoque, el significado y la acción específica.",
-        duration: "2 horas",
+        title: "El Poder de los Rituales",
+        description: "Neurobiología del ritual, diseño de ritual matutino transformador y práctica de creación personalizada.",
+        duration: "1.5 horas",
         subTopics: [
           {
-            title: "Elemento Enfoque",
-            description: "Desarrollo de la atención consciente y dirigida"
+            title: "Neurobiología del ritual",
+            description: "Fundamentos científicos de cómo los rituales transforman el cerebro"
           },
           {
-            title: "Elemento Significado",
-            description: "Asignación consciente de significados a las experiencias"
+            title: "Diseño de ritual matutino transformador",
+            description: "Creación de rituales personalizados para el día a día"
           },
           {
-            title: "Elemento Acción",
-            description: "Implementación de acciones específicas y efectivas"
+            title: "Práctica de creación personalizada",
+            description: "Ejercicio práctico de diseño de ritual propio"
           }
         ]
       },
       {
         id: "tema-3-2",
-        title: "Maestría del Enfoque Consciente",
-        description: "Entrena tu atención y utiliza preguntas transformadoras para cultivar estados internos óptimos.",
-        duration: "2.5 horas",
+        title: "Profundización de la Sorpresa",
+        description: "Trabajo experiencial con la herramienta del sobre, las 3 preguntas poderosas y compromiso público grupal.",
+        duration: "2 horas",
         subTopics: [
           {
-            title: "Entrenamiento de atención",
-            description: "Técnicas para mejorar la concentración y presencia"
+            title: "La herramienta del sobre",
+            description: "Metodología para compromiso y transformación"
           },
           {
-            title: "Preguntas transformadoras",
-            description: "Formulación de preguntas que generen cambios profundos"
+            title: "Las 3 preguntas poderosas",
+            description: "Preguntas que generan transformación profunda"
+          },
+          {
+            title: "Compromiso público grupal",
+            description: "Establecimiento de compromisos en comunidad"
           }
         ]
       },
       {
         id: "tema-3-3",
-        title: "Resignificación y Reencuadre Consciente",
-        description: "Desarrolla la habilidad de asignar nuevos significados y reencuadrar limitaciones para potenciar tu vida.",
+        title: "Protocolo de las 7 Excepciones",
+        description: "Para casos que no responden a protocolos estándar: las 7 preguntas quirúrgicas y demostración con caso complejo.",
         duration: "2 horas",
         subTopics: [
           {
-            title: "Técnicas de resignificación",
-            description: "Métodos para cambiar el significado de experiencias pasadas"
+            title: "Casos que no responden a protocolos estándar",
+            description: "Identificación de situaciones especiales"
           },
           {
-            title: "Reencuadre de limitaciones",
-            description: "Transformación de obstáculos en oportunidades"
+            title: "Las 7 preguntas quirúrgicas",
+            description: "Preguntas específicas para casos complejos"
+          },
+          {
+            title: "Demostración con caso complejo",
+            description: "Aplicación práctica del protocolo"
           }
         ]
       },
       {
         id: "tema-3-4",
-        title: "Síntesis de Transformación Integral y Certificación",
-        description: "Integra los aprendizajes de las primeras 3 sesiones, establece compromisos personalizados y recibe tu certificación inicial.",
+        title: "Los 3 Elementos de Decisión Consciente",
+        description: "Maestría del Enfoque, Resignificación y Reencuadre, y Acción Específica para transformación diaria.",
+        duration: "2 horas",
+        subTopics: [
+          {
+            title: "Maestría del Enfoque",
+            description: "Desarrollo de atención consciente y dirigida"
+          },
+          {
+            title: "Resignificación y Reencuadre",
+            description: "Asignación de nuevos significados y transformación de limitaciones"
+          },
+          {
+            title: "Acción Específica",
+            description: "Implementación de acciones concretas para transformación diaria"
+          }
+        ]
+      },
+      {
+        id: "tema-3-5",
+        title: "Programa Integral de 90 Días",
+        description: "Estructura semanal de seguimiento, comunidad de apoyo y plan personalizado.",
+        duration: "1 hora",
+        subTopics: [
+          {
+            title: "Estructura semanal de seguimiento",
+            description: "Plan de acompañamiento durante 90 días"
+          },
+          {
+            title: "Comunidad de apoyo",
+            description: "Red de soporte y colaboración"
+          },
+          {
+            title: "Plan personalizado",
+            description: "Diseño de estrategia individual de transformación"
+          }
+        ]
+      },
+      {
+        id: "tema-3-6",
+        title: "Introducción al LSP Insight System",
+        description: "Preparación para la Sesión 4: LEGO® Serious Play® adaptado para terapia.",
+        duration: "1 hora",
+        subTopics: [
+          {
+            title: "Fundamentos de LSP",
+            description: "Principios de LEGO® Serious Play®"
+          },
+          {
+            title: "Adaptación para terapia",
+            description: "Cómo aplicar LSP en contextos terapéuticos"
+          },
+          {
+            title: "Preparación para Sesión 4",
+            description: "Contexto y expectativas para la próxima sesión"
+          }
+        ]
+      },
+      {
+        id: "tema-3-7",
+        title: "Herramientas de IA para Tu Transformación",
+        description: "Presentación de asistentes inteligentes personalizados disponibles 24/7.",
+        duration: "1 hora",
+        subTopics: [
+          {
+            title: "Asistentes inteligentes personalizados",
+            description: "5 Apps de IA diseñadas para tu transformación"
+          },
+          {
+            title: "Disponibilidad 24/7",
+            description: "Acceso continuo a herramientas de apoyo"
+          },
+          {
+            title: "Integración con el programa",
+            description: "Cómo usar las herramientas de IA en tu proceso"
+          }
+        ]
+      },
+      {
+        id: "tema-3-8",
+        title: "Síntesis Integral y Cierre Inspirador",
+        description: "Mapa completo de las 6 metodologías, círculo de compromisos y entrega de certificados.",
         duration: "1.5 horas",
         subTopics: [
           {
-            title: "Integración de aprendizajes",
-            description: "Síntesis de todas las técnicas aprendidas"
+            title: "Mapa completo de las 6 metodologías",
+            description: "Integración de todas las técnicas aprendidas"
           },
           {
-            title: "Compromisos personalizados",
-            description: "Establecimiento de objetivos y planes de acción"
+            title: "Círculo de compromisos",
+            description: "Establecimiento de compromisos grupales"
           },
           {
-            title: "Certificación inicial",
-            description: "Reconocimiento del progreso y logros alcanzados"
+            title: "Entrega de certificados",
+            description: "Reconocimiento del progreso y logros"
           }
         ]
       }
@@ -443,17 +552,17 @@ export const sessionsData: SessionData[] = [
   },
   {
     id: 4,
-    title: "Consolidación y Profundización",
+    title: "LSP Insight System: Del Símbolo a la Acción",
     date: "25 de Enero 2026 (Online)",
     time: "10:00 AM - 6:00 PM",
     location: "Sesión Online",
-    description: "Cuarta sesión online dedicada a la consolidación de conocimientos y profundización de técnicas aprendidas en las sesiones presenciales.",
+    description: "Cuarta sesión online enfocada en consolidación de aprendizajes, protocolos avanzados de bioenergética y aplicación del LSP Insight System.",
     objectives: [
-      "Evaluar el progreso personal y ajustar estrategias",
-      "Aprender los cuatro protocolos principales de bioenergética",
-      "Conectar la comprensión con la implementación",
-      "Descubrir los principios de LEGO® Serious Play®",
-      "Materializar ideas y 'pensar con las manos'"
+      "Revisar el progreso en los 90 días y hacer ajustes estratégicos",
+      "Profundizar en la aplicación práctica de los 4 Protocolos Bioenergéticos",
+      "Conectar comprensión con implementación efectiva",
+      "Dominar el LSP Insight System para materializar ideas",
+      "Construir físicamente conflictos y soluciones con LEGO®"
     ],
     multimedia: [
       {
@@ -486,73 +595,97 @@ export const sessionsData: SessionData[] = [
     topics: [
       {
         id: "tema-4-1",
-        title: "Revisión de Progreso y Ajustes",
-        description: "Evaluación del progreso personal y ajustes en las estrategias implementadas.",
-        duration: "1.5 horas",
+        title: "Webinar Preparatorio: Construye Tu Historia",
+        description: "Cómo transformar tu narrativa personal en herramienta de empoderamiento.",
+        duration: "1 hora",
         subTopics: [
           {
-            title: "Evaluación de progreso",
-            description: "Herramientas para medir el avance personal"
+            title: "Transformación de narrativa personal",
+            description: "De víctima a protagonista de tu historia"
           },
           {
-            title: "Ajustes estratégicos",
-            description: "Modificaciones basadas en los resultados obtenidos"
+            title: "Herramienta de empoderamiento",
+            description: "Cómo usar tu historia para generar poder personal"
           }
         ]
       },
       {
         id: "tema-4-2",
-        title: "Protocolos Avanzados de Bioenergética",
-        description: "Los cuatro protocolos principales (Alpha, Beta, Gamma, Delta) y su aplicación práctica.",
-        duration: "3 horas",
+        title: "Revisión de Progreso y Ajustes",
+        description: "Evaluación del avance en los 90 días y ajustes estratégicos personalizados.",
+        duration: "1.5 horas",
         subTopics: [
           {
-            title: "Protocolo Alpha",
-            description: "Técnicas para estados de relajación profunda"
+            title: "Evaluación del avance en los 90 días",
+            description: "Revisión de logros y desafíos"
           },
           {
-            title: "Protocolo Beta",
-            description: "Métodos para activación y energía"
-          },
-          {
-            title: "Protocolo Gamma",
-            description: "Técnicas para estados de alta frecuencia"
-          },
-          {
-            title: "Protocolo Delta",
-            description: "Métodos para estados de integración profunda"
+            title: "Ajustes estratégicos personalizados",
+            description: "Modificaciones basadas en resultados individuales"
           }
         ]
       },
       {
         id: "tema-4-3",
-        title: "Metodología de Acción Efectiva",
-        description: "Conecta la comprensión con la implementación a través de protocolos que aseguran un compromiso auténtico.",
-        duration: "2 horas",
+        title: "Protocolos Avanzados de Bioenergética",
+        description: "Aplicación práctica profunda de los 4 Protocolos (Alpha, Beta, Gamma, Delta) en casos complejos.",
+        duration: "2.5 horas",
         subTopics: [
           {
-            title: "Conexión comprensión-implementación",
-            description: "Puente entre teoría y práctica"
+            title: "Protocolo Alpha en casos complejos",
+            description: "Aplicación avanzada para síntomas físicos persistentes"
           },
           {
-            title: "Protocolos de compromiso",
-            description: "Métodos para asegurar la implementación efectiva"
+            title: "Protocolo Beta en casos complejos",
+            description: "Trabajo profundo con conflictos emocionales arraigados"
+          },
+          {
+            title: "Protocolo Gamma en casos complejos",
+            description: "Resolución de dinámicas sistémicas profundas"
+          },
+          {
+            title: "Protocolo Delta en casos complejos",
+            description: "Integración existencial y propósito de vida"
           }
         ]
       },
       {
         id: "tema-4-4",
-        title: "LSP Insight System: del símbolo a la acción",
-        description: "Descubre los principios de LEGO® Serious Play® para materializar ideas y 'pensar con las manos'.",
+        title: "Metodología de Acción Efectiva",
+        description: "Conectar comprensión con implementación a través de protocolos que aseguran compromiso auténtico.",
         duration: "1.5 horas",
         subTopics: [
           {
-            title: "Principios de LSP",
-            description: "Fundamentos de la metodología LEGO® Serious Play®"
+            title: "Conexión comprensión-implementación",
+            description: "Puente entre teoría y práctica efectiva"
           },
           {
-            title: "Materialización de ideas",
-            description: "Técnicas para convertir conceptos abstractos en objetos tangibles"
+            title: "Protocolos de compromiso auténtico",
+            description: "Métodos para asegurar implementación real"
+          }
+        ]
+      },
+      {
+        id: "tema-4-5",
+        title: "LSP Insight System: Del Símbolo a la Acción",
+        description: "Descubre los principios de LEGO® Serious Play® para materializar ideas y 'pensar con las manos'. Construcción física de conflictos y soluciones.",
+        duration: "2 horas",
+        subTopics: [
+          {
+            title: "Principios de LEGO® Serious Play®",
+            description: "Fundamentos de la metodología LSP"
+          },
+          {
+            title: "Pensar con las manos",
+            description: "Materialización de conceptos abstractos"
+          },
+          {
+            title: "Construcción física de conflictos",
+            description: "Representación tangible de problemas"
+          },
+          {
+            title: "Construcción física de soluciones",
+            description: "Materialización de estrategias de resolución"
           }
         ]
       }
@@ -570,12 +703,12 @@ export const sessionsData: SessionData[] = [
     date: "22 de Febrero 2026 (Online)",
     time: "10:00 AM - 6:00 PM",
     location: "Sesión Online",
-    description: "Quinta sesión online final enfocada en el desarrollo de maestría en las técnicas y la proyección de un futuro de evolución continua.",
+    description: "Quinta sesión online final enfocada en maestría de las técnicas, integración avanzada de IA y proyección de futuro con desarrollo continuo.",
     objectives: [
-      "Transformar descubrimientos en arquetipos y estrategias claras",
-      "Crear un plan de acción concreto",
+      "Transformar descubrimientos de LSP en arquetipos y estrategias claras",
+      "Crear plan de acción concreto para la vida",
       "Integrar herramientas de IA como asistente estratégico",
-      "Integrar completamente todos los aprendizajes",
+      "Integrar completamente todos los aprendizajes del programa",
       "Establecer compromisos a largo plazo y plan de desarrollo continuo"
     ],
     multimedia: [
@@ -610,61 +743,77 @@ export const sessionsData: SessionData[] = [
     topics: [
       {
         id: "tema-5-1",
-        title: "Descubrimiento de insights y estrategias con LSP",
-        description: "Transforma los descubrimientos de los modelos en arquetipos, estrategias claras y un plan de acción concreto.",
-        duration: "3 horas",
+        title: "Webinar Preparatorio: Construyendo Nuestra Vida con LEGO Serious Play",
+        description: "Metodología LSP para materializar estrategias de vida concretas.",
+        duration: "1 hora",
         subTopics: [
           {
-            title: "Identificación de arquetipos",
-            description: "Reconocimiento de patrones profundos en los modelos LSP"
+            title: "Metodología LSP para vida",
+            description: "Aplicación de LEGO® Serious Play® a estrategias de vida"
           },
           {
-            title: "Desarrollo de estrategias",
-            description: "Creación de planes de acción basados en insights"
-          },
-          {
-            title: "Plan de acción concreto",
-            description: "Implementación práctica de las estrategias identificadas"
+            title: "Materialización de estrategias",
+            description: "Cómo convertir ideas en planes concretos"
           }
         ]
       },
       {
         id: "tema-5-2",
-        title: "Integración de Herramientas de IA",
-        description: "Uso avanzado de IA como asistente estratégico en tu práctica profesional y personal.",
-        duration: "2.5 horas",
+        title: "Descubrimiento de Insights y Estrategias con LSP",
+        description: "Transforma los descubrimientos de los modelos en arquetipos, estrategias claras y plan de acción concreto.",
+        duration: "3 horas",
         subTopics: [
           {
-            title: "IA como asistente estratégico",
-            description: "Uso de IA para análisis y planificación"
+            title: "Transformación de descubrimientos en arquetipos",
+            description: "Identificación de patrones profundos en modelos LSP"
           },
           {
-            title: "Aplicación profesional",
-            description: "Integración de IA en la práctica profesional"
+            title: "Desarrollo de estrategias claras",
+            description: "Creación de estrategias basadas en insights"
           },
           {
-            title: "Aplicación personal",
-            description: "Uso de IA para desarrollo personal continuo"
+            title: "Plan de acción concreto",
+            description: "Implementación práctica de estrategias identificadas"
           }
         ]
       },
       {
         id: "tema-5-3",
-        title: "Síntesis Final y Proyección",
-        description: "Integración completa de los aprendizajes, establecimiento de compromisos a largo plazo y plan de desarrollo continuo.",
-        duration: "2.5 horas",
+        title: "Integración Avanzada de Herramientas de IA",
+        description: "Uso estratégico de IA como asistente en tu práctica profesional y personal.",
+        duration: "2 horas",
         subTopics: [
           {
-            title: "Integración completa",
-            description: "Síntesis de todos los aprendizajes del programa"
+            title: "Uso estratégico de IA",
+            description: "IA como asistente en análisis y planificación"
           },
           {
-            title: "Compromisos a largo plazo",
-            description: "Establecimiento de objetivos y compromisos futuros"
+            title: "Aplicación en práctica profesional",
+            description: "Integración de IA en contextos profesionales"
+          },
+          {
+            title: "Aplicación en desarrollo personal",
+            description: "Uso de IA para crecimiento personal continuo"
+          }
+        ]
+      },
+      {
+        id: "tema-5-4",
+        title: "Síntesis Final y Proyección",
+        description: "Integración completa de los aprendizajes, establecimiento de compromisos a largo plazo y plan de desarrollo continuo.",
+        duration: "2 horas",
+        subTopics: [
+          {
+            title: "Integración completa de aprendizajes",
+            description: "Síntesis de todas las metodologías del programa"
+          },
+          {
+            title: "Establecimiento de compromisos a largo plazo",
+            description: "Objetivos y compromisos para el futuro"
           },
           {
             title: "Plan de desarrollo continuo",
-            description: "Estrategias para el crecimiento personal continuo"
+            description: "Estrategias para crecimiento personal permanente"
           }
         ]
       }
