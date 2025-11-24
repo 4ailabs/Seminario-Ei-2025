@@ -200,7 +200,7 @@ export const translations: Record<string, Translations> = {
             },
             {
               title: "PONS: Sistema de Posicionamiento Neurocognitivo",
-              description: "Sistema completo con las 8 posiciones de acceso visual para estados internos. Aprendizaje de anclaje espacial de recursos internos, técnicas de recuperación de recursos cuando se necesitan, e integración práctica en contextos terapéuticos y de vida cotidiana."
+              description: "Sistema completo reprocesamiento visual para estados internos y memorias traumáticas. Aprendizaje de anclaje espacial de recursos internos, técnicas de recuperación de recursos cuando se necesitan, e integración práctica en contextos terapéuticos y de vida cotidiana."
             },
           ]
         },
@@ -561,7 +561,7 @@ export const translations: Record<string, Translations> = {
             },
             {
               title: "PONS: Neurocognitive Positioning System",
-              description: "Complete system with 8 visual access positions for internal states. Learning spatial anchoring of internal resources, techniques for resource recovery when needed, and practical integration in therapeutic and daily life contexts."
+              description: "Complete visual reprocessing system for internal states and traumatic memories. Learning spatial anchoring of internal resources, techniques for resource recovery when needed, and practical integration in therapeutic and daily life contexts."
             },
           ]
         },

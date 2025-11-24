@@ -162,7 +162,7 @@ export const sessionsData: SessionData[] = [
       {
         id: "tema-1-4",
         title: "PONS: Sistema de Posicionamiento Neurocognitivo",
-        description: "Sistema completo de posicionamiento con las 8 posiciones de acceso visual. Aprendizaje de anclaje espacial de recursos internos e integración práctica en contextos terapéuticos y personales.",
+        description: "Sistema completo reprocesamiento visual para estados internos y memorias traumáticas. Aprendizaje de anclaje espacial de recursos internos, técnicas de recuperación de recursos cuando se necesitan, e integración práctica en contextos terapéuticos y de vida cotidiana.",
         duration: "2 horas",
         subTopics: [
           {

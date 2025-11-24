@@ -40,6 +40,7 @@ import LazyVimeoVideo from './components/LazyVimeoVideo';
 import Header from './components/Header';
 import AnimatedSection from './components/AnimatedSection';
 import ProgramSection from './components/ProgramSection';
+import ProgramTimeline from './components/ProgramTimeline';
 import ErrorBoundary from './components/ErrorBoundary';
 import InfoCard from './components/InfoCard';
 import WebinarCard from './components/WebinarCard';
@@ -194,8 +195,16 @@ const AppContent: React.FC = () => {
                 </section>
 
                 {/* --- Program Section --- */}
-                <AnimatedSection id="programa" className="bg-gradient-to-b from-slate-50 to-white" delay={200}>
+                <AnimatedSection id="programa" className="bg-white py-16 sm:py-20 md:py-24" delay={200}>
                     <ProgramSection/>
+                </AnimatedSection>
+
+                {/* Divider with more contrast */}
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
+
+                {/* --- Program Timeline Visual --- */}
+                <AnimatedSection className="bg-gradient-to-b from-slate-100 via-slate-50 to-white py-16 sm:py-20 md:py-24" delay={250}>
+                    <ProgramTimeline/>
                 </AnimatedSection>
 
                 {/* Divider with more contrast */}
@@ -250,7 +259,7 @@ const AppContent: React.FC = () => {
                 <div className="w-full border-t border-slate-200"></div> */}
 
                 {/* --- Hotel Information Section --- */}
-                <AnimatedSection id="ubicacion" className="relative py-24 sm:py-28 md:py-32 overflow-hidden bg-white" delay={150}>
+                <AnimatedSection id="ubicacion" className="relative py-24 sm:py-28 md:py-32 overflow-hidden bg-gradient-to-b from-slate-50 to-white" delay={150}>
 
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         {/* Header */}
@@ -364,7 +373,7 @@ const AppContent: React.FC = () => {
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
 
                 {/* --- Online Modality Benefits --- */}
-                <AnimatedSection className="relative py-24 sm:py-28 md:py-32 overflow-hidden bg-gradient-to-b from-slate-50 to-white" delay={150}>
+                <AnimatedSection className="relative py-24 sm:py-28 md:py-32 overflow-hidden bg-white" delay={150}>
 
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         {/* Header */}
@@ -449,7 +458,7 @@ const AppContent: React.FC = () => {
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
                 
                 {/* --- Webinars Section --- */}
-                <AnimatedSection id="webinars" className="bg-white py-16 sm:py-20 md:py-24" delay={250}>
+                <AnimatedSection id="webinars" className="bg-gradient-to-b from-blue-50/30 via-white to-slate-50/50 py-16 sm:py-20 md:py-24" delay={250}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-6 sm:mb-8">
                             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4 leading-tight">
@@ -480,7 +489,7 @@ const AppContent: React.FC = () => {
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
                 
                 {/* --- Who is it for Section --- */}
-                <AnimatedSection id="para-quien" className="bg-gradient-to-b from-slate-50 to-white py-24 sm:py-28 md:py-32" delay={400}>
+                <AnimatedSection id="para-quien" className="bg-white py-24 sm:py-28 md:py-32" delay={400}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-slate-900 leading-tight">{t.whoIsItFor.title}</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-7xl mx-auto">
@@ -496,7 +505,7 @@ const AppContent: React.FC = () => {
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
                 
                 {/* --- Results Section --- */}
-                <AnimatedSection id="resultados" className="bg-white py-24 sm:py-28 md:py-32" delay={600}>
+                <AnimatedSection id="resultados" className="bg-gradient-to-b from-amber-50/30 via-white to-slate-50/50 py-24 sm:py-28 md:py-32" delay={600}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="flex flex-col sm:flex-row items-center justify-center text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8 sm:mb-12 text-slate-900 leading-tight tracking-tight">
                             <SparklesIcon className="w-6 h-6 sm:w-8 sm:h-8 mr-0 sm:mr-3 mb-2 sm:mb-0 text-amber-500" />
@@ -532,7 +541,7 @@ const AppContent: React.FC = () => {
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
 
                 {/* --- Testimonials Section --- */}
-                <AnimatedSection id="testimonios" className="bg-gradient-to-b from-slate-50 to-white py-24 sm:py-28 md:py-32" delay={800}>
+                <AnimatedSection id="testimonios" className="bg-white py-24 sm:py-28 md:py-32" delay={800}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-900 leading-tight">{t.testimonials.title}</h2>
                         <p className="text-center text-base sm:text-lg text-slate-600 mt-4 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">{t.testimonials.subtitle}</p>
@@ -598,14 +607,28 @@ const AppContent: React.FC = () => {
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
 
                 {/* --- Includes Section --- */}
-                <AnimatedSection id="incluye" className="bg-white py-24 sm:py-28 md:py-32" delay={1000}>
-                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-4 sm:mb-6 text-slate-900 leading-tight tracking-tight">
-                            {t.includes.title}
-                        </h2>
-                        <p className="text-base sm:text-lg text-slate-600 mb-8 sm:mb-12 max-w-3xl mx-auto text-center leading-relaxed">
-                            {t.includes.subtitle}
-                        </p>
+                <AnimatedSection id="incluye" className="bg-gradient-to-b from-emerald-50/30 via-white to-slate-50/50 py-24 sm:py-28 md:py-32 relative overflow-hidden" delay={1000}>
+                    {/* Decorative background elements */}
+                    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                        <div className="absolute top-20 right-10 w-72 h-72 bg-emerald-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+                        <div className="absolute bottom-20 left-10 w-72 h-72 bg-cyan-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+                    </div>
+                    
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        {/* Header with badge */}
+                        <div className="text-center mb-12 sm:mb-16">
+                            <div className="inline-block mb-4">
+                                <span className="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wide shadow-lg">
+                                    {language === 'es' ? 'Valor Completo' : 'Complete Value'}
+                                </span>
+                            </div>
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 sm:mb-6 text-slate-900 leading-tight tracking-tight">
+                                {t.includes.title}
+                            </h2>
+                            <p className="text-base sm:text-lg md:text-xl text-slate-600 mb-8 sm:mb-12 max-w-3xl mx-auto text-center leading-relaxed font-medium">
+                                {t.includes.subtitle}
+                            </p>
+                        </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
                             {t.includes.items.map((item, index) => (
                                 <IncludeCard
@@ -623,7 +646,7 @@ const AppContent: React.FC = () => {
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
 
                 {/* --- Extensions & Investment Section --- */}
-                 <AnimatedSection id="inversion" className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gradient-to-b from-white via-slate-50 to-white" delay={1100}>
+                 <AnimatedSection id="inversion" className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gradient-to-b from-cyan-50/40 via-white to-blue-50/30" delay={1100}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                         <h2 className="flex flex-col sm:flex-row items-center justify-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-slate-900 mb-3 sm:mb-4 leading-tight tracking-tight">
                             <GemIcon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 mr-0 sm:mr-3 mb-2 sm:mb-0 text-blue-600" />
