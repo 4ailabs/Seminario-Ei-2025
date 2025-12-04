@@ -8,8 +8,8 @@ const EventStartsBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [timeUntilStart, setTimeUntilStart] = useState<{ hours: number; minutes: number }>({ hours: 0, minutes: 0 });
 
-  // Fecha de inicio: 5 de Diciembre 2025 a las 9:00 AM (hora de México)
-  const eventStartDate = new Date('2025-12-05T09:00:00-06:00');
+  // Fecha de inicio: 6 de Diciembre 2025 a las 9:00 AM (hora de México)
+  const eventStartDate = new Date('2025-12-06T09:00:00-06:00');
   const now = new Date();
   const timeDiff = eventStartDate.getTime() - now.getTime();
   
@@ -74,8 +74,8 @@ const EventStartsBanner: React.FC = () => {
                   <Clock className="w-3 h-3 sm:w-4 sm:h-4" />
                   <span>
                     {language === 'es' 
-                      ? `5-7 Diciembre 2025 • Hotel Galería Plaza Reforma, CDMX`
-                      : `December 5-7, 2025 • Hotel Galería Plaza Reforma, CDMX`
+                      ? `6-8 Diciembre 2025 • Hotel Galería Plaza Reforma, CDMX`
+                      : `December 6-8, 2025 • Hotel Galería Plaza Reforma, CDMX`
                     }
                   </span>
                 </div>

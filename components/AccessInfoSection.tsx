@@ -7,25 +7,25 @@ const AccessInfoSection: React.FC = () => {
 
   const schedule = [
     {
-      day: language === 'es' ? 'Día 1 - Jueves 5 de Diciembre' : 'Day 1 - Thursday, December 5',
+      day: language === 'es' ? 'Día 1 - Viernes 6 de Diciembre' : 'Day 1 - Friday, December 6',
       time: '9:00 AM - 6:00 PM',
       activities: language === 'es' 
         ? ['Registro: 8:30 AM', 'Sesión matutina: 9:00 AM - 1:00 PM', 'Comida: 1:00 PM - 2:30 PM', 'Sesión vespertina: 2:30 PM - 6:00 PM']
         : ['Registration: 8:30 AM', 'Morning session: 9:00 AM - 1:00 PM', 'Lunch: 1:00 PM - 2:30 PM', 'Evening session: 2:30 PM - 6:00 PM']
     },
     {
-      day: language === 'es' ? 'Día 2 - Viernes 6 de Diciembre' : 'Day 2 - Friday, December 6',
+      day: language === 'es' ? 'Día 2 - Sábado 7 de Diciembre' : 'Day 2 - Saturday, December 7',
       time: '9:00 AM - 6:00 PM',
       activities: language === 'es'
-        ? ['Sesión matutina: 9:00 AM - 1:00 PM', 'Comida: 1:00 PM - 2:30 PM', 'Sesión vespertina: 2:30 PM - 6:00 PM']
-        : ['Morning session: 9:00 AM - 1:00 PM', 'Lunch: 1:00 PM - 2:30 PM', 'Evening session: 2:30 PM - 6:00 PM']
+        ? ['Sesión matutina: 9:00 AM - 1:00 PM', 'Comida: 1:00 PM - 2:30 PM', 'Sesión vespertina: 2:30 PM - 6:00 PM', 'Cena grupal en la terraza del hotel: 8:30 PM']
+        : ['Morning session: 9:00 AM - 1:00 PM', 'Lunch: 1:00 PM - 2:30 PM', 'Evening session: 2:30 PM - 6:00 PM', 'Group dinner at hotel terrace: 8:30 PM']
     },
     {
-      day: language === 'es' ? 'Día 3 - Sábado 7 de Diciembre' : 'Day 3 - Saturday, December 7',
-      time: '9:00 AM - 6:00 PM',
+      day: language === 'es' ? 'Día 3 - Domingo 8 de Diciembre' : 'Day 3 - Sunday, December 8',
+      time: '10:00 AM - 6:00 PM',
       activities: language === 'es'
-        ? ['Sesión matutina: 9:00 AM - 1:00 PM', 'Comida: 1:00 PM - 2:30 PM', 'Sesión vespertina: 2:30 PM - 6:00 PM', 'Cierre y entrega de certificados']
-        : ['Morning session: 9:00 AM - 1:00 PM', 'Lunch: 1:00 PM - 2:30 PM', 'Evening session: 2:30 PM - 6:00 PM', 'Closing and certificate presentation']
+        ? ['Sesión matutina: 10:00 AM - 1:00 PM', 'Comida: 1:00 PM - 2:30 PM', 'Sesión vespertina: 2:30 PM - 6:00 PM', 'Cierre y entrega de certificados']
+        : ['Morning session: 10:00 AM - 1:00 PM', 'Lunch: 1:00 PM - 2:30 PM', 'Evening session: 2:30 PM - 6:00 PM', 'Closing and certificate presentation']
     }
   ];
 

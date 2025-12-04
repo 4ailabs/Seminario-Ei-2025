@@ -44,7 +44,7 @@ const SocialProofBadge: React.FC = () => {
     },
     {
       icon: <Star className="w-4 h-4" />,
-      text: '5-7 Dic 2025 + 2 sesiones 2026',
+      text: '6-8 Dic 2025 + 2 sesiones 2026',
       color: 'from-amber-500 to-orange-600',
       bgColor: 'bg-amber-50',
       borderColor: 'border-amber-200',
@@ -71,7 +71,7 @@ const SocialProofBadge: React.FC = () => {
     },
     {
       icon: <Star className="w-4 h-4" />,
-      text: 'Dec 5-7, 2025 + 2 sessions 2026',
+      text: 'Dec 6-8, 2025 + 2 sessions 2026',
       color: 'from-amber-500 to-orange-600',
       bgColor: 'bg-amber-50',
       borderColor: 'border-amber-200',

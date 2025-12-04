@@ -31,7 +31,7 @@ const StickyCtaBar: React.FC<StickyCtaBarProps> = ({ onScrollTo }) => {
 
   const generateWhatsAppMessage = () => {
     const message = language === 'es'
-      ? `¡Hola! Necesito información sobre el acceso al Seminario Internacional de Inteligencia Energética que inicia mañana (5-7 Dic 2025). ¿Podrían ayudarme con información de acceso presencial u online?`
+      ? `¡Hola! Necesito información sobre el acceso al Seminario Internacional de Inteligencia Energética que inicia mañana (6-8 Dic 2025). ¿Podrían ayudarme con información de acceso presencial u online?`
       : `Hello! I need information about access to the International Energy Intelligence Seminar starting tomorrow (Dec 5-7, 2025). Could you help me with in-person or online access information?`;
     return encodeURIComponent(message);
   };
@@ -56,7 +56,7 @@ const StickyCtaBar: React.FC<StickyCtaBarProps> = ({ onScrollTo }) => {
               </div>
               <div className="flex items-baseline gap-2 flex-wrap">
                 <span className="text-slate-900 text-base sm:text-lg md:text-xl font-bold tracking-tight">
-                  {language === 'es' ? '5-7 Diciembre 2025' : 'December 5-7, 2025'}
+                  {language === 'es' ? '6-8 Diciembre 2025' : 'December 6-8, 2025'}
                 </span>
               </div>
               <p className="text-slate-600 text-xs hidden sm:block">

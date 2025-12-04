@@ -133,7 +133,7 @@ const AppContent: React.FC = () => {
 
     const generateWhatsAppMessage = () => {
         // Always generate Spanish message for WhatsApp
-        const message = `¡Hola! Me interesa inscribirme al Seminario Internacional de Inteligencia Energética (5-7 Dic 2025 + sesiones 24 Ene & 28 Feb 2026) en el Hotel Galería Plaza Reforma, Ciudad de México. ¿Podrían brindarme más información sobre el proceso de inscripción y formas de pago?`;
+        const message = `¡Hola! Me interesa inscribirme al Seminario Internacional de Inteligencia Energética (6-8 Dic 2025 + sesiones 24 Ene & 28 Feb 2026) en el Hotel Galería Plaza Reforma, Ciudad de México. ¿Podrían brindarme más información sobre el proceso de inscripción y formas de pago?`;
         return encodeURIComponent(message);
     };
 
@@ -159,7 +159,7 @@ const AppContent: React.FC = () => {
                                 </span>
                                 <div className="text-slate-900 font-semibold flex flex-col gap-1 text-center">
                                     <span className="text-base sm:text-lg md:text-xl">
-                                        {language === 'es' ? '5-7 Diciembre 2025' : 'December 5-7, 2025'}
+                                        {language === 'es' ? '6-8 Diciembre 2025' : 'December 6-8, 2025'}
                                     </span>
                                     <div className="text-xs sm:text-sm text-slate-600 font-medium px-2">
                                         {language === 'es' ? '+ 2 Sesiones: 24 Ene & 28 Feb 2026' : '+ 2 Sessions: Jan 24 & Feb 28, 2026'}

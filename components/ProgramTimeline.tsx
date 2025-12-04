@@ -8,7 +8,7 @@ const ProgramTimeline: React.FC = () => {
   const presencialSessions = [
     {
       id: 1,
-      date: language === 'es' ? '5 Dic 2025' : 'Dec 5, 2025',
+      date: language === 'es' ? '6 Dic 2025' : 'Dec 6, 2025',
       title: language === 'es' ? 'Neuroplasticidad y Reprocesamiento Bilateral' : 'Neuroplasticity and Bilateral Reprocessing',
       keywords: language === 'es' 
         ? ['PONS', 'TRSB', 'Protocolo 4 etapas']
@@ -20,11 +20,11 @@ const ProgramTimeline: React.FC = () => {
     },
     {
       id: 2,
-      date: language === 'es' ? '6 Dic 2025' : 'Dec 6, 2025',
+      date: language === 'es' ? '7 Dic 2025' : 'Dec 7, 2025',
       title: language === 'es' ? 'Bioenergética + Context Engineering' : 'Bioenergetics + Context Engineering',
       keywords: language === 'es'
-        ? ['13 hologramas', '20 sensaciones viscerales', 'Protocolos Alpha, Beta, Gamma, Delta']
-        : ['13 holograms', '20 visceral sensations', 'Alpha, Beta, Gamma, Delta Protocols'],
+        ? ['13 hologramas traumaticos', '20 sensaciones viscerales traumaticas', 'Protocolos Alpha, Beta, Gamma, Delta']
+        : ['13 traumatic holograms', '20 traumatic visceral sensations', 'Alpha, Beta, Gamma, Delta Protocols'],
       icon: <Zap className="w-5 h-5 sm:w-6 sm:h-6" />,
       color: 'from-orange-500 to-amber-600',
       bgColor: 'bg-orange-500',
@@ -32,7 +32,7 @@ const ProgramTimeline: React.FC = () => {
     },
     {
       id: 3,
-      date: language === 'es' ? '7 Dic 2025' : 'Dec 7, 2025',
+      date: language === 'es' ? '8 Dic 2025' : 'Dec 8, 2025',
       title: language === 'es' ? 'Integración y Transformación Sostenible' : 'Integration and Sustainable Transformation',
       keywords: language === 'es'
         ? ['Protocolo avanzado', 'Programa 90 días', 'LSP Insight System', 'Herramientas IA']
@@ -99,7 +99,7 @@ const ProgramTimeline: React.FC = () => {
             <Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
           </div>
           <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900">
-            {language === 'es' ? 'Bloque Presencial: 5-7 Diciembre 2025' : 'In-Person Block: December 5-7, 2025'}
+            {language === 'es' ? 'Bloque Presencial: 6-8 Diciembre 2025' : 'In-Person Block: December 6-8, 2025'}
           </h3>
         </div>
 
