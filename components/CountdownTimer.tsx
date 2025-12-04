@@ -129,8 +129,8 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
         <div className="text-center">
           <p className="text-red-300 text-xs sm:text-sm font-semibold animate-pulse">
             {language === 'es' 
-              ? '⚠️ Esta es tu última oportunidad para obtener el precio Early Bird'
-              : '⚠️ This is your last chance to get the Early Bird price'}
+              ? 'Esta es tu última oportunidad para obtener el precio Early Bird'
+              : 'This is your last chance to get the Early Bird price'}
           </p>
         </div>
       )}

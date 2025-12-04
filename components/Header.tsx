@@ -12,10 +12,8 @@ const Header: React.FC<HeaderProps> = ({ onScrollTo }) => {
 
   // Main navigation items (visible on desktop)
   const mainNavLinks = [
-    { id: 'programa', text: t.nav.programa },
-    { id: 'ubicacion', text: t.nav.ubicacion },
+    { id: 'acceso', text: language === 'es' ? 'Acceso' : 'Access' },
     { id: 'sesiones', text: 'Sesiones', isRoute: true },
-    { id: 'inversion', text: t.nav.inversion },
   ];
 
   // Secondary navigation items (in mobile menu or dropdown)
@@ -35,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({ onScrollTo }) => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md border-b border-slate-200 transition-all duration-300">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md border-b border-slate-200 transition-all duration-300" style={{ top: 'var(--banner-height, 0px)' }}>
       <div className="container mx-auto px-3 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
         <a
           href="https://inteligencia-energetica.com/home-ei"
@@ -169,11 +167,11 @@ const Header: React.FC<HeaderProps> = ({ onScrollTo }) => {
             </div>
             
             <a
-              href="#inversion"
-              onClick={(e) => {e.preventDefault(); handleMobileNavClick('inversion')}}
+              href="#acceso"
+              onClick={(e) => {e.preventDefault(); handleMobileNavClick('acceso')}}
               className="block bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-6 rounded-xl text-center transition-all duration-200 touch-manipulation text-base mt-4 active:scale-[0.98]"
             >
-              {t.nav.inscribirse}
+              {language === 'es' ? 'Acceso' : 'Access'}
             </a>
           </nav>
         </div>

@@ -25,7 +25,8 @@ import {
     Compass,
     Play,
     Phone,
-    Globe
+    Globe,
+    Video
 } from 'lucide-react';
 import { LanguageProvider, useLanguage } from './LanguageContext';
 import { useIntersectionObserver } from './useIntersectionObserver';
@@ -49,6 +50,8 @@ import IncludeCard from './components/IncludeCard';
 import StickyCtaBar from './components/StickyCtaBar';
 import CountdownTimer from './components/CountdownTimer';
 import SocialProofBadge from './components/SocialProofBadge';
+import EventStartsBanner from './components/EventStartsBanner';
+import AccessInfoSection from './components/AccessInfoSection';
 import { 
   MapPinIcon, 
   SparklesIcon, 
@@ -136,12 +139,13 @@ const AppContent: React.FC = () => {
 
     return (
         <div className="bg-gradient-to-b from-slate-50 to-white text-slate-800 antialiased">
+            <EventStartsBanner />
             <Header onScrollTo={handleScrollTo} />
 
             <main>
 
                 {/* --- Hero Section --- */}
-                <section className="relative min-h-[90vh] flex items-center justify-center text-center px-4 py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden bg-gradient-to-b from-white to-slate-50">
+                <section className="relative min-h-[90vh] flex items-center justify-center text-center px-4 py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden bg-gradient-to-b from-white to-slate-50" style={{ paddingTop: 'calc(80px + 1rem)' }}>
                     <div className="absolute inset-0 bg-gradient-to-b from-white to-slate-50"></div>
                     <div className="relative z-10 max-w-6xl mx-auto">
                         <AnimatedSection>
@@ -180,11 +184,16 @@ const AppContent: React.FC = () => {
                                 {t.hero.description}
                             </p>
                             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4">
-                                <a href="#inversion" onClick={(e) => {e.preventDefault(); handleScrollTo('inversion')}} className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 active:from-cyan-700 active:to-blue-700 text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl text-sm sm:text-base md:text-lg transition-all duration-200 shadow-sm touch-manipulation w-full sm:w-auto active:scale-[0.98]">
-                                    {t.hero.ctaInscribirse}
+                                <a href="#acceso" onClick={(e) => {e.preventDefault(); handleScrollTo('acceso')}} className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 active:from-cyan-700 active:to-blue-700 text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl text-sm sm:text-base md:text-lg transition-all duration-200 shadow-sm touch-manipulation w-full sm:w-auto active:scale-[0.98] flex items-center justify-center gap-2">
+                                    <Video className="w-4 h-4 sm:w-5 sm:h-5" />
+                                    {language === 'es' ? 'Ver Información de Acceso' : 'View Access Information'}
                                 </a>
-                                <a href="#programa" onClick={(e) => {e.preventDefault(); handleScrollTo('programa')}} className="bg-white hover:bg-slate-50 active:bg-slate-100 border border-slate-300 text-slate-800 font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl text-sm sm:text-base md:text-lg transition-all duration-200 touch-manipulation w-full sm:w-auto active:scale-[0.98]">
-                                    {t.hero.ctaVerPrograma}
+                                <a href="#acceso" onClick={(e) => {e.preventDefault(); handleScrollTo('acceso')}} className="bg-white hover:bg-slate-50 active:bg-slate-100 border border-slate-300 text-slate-800 font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl text-sm sm:text-base md:text-lg transition-all duration-200 touch-manipulation w-full sm:w-auto active:scale-[0.98]">
+                                    {language === 'es' ? 'Ver Acceso' : 'View Access'}
+                                </a>
+                                <a href={`https://wa.me/+525579076626?text=${generateWhatsAppMessage()}`} target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 active:bg-green-700 text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl text-sm sm:text-base md:text-lg transition-all duration-200 shadow-sm touch-manipulation w-full sm:w-auto active:scale-[0.98] flex items-center justify-center gap-2">
+                                    <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+                                    {language === 'es' ? 'Consultas por WhatsApp' : 'WhatsApp Inquiries'}
                                 </a>
                                 {/* <a href="/trsb" className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 active:from-purple-800 active:to-purple-900 text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-xl text-sm sm:text-base md:text-lg transition-all duration-200 shadow-sm touch-manipulation w-full sm:w-auto flex items-center justify-center gap-2 active:scale-[0.98]">
                                     App TRSB
@@ -194,10 +203,23 @@ const AppContent: React.FC = () => {
                     </div>
                 </section>
 
+                {/* --- Access Information Section --- */}
+                <AnimatedSection id="acceso" className="bg-white py-16 sm:py-20 md:py-24" delay={150}>
+                    <AccessInfoSection />
+                </AnimatedSection>
+
+                {/* Divider with more contrast */}
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
+
                 {/* --- Program Section --- */}
+                {false && (
+                <>
                 <AnimatedSection id="programa" className="bg-white py-16 sm:py-20 md:py-24" delay={200}>
                     <ProgramSection/>
                 </AnimatedSection>
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
+                </>
+                )}
 
                 {/* Divider with more contrast */}
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
@@ -259,6 +281,9 @@ const AppContent: React.FC = () => {
                 <div className="w-full border-t border-slate-200"></div> */}
 
                 {/* --- Hotel Information Section --- */}
+                {/* Ocultada - información ya incluida en sección de acceso */}
+                {false && (
+                <>
                 <AnimatedSection id="ubicacion" className="relative py-24 sm:py-28 md:py-32 overflow-hidden bg-gradient-to-b from-slate-50 to-white" delay={150}>
 
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -368,11 +393,18 @@ const AppContent: React.FC = () => {
                         </div>
                     </div>
                 </AnimatedSection>
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
+                </>
+                )}
+
 
                 {/* Divider with more contrast */}
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
 
                 {/* --- Online Modality Benefits --- */}
+                {/* Ocultada - información ya incluida en sección de acceso */}
+                {false && (
+                <>
                 <AnimatedSection className="relative py-24 sm:py-28 md:py-32 overflow-hidden bg-white" delay={150}>
 
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -453,11 +485,17 @@ const AppContent: React.FC = () => {
                         </div>
                     </div>
                 </AnimatedSection>
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
+                </>
+                )}
                 
                 {/* Divider with more contrast */}
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
                 
                 {/* --- Webinars Section --- */}
+                {/* Ocultada de la página principal - disponible en /webinar-2 */}
+                {false && (
+                <>
                 <AnimatedSection id="webinars" className="bg-gradient-to-b from-blue-50/30 via-white to-slate-50/50 py-16 sm:py-20 md:py-24" delay={250}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-6 sm:mb-8">
@@ -484,11 +522,13 @@ const AppContent: React.FC = () => {
                         </div>
                     </div>
                 </AnimatedSection>
-
-                {/* Divider with more contrast */}
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
+                </>
+                )}
                 
                 {/* --- Who is it for Section --- */}
+                {false && (
+                <>
                 <AnimatedSection id="para-quien" className="bg-white py-24 sm:py-28 md:py-32" delay={400}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-slate-900 leading-tight">{t.whoIsItFor.title}</h2>
@@ -500,11 +540,13 @@ const AppContent: React.FC = () => {
                         </div>
                     </div>
                 </AnimatedSection>
-
-                {/* Divider with more contrast */}
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
+                </>
+                )}
                 
                 {/* --- Results Section --- */}
+                {false && (
+                <>
                 <AnimatedSection id="resultados" className="bg-gradient-to-b from-amber-50/30 via-white to-slate-50/50 py-24 sm:py-28 md:py-32" delay={600}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="flex flex-col sm:flex-row items-center justify-center text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-8 sm:mb-12 text-slate-900 leading-tight tracking-tight">
@@ -536,11 +578,13 @@ const AppContent: React.FC = () => {
                         </div>
                     </div>
                 </AnimatedSection>
-
-                {/* Divider with more contrast */}
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
+                </>
+                )}
 
                 {/* --- Testimonials Section --- */}
+                {false && (
+                <>
                 <AnimatedSection id="testimonios" className="bg-white py-24 sm:py-28 md:py-32" delay={800}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-900 leading-tight">{t.testimonials.title}</h2>
@@ -567,6 +611,9 @@ const AppContent: React.FC = () => {
                         </div>
                     </div>
                 </AnimatedSection>
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
+                </>
+                )}
 
                 {/* --- Gallery Preview Section --- */}
                 {/* <AnimatedSection id="galeria" className="bg-slate-800 py-20 sm:py-24 md:py-28" delay={900}>
@@ -607,6 +654,8 @@ const AppContent: React.FC = () => {
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
 
                 {/* --- Includes Section --- */}
+                {false && (
+                <>
                 <AnimatedSection id="incluye" className="bg-gradient-to-b from-emerald-50/30 via-white to-slate-50/50 py-24 sm:py-28 md:py-32 relative overflow-hidden" delay={1000}>
                     {/* Decorative background elements */}
                     <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -641,11 +690,16 @@ const AppContent: React.FC = () => {
                         </div>
                     </div>
                 </AnimatedSection>
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
+                </>
+                )}
 
                 {/* Divider with more contrast */}
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
 
                 {/* --- Extensions & Investment Section --- */}
+                {false && (
+                <>
                  <AnimatedSection id="inversion" className="py-16 sm:py-20 md:py-24 lg:py-28 bg-gradient-to-b from-cyan-50/40 via-white to-blue-50/30" delay={1100}>
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                         <h2 className="flex flex-col sm:flex-row items-center justify-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-slate-900 mb-3 sm:mb-4 leading-tight tracking-tight">
@@ -667,7 +721,7 @@ const AppContent: React.FC = () => {
                                 {/* Early Bird Benefit */}
                                 <div className="mt-4 p-3 bg-green-50 rounded-xl border border-green-200">
                                     <p className="text-green-800 text-sm font-semibold mb-1">
-                                        🎁 {language === 'es' ? 'Beneficio Early Bird' : 'Early Bird Benefit'}
+                                        {language === 'es' ? 'Beneficio Early Bird' : 'Early Bird Benefit'}
                                     </p>
                                     <p className="text-green-700 text-xs leading-relaxed">
                                         {language === 'es' ? 'Acceso GRATIS a las grabaciones del seminario' : 'FREE access to seminar recordings'}
@@ -705,6 +759,8 @@ const AppContent: React.FC = () => {
                         </div>
                     </div>
                 </AnimatedSection>
+                </>
+                )}
             </main>
 
             <footer className="text-center p-6 sm:p-8 pb-20 sm:pb-8 text-slate-600 bg-white border-t border-slate-200 safe-area-inset-bottom">
@@ -742,7 +798,7 @@ const AppContent: React.FC = () => {
                             className="text-xs text-slate-400 hover:text-slate-500 transition-colors duration-200 opacity-50 hover:opacity-70 mt-2"
                             title="Acceso Equipo"
                         >
-                            🔒 Equipo
+                            Equipo
                         </button>
                     </div>
                 </div>
@@ -750,7 +806,7 @@ const AppContent: React.FC = () => {
 
             <BackToTop />
             {/* <ChatButton /> */}
-            {/* <StickyCtaBar onScrollTo={handleScrollTo} /> */}
+            <StickyCtaBar onScrollTo={handleScrollTo} />
             <SocialProofBadge />
         </div>
     );

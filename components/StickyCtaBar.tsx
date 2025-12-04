@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, MapPin, Video, Clock } from 'lucide-react';
 import { WhatsAppIcon } from './Icons';
 import { useLanguage } from '../LanguageContext';
 
@@ -13,10 +13,10 @@ const StickyCtaBar: React.FC<StickyCtaBarProps> = ({ onScrollTo }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Mostrar después de 400px de scroll y ocultar cuando llegue a la sección de inversión
-      const inversionSection = document.getElementById('inversion');
-      if (inversionSection) {
-        const rect = inversionSection.getBoundingClientRect();
+      // Mostrar después de 400px de scroll y ocultar cuando llegue a la sección de acceso
+      const accesoSection = document.getElementById('acceso');
+      if (accesoSection) {
+        const rect = accesoSection.getBoundingClientRect();
         const isInView = rect.top <= window.innerHeight && rect.bottom >= 0;
         setIsVisible(window.scrollY > 400 && !isInView);
       } else {
@@ -31,8 +31,8 @@ const StickyCtaBar: React.FC<StickyCtaBarProps> = ({ onScrollTo }) => {
 
   const generateWhatsAppMessage = () => {
     const message = language === 'es'
-      ? `¡Hola! Me interesa inscribirme al Seminario Internacional de Inteligencia Energética (5-7 Dic 2025 + sesiones 24 Ene & 28 Feb 2026) en el Hotel Galería Plaza Reforma, Ciudad de México. ¿Podrían brindarme más información sobre el proceso de inscripción y formas de pago?`
-      : `Hello! I'm interested in registering for the International Energy Intelligence Seminar (Dec 5-7, 2025 + sessions Jan 24 & Feb 28, 2026) at Hotel Galería Plaza Reforma, Mexico City. Could you provide me with more information about the registration process and payment methods?`;
+      ? `¡Hola! Necesito información sobre el acceso al Seminario Internacional de Inteligencia Energética que inicia mañana (5-7 Dic 2025). ¿Podrían ayudarme con información de acceso presencial u online?`
+      : `Hello! I need information about access to the International Energy Intelligence Seminar starting tomorrow (Dec 5-7, 2025). Could you help me with in-person or online access information?`;
     return encodeURIComponent(message);
   };
 
@@ -46,36 +46,55 @@ const StickyCtaBar: React.FC<StickyCtaBarProps> = ({ onScrollTo }) => {
       <div className="bg-white/98 backdrop-blur-md border-t border-slate-200 shadow-sm">
         <div className="container mx-auto px-4 py-3 sm:py-4">
           <div className="flex items-center justify-between gap-3 sm:gap-4">
-            {/* Precio y oferta */}
+            {/* Información de acceso */}
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-1">
-                <Sparkles className="w-4 h-4 text-amber-500 flex-shrink-0" />
-                <span className="text-amber-600 text-xs sm:text-sm font-semibold uppercase tracking-wide">
-                  Early Bird
+                <Clock className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                <span className="text-blue-600 text-xs sm:text-sm font-semibold uppercase tracking-wide">
+                  {language === 'es' ? 'Inicia Mañana' : 'Starts Tomorrow'}
                 </span>
               </div>
               <div className="flex items-baseline gap-2 flex-wrap">
-                <span className="text-slate-900 text-xl sm:text-2xl md:text-3xl font-bold tracking-tight">
-                  $8,000 MXN
-                </span>
-                <span className="text-slate-500 text-xs sm:text-sm line-through">
-                  $9,500 MXN
+                <span className="text-slate-900 text-base sm:text-lg md:text-xl font-bold tracking-tight">
+                  {language === 'es' ? '5-7 Diciembre 2025' : 'December 5-7, 2025'}
                 </span>
               </div>
               <p className="text-slate-600 text-xs hidden sm:block">
-                {language === 'es' ? '+ Acceso GRATIS a grabaciones' : '+ FREE access to recordings'}
+                {language === 'es' ? 'Hotel Galería Plaza Reforma, CDMX' : 'Hotel Galería Plaza Reforma, CDMX'}
               </p>
             </div>
 
             {/* CTAs */}
             <div className="flex items-center gap-2 sm:gap-3">
-              {/* Botón Ver Inversión (solo visible en pantallas grandes) */}
+              {/* Botón Ver Acceso (solo visible en pantallas grandes) */}
               <button
-                onClick={() => onScrollTo('inversion')}
+                onClick={() => onScrollTo('acceso')}
                 className="hidden lg:flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-900 font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-xl text-sm transition-all duration-200 active:scale-[0.98] border border-slate-200"
               >
-                {language === 'es' ? 'Ver Detalles' : 'View Details'}
+                {language === 'es' ? 'Ver Acceso' : 'View Access'}
                 <ArrowRight className="w-4 h-4" />
+              </button>
+
+              {/* Botón Presencial */}
+              <button
+                onClick={() => onScrollTo('acceso')}
+                className="hidden sm:flex items-center gap-2 bg-blue-100 hover:bg-blue-200 text-blue-700 font-semibold py-2 sm:py-3 px-3 sm:px-4 rounded-xl text-xs sm:text-sm transition-all duration-200 active:scale-[0.98] border border-blue-300"
+              >
+                <MapPin className="w-3 h-3 sm:w-4 sm:h-4" />
+                <span className="hidden md:inline">
+                  {language === 'es' ? 'Presencial' : 'In-Person'}
+                </span>
+              </button>
+
+              {/* Botón Online */}
+              <button
+                onClick={() => onScrollTo('acceso')}
+                className="hidden sm:flex items-center gap-2 bg-purple-100 hover:bg-purple-200 text-purple-700 font-semibold py-2 sm:py-3 px-3 sm:px-4 rounded-xl text-xs sm:text-sm transition-all duration-200 active:scale-[0.98] border border-purple-300"
+              >
+                <Video className="w-3 h-3 sm:w-4 sm:h-4" />
+                <span className="hidden md:inline">
+                  {language === 'es' ? 'Online' : 'Online'}
+                </span>
               </button>
 
               {/* Botón WhatsApp Principal */}
@@ -87,10 +106,10 @@ const StickyCtaBar: React.FC<StickyCtaBarProps> = ({ onScrollTo }) => {
               >
                 <WhatsAppIcon className="w-5 h-5 sm:w-5 sm:h-5 flex-shrink-0" />
                 <span className="hidden sm:inline">
-                  {language === 'es' ? '¡Inscríbete Ahora!' : 'Register Now!'}
+                  {language === 'es' ? 'Consultas' : 'Inquiries'}
                 </span>
                 <span className="sm:hidden">
-                  {language === 'es' ? 'Inscríbete' : 'Register'}
+                  {language === 'es' ? 'Info' : 'Info'}
                 </span>
               </a>
             </div>
