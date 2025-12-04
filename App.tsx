@@ -208,9 +208,6 @@ const AppContent: React.FC = () => {
                     <AccessInfoSection />
                 </AnimatedSection>
 
-                {/* Divider with more contrast */}
-                <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
-
                 {/* --- Program Section --- */}
                 {false && (
                 <>
@@ -221,16 +218,10 @@ const AppContent: React.FC = () => {
                 </>
                 )}
 
-                {/* Divider with more contrast */}
-                <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
-
                 {/* --- Program Timeline Visual --- */}
-                <AnimatedSection className="bg-gradient-to-b from-slate-100 via-slate-50 to-white py-16 sm:py-20 md:py-24" delay={250}>
+                <AnimatedSection className="bg-white py-16 sm:py-20 md:py-24" delay={250}>
                     <ProgramTimeline/>
                 </AnimatedSection>
-
-                {/* Divider with more contrast */}
-                <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
 
                 {/* --- Webinar TRSB Banner --- */}
                 {/* <AnimatedSection className="bg-white py-8 sm:py-12 border-y border-slate-200" delay={100}>
